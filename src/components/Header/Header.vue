@@ -61,11 +61,11 @@
                     >General Aviation</router-link
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <router-link class="dropdown-item" to="/general-aviation-form1"
                     >General Aviation Form</router-link
                   >
-                </li>
+                </li> -->
               </ul>
             </li>
             <li class="nav-item">
@@ -191,6 +191,7 @@ export default {
 }
 .header .navbar-nav .nav-item .dropdown-menu {
   left: 25px;
+  border-radius: 0;
 }
 .nav-item .dropdown-menu .dropdown-item {
   font-weight: 600;

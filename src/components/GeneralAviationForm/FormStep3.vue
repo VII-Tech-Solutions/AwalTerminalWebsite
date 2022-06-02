@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -63,12 +63,12 @@
                                     <div class="col-lg-6 mb-0">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select a country </option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select a country </option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                        <div class="form-group">
                                             <label class="form-label text-capitalize">email address<span class="asterik">*</span></label>
@@ -101,12 +101,12 @@
                                     <div class="col-lg-6 mb-0">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select a country </option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select a country </option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                        <div class="form-group">
                                             <label class="form-label text-capitalize">email address <span class="asterik">*</span></label>
@@ -125,11 +125,12 @@
                 
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="form-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <a class="light-button d-inline-block">cancel</a>
+                        <router-link to="/general-aviation-form2" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
                         <router-link to="/general-aviation-form4"  class="beige-button d-inline-block">next</router-link>

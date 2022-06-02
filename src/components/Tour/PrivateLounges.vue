@@ -28,10 +28,9 @@
         </div>
         <div class="container">
             <div class="mx-auto text-center">
-                <div class="theme-button-div" id="button-style">
-                    <div id="spin"></div>
-                    <a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="text-uppercase theme-btn text-center">book a private lounge</a>
-                </div>
+                
+                    <a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="text-uppercase blue-btn text-center">book a private lounge</a>
+                
             </div>
         </div>  
     </div>

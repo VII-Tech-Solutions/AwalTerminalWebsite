@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -343,23 +343,21 @@
                                 </div>
                             </div>
                         </form>
-                        
                     </div>
                 </div>
-               
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="elite-forrm-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    
                     <div class="d-block">
                         <router-link to="/elite-form4" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-flex align-items-center">
                         <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 text-green sans">Total Amount: <span>BHD 297.550</span></p>
                         <div class="d-block">
-                            <router-link to="/elite-thankyou"  class="btn-next d-inline-block align-top transition text-capitalize">Submit Reservation</router-link>
+                            <router-link to="/elite-payement-form"  class="btn-next d-inline-block align-top transition text-capitalize">Submit Reservation</router-link>
                         </div>
                     </div>
                 </div>

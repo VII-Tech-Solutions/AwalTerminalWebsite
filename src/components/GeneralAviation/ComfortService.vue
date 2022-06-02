@@ -5,7 +5,7 @@
         <div class="main-page-title">
             <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">5-star hospitality services</span></div>
             <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
-                <h2 class="text-capitalize mx-auto text-center">Convenient & <br> comfortable services</h2>
+                <h2 class=" mx-auto text-center">Convenient & <br> comfortable services</h2>
                 <p class="mx-auto">Whether you are arriving at or departing from the Kingdom, <strong class="fw-bold">Hala Bahrain</strong> agents will assist you with all travel formalities while you relax in one of our luxurious lounges and enjoy our warm hospitality.</p>
             </div>
         </div>
@@ -21,7 +21,11 @@
             <div class="comfort-card"><p class="comfort-card-title">Air Start Unit (ASU) </p></div>
             <div class="comfort-card"><p class="comfort-card-title">Ground Power Unit (GPU) </p></div>
         </div>
-        <div class="container"><div class="mx-auto text-center" data-aos="fade-bottom" data-aos-duration="2500"><div class="theme-button-div" id="button-style"><div id="spin"></div><a href="#" class="text-uppercase theme-btn text-center">book a general aviation</a></div></div></div>
+        <div class="container"><div class="mx-auto text-center" data-aos="fade-bottom" data-aos-duration="2500">
+            
+            
+                <a href="#" class="text-uppercase blue-btn text-center">book general aviation</a>
+                </div></div>
        </div>
     </div>
 </template>

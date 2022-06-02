@@ -8,7 +8,7 @@
             <form >
                 <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="fullname" class="form-label"
-                  >Full Name*</label
+                  >Full Name<span class="asterik">*</span></label
                 >
                 <input
                   type="text"
@@ -19,7 +19,7 @@
               </div>
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
+                  >Email address<span class="asterik">*</span></label
                 >
                 <input
                   type="email"
@@ -32,7 +32,7 @@
               </div>
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="exampleInputEmail1" class="form-label"
-                  >Your Message*</label
+                  >Your Message<span class="asterik">*</span></label
                 >
                <textarea class="form-control" rows="7">What would you like to discuss?</textarea>
                 
@@ -60,7 +60,8 @@
 
 .form-wrapper form .form-group {margin-bottom: 40px ;}
 
-.form-wrapper .form-control {border: 1px solid #4d627a;padding: 5px 10px;height: 50px;background: transparent;box-shadow: none;outline: none;border-radius: 0;}
+.form-wrapper .form-control {border: 1px solid #4d627a !important;padding: 5px 10px;height: 50px;background: transparent;box-shadow: none !important;outline: none !important;border-radius: 0;}
+.form-wrapper .form-control::placeholder{color: #888;}
 .form-wrapper textarea.form-control{height: auto;}
 .btn-blue {
     font-size: 18px;

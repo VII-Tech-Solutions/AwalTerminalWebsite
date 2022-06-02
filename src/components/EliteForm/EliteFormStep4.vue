@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -59,9 +59,9 @@
                         </form>
                     </div>
                 </div>
-                
             </div>
         </div>
+        <!-- FOOTER -->
        <div class="elite-forrm-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">

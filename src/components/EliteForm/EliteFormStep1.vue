@@ -9,8 +9,8 @@
 				</strong>
 			</div>
 			<div class="step-one-block">
-				<div class="d-flex flex-md-row flex-column align-items-center justify-content-between mb-3 mb-sm-4">
-					<h2 class="step-heading">Elite Service</h2>
+				<div class="d-flex flex-md-row flex-column align-items-center justify-content-between">
+					<h2 class="form-h3 text-capitalize">Elite Service</h2>
 					<span class="step-number lora-semi">Step 1 of 5</span>
 				</div>
 				<div class="row">
@@ -28,7 +28,7 @@
 							<label class="custom-radio">
 								<input type="radio" checked="checked" name="radio" />
 								<div class="checkmark">
-									<div class="radio-circle mb-3">
+									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
 									</div>
 									<strong class="service-name d-block mb-lg-3 mb-2">Common Lounge</strong>
@@ -46,7 +46,7 @@
 							<label class="custom-radio">
 								<input type="radio" checked="checked" name="radio" />
 								<div class="checkmark">
-									<div class="radio-circle mb-3">
+									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
 									</div>
 									<strong class="service-name d-block mb-lg-3 mb-2">Private Lounge</strong>
@@ -99,6 +99,7 @@
 	.elite-offer-services .service-features{font-size:14px;line-height:17px;color:#011e41;}
 	.elite-offer-services .service-features li{margin:0 0 10px;padding:0 0 0 15px;}
 	.elite-offer-services .service-features li:before{content:"";width: 5px;height: 10px;border: solid #011e41;position:absolute;left:0;top:1px;border-width: 0 1px 1px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}	.elite-offer-services .tax-text{font-size:10px;line-height:12px;position:absolute;left:30px;bottom:20px;}
+	.step-one-block {margin-bottom: 40px;}
 	@media only screen and (max-width:767px){
 		.elite-form .step-heading{font-size:40px;line-height:44px;}
 	}

@@ -5,9 +5,9 @@
                   <div class="bg-white service-fixed">
                           <div class="main-page-title">
                               <div class="page-title">
-                                  <h2 class="text-capitalize mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">A luxurious experience</h2>
+                                  <h2 class=" mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">A luxurious experience</h2>
                                   <p class="mx-auto w-100 mb-lg-4 mb-3" data-aos="fade-up" data-aos-duration="2500">For total comfort and sublime luxury, try our elite services. From your arrival or departure, we will take care of everything. We pride ourselves on extending the warm hospitality Bahrain is known for.</p>
-                                  <div class="d-flex justify-content-center"><a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-capitalize d-inline">book now</a></div>
+                                  <div class="d-flex justify-content-center"><a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book now</a></div>
                               </div>
                           </div>
                           <div class="service-card">

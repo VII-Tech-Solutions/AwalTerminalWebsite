@@ -15,8 +15,8 @@
 
 <style>
 .elite-forrm-footer{width:100%;position:fixed;left:0;bottom:0;background:#dee6f0;padding:20px 0;font-size:14px;line-height:17px;font-family: "Lora";}
-.elite-forrm-footer .cancel-link{color:#011e41;}
-.elite-forrm-footer .btn-next,.elite-forrm-footer .btn-next:focus{background-color:#011e41;border:1px solid #011e41;color:#fff;padding:10px 20px}
+.elite-forrm-footer .cancel-link{color:#011e41;font-family: 'lora';font-weight: 600;}
+.elite-forrm-footer .btn-next,.elite-forrm-footer .btn-next:focus{background-color:#011e41;border:1px solid #011e41;color:#fff;padding:10px 20px;text-decoration: none;}
 .elite-forrm-footer .btn-next:hover{background-color:transparent;border-color:#011e41;color:#011e41;}
 @media (max-width:768px) { 
 .elite-forrm-footer, .form-footer {padding:15px 0px;}

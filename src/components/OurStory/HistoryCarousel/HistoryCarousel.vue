@@ -181,24 +181,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   mounted() {
-    // this.scrollAnimation();
+    this.scrollAnimation();
   },
 
   methods: {
-    // scrollAnimation() {
-    //   gsap
-    //     .timeline({
-    //       scrollTrigger: {
-    //         trigger: ".slider-wrapper",
-    //         start: "center center",
-    //         end: "bottom top",
-    //         markers: false,
-    //         scrub: true,
-    //         pin: true,
-    //       },
-    //     })
-    //     .to(".slider-wrapper", { x: "-470%", duration: 50 });
-    // },
+    scrollAnimation() {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".slider-wrapper",
+            start: "center center",
+            end: "bottom top",
+            markers: false,
+            scrub: true,
+            pin: true,
+          },
+        })
+        .to(".slider-wrapper", { x: "-470%", duration: 50 });
+    },
     item() {
       // window.scrollTo(0, 20);
       gsap.to(".slider-wrapper", { x: "0%" });

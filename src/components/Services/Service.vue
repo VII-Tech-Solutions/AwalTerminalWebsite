@@ -6,7 +6,7 @@
                 <div class="bg-white service-fixed">
                         <div class="main-page-title">
                             <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
-                                <h2 class="text-capitalize mx-auto text-center">Smooth, seamless service</h2>
+                                <h2 class=" mx-auto text-center">Smooth, seamless service</h2>
                                 <p class="mx-auto w-100">A state-of-the-art facility with 5-star hospitality services. The terminal comprises eight private lounges and two common lounges, a meeting room, and Duty-Free offerings designed to meet the needs of VIP passengers.</p>
                             </div>
                         </div>

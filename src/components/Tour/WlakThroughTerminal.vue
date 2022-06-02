@@ -3,7 +3,7 @@
        <div class="container">
         <div class="main-page-title">
             <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
-                <h2 class="text-capitalize mx-auto text-center">Walk through the terminal</h2>
+                <h2 class=" mx-auto text-center">Walk through the terminal</h2>
                 <p class="mx-auto">Following careful renovations, our interiors are the reflection of comfort and luxury. Feel at ease while relaxing at our common lounge with friends and family until your departure.</p>
             </div>
         </div>

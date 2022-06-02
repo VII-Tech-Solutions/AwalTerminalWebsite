@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -373,7 +373,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <span class="x-line"><hr></span> -->
                                 <div class="amount-box">
                                     <div class="amount-header">
                                         <ul class="ul_css">
@@ -399,14 +398,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </form>
-                        
                     </div>
                 </div>
-               
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="elite-forrm-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">

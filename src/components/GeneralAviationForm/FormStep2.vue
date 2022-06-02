@@ -34,7 +34,7 @@
                                                 <span class="input-icon">
                                                     <img src="../../assets/images/icons/schedule.svg" alt="couch" class=" img-fluid"/>
                                                 </span>
-                                                </div>
+                                            </div>
                                         </div>   
                                         <div class="form-group">
                                             <label class="form-label">Nature of Flight<span class="asterik">*</span></label>
@@ -44,17 +44,16 @@
                                     <div class="col-lg-6 mb-0">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">From Airport<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select Airport</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select Airport</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">arrival date<span class="asterik">*</span></label>
-                                            <div class="form-border calender">
-                                                <input type="date" class="form-control calender-date border-0" placeholder="">
+                                            <div class="form-border">
                                                 <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
                                                 <div class="d-flex align-items-center"><span class="input-icon">
                                                     <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
@@ -90,21 +89,22 @@
                                     <div class="col-lg-6 mb-0">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">to Airport<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select Airport</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select Airport</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">departure date<span class="asterik">*</span></label>
-                                            <div class="form-border calender">
-                                                <input type="date" class="form-control calender-date border-0" placeholder="">
+                                            <div class="form-border">
                                                 <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center"><span class="input-icon">
-                                                    <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                </span></div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="input-icon">
+                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -117,14 +117,14 @@
                         </form>
                     </div>
                 </div>
-                
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="form-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <a class="light-button d-inline-block">back</a>
+                        <router-link to="/general-aviation-form1" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
                         <router-link to="/general-aviation-form3"  class="beige-button d-inline-block">next</router-link>

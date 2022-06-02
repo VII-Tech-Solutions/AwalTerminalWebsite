@@ -31,6 +31,9 @@ p {
 	color: #011e41;
 	margin: 0;
 }
+textarea {
+	resize: none;
+  }
 .fw-semi-bold{font-weight:600;}
 .text-inherit{text-transform:inherit !important;}
 .fa-style{border-bottom:1px solid #fff;}
@@ -55,13 +58,13 @@ p {
 	transition: all ease-in-out .3s;
 }
 .white-btn:hover {
-	background-color: #fbfaf9c7;
+	background-color: #011e41;
 	border: 2px solid #011e41;
-	color: #011e41;
+	color: #fff;
 }
 .text--btn{ color: #011e41; transition: all ease-in-out .3s;} .text--btn:hover{ color: #011e41; cursor:pointer;}
 .beige-button{padding:10px 20px 10px 20px; font-size:14px; background-color:#fdc99a; color: #011e41; border:1px solid transparent; text-decoration:none; text-transform:capitalize; transition: all ease-in-out .3s; cursor:pointer; font-family:"Lora"; font-weight:600;}
-.beige-button:hover {color: #fff; background-color:#fdc99aab; border:1px solid #fdc99a;}
+.beige-button:hover {color: #fdc99a; background-color:transparent; border:1px solid #fdc99a;}
 .light-button{padding:10px 20px 10px 22px;  font-size:14px; background-color:transparent; color: #fff; text-decoration:none; text-transform:capitalize; transition: all ease-in-out .3s; cursor: pointer; font-family:"Lora"; font-weight:600;}
 .light-button:hover{color: #fff; background-color:#ffffff0d;}
 .card-blue-btn {
@@ -97,7 +100,7 @@ p {
 	transition: all ease-in-out .3s;
 }
 .blue-btn:hover{
-	background-color: #F0EFF0;
+	background-color: #fff;
 	color: #011e41;
 }
 .form-blue-btn{
@@ -227,7 +230,6 @@ p {
 	width: 100%;
 }
 /* END  */
-
 .trivial {
   padding-top: 100px
 }
@@ -235,11 +237,12 @@ p {
 /* Start Two Fold Module Component */
 .two-fold{
 	background-image: url("./assets/images/total-comfort.jpg");
-	background-position: right;
+	background-position: top right;
 	background-repeat: no-repeat;
 	padding-bottom: 225px;
-	background-size: contain;
+	background-size: 68%;
 	/* margin-bottom: 93px; */
+	background-attachment: fixed;
 }
 .two-fold-content{
 	padding: 150px 75px 150px 95px;
@@ -296,7 +299,7 @@ p {
 	display: block;
 	text-align: center;
 }
-.two-fold .visit-terminal-btn:hover{background: #F0EFF0;}
+.two-fold .visit-terminal-btn:hover{background: #011e41;color: #fff;}
 /* End Two Fold Module Component 2 */
 /* Start Two Fold Module Component 2 */
 .two-fold-2{
@@ -326,7 +329,7 @@ p {
 	padding: 13px 20px;
 	transition: all ease-in-out .3s;
 }
-.common-btn:hover{background: #F0EFF0;}
+.common-btn:hover{background: #011e41;color: #fff;}
 .tailored-list li{margin-bottom: 40px;}
 .tailored-list{
     margin-bottom: 70px;
@@ -350,7 +353,7 @@ p {
 }
 /* FORM GENERAL */
 .lora-semi{font-family:"Lora"; font-weight:600;}
-.form-page-title{margin-bottom:11px;}
+.form-page-title{margin-bottom:20px;}
 .custom-w{width:100%;max-width: 570px;}
 .aviation-form .accordion-button:focus {z-index:3; border-color:#011e41; box-shadow:none;}
 .w-p{min-width:160px; margin-right:50px;}

@@ -5,7 +5,7 @@
         <div>
             <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">Private lounges, dining, and shopping</span></div>
             <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
-                <h2 class="text-capitalize mx-auto text-center">Take a tour</h2>
+                <h2 class=" mx-auto text-center">Take a tour</h2>
             </div>
         </div>
         <div class="take-tour-details" >

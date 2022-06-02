@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -21,17 +21,16 @@
                             <fieldset>
                                 <legend class="form-title sub-title">Passenger Details</legend>
                                 <legend class="form-title">Passenger 1</legend>
-                                <div class="row">
-                                    
+                                <div class="row"> 
                                     <div class="col-lg-2">
                                          <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Title<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Mr</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Mr</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
@@ -46,45 +45,43 @@
                                             <input type="text" class="form-control" placeholder="Enter your last name">
                                         </div>  
                                     </div>
-                                    
                                 </div>
                                <div class="row">
-                                    
                                     <div class="col-lg-2">
                                          <div class="form-group">
                                             <label class="form-label">Date of Birth<span class="asterik">*</span></label>
-                                            <div class="form-border calender">
-                                                <input type="date" class="form-control calender-date border-0" placeholder="">
+                                            <div class="form-border">
                                                 <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center"><span class="input-icon">
-                                                    <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                </span></div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="input-icon">
+                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Nationality<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select a nationality</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select a nationality</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Class<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Economy</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Economy</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
-                                    
                                 </div>
                                  <div class="row">
                                     <div class="col-lg-8">
@@ -94,17 +91,16 @@
                             </fieldset>
                              <fieldset>
                                 <legend class="form-title">Passenger 2</legend>
-                                <div class="row">
-                                    
+                                <div class="row">                          
                                     <div class="col-lg-2">
                                          <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Title<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Mr</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Mr</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
@@ -118,46 +114,44 @@
                                             <label class="form-label text-capitalize">Last Name<span class="asterik">*</span></label>
                                             <input type="text" class="form-control" placeholder="Enter your last name">
                                         </div>  
-                                    </div>
-                                    
+                                    </div>   
                                 </div>
                                <div class="row">
-                                    
                                     <div class="col-lg-2">
                                          <div class="form-group">
                                             <label class="form-label">Date of Birth<span class="asterik">*</span></label>
-                                            <div class="form-border calender">
-                                                <input type="date" class="form-control calender-date border-0" placeholder="">
+                                            <div class="form-border">
                                                 <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center"><span class="input-icon">
-                                                    <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                </span></div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="input-icon">
+                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Nationality<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select a nationality</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select a nationality</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Class<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Economy</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Economy</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
-                                    </div>
-                                    
+                                    </div>          
                                 </div>
                                  <div class="row">
                                     <div class="col-lg-8">
@@ -168,16 +162,15 @@
                             <fieldset>
                                 <legend class="form-title">Passenger 3</legend>
                                 <div class="row">
-                                    
                                     <div class="col-lg-2">
                                          <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Title<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Mr</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Mr</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
@@ -191,54 +184,52 @@
                                             <label class="form-label text-capitalize">Last Name<span class="asterik">*</span></label>
                                             <input type="text" class="form-control" placeholder="Enter your last name">
                                         </div>  
-                                    </div>
-                                    
+                                    </div> 
                                 </div>
-                               <div class="row">
-                                    
+                               <div class="row">          
                                     <div class="col-lg-2">
                                          <div class="form-group">
                                             <label class="form-label">Date of Birth<span class="asterik">*</span></label>
-                                            <div class="form-border calender">
-                                                <input type="date" class="form-control calender-date border-0" placeholder="">
+                                            <div class="form-border">
                                                 <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center"><span class="input-icon">
-                                                    <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                </span></div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="input-icon">
+                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Nationality<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select a nationality</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select a nationality</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Class<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Economy</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Economy</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
-                                    
                                 </div>
                             </fieldset>
                         </form>
                     </div>
                 </div>
-                
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="elite-forrm-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">

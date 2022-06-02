@@ -13,7 +13,7 @@
                     <img class="img-fluid" src="../../assets/images/agentImg.png" alt="Hala Bahrain"/>
                   </figure>
                 </div>
-                <div class="d-flex mobile-centered-btn"><a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book elite services</a></div>
+                <div class="d-flex mobile-centered-btn"><router-link to="/elite-form" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book elite services</router-link></div>
               </div>
             </div>
         </div>
@@ -54,7 +54,7 @@ export default {
 </script>
 <style>
 .service-card-style.book-service-card{padding:40px 30px;}
-.book-elite-service{padding:150px 0px;}
+.book-elite-service{padding:100px 0px;}
 .book-elite-service .five_star{padding-bottom:40px;justify-content:space-between;}
 .book-elite-service .five_star h2{margin-bottom:40px; padding-bottom:0px;}
 .book-elite-service .five_star p{text-align:start;}
@@ -66,7 +66,7 @@ export default {
 .service-checklist ul li .checklist-points p{font-size:18px; line-height:22px; color: #011e41;}
 .card-small-text{font-size:12px; line-height:16px; color: #011e41;}
 @media (max-width:1199px) {
-.book-elite-service{padding:100px 0px;}
+/* .book-elite-service{padding:100px 0px;} */
 .book-elite-service .five_star h2{margin-bottom:30px;}
 }
 @media (max-width:992px) {

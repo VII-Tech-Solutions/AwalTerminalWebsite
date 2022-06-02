@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -19,7 +19,7 @@
                     <div class="col-lg-6 col-md-10">
                         <form class="general-form">
                             <fieldset>
-                                <legend class="form-title sub-title">Required Services  </legend>
+                                <legend class="form-title sub-title">Required Services</legend>
                                 <p class="form-p fw-semi-bold mb-lg-3 mb-2">Select all the services that you require upon arrival/departure</p>
                                 <div class="form-service-check">
                                     <ul class="ul_css">
@@ -62,9 +62,12 @@
                                                 <div class="form-group mb-0 w-100">
                                                     <input type="text" class="form-control" placeholder="Enter hotel name" />
                                                 </div>
-                                                <div class="form-border ms-1"><input type="text" class="form-control border-0" placeholder="HH:MM"><span class="input-icon">
-                                                    <img src="../../assets/images/icons/schedule.svg" alt="couch" class=" img-fluid"/>
-                                                </span></div>
+                                                <div class="form-border ms-1">
+                                                    <input type="text" class="form-control border-0" placeholder="HH:MM">
+                                                    <span class="input-icon">
+                                                        <img src="../../assets/images/icons/schedule.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </li>
                                         <li>
@@ -99,19 +102,18 @@
                                         </li>
                                     </ul>
                                 </div>
-                                
                             </fieldset>
                         </form>
                     </div>
                 </div>
-               
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="form-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <a class="light-button d-inline-block">cancel</a>
+                        <router-link to="/general-aviation-form3" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
                         <router-link to="/general-aviation-form5"  class="beige-button d-inline-block">next</router-link>

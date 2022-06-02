@@ -84,10 +84,10 @@
                     </div>
                     <div class="contact-address d-block" data-aos="fade-up" data-aos-duration="2500">
                         <p>For further assistance, please contact the Bookings Team on <a class="phone" href="tel:+973 39471116">
-                        +973 39471116</a> or <span class="effect-span"><a class="mail effect-box" href="cip@halanhrain.bh">cip@halanhrain.bh</a></span></p>
+                        +973 39471116</a> or <span class="effect-span"><a class="mail effect-box" href="mailto:cip@halabahrain.bh">cip@halabahrain.bh</a></span></p>
                     </div>
                      <div class="d-flex">
-                        <a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-capitalize d-inline">book now</a>
+                        <a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book now</a>
                     </div>
                 </div>
             </div>

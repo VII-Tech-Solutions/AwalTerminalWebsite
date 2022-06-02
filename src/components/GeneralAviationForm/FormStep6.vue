@@ -378,11 +378,12 @@
                
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="form-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <a class="light-button d-inline-block">back</a>
+                        <router-link to="/general-aviation-form5" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
                         <router-link to="/general-aviation-thankyou"  class="beige-button d-inline-block">submit application</router-link>

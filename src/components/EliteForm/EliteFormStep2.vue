@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -22,7 +22,7 @@
                                 <legend class="form-title sub-title">Your Journey </legend>
                                 <div class="row">
                                     <div class="col-lg-12 ">
-                                    <div class="custom-radio-btn mt-0 form-group">
+                                        <div class="custom-radio-btn mt-0 form-group">
                                             <p class="form-title">Enter your flight details</p>
                                             <div class="d-flex align-items-center justify-content-md-start justify-content-center">
                                                 <div class="form-check px-0 ms-0 me-4">
@@ -38,43 +38,40 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                    </div>
+                                        </div>
                                     </div>
                                     <div class="col-lg-3 ">
                                          <div class="form-group">
                                             <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
-                                                <select class="form-select" id="inputGroupSelect01">
-                                                    <option selected>Select an airport </option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Select an airport </option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">date<span class="asterik">*</span></label>
-                                            <div class="form-border calender">
-                                                <input type="date" class="form-control calender-date border-0" placeholder="">
+                                            <div class="form-border">
                                                 <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center"><span class="input-icon">
-                                                    <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                </span></div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="input-icon">
+                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                     <div class="col-lg-2 ">
-
                                         <div class="form-group">
                                             <label class="form-label">Time<span class="asterik">*</span></label>
                                             <div class="form-border"><input type="text" class="form-control border-0" placeholder="HH:MM">
-                                            <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
+                                                <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
                                             </div>
                                         </div>  
-                                        
                                     </div>
-                                    
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 ">
@@ -111,22 +108,21 @@
                         </form>
                     </div>
                 </div>
-                
             </div>
         </div>
-                    <div class="elite-forrm-footer">
-                        <div class="container">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-block">
-                                    <router-link to="/elite-form1" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
-                                </div>
-                                <div class="d-block">
-                                    <router-link to="/elite-form3"  class="btn-next d-inline-block align-top transition text-capitalize">next</router-link>
-                                </div>
-                            </div>
-                        </div>
+        <!-- FOOTER -->
+        <div class="elite-forrm-footer">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-block">
+                        <router-link to="/elite-form1" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
+                    </div>
+                    <div class="d-block">
+                        <router-link to="/elite-form3"  class="btn-next d-inline-block align-top transition text-capitalize">next</router-link>
+                    </div>
                 </div>
-                    
+            </div>
+        </div>           
     </div>    
 </template>  
 
@@ -137,7 +133,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 .radio-container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 23px;
   cursor: pointer;
   font-size: 14px;
   -webkit-user-select: none;

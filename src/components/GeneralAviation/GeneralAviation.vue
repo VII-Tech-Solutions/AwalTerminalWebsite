@@ -3,7 +3,7 @@
     <SupportServiceTwoFold/>
     <GeneralAviationBook/>
     <div class="d-block">
-        <figure class="mb-0" data-aos="zoom-up" data-aos-duration="2500">
+        <figure class="mb-0" data-aos="zoom-in" data-aos-duration="2500">
             <img class="cover-img img-fluid w-100" src="../../assets/images/cover-img.png"/>
         </figure>
     </div>

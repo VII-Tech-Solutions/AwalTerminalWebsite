@@ -3,9 +3,9 @@
         <div class="container">
             <div class="form-header">
                  <router-link  to="/">
-                <figure class="mb-0 form-logo">
-                    <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
-                </figure>
+                    <figure class="mb-0 form-logo">
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                    </figure>
                  </router-link>
             </div>
             <div class="form-body">
@@ -26,21 +26,26 @@
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Fuel Services, upload Fuel Release (if available)</p>
                                             <div class="form-group">
                                                 <div class="form-border upload-form px-1"><input type="text" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
-                                                <input type="file" class="form-control upload-input" placeholder="" />
-                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center"><span class="fa fa-arrow-up border-bottom me-2"></span>upload file</button>
+                                                    <input type="file" class="form-control upload-input" placeholder="" />
+                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
+                                                    </button>
                                                 </div>
                                                 <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
-                                                    </span>delete attachement</button>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Catering Services, upload Catering Order (if available)</p>
                                             <div class="form-group">
                                                 <div class="form-border upload-form px-1"><input type="text" class="form-control border-0" placeholder="Upload catering order">
-                                                <input type="file" class="form-control upload-input" placeholder="" />
-                                                <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center"><span class="fa fa-arrow-up border-bottom me-2"></span>upload file</button>
+                                                    <input type="file" class="form-control upload-input" placeholder="" />
+                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
+                                                    </button>
                                                 </div>
                                             </div>
                                         </li>
@@ -51,39 +56,48 @@
                                                     <a class="text-capitalize text-color-btn">download checklist template</a>
                                                 </div>
                                                 <div class="form-border upload-form px-1"><input type="text" class="form-control border-0" placeholder="certificate_20220415_f8jq8cdh…">
-                                                <input type="file" class="form-control upload-input" placeholder="" />
-                                                <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center"><span class="fa fa-arrow-up border-bottom me-2"></span>upload file</button>
+                                                    <input type="file" class="form-control upload-input" placeholder="" />
+                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
+                                                    </button>
                                                 </div>
                                                 <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
-                                                    </span>delete attachement</button>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Arrival Gendec<span class="asterik">*</span></label>
                                                 <div class="form-border upload-form px-1"><input type="text" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
-                                                <input type="file" class="form-control upload-input" placeholder="" />
-                                                <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center"><span class="fa fa-arrow-up border-bottom me-2"></span>upload file</button>
+                                                    <input type="file" class="form-control upload-input" placeholder="" />
+                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
+                                                    </button>
                                                 </div>
                                                 <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
-                                                    </span>delete attachement</button>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Departure Gendec<span class="asterik">*</span></label>
                                                 <div class="form-border upload-form px-1"><input type="text" class="form-control border-0" placeholder="departure_20220415_pkmai856as…">
-                                                <input type="file" class="form-control upload-input" placeholder="" />
-                                                <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center"><span class="fa fa-arrow-up border-bottom me-2"></span>upload file</button>
+                                                    <input type="file" class="form-control upload-input" placeholder="" />
+                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
+                                                    </button>
                                                 </div>
                                                 <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
-                                                    </span>delete attachement</button>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
@@ -91,7 +105,9 @@
                                                 <label class="form-label text-capitalize">other documents</label>
                                                 <div class="form-border upload-form px-1"><input type="text" class="form-control border-0" placeholder="Upload other documents">
                                                     <input type="file" class="form-control upload-input" placeholder="" />
-                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center"><span class="fa fa-arrow-up border-bottom me-2"></span>upload file</button>
+                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload 
+                                                    </button>
                                                 </div>
                                             </div>
                                         </li>
@@ -106,23 +122,21 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label for="exampleFormControlTextarea1" class="form-label text-capitalize"> remarks</label>
                                 <textarea class="form-control" placeholder="Enter any remarks that you want us to know about" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div> 
                         </form>
-                        
                     </div>
                 </div>
-               
             </div>
         </div>
+        <!-- FOOTER -->
         <div class="form-footer">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <a class="light-button d-inline-block">cancel</a>
+                        <router-link to="/general-aviation-form4" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
                         <router-link to="/general-aviation-form6"  class="beige-button d-inline-block">next</router-link>
