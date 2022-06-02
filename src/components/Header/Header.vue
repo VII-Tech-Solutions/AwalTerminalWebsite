@@ -38,19 +38,9 @@
               <router-link
                 to="/services"
                 class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="true"
-                aria-expanded="false"
                 >All Services</router-link
               >
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <router-link class="dropdown-item" to="/services"
-                    >All Services</router-link
-                  >
-                </li>
                 <li>
                   <router-link class="dropdown-item" to="/elite-services"
                     >Elite Services</router-link
@@ -235,6 +225,9 @@ export default {
 .header.dark .book-now-btn:hover {
     color: #011e41;
     background: transparent;
+}
+li.nav-item.dropdown:hover ul.dropdown-menu {
+    display: block;
 }
 @media (max-width: 991px) {
   .header .navbar-toggler-icon {
