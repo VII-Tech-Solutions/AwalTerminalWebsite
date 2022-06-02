@@ -1,0 +1,521 @@
+@font-face {font-family: 'Lora';src: url('./assets/fonts/client/Lora-SemiBold.woff2') format('woff2'),url('./assets/fonts/client/Lora-SemiBold.woff') format('woff');font-weight: 600;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Lora';src: url('./assets/fonts/client/Lora-Medium.woff2') format('woff2'),url('./assets/fonts/client/Lora-Medium.woff') format('woff');font-weight: 500;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Source Sans Pro';src: url('./assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),url('./assets/fonts/SourceSansPro-Regular.woff') format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Source Sans Pro';src: url('./assets/fonts/SourceSansPro-SemiBold.woff2') format('woff2'),url('./assets/fonts/SourceSansPro-SemiBold.woff') format('woff');font-weight: 600;font-style: normal;font-display: swap;}
+.container{max-width: 1120px;}
+body{
+	min-width:280px;
+	font-family: 'Source Sans Pro';
+	background: #fbfaf9;
+}
+h1{
+	font-family: "Lora";
+	font-size: 85px;
+	line-height: 100px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+h2 {
+	font-family: "Lora";
+	font-size: 60px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #011e41;
+}
+p {
+	font-size: 20px;
+	line-height: 2;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	color: #011e41;
+	margin: 0;
+}
+.fw-semi-bold{font-weight:600;}
+.text-inherit{text-transform:inherit !important;}
+.fa-style{border-bottom:1px solid #fff;}
+.theme-color{color: #011e41;}
+.transition{transition: all ease-in-out 0.3s;}
+.ul_css{padding-left:0; margin-bottom:0; list-style:none;}
+.click-link{color: #011e41;} .click-link:hover{color: #011e41;}
+.white-btn {
+	display: inline-block;
+	padding: 13px 20px;
+  	font-family: "Lora";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: 3px;
+	text-align: center;
+	color: #011e41;
+	background-color: #fff;
+	border: 2px solid transparent;
+	text-decoration: none;
+	cursor:pointer;
+	transition: all ease-in-out .3s;
+}
+.white-btn:hover {
+	background-color: #fbfaf9c7;
+	border: 2px solid #011e41;
+	color: #011e41;
+}
+.text--btn{ color: #011e41; transition: all ease-in-out .3s;} .text--btn:hover{ color: #011e41; cursor:pointer;}
+.beige-button{padding:10px 20px 10px 20px; font-size:14px; background-color:#fdc99a; color: #011e41; border:1px solid transparent; text-decoration:none; text-transform:capitalize; transition: all ease-in-out .3s; cursor:pointer; font-family:"Lora"; font-weight:600;}
+.beige-button:hover {color: #fff; background-color:#fdc99aab; border:1px solid #fdc99a;}
+.light-button{padding:10px 20px 10px 22px;  font-size:14px; background-color:transparent; color: #fff; text-decoration:none; text-transform:capitalize; transition: all ease-in-out .3s; cursor: pointer; font-family:"Lora"; font-weight:600;}
+.light-button:hover{color: #fff; background-color:#ffffff0d;}
+.card-blue-btn {
+	font-family: "Lora";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: 3px;
+	text-align: center;
+	color: #011e41;
+	border: 1px solid #011e41;
+	padding: 16px 20px;
+	text-decoration: none;
+	background-color: transparent;
+	transition: all ease-in-out .3s;
+}
+.card-blue-btn:hover{
+	background-color: #011e41;
+	color: #fff;
+}
+.blue-btn {
+	background-color: #011e41;
+	color: #fff;
+	font-family: "Lora";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: 3px;
+	text-align: center;
+	border: 1px solid #011e41;
+	padding: 16px 40px;
+	text-decoration: none;
+	transition: all ease-in-out .3s;
+}
+.blue-btn:hover{
+	background-color: #F0EFF0;
+	color: #011e41;
+}
+.form-blue-btn{
+	padding: 6px;
+	width:122px;
+	border-radius: 5px;
+	background-color: #011e41;
+	border: 1px solid transparent;
+	font-size: 12px;
+    font-weight: 600;
+    color:#fff;
+    line-height: 1.5;
+	text-decoration: none;
+	transition: all ease-in-out .3s;
+}
+.text-color-btn{
+	font-size: 14px;
+    font-weight: 600;
+    line-height:12px;
+    color: #011e41;
+	border-bottom:2px solid #011e41;
+	text-decoration: none;
+	transition: all ease-in-out .3s;
+}
+.text-color-btn:hover{
+	color: #011e41;
+	cursor: pointer;
+	padding: 4px;
+	box-shadow: -1px 4px 3px 1px rgb(0 0 0 / 20%);
+}
+.form-error-btn{
+	padding: 8px 0px 0px 0px;
+	border: none;
+	background-color: transparent;
+	font-size: 12px;
+    font-weight: 600;
+    color:#d30202;
+    line-height: 1.5;
+	text-decoration: none;
+	transition: all ease-in-out .3s;
+}
+.theme-btn {
+  	font-family: "Lora";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: 3px;
+	text-align: center;
+	color: #fff;
+	padding: 16px 38px 16px 39px;
+	background-color: transparent;
+	text-decoration: none;
+	border: 2px solid transparent;
+	transition: all ease-in-out .3s;
+}
+.theme-button-div {
+	display: inline-flex;
+	background-color: #011e41;
+	border: 2px solid transparent;
+	overflow: hidden;
+}
+#button-style {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+#button-style a {
+	position: relative;
+	transition: all .45s ease-Out;
+}
+#spin {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	left: 70px;
+	top: 20px;
+	transform: rotate(0deg);
+	background: none;
+	position: absolute;
+	transition: all .5s ease-Out;
+}
+#button-style:hover #spin {
+	width: 200%;
+	height: 500%;
+	opacity: 1;
+	left: 0px;
+	top: 33px;
+	background: #fff;
+	transform: rotate(35deg);
+}
+#button-style:hover a {color: #011e41;}
+.section-bottom, .tour, .walk-through-terminal, .take-tour {padding-bottom:100px;}
+.trivial, .walk-through-terminal, .private-lounge, .fascilities, .comfort-service, .take-tour  {padding-top: 100px}
+/* SECTION MAIN PAGE TITLE */
+.main-page-title {padding-bottom: 60px;}
+.page-title h2 {padding-bottom: 23px;margin: 0;}
+.page-title p {font-size: 20px;line-height: 40px;text-align: center;color: #011e41;width: 100%;max-width: 750px;}
+.walk-through-terminal .page-title p {
+    max-width: 650px;
+}
+.horizon{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 60px;
+    position: relative;
+}
+.page-subtitle {
+  	font-family: "Lora";
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: 3px;
+	text-align: center;
+	color: #888;
+	position: relative;
+    z-index: 1;
+    background: #FBFAF9;
+    padding: 0 60px;
+}           
+/* .horizon::before, */
+.horizon::after {
+	display: inline-block;
+	content: "";
+    position: absolute;
+	border-top: 1px solid #888;
+	width: 100%;
+}
+/* END  */
+
+.trivial {
+  padding-top: 100px
+}
+.trivial {padding-top: 100px}
+/* Start Two Fold Module Component */
+.two-fold{
+	background-image: url("./assets/images/total-comfort.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	padding-bottom: 225px;
+	background-size: contain;
+	/* margin-bottom: 93px; */
+}
+.two-fold-content{
+	padding: 150px 75px 150px 95px;
+	background: #fff;
+	width:645px;
+}
+.two-fold-content h2{
+	margin-bottom: 70px;
+	text-align: left;
+}
+.two-fold-inner{
+	padding-left: 95px;
+	position: relative;
+}
+.two-fold-inner::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: #888888;
+    color: #888888;
+    left: 0;
+    top: 20px;
+}
+.two-fold-inner-text{
+    margin-bottom: 70px;
+}
+.two-fold-inner-text p{
+	line-height: 40px;
+}
+.two-fold-inner-text p:nth-child(1){
+    margin-bottom: 30px;
+}
+.two-fold .sublime-luxury-img{
+    margin-bottom: 70px;
+}
+.two-fold-inner-text{margin-bottom: 70px;}
+.two-fold-inner-text p:nth-child(1){margin-bottom: 30px;}
+.two-fold .sublime-luxury-img{margin-bottom: 70px;}
+.two-fold .visit-terminal-btn{
+	font-family: "Lora";
+	border: solid 1px #011e41;
+	border-radius: 0;
+	background: transparent;
+	color: #011e41;
+	letter-spacing: 3px;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 13px 0;
+	transition: all ease-in-out .3s;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+}
+.two-fold .visit-terminal-btn:hover{background: #F0EFF0;}
+/* End Two Fold Module Component 2 */
+/* Start Two Fold Module Component 2 */
+.two-fold-2{
+    background-position: left;
+    padding: 205px 0;
+    background-image: url("./assets/images/tailored.jpg");
+}
+.two-fold-2 p:nth-child(1){
+    margin-bottom: 70px;
+}
+.tailored-icon{
+	margin-right: 20px;
+	color: #011e41;
+	width: 30px;
+    text-align: center;
+}
+.common-btn{
+	font-family: "Lora";
+	border: solid 1px #011e41;
+	border-radius: 0;
+	background: transparent;
+	color: #011e41;
+	letter-spacing: 3px;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 13px 20px;
+	transition: all ease-in-out .3s;
+}
+.common-btn:hover{background: #F0EFF0;}
+.tailored-list li{margin-bottom: 40px;}
+.tailored-list{
+    margin-bottom: 70px;
+}
+.tailored-list p{line-height: 1.5;}
+/* Start Our Story */
+.Short-Description{
+    padding: 93px 0;
+}
+.description-content{
+    max-width: 740px;
+	width: 100%;
+    margin: 0 auto;
+}
+.description-img{
+    margin-bottom: 40px;
+}
+.Short-Description .description{
+    margin-bottom: 40px;
+	padding: 0 10px;
+}
+/* FORM GENERAL */
+.lora-semi{font-family:"Lora"; font-weight:600;}
+.form-page-title{margin-bottom:11px;}
+.custom-w{width:100%;max-width: 570px;}
+.aviation-form .accordion-button:focus {z-index:3; border-color:#011e41; box-shadow:none;}
+.w-p{min-width:160px; margin-right:50px;}
+.asterik{color:#d30202;}
+.form-small-text{font-size:20px; font-weight:600; line-height:27px; color:#011e41;}
+.extra-small-text{font-size:16px; font-weight:600; line-height:1.69; color:#011e41;}
+.aviation-form{ height:100%; display:flex; flex-direction:column; justify-content:space-between;padding-bottom: 65px;}
+.form-header{padding:58px 0px 21px 0px;}
+.form-footer{padding:20px 0px; background-color:#011e41; position:fixed; bottom:0; width:100%;}
+.form-header .form-logo{width:120px; height:68px;} .form-header .form-logo img{width:100%; height:100%; object-fit:contain;}
+.form-h3 {margin-bottom:11px; font-family:"Lora"; font-size:50px; font-weight:500; line-height:78px; color:#011e41;}
+.form-p {font-size:18px; line-height:27px; color:#011e41;}
+.form-title{font-family:"Lora"; font-size:20px; font-weight:600; line-height:27px; color: #011e41; margin-bottom:20px; text-transform:capitalize;}
+.form-title.sub-title{font-size:26px;}
+.general-form{padding:21px 0px;}
+.general-form fieldset{margin-bottom:40px;}
+.general-form .form-group{margin-bottom:30px;}
+.general-form .form-group .form-label{font-size:16px; font-weight:600; line-height:27px; color:#011e41; margin-bottom:8px;}
+.general-form .form-group .form-control , .general-form .form-group .form-select{border:1px solid #4d627a; font-size:12px; line-height:18px; border-radius:0%; background-color:#fff;height: 40px;}
+.general-form .form-group textarea.form-control{height: auto;}
+.general-form .form-group .form-control:focus , .general-form .form-group .form-select:focus{box-shadow:0 0 0 -0.75rem #011e41;}
+.form-border{border:1px solid #4d627a; height:40px; border-radius:0%; background-color:#fff; display:flex; align-items:center; justify-content:space-between; padding-right:10px;}
+.form-border input, .general-form .form-group .form-border .form-control, .general-form .form-group .form-border .form-select{height:auto;}
+.custom-radio-btn{padding:0px 0px 0px 0px;margin: 50px 0;}
+.input-icon{width:15px;}
+.calender{position:relative;} .calender .calender-date{position:absolute; top:0; right:0; bottom:0; left:0; opacity:0;}
+/* MEDIA QUERY */
+@media (max-width: 1199px) {
+.container{max-width: 960px;}
+h1 {font-size: 70px;line-height: 80px;margin-bottom: 25px;}
+h2 {font-size:50px; line-height:1.5;}
+p {font-size:18px; line-height:35px;}
+.page-subtitle {padding:0 15px;}
+.page-title p {font-size:16px; line-height:30px;}
+.tailored-list p{line-height: 1.5;}
+.main-page-title {padding-bottom:50px;}
+.page-title h2 {padding-bottom:18px;}
+.section-bottom, .tour, .walk-through-terminal, .take-tour{padding-bottom:70px;}
+.trivial, .walk-through-terminal, .private-lounge, .fascilities, .comfort-service, .take-tour {padding-top:70px}
+.page-subtitle {font-size:15px; line-height:29px; letter-spacing:2px;}
+.horizon {padding-bottom:40px;}
+/* Two Fold Module Start */
+.two-fold-content {padding: 130px 60px 130px 80px;background: #fff; width:auto;}
+.two-fold {padding-bottom: 200px;}
+/* Two Fold Module End */
+.form-small-text{font-size:18px; line-height:25px;}
+.aviation-form{ height:100%; display:flex; flex-direction:column; justify-content:space-between;}
+.form-header{padding:40px 0px 12px 0px} .form-header .form-logo{width:80px;}
+.general-form{padding:21px 0px;}
+.form-h3 {font-size:40px; line-height:50px;}
+.form-p {font-size:16px; line-height:20px;}
+.form-title{ font-size:20px; line-height:1.35; color: #011e41; margin-bottom:20px; text-transform:capitalize;}
+.general-form .form-group{margin-bottom:25px;}
+.general-form .form-group .form-label{font-size:16px; line-height:1.69;}
+.custom-radio-btn{padding:20px 0px 0px 0px;}
+.elite-forrm-footer, .form-footer {padding:15px 0px;}
+.beige-button {padding:5px 16px; border: 1px solid #fdc99a;}
+.light-button {padding:5px 16px;}
+}
+@media (max-width: 991px) {
+	.container{max-width: 720px;}
+	h1 {font-size: 55px;line-height: 62px;margin-bottom: 20px;}
+	/* Two Fold Module Start */
+	.two-fold{background-size: cover;}
+	.two-fold-content {padding: 100px 40px 100px 60px;background: #fff;}
+	.two-fold-content h2 {margin-bottom: 55px;}
+	.two-fold-2{padding: 180px 0;}
+	/* Two Fold Module End */
+	/* Description Section Start*/
+	/* .description-content{width: 85%;} */
+	.Short-Description{padding: 80px 0;}
+	/* Description Section End*/
+	.two-fold-inner-text p{
+		line-height: 30px;
+	}
+	
+}
+@media (max-width: 767px) {
+.container{max-width: 540px;}
+h1 {font-size: 50px;line-height: 54px;margin-bottom: 15px;}
+h2 {font-size:40px; line-height:60px;}
+.section-bottom, .tour, .walk-through-terminal, .take-tour{padding-bottom:50px;}
+.trivial, .walk-through-terminal, .private-lounge, .fascilities, .comfort-service, .take-tour {padding-top:50px}
+h2 {font-size:40px; line-height:1.5;}
+p {font-size:16px; line-height:32px;}
+.card-blue-btn, .blue-btn {font-size:16px; line-height:20px; padding:14px 18px;}
+.theme-btn {font-size:16px; line-height:20px; letter-spacing:2px; padding:14px 30px 14px 30px;}
+#button-style:hover #spin {width:225%;}
+.main-page-title {padding-bottom:40px;}
+.page-title h2 {padding-bottom:13px;}
+/* Two Fold Module Start */
+.two-fold-content {padding: 80px 40px 80px 60px;background: #fff;}
+.two-fold-content h2 {margin-bottom: 40px;}
+.two-fold {padding-bottom: 180px;}
+.two-fold-2{padding: 150px 0;}
+.two-fold-inner-text {margin-bottom: 60px;}
+.tailored-list li{margin-bottom: 30px;}
+.tailored-list p{line-height: 1.5;}
+/* Two Fold Module End */
+/* Description Section Start*/
+.Short-Description{padding: 70px 0;}
+/* Description Section End*/
+.two-fold-inner-text p{
+	line-height: 25px;
+}
+.w-p{margin-right:20px; width:100px;}
+.form-p {text-align:center; margin:12px 0px 0px 0px; width:100%;}
+.form-header{padding:15px 0px 10px 0px} .form-header .form-logo{width:60px;}
+.form-h3 {font-size:35px; line-height:40px; text-align:center;}
+.general-form {margin-bottom:10px; padding:10px 0px;}
+.form-p {font-size:14px; line-height:18x;}
+.form-title{text-align:center; margin-bottom: 10px; font-size:17px;}
+.elite-forrm-footer .btn-next, .elite-forrm-footer .btn-next:focus{padding: 5px 15px;}
+.extra-small-text{font-size:15px; line-height:25px;}
+.general-form fieldset {margin-bottom:25px;}
+.elite-offer-services .service-name {font-size:23px; line-height:30px;}
+.elite-offer-services .service-price {font-size:17px; line-height:19px;}
+.elite-form .custom-radio .checkmark {padding:22px 22px 30px;}
+.form-title.sub-title {font-size:20px;}
+
+}
+@media (max-width: 575px) {
+h1 {font-size: 42px;line-height: 46px;}
+.section-bottom, .tour, .walk-through-terminal, .take-tour{padding-bottom:35px;}
+.trivial, .walk-through-terminal, .private-lounge, .fascilities, .comfort-service, .take-tour {padding-top:40px}
+h2 {font-size:28px; line-height:1.4;}
+p {font-size:14px; line-height:28px;}
+.card-blue-btn, .blue-btn {font-size:14px; line-height:18px; padding:12px 15px;}
+.page-title p {font-size:14px; line-height:20px; width:auto;}
+.horizon {padding-bottom:25px;}
+.horizon::after {border-top:1px solid #888;}
+.theme-btn {font-size:14px; line-height:18px; letter-spacing:2px; padding:12px 25px 12px 25px}
+#button-style:hover #spin {width:232%;}
+.main-page-title {padding-bottom:30px;}
+.page-title h2 {padding-bottom:13px;}
+/* Two Fold Module Start */
+.two-fold {padding-bottom: 150px;}
+.two-fold-content {padding: 40px 20px 40px 20px;}
+.two-fold-inner {padding-left: 40px;}
+.two-fold-inner::before{width: 30px;}
+.two-fold-inner-text p:nth-child(1) {margin-bottom: 20px;}
+.two-fold-inner-text {margin-bottom: 40px;}
+.two-fold .sublime-luxury-img {margin-bottom: 50px;}
+.two-fold-2{padding: 130px 0;}
+.two-fold .visit-terminal-btn{font-size: 16px;line-height: 19px;letter-spacing: 1px;}
+.tailored-list li{margin-bottom: 20px;}
+.tailored-list{margin-bottom: 40px;}
+.tailored-list p{line-height: 1.5;}
+/* Two Fold Module End */
+/* Description Section Start*/
+.Short-Description{padding: 50px 0;}
+/* Description Section End*/
+.form-footer , .elite-forrm-footer{padding:12px 0px;}
+.common-btn{font-size:16px;line-height: 20px; padding:12px 15px;}
+.beige-button , .light-button{padding:5px 15px 5px 15px;}
+.general-form {margin-bottom:0px;}
+.general-form .form-group {margin-bottom:15px;}
+.form-header .form-logo {width:50px;}
+.elite-forrm-footer .btn-next, .elite-forrm-footer .btn-next:focus {padding:5px 15px;}
+.general-form .form-group .form-label {font-size:14px; line-height:20px;}
+}
+@media (max-width:476px) {
+.form-blue-btn{width:45%;}
+.mobile-col > .extra-small-text{margin-bottom: 10px;}
+.elite-offer-services .elite-offer-service {
+    width: 100%;
+}
+}
