@@ -269,5 +269,9 @@ li.nav-item.dropdown:hover ul.dropdown-menu {
   .header.dark .nav-link, .header.dark .navbar-expand-lg .navbar-nav .nav-link:hover, .header.dark .navbar-expand-lg .navbar-nav .nav-link.router-link-exact-active {
     color: #ffffff;
 }
+.header.dark .navbar-expand-lg .navbar-nav .nav-link:before {
+    color: #fff;
+    border-bottom: 2px solid #ffffff;
+}
 }
 </style>
