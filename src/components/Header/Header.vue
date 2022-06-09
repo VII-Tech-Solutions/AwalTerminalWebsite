@@ -397,6 +397,7 @@ li.nav-item.dropdown:hover ul.dropdown-menu {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    overflow: auto;
 }
 .mobile-menu .navbar-nav {
     width: 100%;
