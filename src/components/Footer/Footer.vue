@@ -19,6 +19,12 @@
                                 <li><router-link to="/contact" class="text-capitalize">Contact Us</router-link></li>
                             </ul>
                         </div>
+                        <div class="operated-by">
+                            <span>Operated by</span>
+                            <div class="image">
+                                <img src="images/operated-by.png" alt="" class="img-fluid"/>
+                            </div>
+                        </div>
                    </div>
               </div>
                <div class="footer-copyright">
@@ -130,6 +136,7 @@ export default {
 .footer-nav > div{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .footer-nav .footer-nav-links ul {
     display: flex;
@@ -212,6 +219,11 @@ export default {
     .footer-service .footer-content .service-list ul li figure{width: 150px; height: auto;}
     .footer-service{min-height: 80vh;padding: 50px 0;}
     .footer-copyright .footer-copyrigt-links ul li:not(:last-child) {margin-right: 25px;}
+.footer-nav > div{flex-direction: column;}
+.footer-nav .logo-img{
+    margin-right: 0;
+}
+.footer-nav-links{margin: 30px 0;}
 }
 @media (max-width: 767px) {
     .footer-service .footer-content .service-list ul li figure{width: 130px;}

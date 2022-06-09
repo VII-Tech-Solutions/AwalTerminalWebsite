@@ -380,6 +380,17 @@ textarea {
 .custom-radio-btn{padding:0px 0px 0px 0px;margin: 50px 0;}
 .input-icon{width:15px;}
 .calender{position:relative;} .calender .calender-date{position:absolute; top:0; right:0; bottom:0; left:0; opacity:0;}
+.operated-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #011e41;
+    font-size: 14px;
+}
+.operated-by .image {
+    width: 165px;
+    margin-left: 15px;
+}
 /* MEDIA QUERY */
 @media (max-width: 1199px) {
 .container{max-width: 960px;}
@@ -412,6 +423,9 @@ p {font-size:18px; line-height:35px;}
 .elite-forrm-footer, .form-footer {padding:15px 0px;}
 .beige-button {padding:5px 16px; border: 1px solid #fdc99a;}
 .light-button {padding:5px 16px;}
+.footer-nav .footer-nav-links ul li:not(:last-child) {
+    margin-right: 20px;
+}
 }
 @media (max-width: 991px) {
 	.container{max-width: 720px;}
