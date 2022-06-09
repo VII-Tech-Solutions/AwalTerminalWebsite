@@ -128,6 +128,7 @@ export default {
 }
 .footer-nav .logo-img {
     margin-right: 60px;
+    width: 65px;
 }
 .footer-nav {
     padding: 30px 0px;

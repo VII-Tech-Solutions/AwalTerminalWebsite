@@ -3,9 +3,9 @@
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container">
         <router-link class="navbar-brand" to="/">
-          <img class="logo" src="../../assets/images/logo.png" alt="logo a" />
+          <img class="img-fluid logo" src="../../assets/images/logo.png" alt="logo a" />
           <img
-            class="log-dark"
+            class="img-fluid log-dark"
             src="../../assets/images/footer-logo.png"
             alt="logo a"
           />
@@ -211,6 +211,7 @@ export default {
 }
 .header .navbar .navbar-brand {
   margin-right: 35px;
+  width: 65px;
 }
 .header .navbar-expand-lg .navbar-nav .nav-item {
   padding: 0 25px;

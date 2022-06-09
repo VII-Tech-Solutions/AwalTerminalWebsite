@@ -88,19 +88,31 @@
                                     <div class="col-lg-2 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Adults <span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="e.g. 2">
+                                            <div class="input-group">
+                                                <span class="fa fa-minus minus-icon"></span>
+                                                <input type="text" class="form-control" placeholder="e.g. 2"/>
+                                                <span class="fa fa-plus plus-icon"></span>
+                                            </div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Children <span class="fw-normal text-lowercase">(2 to 12 years)</span> </label>
-                                            <input type="text" class="form-control" placeholder="e.g. 1">
+                                             <div class="input-group">
+                                                <span class="fa fa-minus minus-icon"></span>
+                                                <input type="text" class="form-control" placeholder="e.g. 1"/>
+                                                <span class="fa fa-plus plus-icon"></span>
+                                            </div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Infants <span class="fw-normal text-lowercase">(below 2 years)</span></label>
-                                            <input type="text" class="form-control" placeholder="e.g. 0">
+                                             <div class="input-group">
+                                                <span class="fa fa-minus minus-icon"></span>
+                                                <input type="text" class="form-control" placeholder="e.g. 0"/>
+                                                <span class="fa fa-plus plus-icon"></span>
+                                            </div>
                                         </div>  
                                     </div>
                                 </div>

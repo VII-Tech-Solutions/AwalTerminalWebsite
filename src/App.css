@@ -391,6 +391,27 @@ textarea {
     width: 165px;
     margin-left: 15px;
 }
+.input-group .minus-icon, .input-group .plus-icon {
+    color: #4d627a;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9;
+	cursor: pointer;
+}
+.input-group .minus-icon {
+    left: 10px;
+}
+.input-group .plus-icon {
+    right: 10px;
+}
+.input-group .form-control {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
 /* MEDIA QUERY */
 @media (max-width: 1199px) {
 .container{max-width: 960px;}

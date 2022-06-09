@@ -38,7 +38,12 @@
                                         </div>   
                                         <div class="form-group">
                                             <label class="form-label">Nature of Flight<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Nature of Flight">
+                                            
+                                             <div class="input-group">
+                                                <span class="fa fa-minus minus-icon"></span>
+                                                <input type="text" class="form-control" placeholder="Nature of Flight">
+                                                <span class="fa fa-plus plus-icon"></span>
+                                            </div>
                                         </div>  
                                     </div>
                                     <div class="col-lg-6 mb-0">
