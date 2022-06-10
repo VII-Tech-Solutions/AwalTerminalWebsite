@@ -18,6 +18,7 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          id="toggle"
         >
           <span class="navbar-toggler-icon"></span>
           <span class="icon fa fa-times"></span>
@@ -73,37 +74,37 @@
           <div class="mobile-menu">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <router-link to="/" class="nav-link active">Home</router-link>
+                <router-link to="/"   @click="item()" class="nav-link active">Home</router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/tour" class="nav-link"
+                <router-link to="/tour" @click="item()"  class="nav-link"
                   >Tour the terminal</router-link
                 >
               </li>
               <li class="nav-item">
-                <router-link to="/story" class="nav-link"
+                <router-link to="/story" @click="item()"  class="nav-link"
                   >Our Story</router-link
                 >
               </li>
               <li class="nav-item ">
-                <router-link to="/services" class="nav-link "
+                <router-link to="/services" @click="item()"  class="nav-link "
                   >All Services</router-link
                 >
                 <ul class="dropdown-menu">
                   <li>
-                    <router-link class="dropdown-item" to="/elite-services"
-                      ><span class="icon"><img src="../../assets/images/icons/star.svg" alt="luggage" class=" img-fluid"/></span> Services</router-link
+                    <router-link class="dropdown-item" @click="item()"  to="/elite-services"
+                      ><span class="icon"><img src="../../assets/images/icons/star.svg" alt="luggage" class=" img-fluid"/></span>Elite Services</router-link
                     >
                   </li>
                   <li>
-                    <router-link class="dropdown-item" to="/general-aviation"
+                    <router-link class="dropdown-item" @click="item()"  to="/general-aviation"
                       ><span class="icon"><img src="../../assets/images/icons/flight-blue.svg" alt="luggage" class=" img-fluid"/></span>General Aviation</router-link
                     >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <router-link to="/contact" class="nav-link"
+                <router-link @click="item()"  to="/contact" class="nav-link"
                   >Contact Us</router-link
                 >
               </li>
@@ -112,17 +113,17 @@
               <div class="footer-copyrigt-links">
                 <ul>
                   <li>
-                    <router-link class="text-capitalize" to="/"
+                    <router-link class="text-capitalize" @click="item()" to="/"
                       >Terms & Conditions</router-link
                     >
                   </li>
                   <li>
-                    <router-link class="text-capitalize" to="/"
+                    <router-link class="text-capitalize" @click="item()" to="/"
                       >Privacy Policy</router-link
                     >
                   </li>
                   <li>
-                    <router-link class="text-capitalize" to="/"
+                    <router-link class="text-capitalize" @click="item()" to="/"
                       >Cookies Policy</router-link
                     >
                   </li>
@@ -136,7 +137,7 @@
               <div class="operated-by">
                 <span>Operated by</span>
                 <div class="image">
-                  <img src="images/operated-by-mobile.png" alt="" class="img-fluid" />
+                  <img src="/images/operated-by-mobile.png" alt="" class="img-fluid" />
                 </div>
               </div>
             </div>
@@ -172,6 +173,16 @@ export default {
         this.classHeader = "header";
       }
     },
+    item() {
+      let element = document.getElementById("navbarSupportedContent");
+      let element2 = document.getElementById("toggle");
+
+      element.classList.remove("show");
+      element2.classList.add("collapsed");
+      
+    },
+        
+
   },
 };
 </script>

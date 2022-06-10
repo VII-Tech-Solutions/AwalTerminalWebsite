@@ -66,6 +66,7 @@ export default {
 .trival-carousel .carousel__slide--next > .carousel__item {transform: scale(0.9) translate(-10px);}
 .trival-carousel .carousel__slide--prev > .carousel__item {transform: scale(0.9) translate(10px);}
 .trival-carousel .carousel__slide--active > .carousel__item {transform: scale(1.1);}
+.trival-carousel .custom-carousal .carousel__track {    margin-left: 20px;}
 /* MEDIA QUERY */
 @media (max-width: 1399px) {
 .trival-carousel .carousel__prev {right:18%; bottom: 80px;}

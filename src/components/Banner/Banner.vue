@@ -25,7 +25,7 @@ export default {
     data() {
         return {
             HeadingTopText: "Welcome to Awal Private Terminal",
-            MainHeading: "We’ll take it from here",
+            MainHeading: "We'll take it from here",
             SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
         };
     },
@@ -66,13 +66,16 @@ export default {
     display: inline-block;
 }
 @media (max-width: 991px) {
+    .banner{
+    background-attachment: scroll;
+    }
     .banner-content .sub-heading{width: 80%;}
 }
 @media (max-width: 767px){
     .banner-content .sub-heading {width: 90%;}
     .banner-content .sub-heading {font-size: 16px;line-height: 1.3;}
     .banner{
-        padding: 40px 0;
+        padding: 80px 0;
     }
 }
 @media (max-width: 575px){

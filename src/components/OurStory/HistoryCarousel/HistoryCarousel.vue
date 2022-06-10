@@ -81,7 +81,7 @@
               />
             </figure>
             <span class="slider-description"
-              >Laying of Foundation for Old Terminal Building in 1960</span
+              >Laying of Foundation for Old Terminal Building in 1970</span
             >
             <strong class="slider-date">1970s</strong>
           </div>
@@ -97,7 +97,7 @@
               />
             </figure>
             <span class="slider-description"
-              >Laying of Foundation for Old Terminal Building in 1960</span
+              >Laying of Foundation for Old Terminal Building in 1930</span
             >
             <strong class="slider-date">1930s</strong>
           </div>
@@ -113,7 +113,7 @@
               />
             </figure>
             <span class="slider-description"
-              >Laying of Foundation for Old Terminal Building in 1960</span
+              >Laying of Foundation for Old Terminal Building in 1990</span
             >
             <strong class="slider-date">1990s</strong>
           </div>
@@ -129,7 +129,7 @@
               />
             </figure>
             <span class="slider-description"
-              >Laying of Foundation for Old Terminal Building in 1960</span
+              >Laying of Foundation for Old Terminal Building in 2000</span
             >
             <strong class="slider-date">2000s</strong>
           </div>
@@ -145,7 +145,7 @@
               />
             </figure>
             <span class="slider-description"
-              >Laying of Foundation for Old Terminal Building in 1960</span
+              >Laying of Foundation for Old Terminal Building in 2010</span
             >
             <strong class="slider-date">2010s</strong>
           </div>
@@ -161,7 +161,7 @@
               />
             </figure>
             <span class="slider-description"
-              >Laying of Foundation for Old Terminal Building in 1960</span
+              >Laying of Foundation for Old Terminal Building in 2020</span
             >
             <strong class="slider-date">2020s</strong>
           </div>
@@ -177,28 +177,28 @@
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 export default {
   mounted() {
-    this.scrollAnimation();
+    // this.scrollAnimation();
   },
 
   methods: {
-    scrollAnimation() {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".slider-wrapper",
-            start: "center center",
-            end: "bottom top",
-            markers: false,
-            scrub: true,
-            pin: true,
-          },
-        })
-        .to(".slider-wrapper", { x: "-470%", duration: 50 });
-    },
+    // scrollAnimation() {
+    //   gsap
+    //     .timeline({
+    //       scrollTrigger: {
+    //         trigger: ".slider-wrapper",
+    //         start: "center center",
+    //         end: "bottom top",
+    //         markers: false,
+    //         scrub: true,
+    //         pin: true,
+    //       },
+    //     })
+    //     .to(".slider-wrapper", { x: "-470%", duration: 50 });
+    // },
     item() {
       // window.scrollTo(0, 20);
       gsap.to(".slider-wrapper", { x: "0%" });

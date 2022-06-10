@@ -44,7 +44,7 @@
 						</div>
 						<div class="elite-offer-service">
 							<label class="custom-radio">
-								<input type="radio" checked="checked" name="radio" />
+								<input type="radio"  name="radio" />
 								<div class="checkmark">
 									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
@@ -72,6 +72,9 @@
 <script>
 	import EliteFormFooter from './EliteFormFooter.vue';
 	export default {
+		mounted () {
+  window.scrollTo(0, 0)
+},
 		components: {
 			EliteFormFooter
 		},

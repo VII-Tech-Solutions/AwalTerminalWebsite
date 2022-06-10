@@ -246,6 +246,12 @@
 </template>  
 
 <script>
+export default {
+
+mounted () {
+  window.scrollTo(0, 0)
+}
+}
 import '@fortawesome/fontawesome-free/js/all.js';
 </script>
 <style>

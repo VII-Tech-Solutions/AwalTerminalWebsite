@@ -22,7 +22,7 @@
                         <div class="operated-by">
                             <span>Operated by</span>
                             <div class="image">
-                                <img src="images/operated-by.png" alt="" class="img-fluid"/>
+                                <img src="/images/operated-by.png" alt="" class="img-fluid"/>
                             </div>
                         </div>
                    </div>
@@ -218,7 +218,7 @@ export default {
 }
 @media (max-width: 991px) {
     .footer-service .footer-content .service-list ul li figure{width: 150px; height: auto;}
-    .footer-service{min-height: 80vh;padding: 50px 0;}
+    .footer-service{min-height: 80vh;padding: 50px 0;background-attachment: scroll;}
     .footer-copyright .footer-copyrigt-links ul li:not(:last-child) {margin-right: 25px;}
 .footer-nav > div{flex-direction: column;}
 .footer-nav .logo-img{

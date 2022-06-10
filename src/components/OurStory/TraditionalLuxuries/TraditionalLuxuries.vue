@@ -11,7 +11,7 @@
                                 <p>Our user-friendly and easily accessible services include, but are not limited to, Meet and Assist, Lounge, Porterage, and Baggage Wrapping. We also provide assistance services that extend from the moment customers arrive at the airport until they take their seat aboard the aircraft.</p>
                             </div>
                         </div>
-                        <div class="quote" data-aos="fade-up" data-aos-duration="2500">“At Hala Bahrain, we work to turn your dream travel experience into reality.”</div>
+                        <div class="quote" data-aos="fade-up" data-aos-duration="2500">"At Hala Bahrain, we work to turn your dream travel experience into reality."</div>
                     </div>
                 </div>
             </div>
