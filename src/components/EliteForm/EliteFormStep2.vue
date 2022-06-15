@@ -43,7 +43,7 @@
                                     <div class="col-lg-3 ">
                                          <div class="form-group">
                                             <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
+                                            <select class="form-select" v-model="arriving_from_airport" id="inputGroupSelect01">
                                                 <option selected>Select an airport </option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -55,7 +55,7 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">date<span class="asterik">*</span></label>
                                             <div class="form-border">
-                                                <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
+                                                <input type="date" onkeydown="return false"  v-model="arrival_date" class="form-control border-0" placeholder="DD/MM/YYYY">
                                                 <div class="d-flex align-items-center">
                                                     <span class="input-icon">
                                                         <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
@@ -67,7 +67,7 @@
                                     <div class="col-lg-2 ">
                                         <div class="form-group">
                                             <label class="form-label">Time<span class="asterik">*</span></label>
-                                            <div class="form-border"><input type="text" class="form-control border-0" placeholder="HH:MM">
+                                            <div class="form-border"><input onkeydown="return false"  type="time" class="form-control border-0" v-model="arrival_time" placeholder="HH:MM">
                                                 <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
                                             </div>
                                         </div>  
@@ -77,7 +77,41 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Flight Number <span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="e.g. BAH2233">
+                                            <input type="text" class="form-control" v-model="flight_number" placeholder="e.g. BAH2233">
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 ">
+                                         <div class="form-group">
+                                            <label class="form-label" for="inputGroupSelect01">Flight Type<span class="asterik">*</span></label>
+                                            <select class="form-select" v-model="flight_type" id="inputGroupSelect01">
+                                              
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                            
+                                            </select>
+                                        </div>  
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label text-capitalize">date<span class="asterik">*</span></label>
+                                            <div class="form-border">
+                                                <input type="date" onkeydown="return false"  v-model="date" class="form-control border-0" placeholder="DD/MM/YYYY">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="input-icon">
+                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 ">
+                                        <div class="form-group">
+                                            <label class="form-label">Time<span class="asterik">*</span></label>
+                                            <div class="form-border"><input type="time" onkeydown="return false"  class="form-control border-0" v-model="time" placeholder="HH:MM">
+                                                <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
+                                            </div>
                                         </div>  
                                     </div>
                                 </div>
@@ -89,9 +123,10 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Adults <span class="asterik">*</span></label>
                                             <div class="input-group">
-                                                <span class="fa fa-minus minus-icon"></span>
-                                                <input type="text" class="form-control" placeholder="e.g. 2"/>
-                                                <span class="fa fa-plus plus-icon"></span>
+                                                <a @click="AdultDec()"><span class="fa fa-minus minus-icon" ></span></a>
+                                                <input type="text" class="form-control" placeholder="e.g. 2" v-model="number_of_adults" />
+                                                <a @click="AdultInc()">
+                                                <span class="fa fa-plus plus-icon"></span></a>
                                             </div>
                                         </div>  
                                     </div>
@@ -99,9 +134,11 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Children <span class="fw-normal text-lowercase">(2 to 12 years)</span> </label>
                                              <div class="input-group">
-                                                <span class="fa fa-minus minus-icon"></span>
-                                                <input type="text" class="form-control" placeholder="e.g. 1"/>
-                                                <span class="fa fa-plus plus-icon"></span>
+                                                 <a @click="number_of_childrenDec()">
+                                                <span class="fa fa-minus minus-icon"></span></a>
+                                                <input type="text" class="form-control" placeholder="e.g. 1" v-model="number_of_children"/>
+                                                <a @click="number_of_childrenInc()">
+                                                <span class="fa fa-plus plus-icon"></span></a>
                                             </div>
                                         </div>  
                                     </div>
@@ -109,14 +146,40 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Infants <span class="fw-normal text-lowercase">(below 2 years)</span></label>
                                              <div class="input-group">
+                                                 <a @click="number_of_infantsDec">
                                                 <span class="fa fa-minus minus-icon"></span>
-                                                <input type="text" class="form-control" placeholder="e.g. 0"/>
-                                                <span class="fa fa-plus plus-icon"></span>
+                                                 </a>
+                                                <input type="text" class="form-control" placeholder="e.g. 0" v-model="number_of_infants" />
+                                                <a @click="number_of_infantsInc">
+                                                <span class="fa fa-plus plus-icon"></span></a>
                                             </div>
                                         </div>  
                                     </div>
                                 </div>
                             </fieldset>
+                            <!-- <fieldset>
+                                <legend class="form-title">Number of Passengers </legend>
+                                 <div class="row align-items-baseline">
+                                    <div class="col-lg-2 ">
+                                        <div class="form-group">
+                                            <label class="form-label text-capitalize">number_of_adults <span class="asterik">*</span></label>
+                                            <input type="text" class="form-control" v-model="number_of_adults" placeholder="e.g. 2">
+                                        </div>  
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label text-capitalize">number_of_children <span class="fw-normal text-lowercase">(2 to 12 years)</span> </label>
+                                            <input type="text" class="form-control" v-model="number_of_children" placeholder="e.g. 1">
+                                        </div>  
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="form-group">
+                                            <label class="form-label text-capitalize">number_of_infants <span class="fw-normal text-lowercase">(below 2 years)</span></label>
+                                            <input type="text" class="form-control" v-model="number_of_infants"  placeholder="e.g. 0">
+                                        </div>  
+                                    </div>
+                                </div>
+                            </fieldset> -->
                         </form>
                     </div>
                 </div>
@@ -127,10 +190,15 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <router-link to="/elite-form1" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
+                        <router-link to="/elite-form" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-block">
-                        <router-link to="/elite-form3"  class="btn-next d-inline-block align-top transition text-capitalize">next</router-link>
+                      <span v-if="!(arriving_from_airport && arrival_date && arrival_time && flight_number && number_of_adults )">
+                            <button :disabled="notFormValid">Next</button>
+                        </span>
+                      <span v-if="arriving_from_airport && arrival_date && arrival_time && flight_number && number_of_adults ">
+                         <router-link to="/elite-form3" @click="setData()"  class="btn-next d-inline-block align-top transition">next</router-link>
+                         </span>
                     </div>
                 </div>
             </div>
@@ -139,15 +207,139 @@
 </template>  
 
 <script>
-export default {
-
-mounted () {
-  window.scrollTo(0, 0)
-}
-}
 import '@fortawesome/fontawesome-free/js/all.js';
+export default {
+    mounted () {
+     window.scrollTo(0, 0)
+    },   
+  data() {
+      debugger;
+        var obj = JSON.parse(localStorage.elitedata);
+    return {
+         number_of_adults:obj==undefined ?0:obj.number_of_adults,
+         number_of_children:obj==undefined ?0:obj.number_of_children,
+         number_of_infants:obj==undefined ?0:obj.number_of_infants,
+         notFormValid: true,
+         service_id: obj.service_id,  
+          arriving_from_airport : obj==undefined ?'':obj.arriving_from_airport,  
+         arrival_date : obj==undefined ? '' : obj.arrival_date,  
+         arrival_time : obj==undefined ? '': obj.arrival_time,  
+         flight_number : obj==undefined ?'':obj.flight_number,
+         flight_type : obj==undefined ? '' :obj.flight_type,
+         date : obj==undefined ? '' :obj.date,
+         time : obj==undefined ? '' :obj.time,
+         passengers:[{
+                    first_name: "",
+                    last_name: "",
+                    gender: 1,
+                    birth_date: "",
+                    nationality_id: "",
+                    class_id: ""
+                }]
+     }
+        
+    },
+    // validation:{
+    //     arriving_from_airport:{
+    //         required,
+    //     },arrival_date:{
+    //         required,
+    //     },arrival_time:{
+    //         required,
+    //     },flight_number:{
+    //         required,
+    //         minLength:minLength(5),
+    //         maxLength:maxLength(6)
+    //     }
+    // },
+   methods:{
+       AdultInc(){
+           this.number_of_adults = this.number_of_adults + 1;
+           
+       },AdultDec(){
+           if(this.number_of_adults > 0)
+           this.number_of_adults = this.number_of_adults - 1;
+       },
+       number_of_childrenInc(){
+           this.number_of_children = this.number_of_children + 1;
+           
+       },number_of_childrenDec(){
+           if(this.number_of_children > 0)
+           this.number_of_children = this.number_of_children - 1;
+       },
+       number_of_infantsInc(){
+           this.number_of_infants = this.number_of_infants + 1;
+           
+       },number_of_infantsDec(){
+           if(this.number_of_infants > 0)
+           this.number_of_infants = this.number_of_infants - 1;
+       },
+      setData()
+      {
+            var abc= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata) : undefined;
+            var obj = {};
+            obj.number_of_adults =  parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
+            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
+            obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
+            obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
+            for (let i = 0; i < obj.total; i++) {
+                if(abc != undefined){
+                    if(abc.passengers.length == obj.total){
+                         this.passengers.push({
+                            first_name: abc.passengers[i].first_name,
+                            last_name: abc.passengers[i].last_name,
+                            gender: 1,
+                            birth_date: abc.passengers[i].birth_date,
+                            nationality_id: abc.passengers[i].nationality_id,
+                            class_id: abc.passengers[i].class_id
+                        })
+                    }
+                    else if(abc.passengers.length >= obj.total){
+                        this.passengers.push({
+                            first_name: abc.passengers[i].first_name,
+                            last_name: abc.passengers[i].last_name,
+                            gender: 1,
+                            birth_date: abc.passengers[i].birth_date,
+                            nationality_id: abc.passengers[i].nationality_id,
+                            class_id: abc.passengers[i].class_id
+                        })
+                    
+
+                    }
+                    else{
+                        this.passengers.push({
+                            first_name: "",
+                            last_name: "",
+                            gender: 1,
+                            birth_date: "",
+                            nationality_id: "",
+                            class_id: ""
+                        })
+                    }
+                }
+            }
+           if(this.passengers.length > 1){
+                this.passengers.splice(0, 1);
+           }  
+           obj.service_id= this.service_id,
+            obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.arrival_date =  this.arrival_date;
+            obj.arrival_time =  this.arrival_time;
+            obj.flight_number =  this.flight_number;  
+            obj.flight_type = this.flight_type;
+            obj.date = this.date;
+            obj.time = this.time;
+            obj.passengers = this.passengers; 
+            obj.booker = abc == undefined ?  '': abc.booker;
+            debugger;
+            localStorage.setItem('elitedata',JSON.stringify(obj));
+      }
+  }
+  }
 </script>
+
 <style>
+
 .radio-container {
   display: block;
   position: relative;

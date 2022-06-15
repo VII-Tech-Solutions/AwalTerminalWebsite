@@ -38,32 +38,32 @@
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text w-p text-capitalize">aircraft type <span class="asterik">*</span></p>
-                                                    <p class="extra-small-text text-capitalize fw-normal">Airbus A319</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">{{obj.aircraft_type}}</p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text w-p text-capitalize">Registration<span class="asterik">*</span></p>
-                                                    <p class="extra-small-text text-capitalize fw-normal">N978CP</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">{{obj.registration_number}}</p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text w-p text-capitalize">MTOW (KG)<span class="asterik">*</span></p>
-                                                    <p class="extra-small-text text-capitalize fw-normal"> 1200</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal"> {{obj.mtow}}</p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text w-p text-capitalize">Lead Passenger Name<span class="asterik">*</span></p>
-                                                    <p class="extra-small-text text-capitalize fw-normal">Ahmed Abdulla </p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">{{obj.lead_passenger_name}} </p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text w-p">Purpose of Landing<span class="asterik">*</span></p>
-                                                    <p class="extra-small-text fw-normal">Other <br>
-                                                    Some light shopping and going around Bahrain</p>
+                                                    <p class="extra-small-text fw-normal"> {{obj.landing_purpose}}  <br>
+                                                   </p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -89,37 +89,37 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Call Sign<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">N978CP </p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.arrival_call_sign}} </p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">from Airport<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Dubai International Airport</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.arriving_from_airport}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">ETD (UTC Time)<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">24 April, 2022</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.estimated_time_of_arrival}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Arrival Date<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">12:48 PM</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.arrival_date}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-inherit">Nature of Flight<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Private</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.arrival_flight_nature}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Passenger Count<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">3</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.arrival_passenger_count}}</p>
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -134,37 +134,37 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Call Sign<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">N978CP </p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.departure_call_sign}} </p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">To Airport<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Bahrain International Airport</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.departure_to_airport}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">ETD (UTC Time)<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">30 April, 2022</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.estimated_time_of_departure}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Departure Date<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">12:48 PM</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.departure_date}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-inherit">Nature of Flight<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Private</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.departure_flight_nature}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Passenger Count<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">3</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.departure_passenger_count}}</p>
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -194,37 +194,37 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Full Name<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Ahma Yusuf </p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.operator_full_name}} </p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Country<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">United Arab Emirates</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.operator_country}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Telephone Number<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">+973 1234 5678</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.operator_tel_number}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Email Address<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">ahmad@example.com</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.operator_email}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Address<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Street: 68066, Eliot City: Portola State: 123, Zip: 83472</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.operator_address}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Billing Address<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Street: 68066, Eliot City: Portola State: 123, Zip: 83472</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.operator_billing_address}}</p>
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -239,37 +239,37 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Full Name<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Abdulla Khamees</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.agent_fullname}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Country<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Bahrain</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.agent_country}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Telephone Number<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">+973 1234 5678</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.agent_phoneNumber}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Email Address<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">abdulla@example.com</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.agent_email}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Address<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Street: 68066, Eliot City: Portola State: 123, Zip: 83472</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.agent_address}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Billing Address<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Street: 68066, Eliot City: Portola State: 123, Zip: 83472</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.agent_billing_address}}</p>
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -296,24 +296,9 @@
                                                         <p class="extra-small-text w-p">List of Services</p>
                                                         <div class="details-list">
                                                             <ul class="ul_css">
-                                                                <li>
+                                                                <li v-for="item in obj.services" :key="item">
                                                                     <div class="d-flex align-items-baseline">
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Landing Permit</p>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="d-flex align-items-baseline">
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Catering</p>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="d-flex align-items-baseline">
-                                                                        <p class="extra-small-text text-capitalize fw-normal">Passenger Limo Services</p>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="d-flex align-items-baseline">
-                                                                        <p class="extra-small-text text-inherit fw-normal">Crew Transport (to and from) Downtown Rotana Hotel</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{item}}</p>
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -335,34 +320,34 @@
                                     <div class="accordion-body">
                                         <div class="details-list">
                                         <ul class="ul_css">
-                                            <li>
+                                            <li >
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text text-capitalize list-width">Aircraft Certifications Checklist</p>
-                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">certificate_20220415_f8jq8cdhxedg.PDF</p></a>
+                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">{{textboxobj.airCraftCert}}</p></a>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text list-width text-capitalize">Arrival Gendec</p>
-                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">arrival_20220415_fasdolaw97w3bsd235.PDF</p></a>
+                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">{{textboxobj.arrivalgendec}}</p></a>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text list-width text-capitalize">Departure Gendec</p>
-                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline"> departure_20220415_pkmai856as58lo.PDF</p></a>
+                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline"> {{textboxobj.departureGendec}}</p></a>
                                                 </div>
                                             </li>
                                             <li class="mb-lg-5 mb-3">
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text list-width text-capitalize">Other Documents</p>
-                                                    <p class="extra-small-text fw-normal">_</p>
+                                                    <p class="extra-small-text fw-normal">{{textboxobj.otherDocuments}}</p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text list-width text-capitalize">remarks</p>
-                                                    <p class="extra-small-text fw-normal">I have no remarks, thanks.</p>
+                                                    <p class="extra-small-text fw-normal">{{obj.remarks}}</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -386,7 +371,12 @@
                         <router-link to="/general-aviation-form5" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
-                        <router-link to="/general-aviation-thankyou"  class="beige-button d-inline-block">submit application</router-link>
+
+                     
+                            <button  @click="submitData()" class="beige-button d-inline-block" >submit application</button>
+                
+
+                        <!-- <router-link to="/general-aviation-thankyou"  @click="submitData()"  class="beige-button d-inline-block">submit application</router-link> -->
                     </div>
                 </div>
             </div>
@@ -395,13 +385,40 @@
 </template>  
 
 <script>
-export default {
-
-mounted () {
-  window.scrollTo(0, 0)
-}
-}
+import axios  from 'axios'
 import '@fortawesome/fontawesome-free/js/all.js';
+export default{
+    mounted () {
+     window.scrollTo(0, 0)
+    },
+   data() {
+          var obj= JSON.parse(localStorage.data);
+         
+          return {
+         notFormValid: true,
+         obj: JSON.parse(localStorage.data),
+         textboxobj: JSON.parse(localStorage.textboxdata)
+     }
+    },
+      methods:{
+   async  submitData()
+      {
+      const obj =  JSON.parse(localStorage.data);
+      const response = await axios.post("https://awal.viitech.net/api/general-aviation/", obj);  
+      debugger;
+      if(response.status == 200)
+      {
+        debugger;
+        toastr.success(response.data.message);
+        window.location.href=  "/general-aviation-thankyou";
+          localStorage.removeItem("data");
+          localStorage.removeItem("textboxdata");
+      }
+      
+       
+    }
+  }
+}
 </script>
 <style>
 .detail-section{padding-bottom:50px;}  .accordian-ul > ul > li:not(:last-child){padding-bottom:50px;}

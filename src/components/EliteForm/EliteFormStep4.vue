@@ -25,13 +25,13 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">First Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your first name">
+                                            <input type="text" class="form-control" v-model="booker.first_name" placeholder="Enter your first name">
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Last Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your last name">
+                                            <input type="text" class="form-control" v-model="booker.last_name" placeholder="Enter your last name">
                                         </div>  
                                     </div>
                                 </div>
@@ -39,20 +39,20 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Email Address<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your first name">
+                                            <input type="text" class="form-control" v-model="booker.email" placeholder="Enter your first name">
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Mobile Number<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your last name">
+                                            <input type="text" class="form-control" v-model="booker.mobile_number" placeholder="Enter your last name">
                                         </div>  
                                     </div>
                                 </div>
                                 <div class="row">
                                      <div class="col-lg-6">
                                         <div class="form-group"><label for="exampleFormControlTextarea1" class="form-label text-capitalize">Comments</label>
-                                        <textarea class="form-control" placeholder="Enter any comments that you want us to know about" id="exampleFormControlTextarea1" rows="3"></textarea></div> 
+                                        <textarea class="form-control" placeholder="Enter any comments that you want us to know about" v-model="booker.comments" id="exampleFormControlTextarea1" rows="3"></textarea></div> 
                                     </div>
                                 </div>
                             </fieldset>
@@ -69,7 +69,12 @@
                         <router-link to="/elite-form3" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-block">
-                        <router-link to="/elite-form5"  class="btn-next d-inline-block align-top transition text-capitalize">next</router-link>
+                      <span v-if="!(booker.first_name && booker.last_name && booker.mobile_number)">
+                            <button :disabled="notFormValid">Next</button>
+                        </span>
+                      <span v-if="booker.first_name && booker.last_name && booker.mobile_number">
+                         <router-link to="/elite-form5" @click="setData()"  class="btn-next d-inline-block align-top transition">next</router-link>
+                         </span>
                     </div>
                 </div>
             </div>
@@ -78,13 +83,67 @@
 </template>  
 
 <script>
-export default {
-
-mounted () {
-  window.scrollTo(0, 0)
-}
-}
 import '@fortawesome/fontawesome-free/js/all.js';
+export default {
+    mounted () {
+     window.scrollTo(0, 0)
+    },
+  data() {
+      debugger;
+      var obj = JSON.parse(localStorage.elitedata);
+    return {
+        number_of_adults:obj.number_of_adults,
+         number_of_children:obj.number_of_children,
+         number_of_infants:obj.number_of_infants,
+         notFormValid: true,
+         service_id: obj.service_id,
+         Totle: obj.total,
+        arriving_from_airport : obj.arriving_from_airport,  
+         arrival_date : obj.arrival_date,  
+         arrival_time : obj.arrival_time,  
+         flight_number : obj.flight_number,
+         flight_type : obj.flight_type,
+         date : obj.date,
+         time :obj.time,   
+			// passengers info
+         passengers:obj.passengers,
+         //booker Info
+        booker:{
+            first_name:obj.booker.first_name,
+			last_name:obj.booker.last_name,
+			mobile_number:obj.booker.mobile_number,
+			comments:obj.booker.comments,
+            //optional pram
+            email: obj.booker.email
+         }
+			
+         
+        }
+        
+    },
+   methods:{
+      setData()
+      {
+           debugger;
+            var obj = {};
+            obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
+            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
+            obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
+            obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
+           obj.service_id= this.service_id,
+            obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.arrival_date =  this.arrival_date;
+            obj.arrival_time =  this.arrival_time;
+            obj.flight_number =  this.flight_number;
+            obj.flight_type = this.flight_type;
+            obj.date = this.date;
+            obj.time = this.time;
+            obj.passengers = this.passengers;
+            obj.booker = this.booker;
+            localStorage.setItem('elitedata', JSON.stringify(obj));
+      }
+    }
+  }
 </script>
 <style>
 </style>

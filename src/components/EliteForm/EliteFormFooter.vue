@@ -12,7 +12,6 @@
 		</div>
 	</div>
 </template>
-
 <style>
 .elite-forrm-footer{width:100%;position:fixed;left:0;bottom:0;background:#dee6f0;padding:20px 0;font-size:14px;line-height:17px;font-family: "Lora";}
 .elite-forrm-footer .cancel-link{color:#011e41;font-family: 'lora';font-weight: 600;}

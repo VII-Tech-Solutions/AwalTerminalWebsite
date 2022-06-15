@@ -18,14 +18,14 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-10">
                         <form class="general-form">
-                            <fieldset>
+                            <fieldset v-for="(passenger, index) in passengers" :key="passenger">
                                 <legend class="form-title sub-title">Passenger Details</legend>
-                                <legend class="form-title">Passenger 1</legend>
+                                <legend class="form-title">Passenger {{index+1}}</legend>
                                 <div class="row"> 
                                     <div class="col-lg-2">
                                          <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Title<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
+                                            <select class="form-select" required id="inputGroupSelect01">
                                                 <option selected>Mr</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -36,13 +36,13 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">First Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your first name">
+                                            <input type="text" class="form-control" required v-model="passenger.first_name" placeholder="Enter your first name">
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Last Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your last name">
+                                            <input type="text" class="form-control" required v-model="passenger.last_name" placeholder="Enter your last name">
                                         </div>  
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                          <div class="form-group">
                                             <label class="form-label">Date of Birth<span class="asterik">*</span></label>
                                             <div class="form-border">
-                                                <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
+                                                <input type="date" onkeydown="return false"  class="form-control border-0" v-model="passenger.birth_date" required placeholder="DD/MM/YYYY">
                                                 <div class="d-flex align-items-center">
                                                     <span class="input-icon">
                                                         <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
@@ -63,7 +63,7 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Nationality<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
+                                            <select class="form-select" required v-model="passenger.nationality_id" id="inputGroupSelect01">
                                                 <option selected>Select a nationality</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -74,7 +74,7 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                              <label class="form-label text-capitalize" for="inputGroupSelect01">Class<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
+                                            <select class="form-select" required v-model="passenger.class_id" id="inputGroupSelect01">
                                                 <option selected>Economy</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -86,141 +86,6 @@
                                  <div class="row">
                                     <div class="col-lg-8">
                                         <hr class="bottom-line">
-                                    </div>
-                                </div>
-                            </fieldset>
-                             <fieldset>
-                                <legend class="form-title">Passenger 2</legend>
-                                <div class="row">                          
-                                    <div class="col-lg-2">
-                                         <div class="form-group">
-                                            <label class="form-label text-capitalize" for="inputGroupSelect01">Title<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Mr</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                            <label class="form-label text-capitalize">First Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your first name">
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                            <label class="form-label text-capitalize">Last Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your last name">
-                                        </div>  
-                                    </div>   
-                                </div>
-                               <div class="row">
-                                    <div class="col-lg-2">
-                                         <div class="form-group">
-                                            <label class="form-label">Date of Birth<span class="asterik">*</span></label>
-                                            <div class="form-border">
-                                                <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center">
-                                                    <span class="input-icon">
-                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Nationality<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Select a nationality</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Class<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Economy</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>  
-                                    </div>          
-                                </div>
-                                 <div class="row">
-                                    <div class="col-lg-8">
-                                        <hr class="bottom-line">
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend class="form-title">Passenger 3</legend>
-                                <div class="row">
-                                    <div class="col-lg-2">
-                                         <div class="form-group">
-                                            <label class="form-label text-capitalize" for="inputGroupSelect01">Title<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Mr</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                            <label class="form-label text-capitalize">First Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your first name">
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                            <label class="form-label text-capitalize">Last Name<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter your last name">
-                                        </div>  
-                                    </div> 
-                                </div>
-                               <div class="row">          
-                                    <div class="col-lg-2">
-                                         <div class="form-group">
-                                            <label class="form-label">Date of Birth<span class="asterik">*</span></label>
-                                            <div class="form-border">
-                                                <input type="text" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center">
-                                                    <span class="input-icon">
-                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Nationality<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Select a nationality</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>  
-                                    </div>
-                                    <div class="col-lg-3 ">
-                                        <div class="form-group">
-                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Class<span class="asterik">*</span></label>
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Economy</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>  
                                     </div>
                                 </div>
                             </fieldset>
@@ -237,7 +102,12 @@
                         <router-link to="/elite-form2" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-block">
-                        <router-link to="/elite-form4"  class="btn-next d-inline-block align-top transition text-capitalize">next</router-link>
+                      <span style="display:none;" v-if="!(first_name && last_name && birth_date && nationality_id && class_id)">
+                            <button :disabled="notFormValid">Next</button>
+                        </span>
+                      <span v-if="true">
+                         <router-link to="/elite-form4" @click="setData()"  class="btn-next d-inline-block align-top transition">next</router-link>
+                         </span>
                     </div>
                 </div>
             </div>
@@ -246,15 +116,61 @@
 </template>  
 
 <script>
-export default {
-
-mounted () {
-  window.scrollTo(0, 0)
-}
-}
 import '@fortawesome/fontawesome-free/js/all.js';
+export default {
+    mounted () {
+     window.scrollTo(0, 0)
+    },
+  data() {
+      debugger;
+      var obj = JSON.parse(localStorage.elitedata);
+    return {
+		 number_of_adults:obj.number_of_adults,
+         number_of_children:obj.number_of_children,
+         number_of_infants:obj.number_of_infants,
+         notFormValid: true,
+         service_id: obj.service_id,
+         Totle: obj.total,
+          arriving_from_airport : obj.arriving_from_airport,  
+         arrival_date : obj.arrival_date,  
+         arrival_time : obj.arrival_time,  
+         flight_number : obj.flight_number,
+         flight_type : obj.flight_type,
+         date : obj.date,
+         time :obj.time,
+         passengers:obj.passengers
+     }
+        
+    },
+   methods:{
+      setData()
+      {
+           debugger;
+           var abc= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata) : undefined;
+           var obj = {};
+            obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
+            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
+            obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
+            obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
+            obj.service_id= this.service_id,
+            obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.arrival_date =  this.arrival_date;
+            obj.arrival_time =  this.arrival_time;
+            obj.flight_number =  this.flight_number;
+            obj.flight_type = this.flight_type;
+            obj.date = this.date;
+            obj.time = this.time;
+            obj.passengers = this.passengers; 
+            obj.booker = abc == undefined ?  '': abc.booker;
+            // var obj = {};
+            debugger;
+            localStorage.setItem('elitedata', JSON.stringify(obj));
+      }
+  }
+  }
 </script>
 <style>
+
 .radio-container {
   display: block;
   position: relative;

@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="form-header">
 				<strong class="elit-form-logo d-block">
-				<router-link to="/" class="d-block form-logo">
-					<img class="w-100 img-fluid" src="../../assets/images/forms-header-logo.png" alt="AWAL Logo" />
-				</router-link>
+					<router-link to="/" class="d-block form-logo">
+						<img class="w-100 img-fluid" src="../../assets/images/forms-header-logo.png" alt="AWAL Logo" />
+					</router-link>
 				</strong>
 			</div>
 			<div class="step-one-block">
@@ -16,8 +16,11 @@
 				<div class="row">
 					<div class="col-md-7">
 						<div class="step-text-block mb-3">
-							<p class="fw-semi-bold">To reserve and book a general aviation service, please fill in the following If <br>
-							 <span class="fw-normal">form you would like to book an elite service, please <a class="click-link" href="#">click here.</a></span> </p>
+							<p class="fw-semi-bold">To reserve and book a general aviation service, please fill in the
+								following If <br>
+								<span class="fw-normal">form you would like to book an elite service, please <a
+										class="click-link" href="#">click here.</a></span>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -26,7 +29,7 @@
 					<div class="d-flex flex-column flex-md-row">
 						<div class="elite-offer-service d-flex">
 							<label class="custom-radio">
-								<input type="radio" checked="checked" name="radio" />
+								<input type="radio" v-model="service_id" value="1" name="radio" />
 								<div class="checkmark">
 									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
@@ -44,7 +47,7 @@
 						</div>
 						<div class="elite-offer-service">
 							<label class="custom-radio">
-								<input type="radio"  name="radio" />
+								<input type="radio" v-model="service_id" name="radio" value="2" />
 								<div class="checkmark">
 									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
@@ -52,11 +55,14 @@
 									<strong class="service-name d-block mb-lg-3 mb-2">Private Lounge</strong>
 									<strong class="service-price d-block mb-3">BHD 150<sub>/adult</sub></strong>
 									<ul class="list-unstyled service-features">
-										<li class="position-relative">Minimum of 2 adults full fares required to access a Private Lounge</li>
+										<li class="position-relative">Minimum of 2 adults full fares required to access a Private
+											Lounge</li>
 										<li class="position-relative">50% of the adult rate for children aged 2 to 12</li>
 										<li class="position-relative">Free entry for infants ( 0 to 2 years old)</li>
-										<li class="position-relative">Rates are per passenger capped at a total BHD 600.000 per lounge</li>
-										<li class="position-relative">Rates apply to standard lounge size with a maximum of 6 passengers per lounge</li>
+										<li class="position-relative">Rates are per passenger capped at a total BHD 600.000 per
+											lounge</li>
+										<li class="position-relative">Rates apply to standard lounge size with a maximum of 6
+											passengers per lounge</li>
 									</ul>
 									<span class="tax-text">* 10% VAT on the total amount</span>
 								</div>
@@ -66,18 +72,98 @@
 				</div>
 			</div>
 		</div>
-		<EliteFormFooter />
+		<div class="elite-forrm-footer">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-6">
+						<span class="cancel-link d-inline-block text-decoration-none">Cancel</span>
+					</div>
+					<div class="col-6 text-end">
+						<router-link to="/elite-form2" @click="setData()"
+							class="btn-next d-inline-block align-top transition">Next</router-link>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 </template>
+
 <script>
-	import EliteFormFooter from './EliteFormFooter.vue';
+import EliteFormFooter from './EliteFormFooter.vue';
 	export default {
-		mounted () {
-  window.scrollTo(0, 0)
-},
+    mounted () {
+     window.scrollTo(0, 0)
+    },
 		components: {
 			EliteFormFooter
 		},
+		data (){
+			debugger;
+			   var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
+			return {
+				service_id: obj == undefined ? 1 : obj.service_id==true?1:2,
+				number_of_adults:obj==undefined ?0:obj.number_of_adults,
+                number_of_children:obj==undefined ?0:obj.number_of_children,
+                number_of_infants:obj==undefined ?0:obj.number_of_infants,
+				Totle: obj==undefined ?0:obj.total,
+				notFormValid: true,
+				arriving_from_airport: obj==undefined ?0:obj.arriving_from_airport,
+				arrival_date: obj==undefined ?0:obj.arrival_date,
+				arrival_time: obj==undefined ?0:obj.arrival_time,
+				flight_number: obj==undefined ?'':obj.flight_number,
+				flight_type: obj==undefined ?0:obj.flight_type,
+				date: obj==undefined ?0:obj.date,
+				time: obj==undefined ?0:obj.time,
+				// passengers info
+				passengers: obj==undefined ?'':obj.passengers,
+				//booker Info
+				booker: {
+					first_name: obj==undefined ?'':obj.booker.first_name,
+					last_name: obj==undefined ?'':obj.booker.last_name,
+					mobile_number: obj==undefined ?'':obj.booker.mobile_number,
+					comments: obj==undefined ?'':obj.booker.comments,
+					//optional pram
+					email: obj==undefined ?'':obj.booker.email
+				}
+					
+		   }
+		},
+		methods :{
+			Tosat(){
+
+				//Toast woek like below example ...!
+				//toastr.warning('Congratulation.!');
+
+
+				//Swal Work like below Example ...!
+				// Swal.fire(
+				// 'The Internet?',
+			 	//  'That thing is still around?',
+				// 'question'
+			   // );
+
+			},
+			setData(){
+           var obj = {};
+             obj.service_id= this.service_id == 1 ?true:false;
+            obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
+            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
+            obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
+            obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
+            obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.arrival_date =  this.arrival_date;
+            obj.arrival_time =  this.arrival_time;
+            obj.flight_number =  this.flight_number;
+            obj.flight_type = this.flight_type;
+            obj.date = this.date;
+            obj.time = this.time;   
+            obj.passengers = this.passengers; 
+            obj.booker = this.booker;
+            debugger;
+            localStorage.setItem('elitedata', JSON.stringify(obj));
+
+			}
+		}
 	};
 </script>
 <style>

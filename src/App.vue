@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Header v-if="currentRouteName" />
     <router-view />
     <Footer v-if="currentRouteName" />

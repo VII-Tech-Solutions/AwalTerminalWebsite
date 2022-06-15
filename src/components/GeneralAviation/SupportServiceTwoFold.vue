@@ -13,7 +13,7 @@
                                 <img class="img-fluid" src="../../assets/images/sublime-luxury2.jpg"
                                     alt="sublime-luxury">
                             </div>
-                            <router-link to="/general-aviation-form1" class="visit-terminal-btn" data-aos="fade-bottom" data-aos-duration="2500">Book General Aviation</router-link>
+                            <router-link to="/general-aviation-form1" @click="clearStorage()" class="visit-terminal-btn" data-aos="fade-bottom" data-aos-duration="2500">Book General Aviation</router-link>
                         </div>
                     </div>
                 </div>
@@ -22,6 +22,15 @@
     </section>
 </template>
 <script>
+export default {
+methods:{
+       clearStorage()
+      {
+        localStorage.removeItem("data");
+        localStorage.removeItem("textboxdata");
+      },
+  },
+}
 </script>
 <style>
 .support-service.two-fold {
