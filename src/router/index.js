@@ -22,6 +22,7 @@ import ThankYouPage from "../components/GeneralAviationForm/ThankYouPage.vue"
 import OurStory from "../components/OurStory/OurStory.vue"
 import AllService from "../components/AllServices/AllService.vue"
 import Contact from "../components/Contact/Contact.vue"
+import ExpiredPage from "../components/EliteForm/ExpiredPage.vue"
 import '@fortawesome/fontawesome-free/js/all.js';
 
 const routes = [
@@ -142,6 +143,12 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
+  },
+
+  {
+    path: "/expired",
+    name: "ExpiredPage",
+    component: ExpiredPage,
   },
 ];
 
