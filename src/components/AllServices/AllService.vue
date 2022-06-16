@@ -35,6 +35,7 @@
 </template>  
 
 <script>
+//gsdfgsdfsdffg
 import Banner from "./Banner.vue";
 import EliteService from "./EliteService.vue";
 import PlanForComfort from "./PlanForComfort.vue";
