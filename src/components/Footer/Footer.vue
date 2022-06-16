@@ -7,7 +7,7 @@
                     <div class="container">
                         <div class="footer-logo">
                             <figure class="mb-0 logo-img">
-                                <img src="../../assets/images/footer-logo.png" class="img-fluid" alt="Site Logo" />
+                                <img src="../../assets/images/footer-logo.svg" class="img-fluid" alt="Site Logo" />
                             </figure>
                         </div>
                         <div class="footer-nav-links">

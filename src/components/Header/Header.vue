@@ -3,10 +3,10 @@
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container">
         <router-link class="navbar-brand" to="/">
-          <img class="img-fluid logo" src="../../assets/images/logo.png" alt="logo a" />
+          <img class="img-fluid logo" src="../../assets/images/logo.svg" alt="logo a" />
           <img
             class="img-fluid log-dark"
-            src="../../assets/images/footer-logo.png"
+            src="../../assets/images/footer-logo.svg"
             alt="logo a"
           />
         </router-link>
