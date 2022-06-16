@@ -1,6 +1,3 @@
-
-//Stagging
-
 <template >
   <header id="header" :class="classHeader">
     <nav class="navbar fixed-top navbar-expand-lg">
