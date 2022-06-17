@@ -193,11 +193,11 @@
                         <router-link to="/elite-form" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-block">
-                      <span v-if="!(arriving_from_airport && arrival_date && arrival_time && flight_number && number_of_adults )">
-                            <button :disabled="notFormValid">Next</button>
+                      <span class="btn-next d-inline-block align-top transition" v-if="!(arriving_from_airport && arrival_date && arrival_time && flight_number && number_of_adults )" :disabled="notFormValid" @click="error()" >
+                            Next
                         </span>
                       <span v-if="arriving_from_airport && arrival_date && arrival_time && flight_number && number_of_adults ">
-                         <router-link to="/elite-form3" @click="setData()"  class="btn-next d-inline-block align-top transition">next</router-link>
+                         <router-link to="/elite-form3" @click="setData()"  class="btn-next d-inline-block align-top transition">Next</router-link>
                          </span>
                     </div>
                 </div>
@@ -273,6 +273,9 @@ export default {
        },number_of_infantsDec(){
            if(this.number_of_infants > 0)
            this.number_of_infants = this.number_of_infants - 1;
+       },
+       error(){
+        toastr.error('Kindly fillout required fields 🙁');
        },
       setData()
       {

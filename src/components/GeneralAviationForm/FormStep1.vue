@@ -71,11 +71,11 @@
                         <a class="light-button d-inline-block">cancel</a>
                     </div>
                     <div class="d-block">
-                        <span v-if="!(aircraft_type && registration_number && mtow && lead_passenger_name && landing_purpose)">
-                            <button :disabled="notFormValid" >Next</button>
+                        <span class="beige-button d-inline-block" v-if="!(aircraft_type && registration_number && mtow && lead_passenger_name && landing_purpose)" :disabled="notFormValid" @click="error()" >
+                            Next
                         </span>
                         <span v-if="aircraft_type && registration_number && mtow && lead_passenger_name && landing_purpose">
-                         <router-link to="/general-aviation-form2" @click="setData()"  class="beige-button d-inline-block">next</router-link>
+                         <router-link to="/general-aviation-form2" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                          </span>
                        
                         
@@ -105,6 +105,9 @@ export default {
         
     },
   methods:{
+       error(){
+        toastr.error('Kindly fillout required fields 🙁');
+       },
       setData()
       {
           debugger;

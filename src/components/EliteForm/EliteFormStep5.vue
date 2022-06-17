@@ -240,7 +240,7 @@
                                                                                 Title<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                Mr.</p>
+                                                                                {{passenger.title}}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>

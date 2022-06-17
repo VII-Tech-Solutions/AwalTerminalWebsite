@@ -31,7 +31,11 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                
+                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <span class="input-icon delete-icon me-2">
+                                                        <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
@@ -43,6 +47,11 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
+                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <span class="input-icon delete-icon me-2">
+                                                        <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
@@ -57,7 +66,11 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                
+                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <span class="input-icon delete-icon me-2">
+                                                        <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
@@ -69,7 +82,11 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                
+                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <span class="input-icon delete-icon me-2">
+                                                        <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
@@ -81,6 +98,11 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
+                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <span class="input-icon delete-icon me-2">
+                                                        <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                         <li>
@@ -92,6 +114,11 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload 
                                                     </button>
                                                 </div>
+                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <span class="input-icon delete-icon me-2">
+                                                        <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
+                                                    </span>delete attachement
+                                                </button>
                                             </div>
                                         </li>
                                     </ul>
@@ -122,7 +149,7 @@
                         <router-link to="/general-aviation-form4" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
-                        <router-link to="/general-aviation-form6" @click="setData()"  class="beige-button d-inline-block">next</router-link>
+                        <router-link to="/general-aviation-form6" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                     </div>
                 </div>
             </div>

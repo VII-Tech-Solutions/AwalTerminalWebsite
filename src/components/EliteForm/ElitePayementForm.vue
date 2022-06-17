@@ -38,7 +38,7 @@
                                         <div class="accordion-body elite-form">
                                             <div class="elite-offer-services d-flex flex-column">
                                                 <div class="d-flex flex-column flex-md-row">
-                                                    <div  v-if="service_id === 'false'" class="elite-offer-service d-flex">
+                                                    <div v-if="service_id == true"  class="elite-offer-service d-flex">
                                                         <label class="custom-radio">
                                                             <div class="checkmark">
                                                                 <strong class="service-name d-block mb-lg-3 mb-2">Common
@@ -239,7 +239,7 @@
                                                                                 Title<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                Mr.</p>
+                                                                                {{passenger.title}}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>

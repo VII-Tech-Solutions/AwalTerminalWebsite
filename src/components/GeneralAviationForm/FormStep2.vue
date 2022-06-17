@@ -127,20 +127,20 @@
                         <router-link to="/general-aviation-form1" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
-                      <span v-if="!(arrival_call_sign && arriving_from_airport && estimated_time_of_arrival
+                      <span class="beige-button d-inline-block" v-if="!(arrival_call_sign && arriving_from_airport && estimated_time_of_arrival
                        && arrival_date && arrival_flight_nature && arrival_passenger_count
                        && departure_call_sign && departure_to_airport && estimated_time_of_departure
                        && departure_date && departure_flight_nature && departure_passenger_count
                        
-                       )">
-                            <button :disabled="notFormValid">Next</button>
+                       )" :disabled="notFormValid" @click="error()">
+                            Next
                         </span>
                       <span v-if="arrival_call_sign && arriving_from_airport && estimated_time_of_arrival 
                         && arrival_date && arrival_flight_nature && arrival_passenger_count
                         && departure_call_sign && departure_to_airport && estimated_time_of_departure
                         && departure_date && departure_flight_nature && departure_passenger_count
                         ">
-                         <router-link to="/general-aviation-form3" @click="setData()"  class="beige-button d-inline-block">next</router-link>
+                         <router-link to="/general-aviation-form3" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                          </span>
                     </div>
                 </div>
@@ -176,6 +176,10 @@
      }
     },
       methods:{
+        
+       error(){
+        toastr.error('Kindly fillout required fields 🙁');
+       },
       setData()
       {
             var obj= localStorage.data != undefined ?  JSON.parse(localStorage.data):undefined;

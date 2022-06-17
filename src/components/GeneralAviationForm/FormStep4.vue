@@ -117,7 +117,7 @@
                         <router-link to="/general-aviation-form3" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
-                        <router-link to="/general-aviation-form5"  @click="setData()"  class="beige-button d-inline-block">next</router-link>
+                        <router-link to="/general-aviation-form5"  @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                     </div>
                 </div>
             </div>

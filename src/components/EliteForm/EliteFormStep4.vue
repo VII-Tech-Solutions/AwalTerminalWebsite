@@ -19,7 +19,7 @@
                     <div class="col-lg-12 col-md-10">
                         <form class="general-form">
                             <fieldset>
-                                <legend class="form-title">Booker’s Details</legend>
+                                <legend class="form-title">Booker&#39;s Details</legend>
                                 <p class="form-p fw-semi-bold mb-lg-3 mb-2">Enter the details of the person making the booking</p>
                                 <div class="row">
                                     <div class="col-lg-3 ">
@@ -69,12 +69,12 @@
                         <router-link to="/elite-form3" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-block">
-                      <span v-if="!(booker.first_name && booker.last_name && booker.mobile_number)">
-                            <button :disabled="notFormValid">Next</button>
+                       <span class="btn-next d-inline-block align-top transition" v-if="!(booker.first_name && booker.last_name && booker.mobile_number)" :disabled="notFormValid" @click="error()" >
+                            Next
                         </span>
-                      <span v-if="booker.first_name && booker.last_name && booker.mobile_number">
-                         <router-link to="/elite-form5" @click="setData()"  class="btn-next d-inline-block align-top transition">next</router-link>
-                         </span>
+                       <span  v-if="booker.first_name && booker.last_name && booker.mobile_number">
+                       <router-link to="/elite-form5" @click="setData()"  class="btn-next d-inline-block align-top transition">Next</router-link>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -122,6 +122,10 @@ export default {
         
     },
    methods:{
+    
+       error(){
+        toastr.error('Kindly fillout required fields 🙁');
+       },
       setData()
       {
            debugger;

@@ -133,20 +133,20 @@
                         <router-link to="/general-aviation-form2" class="light-button d-inline-block">back</router-link>
                     </div>
                     <div class="d-block">
-                      <span v-if="!(operator_full_name && operator_country && operator_tel_number
+                      <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country && operator_tel_number
                        && operator_email && operator_address && operator_billing_address
                        && agent_fullname && agent_country && agent_phoneNumber
                        && agent_email && agent_address && agent_billing_address
                        
-                       )">
-                            <button :disabled="notFormValid">Next</button>
+                       )" :disabled="notFormValid" @click="error()">
+                            Next
                         </span>
                       <span v-if="operator_full_name && operator_country && operator_tel_number 
                         && operator_email && operator_address && operator_billing_address
                         && agent_fullname && agent_country && agent_phoneNumber
                         && agent_email && agent_address && agent_billing_address
                         ">
-                         <router-link to="/general-aviation-form4" @click="setData()"  class="beige-button d-inline-block">next</router-link>
+                         <router-link to="/general-aviation-form4" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                          </span>
                     </div>
                 </div>
@@ -184,6 +184,10 @@ mounted () {
      }
     },
       methods:{
+        
+       error(){
+        toastr.error('Kindly fillout required fields 🙁');
+       },
         checkunchecked(va)
         {
             debugger;
