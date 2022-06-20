@@ -129,6 +129,7 @@ import EliteFormFooter from './EliteFormFooter.vue';
 		   }
 		},
 		methods :{
+			
 			Tosat(){
 
 				//Toast woek like below example ...!

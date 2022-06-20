@@ -29,11 +29,10 @@
                                             <select class="form-select" v-model="passenger.title" required
                                                 id="inputGroupSelect01">
                                                 <option  default-checked=true > Select Title</option>
-                                                <option value="Mr">Mr</option>
-                                                <option value="Mrs">Mrs</option>
-                                                <option value="Miss">Miss</option>
-                                                <option value="Ms">Ms</option>
-                                                <option value="Dr">Dr</option>
+                                                <option value="N/A">N/A</option>
+                                                <option value="Ms">Ms.</option>
+                                                <option value="Mrs">Mrs.</option>
+                                                <option value="Mr">Mr.</option>
                                             </select>
                                         </div>
                                     </div>
@@ -139,23 +138,7 @@
                 </div>
             </div>
         </div>
-        <!-- FOOTER -->
-        <!-- <div class="elite-forrm-footer">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="d-block">
-                        <router-link to="/elite-form2" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
-                    </div>
-                    <div class="d-block">
-                      <span class="btn-next d-inline-block align-top transition" v-if="!(passenger.first_name)" :disabled="notFormValid">Next
-                        </span>
-                      <span v-if="passenger.first_name">
-                         <router-link to="/elite-form4" @click="setData()"  class="btn-next d-inline-block align-top transition">Next</router-link>
-                         </span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+
     </div>
 </template>  
 

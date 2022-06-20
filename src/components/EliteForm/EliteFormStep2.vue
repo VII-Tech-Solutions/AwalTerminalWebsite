@@ -44,10 +44,7 @@
                                          <div class="form-group">
                                             <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
                                             <select class="form-select" v-model="arriving_from_airport" id="inputGroupSelect01">
-                                                <option selected>Select an airport </option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option  v-for="it in airportoptions" :key="it.id" value="{{it.id}}">{{it.name}}</option>
                                             </select>
                                         </div>  
                                     </div>
@@ -87,8 +84,10 @@
                                             <label class="form-label" for="inputGroupSelect01">Flight Type<span class="asterik">*</span></label>
                                             <select class="form-select" v-model="flight_type" id="inputGroupSelect01">
                                               
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
+                                                <option v-for="item in flightoptions" :key="item.id" value="{{item.id}}">
+                                                    {{item.name}}
+                                                  </option>
+                                                
                                             
                                             </select>
                                         </div>  
@@ -208,20 +207,26 @@
 
 <script>
 import '@fortawesome/fontawesome-free/js/all.js';
+import axios from 'axios';
 export default {
     mounted () {
-     window.scrollTo(0, 0)
+     window.scrollTo(0, 0);
+     this.getDropdownData();
     },   
   data() {
       debugger;
         var obj = JSON.parse(localStorage.elitedata);
     return {
+        airportoptions:[],
+        countriesoptions:this.countriesoptions,
+        flightoptions:this.flightoptions,
+        servicefeatureoptions:this.servicefeatureoptions,
          number_of_adults:obj==undefined ?0:obj.number_of_adults,
          number_of_children:obj==undefined ?0:obj.number_of_children,
          number_of_infants:obj==undefined ?0:obj.number_of_infants,
          notFormValid: true,
          service_id: obj.service_id,  
-          arriving_from_airport : obj==undefined ?'':obj.arriving_from_airport,  
+         arriving_from_airport : obj==undefined ?'':obj.arriving_from_airport,  
          arrival_date : obj==undefined ? '' : obj.arrival_date,  
          arrival_time : obj==undefined ? '': obj.arrival_time,  
          flight_number : obj==undefined ?'':obj.flight_number,
@@ -239,20 +244,28 @@ export default {
      }
         
     },
-    // validation:{
-    //     arriving_from_airport:{
-    //         required,
-    //     },arrival_date:{
-    //         required,
-    //     },arrival_time:{
-    //         required,
-    //     },flight_number:{
-    //         required,
-    //         minLength:minLength(5),
-    //         maxLength:maxLength(6)
-    //     }
-    // },
+   
    methods:{
+    getDropdownData()
+			{
+            debugger;
+           let axiosConfig = {
+                headers: {
+                    'Content-Type': 'application/json;charset=UTF-8',
+                }
+            };
+            axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+            .then((res) => {
+                debugger;
+                this.airportoptions = res.data.data.airports;
+                this.countriesoptions = res.data.data.countries;
+                this.flightoptions = res.data.data.elite_service_types;
+                this.servicefeatureoptions = res.data.data.elite_service_features;
+            })
+            .catch((err) => {
+                toastr.error('Server Error Please Try again.. 🙁');
+            })
+			},
        AdultInc(){
            this.number_of_adults = this.number_of_adults + 1;
            
