@@ -403,8 +403,23 @@ export default{
       methods:{
    async  submitData()
       {
+          let axiosConfig = {
+                headers: {
+                    'Content-Type': 'application/json;charset=UTF-8',
+                }
+          };
       const obj =  JSON.parse(localStorage.data);
-      const response = await axios.post("https://awal.viitech.net/api/general-aviation/", obj);  
+      const response = await axios.post("https://awal.viitech.net/api/general-aviation/", obj,axiosConfig)
+      .then((res) => {
+         debugger;
+                toastr.success(response.data.message);
+                window.location.href=  "/general-aviation-thankyou";
+                localStorage.removeItem("data");
+                localStorage.removeItem("textboxdata");
+            })
+            .catch((err) => {
+                toastr.error(err.message);
+            });  
       debugger;
       if(response.status == 200)
       {
@@ -414,8 +429,6 @@ export default{
           localStorage.removeItem("data");
           localStorage.removeItem("textboxdata");
       }
-      
-       
     }
   }
 }
