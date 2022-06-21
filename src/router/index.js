@@ -9,6 +9,7 @@ import EliteForm4 from "../components/EliteForm/EliteFormStep4.vue";
 import EliteForm5 from "../components/EliteForm/EliteFormStep5.vue";
 import ElitePayementForm from "../components/EliteForm/ElitePayementForm.vue";
 import EliteThankYouPage from "../components/EliteForm/ThankYouPage.vue";
+import EliteEliteService from "../components/EliteForm/EliteService.vue";
 import PaymentRecevied from "../components/EliteForm/Payment.vue";
 import Service from "../components/Services/Service.vue";
 import GeneralAviation from "../components/GeneralAviation/GeneralAviation.vue"
@@ -77,6 +78,11 @@ const routes = [
     path: "/elite-thankyou",
     name: "Elite ThankYouPage",
     component: EliteThankYouPage,
+  },
+  {
+    path: "/elite-service",
+    name: "Elite ThankYouPage",
+    component: EliteEliteService,
   },
   {
     path: "/payment-recevied",
