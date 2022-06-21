@@ -43,8 +43,8 @@
                                     <div class="col-lg-3 ">
                                          <div class="form-group">
                                             <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
-                                            <select class="form-select" v-model="arriving_from_airport" id="inputGroupSelect01">
-                                                <option  v-for="it in airportoptions" :key="it.id" value="{{it.id}}">{{it.name}}</option>
+                                            <select class="form-select" v-model="arriving_from_airport" id="inputGroupSelect01" @change="fligh_name($event)">
+                                                <option  v-for="item in airportoptions" :key="item.id" :value="item.id">{{item.name}}</option>
                                             </select>
                                         </div>  
                                     </div>
@@ -82,9 +82,9 @@
                                     <div class="col-lg-3 ">
                                          <div class="form-group">
                                             <label class="form-label" for="inputGroupSelect01">Flight Type<span class="asterik">*</span></label>
-                                            <select class="form-select" v-model="flight_type" id="inputGroupSelect01">
+                                            <select class="form-select" v-model="flight_type" id="inputGroupSelect01" >
                                               
-                                                <option v-for="item in flightoptions" :key="item.id" value="{{item.id}}">
+                                                <option v-for="item in flightoptions" :key="item.id" :value="item.id" >
                                                     {{item.name}}
                                                   </option>
                                                 
@@ -218,7 +218,7 @@ export default {
         var obj = JSON.parse(localStorage.elitedata);
     return {
         airportoptions:[],
-        countriesoptions:this.countriesoptions,
+        countriesoptions:obj.countriesoptions,
         flightoptions:this.flightoptions,
         servicefeatureoptions:this.servicefeatureoptions,
          number_of_adults:obj==undefined ?0:obj.number_of_adults,
@@ -227,6 +227,7 @@ export default {
          notFormValid: true,
          service_id: obj.service_id,  
          arriving_from_airport : obj==undefined ?'':obj.arriving_from_airport,  
+         airport_name : obj==undefined ?'':obj.airport_name, 
          arrival_date : obj==undefined ? '' : obj.arrival_date,  
          arrival_time : obj==undefined ? '': obj.arrival_time,  
          flight_number : obj==undefined ?'':obj.flight_number,
@@ -234,11 +235,13 @@ export default {
          date : obj==undefined ? '' :obj.date,
          time : obj==undefined ? '' :obj.time,
          passengers:[{
+                    title:"",
                     first_name: "",
                     last_name: "",
                     gender: 1,
                     birth_date: "",
                     nationality_id: "",
+                    nationality_title:"",
                     class_id: ""
                 }]
      }
@@ -246,25 +249,30 @@ export default {
     },
    
    methods:{
-    getDropdownData()
+         fligh_name(event){
+                debugger;
+                this.airport_name=this.airportoptions.find(x => x.id ==event.target.value).name;
+            },
+           
+           getDropdownData()
 			{
             debugger;
-           let axiosConfig = {
-                headers: {
-                    'Content-Type': 'application/json;charset=UTF-8',
-                }
-            };
-            axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
-            .then((res) => {
-                debugger;
-                this.airportoptions = res.data.data.airports;
-                this.countriesoptions = res.data.data.countries;
-                this.flightoptions = res.data.data.elite_service_types;
-                this.servicefeatureoptions = res.data.data.elite_service_features;
-            })
-            .catch((err) => {
-                toastr.error('Server Error Please Try again.. 🙁');
-            })
+                let axiosConfig = {
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8',
+                    }
+                };
+                axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+                .then((res) => {
+                    debugger;
+                    this.airportoptions = res.data.data.airports;
+                    this.countriesoptions = res.data.data.countries;
+                    this.flightoptions = res.data.data.elite_service_types;
+                    this.servicefeatureoptions = res.data.data.elite_service_features;
+                })
+                .catch((err) => {
+                    toastr.error('Server Error Please Try again.. 🙁');
+                })
 			},
        AdultInc(){
            this.number_of_adults = this.number_of_adults + 1;
@@ -293,6 +301,9 @@ export default {
       setData()
       {
             var abc= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata) : undefined;
+            debugger;
+            console.log("abc Data");
+            console.table(abc);
             var obj = {};
             obj.number_of_adults =  parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
@@ -302,21 +313,25 @@ export default {
                 if(abc != undefined){
                     if(abc.passengers.length == obj.total){
                          this.passengers.push({
+                            title:abc.passengers[i].title,
                             first_name: abc.passengers[i].first_name,
                             last_name: abc.passengers[i].last_name,
                             gender: 1,
                             birth_date: abc.passengers[i].birth_date,
                             nationality_id: abc.passengers[i].nationality_id,
+                              nationality_title: abc.passengers[i].nationality_title,
                             class_id: abc.passengers[i].class_id
                         })
                     }
                     else if(abc.passengers.length >= obj.total){
                         this.passengers.push({
+                            title: abc.passengers[i].title,
                             first_name: abc.passengers[i].first_name,
                             last_name: abc.passengers[i].last_name,
                             gender: 1,
                             birth_date: abc.passengers[i].birth_date,
                             nationality_id: abc.passengers[i].nationality_id,
+                               nationality_title: abc.passengers[i].nationality_title,
                             class_id: abc.passengers[i].class_id
                         })
                     
@@ -324,11 +339,13 @@ export default {
                     }
                     else{
                         this.passengers.push({
+                            title:"",
                             first_name: "",
                             last_name: "",
                             gender: 1,
                             birth_date: "",
                             nationality_id: "",
+                            nationality_title: "",
                             class_id: ""
                         })
                     }
@@ -337,8 +354,10 @@ export default {
            if(this.passengers.length > 1){
                 this.passengers.splice(0, 1);
            }  
-           obj.service_id= this.service_id,
+            obj.service_id= this.service_id,
+            obj.countriesoptions=this.countriesoptions;
             obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.airport_name =  this.airport_name;
             obj.arrival_date =  this.arrival_date;
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;  
@@ -351,6 +370,7 @@ export default {
             localStorage.setItem('elitedata',JSON.stringify(obj));
       }
   }
+  
   }
 </script>
 

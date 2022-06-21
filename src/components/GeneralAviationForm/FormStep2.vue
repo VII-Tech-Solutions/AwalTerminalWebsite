@@ -44,11 +44,8 @@
                                     <div class="col-lg-6 mb-0">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">From Airport<span class="asterik">*</span></label>
-                                            <select class="form-select" v-model="arriving_from_airport" id="inputGroupSelect01">
-                                                <option selected>Select Airport</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                            <select class="form-select" v-model="arriving_from_airport" id="inputGroupSelect01" @change="select_airport($event)">
+                                                <option  v-for="item in airportoptions" :key="item.id" :value="item.id">{{item.name}}</option>
                                             </select>
                                         </div>  
                                         <div class="form-group">
@@ -90,10 +87,7 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">to Airport<span class="asterik">*</span></label>
                                             <select class="form-select" v-model="departure_to_airport" id="inputGroupSelect01">
-                                                <option selected>Select Airport</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option  v-for="item in airportoptions" :key="item.id" :value="item.id">{{item.name}}</option>
                                             </select>
                                         </div>  
                                         <div class="form-group">
@@ -152,13 +146,20 @@
 <script>
 
     import '@fortawesome/fontawesome-free/js/all.js';
+    import axios from 'axios';
     export default{
     mounted () {
-     window.scrollTo(0, 0)
+     window.scrollTo(0, 0);
+     this.getDropdownData();
     },
     data() {
          var obj= JSON.parse(localStorage.data);
         return {
+        airportoptions:[],
+        countriesoptions:obj.countriesoptions,
+        flightoptions:this.flightoptions,
+        servicefeatureoptions:this.servicefeatureoptions,
+        airport_name: obj.airport_name,
          notFormValid: true,
          arrival_call_sign:obj.arrival_call_sign,  
          arriving_from_airport:obj.arriving_from_airport,
@@ -176,7 +177,30 @@
      }
     },
       methods:{
-        
+        getDropdownData()
+			{
+            debugger;
+                let axiosConfig = {
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8',
+                    }
+                };
+                axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+                .then((res) => {
+                    debugger;
+                    this.airportoptions = res.data.data.airports;
+                    this.countriesoptions = res.data.data.countries;
+                    this.flightoptions = res.data.data.elite_service_types;
+                    this.servicefeatureoptions = res.data.data.elite_service_features;
+                })
+                .catch((err) => {
+                    toastr.error('Server Error Please Try again.. 🙁');
+                })
+			},
+            
+        select_airport(event){
+            this.airport_name=this.airportoptions.find(x=> x.id == event.target.value).name;
+        },
        error(){
         toastr.error('Kindly fillout required fields 🙁');
        },
@@ -222,6 +246,8 @@
             obj1.transport_hotel_name=obj.transport_hotel_name,  
             obj1.transport_time=obj.transport_time,  
             obj1.remarks=obj.remarks
+            obj1.countriesoptions=this.countriesoptions;
+            obj1.airport_name = this.airport_name;
 
              localStorage.setItem('data', JSON.stringify(obj1));
       }

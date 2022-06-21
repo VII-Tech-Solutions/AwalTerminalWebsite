@@ -95,7 +95,7 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">from Airport<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.arriving_from_airport}}</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.airport_name}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>

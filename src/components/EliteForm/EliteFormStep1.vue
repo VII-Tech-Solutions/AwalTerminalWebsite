@@ -106,8 +106,10 @@ import EliteFormFooter from './EliteFormFooter.vue';
                 number_of_children:obj==undefined ?0:obj.number_of_children,
                 number_of_infants:obj==undefined ?0:obj.number_of_infants,
 				Totle: obj==undefined ?0:obj.total,
+            countriesoptions: obj==undefined ?'':obj.countriesoptions,
 				notFormValid: true,
 				arriving_from_airport: obj==undefined ?0:obj.arriving_from_airport,
+				airport_name:obj==undefined ?0:obj.airport_name,
 				arrival_date: obj==undefined ?0:obj.arrival_date,
 				arrival_time: obj==undefined ?0:obj.arrival_time,
 				flight_number: obj==undefined ?'':obj.flight_number,
@@ -151,7 +153,9 @@ import EliteFormFooter from './EliteFormFooter.vue';
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
+				obj.countriesoptions=this.countriesoptions;
             obj.arriving_from_airport =  this.arriving_from_airport;
+				obj.airport_name = this.airport_name;
             obj.arrival_date =  this.arrival_date;
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;

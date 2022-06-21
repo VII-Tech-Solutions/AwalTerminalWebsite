@@ -130,7 +130,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{arriving_from_airport}}</p>
+                                                                                {{airport_name}}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -282,7 +282,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.nationality_id}}</p>
+                                                                                {{passenger.nationality_title}}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -394,9 +394,11 @@ export default {
          number_of_children:obj.number_of_children,
          number_of_infants:obj.number_of_infants,
          notFormValid: true,
+        countriesoptions:obj.countriesoptions,
          service_id: obj.service_id,  
          Totle: obj.total,
-          arriving_from_airport : obj.arriving_from_airport,  
+         arriving_from_airport : obj.arriving_from_airport,  
+         airport_name : obj.airport_name,
          arrival_date : obj.arrival_date,  
          arrival_time : obj.arrival_time,  
          flight_number : obj.flight_number,  
@@ -430,7 +432,9 @@ export default {
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
             obj.service_id= this.service_id,
+            obj.countriesoptions=this.countriesoptions,
             obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.airport_name = this.airport_name;
             obj.arrival_date =  this.arrival_date;
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;

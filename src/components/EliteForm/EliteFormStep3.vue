@@ -77,17 +77,8 @@
                                                 for="inputGroupSelect01">Nationality<span
                                                     class="asterik">*</span></label>
                                             <select class="form-select" required v-model="passenger.nationality_id"
-                                                id="inputGroupSelect01">
-                                                <option value="Saudi Arabia">Saudi Arabia</option>
-                                                <option value="Kuwait">Kuwait</option>
-                                                <option value="Qatar">Qatar</option>
-                                                <option value="Bahrain">Bahrain</option>
-                                                <option value="United Arab Emirates ">United Arab Emirates </option>
-                                                <option value="Oman">Oman</option>
-                                                <option value="Yemen">Yemen</option>
-                                                <option value="Cyprus">Cyprus</option>
-                                                <option value="Lebanon">Lebanon</option>
-                                                <option value="Syria">Syria</option>
+                                                id="inputGroupSelect01" @change="fetch_title($event,passenger)">
+                                                <option v-for="item in countriesoptions" :key="item.id" :value="item.id">{{item.name}} </option>
                                             </select>
                                         </div>
                                     </div>
@@ -155,10 +146,12 @@ export default {
 		 number_of_adults:obj.number_of_adults,
          number_of_children:obj.number_of_children,
          number_of_infants:obj.number_of_infants,
+         countriesoptions:obj.countriesoptions,
          notFormValid: true,
          service_id: obj.service_id,
          Totle: obj.total,
           arriving_from_airport : obj.arriving_from_airport,  
+          airport_name: obj.airport_name,
          arrival_date : obj.arrival_date,  
          arrival_time : obj.arrival_time,  
          flight_number : obj.flight_number,
@@ -174,6 +167,11 @@ export default {
        error(){
         toastr.error('Kindly fillout required fields 🙁');
        },
+       fetch_title(event,passenger){
+          debugger;
+           passenger.nationality_title=this.countriesoptions.find(x=>x.id== event.target.value).name;
+        //   passenger.nationality_title
+       },
       setData()
       {
            debugger;
@@ -184,7 +182,9 @@ export default {
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
             obj.service_id= this.service_id,
+            obj.countriesoptions=this.countriesoptions,
             obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.airport_name = this.airport_name;
             obj.arrival_date =  this.arrival_date;
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;
@@ -192,6 +192,8 @@ export default {
             obj.date = this.date;
             obj.time = this.time;
             obj.passengers = this.passengers; 
+             console.log("mY Pessenegerss");
+            console.table(this.passengers);
             obj.booker = abc == undefined ?  '': abc.booker;
             // var obj = {};
             debugger;

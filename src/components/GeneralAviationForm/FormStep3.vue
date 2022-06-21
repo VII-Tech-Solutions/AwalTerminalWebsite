@@ -64,10 +64,7 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
                                             <select class="form-select" v-model="operator_country" id="inputGroupSelect01">
-                                                <option selected>Select a country </option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option v-for="item in countriesoptions" :key="item.id" :value="item.id">{{item.name}} </option>
                                             </select>
                                         </div>  
                                        <div class="form-group">
@@ -102,10 +99,7 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
                                             <select class="form-select" v-model="agent_country" id="inputGroupSelect01">
-                                                <option selected>Select a country </option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option v-for="item in countriesoptions" :key="item.id" :value="item.id">{{item.name}} </option>
                                             </select>
                                         </div>  
                                        <div class="form-group">
@@ -166,7 +160,7 @@ mounted () {
         return {
              
          notFormValid: true,
-         
+         airport_name: obj.airport_name,
          operator_full_name:obj.operator_full_name,  
          operator_country:obj.operator_country,  
          operator_tel_number:obj.operator_tel_number,   
@@ -178,6 +172,7 @@ mounted () {
          agent_phoneNumber:obj.agent_phoneNumber,  
          agent_email:obj.agent_email,   
          agent_address:obj.agent_address,  
+         countriesoptions:obj.countriesoptions,
          agent_billing_address:obj.agent_billing_address, 
          is_using_agent: obj.is_using_agent == false? 2: 1,
          //agentno: !this.is_using_agent
@@ -240,7 +235,8 @@ mounted () {
             obj1.agent_address=this.agent_address;    
             obj1.agent_billing_address=this.agent_billing_address; 
              obj1.is_using_agent=this.is_using_agent == "1"?true:false; 
-
+             
+            obj1.airport_name = this.airport_name;
             obj1.services=obj.services; 
             obj1.attachments=obj.attachments;
             obj1.transport_hotel_name=obj.transport_hotel_name;  

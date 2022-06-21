@@ -185,6 +185,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
             obj1.transport_hotel_name=this.transport_hotel_name,  
             obj1.transport_time=this.transport_time,  
             obj1.remarks=obj.remarks
+            obj1.airport_name = this.airport_name;
              localStorage.setItem('data', JSON.stringify(obj1));
       }
   }

@@ -254,7 +254,8 @@ import '@fortawesome/fontawesome-free/js/all.js';
             obj1.attachments= this.attachement,
             obj1.transport_hotel_name=obj.transport_hotel_name,  
             obj1.transport_time=obj.transport_time,  
-            obj1.remarks=this.remarks
+            obj1.remarks=this.remarks,
+            obj1.airport_name = this.airport_name;
 
              localStorage.setItem('data', JSON.stringify(obj1));
 
