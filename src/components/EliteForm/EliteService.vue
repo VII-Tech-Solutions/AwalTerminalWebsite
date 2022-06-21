@@ -108,7 +108,7 @@
                                              <p class="extra-small-text w-p text-capitalize">Flight
                                                 Details</p>
                                              <div class="details-list">
-                                                <ul class="ul_css">
+                                                <ul class="ul_css" v-for="(passenger_info, index) in elite_services" :key="passenger">
                                                    <li>
                                                       <div class="d-flex align-items-baseline">
                                                          <p class="extra-small-text w-p text-capitalize">
@@ -122,7 +122,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             Arriving From<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            airport_name </p>
+                                                            {{}} </p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -130,7 +130,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             date<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            arrival_date </p>
+                                                            {{}} </p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -138,7 +138,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             time<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            arrival_time</p>
+                                                            {{}}</p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -146,7 +146,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             Flight number<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            flight_number </p>
+                                                            {{}} </p>
                                                       </div>
                                                    </li>
                                                 </ul>
@@ -163,7 +163,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             adults<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            number_of_adults </p>
+                                                            {{}} </p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -172,7 +172,7 @@
                                                             children<span class="asterik">*</span>
                                                          </p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            number_of_children </p>
+                                                            {{}} </p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -181,7 +181,7 @@
                                                             infants<span class="asterik">*</span>
                                                          </p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            number_of_infants</p>
+                                                            {{}}</p>
                                                       </div>
                                                    </li>
                                                 </ul>
@@ -207,9 +207,9 @@
                                  <div class="accordian-ul">
                                     <ul class="ul_css">
                                        <!-- <li v-for="(passenger, index) in passengers" :key="passenger"> -->
-                                       <li>
+                                       <li v-for="(passenger, index) in passengers" :key="passenger">
                                           <div class="d-flex mobile-col">
-                                             <p class="extra-small-text w-p text-capitalize">Passenger 1
+                                             <p class="extra-small-text w-p text-capitalize">Passenger {{index+1}}
                                              </p>
                                              <div class="details-list">
                                                 <ul class="ul_css">
@@ -218,7 +218,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             Title<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            passenger.title </p>
+                                                            {{passenger.title}} </p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -226,7 +226,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             First Name*<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            passenger.first_name </p>
+                                                            {{passenger.first_name}} </p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -235,7 +235,7 @@
                                                             Last Name<span class="asterik">*</span>
                                                          </p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            passenger.last_name </p>
+                                                            {{passenger.last_name}} </p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -243,7 +243,7 @@
                                                          <p class="extra-small-text w-p">Date of
                                                             Birth<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            passenger.birth_date</p>
+                                                            {{passenger.birth_date}}</p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -251,7 +251,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             Nationality<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            passenger.nationality_id</p>
+                                                            {{passenger.nationality_id}}</p>
                                                       </div>
                                                    </li>
                                                    <li>
@@ -259,7 +259,23 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             Class<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            passenger.class_id</p>
+                                                            {{passenger.flight_class}}</p>
+                                                      </div>
+                                                   </li>
+                                                   <li>
+                                                      <div class="d-flex align-items-baseline">
+                                                         <p class="extra-small-text w-p text-capitalize">
+                                                            Created at<span class="asterik">*</span></p>
+                                                         <p class="extra-small-text text-capitalize fw-normal">
+                                                            {{passenger.created_at}}</p>
+                                                      </div>
+                                                   </li>
+                                                   <li>
+                                                      <div class="d-flex align-items-baseline">
+                                                         <p class="extra-small-text w-p text-capitalize">
+                                                            Updated at<span class="asterik">*</span></p>
+                                                         <p class="extra-small-text text-capitalize fw-normal">
+                                                            {{passenger.updated_at}}</p>
                                                       </div>
                                                    </li>
                                                 </ul>
@@ -353,15 +369,37 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import axios from 'axios';
 export default {
    mounted() {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
+      this.getDropdownData();
    },
    data() {
       return {
+         elite_services:'',
+         passengers:'',
+         booker:''
 
       }
    },
    methods: {
-
+      getDropdownData()
+			{
+            debugger;
+                let axiosConfig = {
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8',
+                    }
+                };
+                axios.get('https://awal.viitech.net/api/elite-service/ba9b4820f16511ecabf937cfe47d8cd9', axiosConfig)
+                .then((res) => {
+                    debugger;
+                    this.elite_services = res.data.data.elite_services;
+                    this.passengers = res.data.data.passengers;
+                    this.booker = res.data.data.booker;
+                })
+                .catch((err) => {
+                    toastr.error('Server Error Please Try again.. 🙁');
+                })
+			},
    }
 }
 </script>

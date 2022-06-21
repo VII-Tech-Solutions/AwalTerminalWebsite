@@ -105,8 +105,6 @@ export default {
          arrival_time : obj.arrival_time,  
          flight_number : obj.flight_number,
          flight_type : obj.flight_type,
-         date : obj.date,
-         time :obj.time,   
 			// passengers info
          passengers:obj.passengers,
          //booker Info
@@ -144,8 +142,6 @@ export default {
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;
             obj.flight_type = this.flight_type;
-            obj.date = this.date;
-            obj.time = this.time;
             obj.passengers = this.passengers;
             obj.booker = this.booker;
             localStorage.setItem('elitedata', JSON.stringify(obj));

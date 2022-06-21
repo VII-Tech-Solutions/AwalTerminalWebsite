@@ -114,8 +114,6 @@ import EliteFormFooter from './EliteFormFooter.vue';
 				arrival_time: obj==undefined ?0:obj.arrival_time,
 				flight_number: obj==undefined ?'':obj.flight_number,
 				flight_type: obj==undefined ?0:obj.flight_type,
-				date: obj==undefined ?0:obj.date,
-				time: obj==undefined ?0:obj.time,
 				// passengers info
 				passengers: obj==undefined ?'':obj.passengers,
 				//booker Info
@@ -160,8 +158,6 @@ import EliteFormFooter from './EliteFormFooter.vue';
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;
             obj.flight_type = this.flight_type;
-            obj.date = this.date;
-            obj.time = this.time;   
             obj.passengers = this.passengers; 
             obj.booker = this.booker;
             debugger;

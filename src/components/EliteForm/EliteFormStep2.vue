@@ -92,27 +92,6 @@
                                             </select>
                                         </div>  
                                     </div>
-                                    <div class="col-lg-2">
-                                        <div class="form-group">
-                                            <label class="form-label text-capitalize">date<span class="asterik">*</span></label>
-                                            <div class="form-border">
-                                                <input type="date" onkeydown="return false"  v-model="date" class="form-control border-0" placeholder="DD/MM/YYYY">
-                                                <div class="d-flex align-items-center">
-                                                    <span class="input-icon">
-                                                        <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 ">
-                                        <div class="form-group">
-                                            <label class="form-label">Time<span class="asterik">*</span></label>
-                                            <div class="form-border"><input type="time" onkeydown="return false"  class="form-control border-0" v-model="time" placeholder="HH:MM">
-                                                <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
-                                            </div>
-                                        </div>  
-                                    </div>
                                 </div>
                             </fieldset>
                             <fieldset>
@@ -232,8 +211,6 @@ export default {
          arrival_time : obj==undefined ? '': obj.arrival_time,  
          flight_number : obj==undefined ?'':obj.flight_number,
          flight_type : obj==undefined ? '' :obj.flight_type,
-         date : obj==undefined ? '' :obj.date,
-         time : obj==undefined ? '' :obj.time,
          passengers:[{
                     title:"",
                     first_name: "",
@@ -362,8 +339,6 @@ export default {
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;  
             obj.flight_type = this.flight_type;
-            obj.date = this.date;
-            obj.time = this.time;
             obj.passengers = this.passengers; 
             obj.booker = abc == undefined ?  '': abc.booker;
             debugger;

@@ -156,8 +156,6 @@ export default {
          arrival_time : obj.arrival_time,  
          flight_number : obj.flight_number,
          flight_type : obj.flight_type,
-         date : obj.date,
-         time :obj.time,
          passengers:obj.passengers
      }
         
@@ -189,8 +187,6 @@ export default {
             obj.arrival_time =  this.arrival_time;
             obj.flight_number =  this.flight_number;
             obj.flight_type = this.flight_type;
-            obj.date = this.date;
-            obj.time = this.time;
             obj.passengers = this.passengers; 
              console.log("mY Pessenegerss");
             console.table(this.passengers);
