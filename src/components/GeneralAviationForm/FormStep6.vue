@@ -424,8 +424,8 @@ export default{
       if(response.status == 200)
       {
         debugger;
-        toastr.success(response.data.message);
-        window.location.href=  "/general-aviation-thankyou";
+          toastr.success(response.data.message);
+          window.location.href=  "/general-aviation-thankyou";
           localStorage.removeItem("data");
           localStorage.removeItem("textboxdata");
       }
