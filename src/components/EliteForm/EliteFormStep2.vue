@@ -27,13 +27,13 @@
                                             <div class="d-flex align-items-center justify-content-md-start justify-content-center">
                                                 <div class="form-check px-0 ms-0 me-4">
                                                     <label class="radio-container text-capitalize">Arrival
-                                                        <input type="radio" checked="checked" name="radio">
+                                                        <input type="radio"  v-model="is_arrival_flight" value="1" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                                 <div class="form-check ms-0">
                                                     <label class="radio-container text-capitalize">Departure
-                                                        <input type="radio" checked="checked" name="radio">
+                                                        <input type="radio"  v-model="is_arrival_flight" value="2" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
@@ -210,7 +210,7 @@ export default {
          date : obj==undefined ? '' : obj.date,  
          time : obj==undefined ? '': obj.time,  
          flight_number : obj==undefined ?'':obj.flight_number,
-         is_arrival_flight : obj==undefined ? false :obj.is_arrival_flight,
+         is_arrival_flight : obj == undefined ? 1 : obj.is_arrival_flight==true?1:2,
          passengers:[{
                     title:"",
                     first_name: "",

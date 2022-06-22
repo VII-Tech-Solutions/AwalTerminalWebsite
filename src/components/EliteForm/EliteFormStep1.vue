@@ -47,7 +47,7 @@
 						</div>
 						<div class="elite-offer-service">
 							<label class="custom-radio">
-								<input type="radio" v-model="service_id" name="radio" value="2" />
+								<input type="radio" v-model="service_id" value="2" name="radio"  />
 								<div class="checkmark">
 									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
