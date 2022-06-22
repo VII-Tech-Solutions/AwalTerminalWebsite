@@ -99,12 +99,12 @@ export default {
         countriesoptions:obj.countriesoptions,
          service_id: obj.service_id,
          Totle: obj.total,
-        arriving_from_airport : obj.arriving_from_airport,  
+        airport_id : obj.airport_id,  
         airport_name : obj.airport_name,
-         arrival_date : obj.arrival_date,  
-         arrival_time : obj.arrival_time,  
+         date : obj.date,  
+         time : obj.time,  
          flight_number : obj.flight_number,
-         flight_type : obj.flight_type,
+         is_arrival_flight : obj.is_arrival_flight,
 			// passengers info
          passengers:obj.passengers,
          //booker Info
@@ -136,12 +136,12 @@ export default {
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
            obj.service_id= this.service_id,
             obj.countriesoptions=this.countriesoptions,
-            obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.airport_id =  this.airport_id;
             obj.airport_name = this.airport_name;
-            obj.arrival_date =  this.arrival_date;
-            obj.arrival_time =  this.arrival_time;
+            obj.date =  this.date;
+            obj.time =  this.time;
             obj.flight_number =  this.flight_number;
-            obj.flight_type = this.flight_type;
+            obj.is_arrival_flight = this.is_arrival_flight;
             obj.passengers = this.passengers;
             obj.booker = this.booker;
             localStorage.setItem('elitedata', JSON.stringify(obj));

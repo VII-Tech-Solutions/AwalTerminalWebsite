@@ -108,12 +108,12 @@ import EliteFormFooter from './EliteFormFooter.vue';
 				Totle: obj==undefined ?0:obj.total,
             countriesoptions: obj==undefined ?'':obj.countriesoptions,
 				notFormValid: true,
-				arriving_from_airport: obj==undefined ?0:obj.arriving_from_airport,
+				airport_id: obj==undefined ?0:obj.airport_id,
 				airport_name:obj==undefined ?0:obj.airport_name,
-				arrival_date: obj==undefined ?0:obj.arrival_date,
-				arrival_time: obj==undefined ?0:obj.arrival_time,
+				date: obj==undefined ?0:obj.date,
+				time: obj==undefined ?0:obj.time,
 				flight_number: obj==undefined ?'':obj.flight_number,
-				flight_type: obj==undefined ?0:obj.flight_type,
+				is_arrival_flight: obj==undefined ?0:obj.is_arrival_flight,
 				// passengers info
 				passengers: obj==undefined ?'':obj.passengers,
 				//booker Info
@@ -152,12 +152,12 @@ import EliteFormFooter from './EliteFormFooter.vue';
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
 				obj.countriesoptions=this.countriesoptions;
-            obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.airport_id =  this.airport_id;
 				obj.airport_name = this.airport_name;
-            obj.arrival_date =  this.arrival_date;
-            obj.arrival_time =  this.arrival_time;
+            obj.date =  this.date;
+            obj.time =  this.time;
             obj.flight_number =  this.flight_number;
-            obj.flight_type = this.flight_type;
+            obj.is_arrival_flight = this.is_arrival_flight;
             obj.passengers = this.passengers; 
             obj.booker = this.booker;
             debugger;

@@ -43,7 +43,7 @@
                                     <div class="col-lg-3 ">
                                          <div class="form-group">
                                             <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
-                                            <select class="form-select" v-model="arriving_from_airport" id="inputGroupSelect01" @change="fligh_name($event)">
+                                            <select class="form-select" v-model="airport_id" id="inputGroupSelect01" @change="fligh_name($event)">
                                                 <option  v-for="item in airportoptions" :key="item.id" :value="item.id">{{item.name}}</option>
                                             </select>
                                         </div>  
@@ -52,7 +52,7 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">date<span class="asterik">*</span></label>
                                             <div class="form-border">
-                                                <input type="date" onkeydown="return false"  v-model="arrival_date" class="form-control border-0" placeholder="DD/MM/YYYY">
+                                                <input type="date" onkeydown="return false"  v-model="date" class="form-control border-0" placeholder="DD/MM/YYYY">
                                                 <div class="d-flex align-items-center">
                                                     <span class="input-icon">
                                                         <img src="../../assets/images/icons/date-range.svg" alt="couch" class=" img-fluid"/>
@@ -64,7 +64,7 @@
                                     <div class="col-lg-2 ">
                                         <div class="form-group">
                                             <label class="form-label">Time<span class="asterik">*</span></label>
-                                            <div class="form-border"><input onkeydown="return false"  type="time" class="form-control border-0" v-model="arrival_time" placeholder="HH:MM">
+                                            <div class="form-border"><input onkeydown="return false"  type="time" class="form-control border-0" v-model="time" placeholder="HH:MM">
                                                 <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
                                             </div>
                                         </div>  
@@ -78,11 +78,11 @@
                                         </div>  
                                     </div>
                                 </div>
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-lg-3 ">
                                          <div class="form-group">
                                             <label class="form-label" for="inputGroupSelect01">Flight Type<span class="asterik">*</span></label>
-                                            <select class="form-select" v-model="flight_type" id="inputGroupSelect01" >
+                                            <select class="form-select" v-model="is_arrival_flight" id="inputGroupSelect01" >
                                               
                                                 <option v-for="item in flightoptions" :key="item.id" :value="item.id" >
                                                     {{item.name}}
@@ -92,7 +92,7 @@
                                             </select>
                                         </div>  
                                     </div>
-                                </div>
+                                </div> -->
                             </fieldset>
                             <fieldset>
                                 <legend class="form-title">Number of Passengers </legend>
@@ -171,10 +171,10 @@
                         <router-link to="/elite-form" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-block">
-                      <span class="btn-next d-inline-block align-top transition" v-if="!(arriving_from_airport && arrival_date && arrival_time && flight_number && number_of_adults )" :disabled="notFormValid" @click="error()" >
+                      <span class="btn-next d-inline-block align-top transition" v-if="!(airport_id && date && time && flight_number && number_of_adults )" :disabled="notFormValid" @click="error()" >
                             Next
                         </span>
-                      <span v-if="arriving_from_airport && arrival_date && arrival_time && flight_number && number_of_adults ">
+                      <span v-if="airport_id && date && time && flight_number && number_of_adults ">
                          <router-link to="/elite-form3" @click="setData()"  class="btn-next d-inline-block align-top transition">Next</router-link>
                          </span>
                     </div>
@@ -205,12 +205,12 @@ export default {
          number_of_infants:obj==undefined ?0:obj.number_of_infants,
          notFormValid: true,
          service_id: obj.service_id,  
-         arriving_from_airport : obj==undefined ?'':obj.arriving_from_airport,  
+         airport_id : obj==undefined ?'':obj.airport_id,  
          airport_name : obj==undefined ?'':obj.airport_name, 
-         arrival_date : obj==undefined ? '' : obj.arrival_date,  
-         arrival_time : obj==undefined ? '': obj.arrival_time,  
+         date : obj==undefined ? '' : obj.date,  
+         time : obj==undefined ? '': obj.time,  
          flight_number : obj==undefined ?'':obj.flight_number,
-         flight_type : obj==undefined ? '' :obj.flight_type,
+         is_arrival_flight : obj==undefined ? false :obj.is_arrival_flight,
          passengers:[{
                     title:"",
                     first_name: "",
@@ -333,12 +333,12 @@ export default {
            }  
             obj.service_id= this.service_id,
             obj.countriesoptions=this.countriesoptions;
-            obj.arriving_from_airport =  this.arriving_from_airport;
+            obj.airport_id =  this.airport_id;
             obj.airport_name =  this.airport_name;
-            obj.arrival_date =  this.arrival_date;
-            obj.arrival_time =  this.arrival_time;
+            obj.date =  this.date;
+            obj.time =  this.time;
             obj.flight_number =  this.flight_number;  
-            obj.flight_type = this.flight_type;
+            obj.is_arrival_flight = this.is_arrival_flight;
             obj.passengers = this.passengers; 
             obj.booker = abc == undefined ?  '': abc.booker;
             debugger;
