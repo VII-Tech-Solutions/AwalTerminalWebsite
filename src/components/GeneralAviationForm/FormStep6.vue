@@ -426,14 +426,14 @@ export default{
                 toastr.error(err.message);
             });  
       debugger;
-      if(response.status == 200)
-      {
-        debugger;
-          toastr.success(response.data.message);
-          window.location.href=  "/general-aviation-thankyou";
-          localStorage.removeItem("data");
-          localStorage.removeItem("textboxdata");
-      }
+    //   if(response.status == 200)
+    //   {
+    //     debugger;
+    //       toastr.success(response.data.message);
+    //       window.location.href=  "/general-aviation-thankyou";
+    //       localStorage.removeItem("data");
+    //       localStorage.removeItem("textboxdata");
+    //   }
     }
   }
 }

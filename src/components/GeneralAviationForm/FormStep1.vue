@@ -135,6 +135,7 @@ export default {
             obj1.departure_passenger_count=obj==undefined ?'1':obj.departure_passenger_count,  
             obj1.operator_full_name=obj==undefined ?'':obj.operator_full_name,    
             obj1.operator_country=obj==undefined ?'1':obj.operator_country,   
+            obj1.teldrop=obj==undefined ?'1-684':obj.teldrop,  
             obj1.operator_tel_number=obj==undefined ?'':obj.operator_tel_number,    
             obj1.operator_email=obj==undefined ?'':obj.operator_email,   
             obj1.operator_address=obj==undefined ?'':obj.operator_address,    

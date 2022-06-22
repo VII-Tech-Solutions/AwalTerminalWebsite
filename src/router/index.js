@@ -10,6 +10,7 @@ import EliteForm5 from "../components/EliteForm/EliteFormStep5.vue";
 import ElitePayementForm from "../components/EliteForm/ElitePayementForm.vue";
 import EliteThankYouPage from "../components/EliteForm/ThankYouPage.vue";
 import PaymentRecevied from "../components/EliteForm/Payment.vue";
+import PaymentFailed from "../components/EliteForm/PaymentFailed.vue";
 import Service from "../components/Services/Service.vue";
 import GeneralAviation from "../components/GeneralAviation/GeneralAviation.vue"
 import GeneralAviationForm1 from "../components/GeneralAviationForm/FormStep1.vue"
@@ -80,7 +81,7 @@ const routes = [
     component: EliteThankYouPage,
   },
   {
-    path: "/payment-recevied",
+    path: "/payment-received",
     name: "Payment Recevied",
     component: PaymentRecevied,
   },
@@ -90,7 +91,7 @@ const routes = [
     component: OurStory,
   },
   {
-    path: "/services",
+    path: "/services", query: { uuid: 'private' },
     name: "Service",
     component: Service,
   },
@@ -98,6 +99,11 @@ const routes = [
     path: "/elite-services",
     name: "AllService",
     component: AllService,
+  },
+  {
+    path: "/payment-failed",
+    name: "Payment Failed",
+    component: PaymentFailed,
   },
   {
     path: "/general-aviation",

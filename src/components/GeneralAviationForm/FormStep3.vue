@@ -29,11 +29,11 @@
                                         <div class="form-group">
                                             <label class="form-label">Telephone Number<span class="asterik">*</span></label>
                                             <div class="form-border">
-                                                 <select class="form-select phone-select h-100"  id="inputGroupSelect01">
-                                                    <option selected>+973</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
+                                                 <select  v-model="teldrop"  class="form-select phone-select h-100"  id="inputGroupSelect01">
+                                                    <option value="1-684" selected>1-684</option>
+                                                    <option value="93">355</option>
+                                                    <option value="213">213</option>
+                                                    <option value="92">92</option>
                                                 </select>
                                                 <input type="text" v-model="operator_tel_number" class="form-control border-0" placeholder="1234 5678">
                                             </div>
@@ -162,7 +162,8 @@ mounted () {
          notFormValid: true,
          airport_name: obj.airport_name,
          operator_full_name:obj.operator_full_name,  
-         operator_country:obj.operator_country,  
+         operator_country:obj.operator_country, 
+         teldrop: obj.teldrop, 
          operator_tel_number:obj.operator_tel_number,   
          operator_email:obj.operator_email,   
          operator_address:obj.operator_address,  
@@ -224,6 +225,7 @@ mounted () {
 
             obj1.operator_full_name=this.operator_full_name;    
             obj1.operator_country=this.operator_country;  
+            obj1.teldrop=  this.teldrop;    
             obj1.operator_tel_number=  this.operator_tel_number;    
             obj1.operator_email=this.operator_email,   
             obj1.operator_address=this.operator_address;    

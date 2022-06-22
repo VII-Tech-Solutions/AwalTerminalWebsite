@@ -333,6 +333,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
             obj1.operator_full_name=obj.operator_full_name,    
             obj1.operator_country=obj.operator_country,   
+              obj1.teldrop=  obj.teldrop;  
             obj1.operator_tel_number=  obj.operator_tel_number,    
             obj1.operator_email=obj.operator_email,   
             obj1.operator_address=obj.operator_address,    
