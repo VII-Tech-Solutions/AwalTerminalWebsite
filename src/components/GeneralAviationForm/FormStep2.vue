@@ -155,14 +155,15 @@
     data() {
          var obj= JSON.parse(localStorage.data);
         return {
-        airportoptions:[],
+        airportoptions:obj.airportoptions,
         countriesoptions:obj.countriesoptions,
-        flightoptions:this.flightoptions,
-        servicefeatureoptions:this.servicefeatureoptions,
+        formserviceoption :obj.formserviceoption,
         airport_name: obj.airport_name,
          notFormValid: true,
          arrival_call_sign:obj.arrival_call_sign,  
+
          arriving_from_airport:obj.arriving_from_airport,
+
          estimated_time_of_arrival:obj.estimated_time_of_arrival, 
          arrival_date:obj.arrival_date,
          arrival_flight_nature:obj.arrival_flight_nature,
@@ -190,8 +191,8 @@
                     debugger;
                     this.airportoptions = res.data.data.airports;
                     this.countriesoptions = res.data.data.countries;
-                    this.flightoptions = res.data.data.elite_service_types;
-                    this.servicefeatureoptions = res.data.data.elite_service_features;
+                    this.formserviceoption = res.data.data.form_services;
+                  
                 })
                 .catch((err) => {
                     toastr.error('Server Error Please Try again.. 🙁');
@@ -246,10 +247,12 @@
             obj1.transport_hotel_name=obj.transport_hotel_name,  
             obj1.transport_time=obj.transport_time,  
             obj1.remarks=obj.remarks
+            obj1.airportoptions=this.airportoptions;
             obj1.countriesoptions=this.countriesoptions;
+            obj1.formserviceoption=this.formserviceoption;
             obj1.airport_name = this.airport_name;
 
-             localStorage.setItem('data', JSON.stringify(obj1));
+            localStorage.setItem('data', JSON.stringify(obj1));
       }
   }
 

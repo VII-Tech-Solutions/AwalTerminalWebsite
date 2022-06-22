@@ -9,7 +9,6 @@ import EliteForm4 from "../components/EliteForm/EliteFormStep4.vue";
 import EliteForm5 from "../components/EliteForm/EliteFormStep5.vue";
 import ElitePayementForm from "../components/EliteForm/ElitePayementForm.vue";
 import EliteThankYouPage from "../components/EliteForm/ThankYouPage.vue";
-import EliteEliteService from "../components/EliteForm/EliteService.vue";
 import PaymentRecevied from "../components/EliteForm/Payment.vue";
 import Service from "../components/Services/Service.vue";
 import GeneralAviation from "../components/GeneralAviation/GeneralAviation.vue"
@@ -24,6 +23,7 @@ import OurStory from "../components/OurStory/OurStory.vue"
 import AllService from "../components/AllServices/AllService.vue"
 import Contact from "../components/Contact/Contact.vue"
 import ExpiredPage from "../components/EliteForm/ExpiredPage.vue"
+import EliteEliteService from "../components/EliteForm/EliteService.vue";
 import '@fortawesome/fontawesome-free/js/all.js';
 
 const routes = [
@@ -78,11 +78,6 @@ const routes = [
     path: "/elite-thankyou",
     name: "Elite ThankYouPage",
     component: EliteThankYouPage,
-  },
-  {
-    path: "/elite-service",
-    name: "Elite ThankYouPage",
-    component: EliteEliteService,
   },
   {
     path: "/payment-recevied",
@@ -155,6 +150,11 @@ const routes = [
     path: "/expired",
     name: "ExpiredPage",
     component: ExpiredPage,
+  },
+  {
+    path: "/elite-service",
+    name: "Elite ThankYouPage",
+    component: EliteEliteService,
   },
 ];
 

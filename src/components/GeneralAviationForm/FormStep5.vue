@@ -31,8 +31,8 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
-                                                    <span class="input-icon delete-icon me-2">
+                                                <button   @click="deleteFile('fuel')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <span  class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
                                                 </button>
@@ -43,11 +43,11 @@
                                             <div class="form-group">
                                                 <div class="form-border upload-form px-1"><input type="text" v-model="cateringServices" class="form-control border-0" placeholder="Upload catering order">
                                                     <input type="file" @change="uploadFile($event,'Cater')" ref="file" class="form-control upload-input" placeholder="" />
-                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button  @click="deleteFile('Cater')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -62,11 +62,11 @@
                                                 </div>
                                                 <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert" class="form-control border-0" placeholder="certificate_20220415_f8jq8cdh…">
                                                     <input type="file" @change="uploadFile($event,'Aircraft')" ref="file" class="form-control upload-input" placeholder="" />
-                                                    <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
+                                                    <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button  @click="deleteFile('Aircraft')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -82,7 +82,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button  @click="deleteFile('Arrival')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -98,7 +98,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button   @click="deleteFile('Departure')"  class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -114,7 +114,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload 
                                                     </button>
                                                 </div>
-                                                <button class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button   @click="deleteFile('other')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -165,10 +165,9 @@ import '@fortawesome/fontawesome-free/js/all.js';
      window.scrollTo(0, 0)
     },
     data() {
+        debugger;
           var obj= JSON.parse(localStorage.data);
           var textboxobj= localStorage.textboxdata != undefined ?  JSON.parse(localStorage.textboxdata):undefined;
-          
-      
         return {
          notFormValid: true,
          remarks:obj.remarks,
@@ -178,6 +177,13 @@ import '@fortawesome/fontawesome-free/js/all.js';
          arrivalgendec:   textboxobj == undefined ? '' : textboxobj.arrivalgendec,
          departureGendec: textboxobj == undefined ? '' : textboxobj.departureGendec,
          otherDocuments:  textboxobj == undefined ? '' : textboxobj.otherDocuments,
+
+         fuelattr:       textboxobj == undefined ? '' : textboxobj.fuelattr,
+         cateringattr:   textboxobj == undefined ? '' : textboxobj.cateringattr,
+         airattr:        textboxobj == undefined ? '' : textboxobj.airattr,
+         arrgenattr:     textboxobj == undefined ? '' : textboxobj.depGenattr,
+         depGenattr:     textboxobj == undefined ? '' : textboxobj.otherDocattr,
+         otherDocattr:   textboxobj == undefined ? '' : textboxobj.otherDocuments,
          attachement : obj.attachments,
      }
     },
@@ -195,11 +201,43 @@ import '@fortawesome/fontawesome-free/js/all.js';
         axios.post('https://awal.viitech.net/api/general-aviation/media', formData, { headers }).then((res) => {
             if(res.status == 200)
             {
-                 name=="fuel"?this.fuelServices = ref.target.files[0].name :name=="Cater"?
-                 this.cateringServices = ref.target.files[0].name :name=="Aircraft"? 
-                 this.airCraftCert = ref.target.files[0].name :name=="Arrival"?
-                 this.arrivalgendec = ref.target.files[0].name :name=="Departure"?
-                 this.departureGendec = ref.target.files[0].name:this.otherDocuments=ref.target.files[0].name;
+                debugger;
+                if(name == "fuel")
+                {
+                    this.fuelServices = ref.target.files[0].name;
+                    this.fuelattr = res.data.data.attachments[0].id;
+                    
+                }
+                else if(name=="Cater")
+                {
+                 this.cateringServices = ref.target.files[0].name ;
+                 this.cateringattr = res.data.data.attachments[0].id;
+                }
+                else if(name=="Aircraft")
+                {
+                 this.airCraftCert = ref.target.files[0].name;
+                 this.airattr = res.data.data.attachments[0].id;
+                }
+                else if(name=="Arrival")
+                {
+                this.arrivalgendec = ref.target.files[0].name;
+                this.arrivalgendec = res.data.data.attachments[0].id;
+                }
+                else if(name=="Departure")
+                {
+                this.departureGendec = ref.target.files[0].name;
+                this.depGenattr = res.data.data.attachments[0].id;
+                }
+                else
+                {
+                this.otherDocuments=ref.target.files[0].name;
+                this.otherDocattr = res.data.data.attachments[0].id;
+                }
+                //  name=="fuel"?this.fuelServices = ref.target.files[0].name :name=="Cater"?
+                //  this.cateringServices = ref.target.files[0].name :name=="Aircraft"? 
+                //  this.airCraftCert = ref.target.files[0].name :name=="Arrival"?
+                //  this.arrivalgendec = ref.target.files[0].name :name=="Departure"?
+                //  this.departureGendec = ref.target.files[0].name:this.otherDocuments=ref.target.files[0].name;
                  this.attachement.push(res.data.data.attachments[0].id);
             }
         }); 
@@ -211,6 +249,62 @@ import '@fortawesome/fontawesome-free/js/all.js';
          else{
             name!="other"? toastr.error('file size should not exceed 2MB'):toastr.error('File size for other documents should not exceed 10MB');
          }
+      },
+      deleteFile(name)
+      {
+        debugger;
+        var textboxobj= localStorage.textboxdata != undefined ?  JSON.parse(localStorage.textboxdata):undefined;
+                if(name == "fuel")
+                {
+                 const filtersList = this.attachement.filter(element => element !== this.fuelattr)
+                 this.attachement=filtersList;
+                 this.fuelServices = "";  
+                }
+                else if(name=="Cater")
+                {
+                 const filtersList = this.attachement.filter(element => element !== this.fuelattr)
+                 this.attachement=filtersList;
+                 this.cateringServices ="";
+                }
+                else if(name=="Aircraft")
+                {
+                 const filtersList = this.attachement.filter(element => element !== this.fuelattr)
+                 this.attachement=filtersList;
+                 this.airCraftCert = "";       
+                }
+                else if(name=="Arrival")
+                {
+                const filtersList = this.attachement.filter(element => element !== this.fuelattr)
+                this.attachement=filtersList;
+                this.arrivalgendec = "";
+                }
+                else if(name=="Departure")
+                {
+                 const filtersList = this.attachement.filter(element => element !== this.fuelattr)
+                 this.attachement=filtersList;
+                 this.departureGendec = "";
+                }
+                else
+                {
+                const filtersList = this.attachement.filter(element => element !== this.fuelattr)
+                this.attachement=filtersList;
+                this.otherDocuments="";
+                
+                }
+              
+                 if(textboxobj != undefined)
+                 { 
+                   textboxobj.fuelServices =      this.fuelServices;
+                   textboxobj.cateringServices =  this.cateringServices;
+                   textboxobj.airCraftCert =      this.airCraftCert;
+                    textboxobj.arrivalgendec =    this.arrivalgendec;
+                    textboxobj.departureGendec =   this.departureGendec;
+                   textboxobj.otherDocuments =     this.otherDocuments;
+                   localStorage.setItem('textboxdata', JSON.stringify(textboxobj));
+                 }
+                 var obj= JSON.parse(localStorage.data);
+                obj.attachments = this.attachement;
+                localStorage.setItem('data', JSON.stringify(obj));
       },
        setData()
       {
@@ -256,6 +350,9 @@ import '@fortawesome/fontawesome-free/js/all.js';
             obj1.transport_time=obj.transport_time,  
             obj1.remarks=this.remarks,
             obj1.airport_name = this.airport_name;
+            obj1.airportoptions=obj.airportoptions;
+            obj1.countriesoptions=obj.countriesoptions;
+            obj1.formserviceoption=obj.formserviceoption;
 
              localStorage.setItem('data', JSON.stringify(obj1));
 
@@ -266,6 +363,14 @@ import '@fortawesome/fontawesome-free/js/all.js';
              textboxobj.arrivalgendec = this.arrivalgendec; 
              textboxobj.departureGendec = this.departureGendec; 
              textboxobj.otherDocuments = this.otherDocuments; 
+
+
+             textboxobj.fuelattr = this.fuelattr; 
+             textboxobj.cateringattr = this.cateringattr; 
+             textboxobj.airattr = this.airattr; 
+             textboxobj.arrgenattr = this.arrgenattr; 
+             textboxobj.depGenattr = this.depGenattr; 
+             textboxobj.otherDocattr = this.otherDocattr; 
             localStorage.setItem('textboxdata', JSON.stringify(textboxobj));
 
       }

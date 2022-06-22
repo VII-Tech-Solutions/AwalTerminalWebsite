@@ -242,6 +242,9 @@ mounted () {
             obj1.transport_hotel_name=obj.transport_hotel_name;  
             obj1.transport_time=obj.transport_time;  
             obj1.remarks=obj.remarks;
+            obj1.airportoptions=obj.airportoptions;
+            obj1.countriesoptions=obj.countriesoptions;
+            obj1.formserviceoption=obj.formserviceoption;
 
              localStorage.setItem('data', JSON.stringify(obj1));
       }

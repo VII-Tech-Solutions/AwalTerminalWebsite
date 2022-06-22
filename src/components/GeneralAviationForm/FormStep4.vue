@@ -23,42 +23,15 @@
                                 <p class="form-p fw-semi-bold mb-lg-3 mb-2">Select all the services that you require upon arrival/departure</p>
                                 <div class="form-service-check">
                                     <ul class="ul_css">
-                                        <li>
-                                            <label class="checked-container">Landing Permit
-                                                <input type="checkbox" value="Landing Permit"  v-model="checkedNames" >
+                                        <li v-for="item in serviceoptions" :key="item.id">
+                                            <label class="checked-container">{{item.name}}
+                                                <input type="checkbox" :value="item.id"  v-model="checkedNames" >
                                                 <span class="checkmark"></span>
                                             </label>
                                         </li>
+  
                                         <li>
-                                            <label class="checked-container">fuel
-                                                <input type="checkbox" value="fuel"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">catering 
-                                                <input type="checkbox" value="catering"  v-model="checkedNames"  >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">passenger limo services 
-                                                <input type="checkbox" value="passenger limo services"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">hotel reservation 
-                                                <input type="checkbox" value="hotel reservation"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container mb-3 text-inherit">Crew Transport (to and from)
-                                                <input type="checkbox" value="Crew Transport (to and from)"  v-model="checkedNames" 
-                                                >
-                                                <span class="checkmark"></span>
-                                            </label>
+
                                             <div class="d-flex align-items-center ms-4">
                                                 <div class="form-group mb-0 w-100">
                                                     <input type="text" v-model="transport_hotel_name" class="form-control" placeholder="Enter hotel name" />
@@ -70,36 +43,6 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">Toilet Service
-                                                <input type="checkbox" value="Toilet Service"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">Water Service
-                                                <input type="checkbox" value="Water Service"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">Air Conditioning Unit (ACU) 
-                                                <input type="checkbox" value="Air Conditioning Unit (ACU)"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">Air Start Unit (ASU) 
-                                                <input type="checkbox" value="Air Start Unit (ASU)"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checked-container">Ground Power Unit (GPU)
-                                                <input type="checkbox" value="Ground Power Unit (GPU)"  v-model="checkedNames" >
-                                                <span class="checkmark"></span>
-                                            </label>
                                         </li>
                                     </ul>
                                 </div>
@@ -136,6 +79,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
           var obj= JSON.parse(localStorage.data);
         return {
          notFormValid: true,
+         serviceoptions:obj.formserviceoption,
          checkedNames:obj.services == ""?[]:obj.services,
          transport_hotel_name:obj.transport_hotel_name,
          transport_time:obj.transport_time,
@@ -186,6 +130,11 @@ import '@fortawesome/fontawesome-free/js/all.js';
             obj1.transport_time=this.transport_time,  
             obj1.remarks=obj.remarks
             obj1.airport_name = this.airport_name;
+
+            obj1.airportoptions=obj.airportoptions;
+            obj1.countriesoptions=obj.countriesoptions;
+            obj1.formserviceoption=obj.formserviceoption;
+
              localStorage.setItem('data', JSON.stringify(obj1));
       }
   }

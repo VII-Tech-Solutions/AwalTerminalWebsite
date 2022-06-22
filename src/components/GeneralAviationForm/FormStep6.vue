@@ -95,7 +95,7 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">from Airport<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.airport_name}}</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{fromairport[0].name}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
@@ -140,7 +140,7 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">To Airport<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.departure_to_airport}}</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{toairport[0].name}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
@@ -200,7 +200,7 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Country<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.operator_country}}</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{opcountry[0].name}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
@@ -245,7 +245,7 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Country<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">{{obj.agent_country}}</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{agcountry[0].name}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>
@@ -296,9 +296,9 @@
                                                         <p class="extra-small-text w-p">List of Services</p>
                                                         <div class="details-list">
                                                             <ul class="ul_css">
-                                                                <li v-for="item in obj.services" :key="item">
+                                                                <li v-for="item in selectedservice" :key="item">
                                                                     <div class="d-flex align-items-baseline">
-                                                                        <p class="extra-small-text text-capitalize fw-normal">{{item}}</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{item.name}}</p>
                                                                     </div>
                                                                 </li>
                                                             </ul>
@@ -393,10 +393,15 @@ export default{
     },
    data() {
           var obj= JSON.parse(localStorage.data);
-         
+        
           return {
          notFormValid: true,
          obj: JSON.parse(localStorage.data),
+         selectedservice: obj.formserviceoption.filter(o1 => obj.services.some(o2 => o1.id === o2)),
+         fromairport:  obj.airportoptions.filter(element => element.id == obj.arriving_from_airport),
+         toairport:  obj.airportoptions.filter(element => element.id == obj.departure_to_airport),
+         opcountry:  obj.countriesoptions.filter(element => element.id == obj.operator_country),
+         agcountry:  obj.countriesoptions.filter(element => element.id == obj.agent_country),
          textboxobj: JSON.parse(localStorage.textboxdata)
      }
     },
