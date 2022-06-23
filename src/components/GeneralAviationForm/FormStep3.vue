@@ -130,7 +130,7 @@
                       <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country && operator_tel_number
                        && operator_email && operator_address && operator_billing_address
                        && agent_fullname && agent_country && agent_phoneNumber
-                       && agent_email && agent_address && agent_billing_address
+                       && agent_email && agent_address && agent_billing_address 
                        
                        )" :disabled="notFormValid" @click="error()">
                             Next
@@ -138,7 +138,7 @@
                       <span v-if="operator_full_name && operator_country && operator_tel_number 
                         && operator_email && operator_address && operator_billing_address
                         && agent_fullname && agent_country && agent_phoneNumber
-                        && agent_email && agent_address && agent_billing_address
+                        && agent_email && agent_address && agent_billing_address 
                         ">
                          <router-link to="/general-aviation-form4" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                          </span>
@@ -158,7 +158,6 @@ mounted () {
     data() {
           var obj= JSON.parse(localStorage.data);
         return {
-             
          notFormValid: true,
          airport_name: obj.airport_name,
          operator_full_name:obj.operator_full_name,  
@@ -176,7 +175,8 @@ mounted () {
          countriesoptions:obj.countriesoptions,
          agent_billing_address:obj.agent_billing_address, 
          is_using_agent: obj.is_using_agent == false? 2: 1,
-         //agentno: !this.is_using_agent
+         reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
+         //emailisvalid: (this.reg.test(this.operator_email)) ? true :false
      }
     },
       methods:{
@@ -184,23 +184,14 @@ mounted () {
        error(){
         toastr.error('Kindly fillout required fields 🙁');
        },
-        checkunchecked(va)
-        {
-            debugger;
-         if(va == "1")
-         {
-          this.is_using_agent = true;
-          this.agentno = !this.is_using_agent;
-         }
-         else{
-            this.agentno= true;
-            this.is_using_agent=!this.agentno;
-         }
-
-        },
+            isEmailValid: function(email) {
+                debugger;
+             return 
+              },
        setData()
       {
           debugger;
+          
             var obj= localStorage.data != undefined ?  JSON.parse(localStorage.data):undefined;
      
             var obj1 = {};

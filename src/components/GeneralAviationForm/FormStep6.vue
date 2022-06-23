@@ -417,7 +417,7 @@ export default{
       const response = await axios.post("https://awal.viitech.net/api/general-aviation/", obj,axiosConfig)
       .then((res) => {
          debugger;
-                toastr.success(response.data.message);
+                toastr.success(res.data.message);
                 window.location.href=  "/general-aviation-thankyou";
                 localStorage.removeItem("data");
                 localStorage.removeItem("textboxdata");

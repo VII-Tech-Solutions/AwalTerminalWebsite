@@ -447,23 +447,18 @@ export default {
             };
             axios.post('https://awal.viitech.net/api/elite-service', postData, axiosConfig)
             .then((res) => {
-                console.log("RESPONSE RECEIVED: ", res);
                 toastr.success('Congratulation! Conform Ticket 🙂');
                 localStorage.removeItem("elitedata");
-                window.location.href='/payment-recevied';
-                //this.route='/elite-payement-form';
+                window.location.href='/payment-received';
             })
             .catch((err) => {
                 debugger
                 console.log("AXIOS ERROR: ", err);
                 toastr.error('Server Error Please Try again.. 🙁');
-                window.location.href='/elite-payement-form';
-                //router.go('/payment-recevied');
+               
             })
            
-        //    const response = await  axios.post("https://awal.viitech.net/api/elite-service", obj);
-        //    debugger;
-        //    this.articleId = response.data.id;
+   
        }
   }
   }

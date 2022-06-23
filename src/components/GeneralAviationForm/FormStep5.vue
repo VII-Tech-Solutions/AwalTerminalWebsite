@@ -169,7 +169,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
           var obj= JSON.parse(localStorage.data);
           var textboxobj= localStorage.textboxdata != undefined ?  JSON.parse(localStorage.textboxdata):undefined;
         return {
-         notFormValid: true,
          remarks:obj.remarks,
          fuelServices:    textboxobj == undefined ? '' : textboxobj.fuelServices,
          cateringServices:textboxobj == undefined ? '' : textboxobj.cateringServices,
@@ -177,19 +176,11 @@ import '@fortawesome/fontawesome-free/js/all.js';
          arrivalgendec:   textboxobj == undefined ? '' : textboxobj.arrivalgendec,
          departureGendec: textboxobj == undefined ? '' : textboxobj.departureGendec,
          otherDocuments:  textboxobj == undefined ? '' : textboxobj.otherDocuments,
-
-         fuelattr:       textboxobj == undefined ? '' : textboxobj.fuelattr,
-         cateringattr:   textboxobj == undefined ? '' : textboxobj.cateringattr,
-         airattr:        textboxobj == undefined ? '' : textboxobj.airattr,
-         arrgenattr:     textboxobj == undefined ? '' : textboxobj.depGenattr,
-         depGenattr:     textboxobj == undefined ? '' : textboxobj.otherDocattr,
-         otherDocattr:   textboxobj == undefined ? '' : textboxobj.otherDocuments,
          attachement : obj.attachments,
      }
     },
       methods:{
        uploadFile(ref,name) {
-      
         var ext =     ref.target.files[0].name.split('.').pop(); 
         if((name !="other" && (parseFloat(ref.target.files[0].size / (1024 * 1024)).toFixed(2)) <= 2) || (name =="other" && (parseFloat(ref.target.files[0].size / (1024 * 1024)).toFixed(2)) <= 10) )
         {
@@ -201,44 +192,18 @@ import '@fortawesome/fontawesome-free/js/all.js';
         axios.post('https://awal.viitech.net/api/general-aviation/media', formData, { headers }).then((res) => {
             if(res.status == 200)
             {
-                debugger;
-                if(name == "fuel")
-                {
-                    this.fuelServices = ref.target.files[0].name;
-                    this.fuelattr = res.data.data.attachments[0].id;
-                    
-                }
-                else if(name=="Cater")
-                {
-                 this.cateringServices = ref.target.files[0].name ;
-                 this.cateringattr = res.data.data.attachments[0].id;
-                }
-                else if(name=="Aircraft")
-                {
-                 this.airCraftCert = ref.target.files[0].name;
-                 this.airattr = res.data.data.attachments[0].id;
-                }
-                else if(name=="Arrival")
-                {
-                this.arrivalgendec = ref.target.files[0].name;
-                this.arrivalgendec = res.data.data.attachments[0].id;
-                }
-                else if(name=="Departure")
-                {
-                this.departureGendec = ref.target.files[0].name;
-                this.depGenattr = res.data.data.attachments[0].id;
-                }
-                else
-                {
-                this.otherDocuments=ref.target.files[0].name;
-                this.otherDocattr = res.data.data.attachments[0].id;
-                }
-                //  name=="fuel"?this.fuelServices = ref.target.files[0].name :name=="Cater"?
-                //  this.cateringServices = ref.target.files[0].name :name=="Aircraft"? 
-                //  this.airCraftCert = ref.target.files[0].name :name=="Arrival"?
-                //  this.arrivalgendec = ref.target.files[0].name :name=="Departure"?
-                //  this.departureGendec = ref.target.files[0].name:this.otherDocuments=ref.target.files[0].name;
-                 this.attachement.push(res.data.data.attachments[0].id);
+                 name=="fuel"?this.fuelServices = ref.target.files[0].name :name=="Cater"?
+                 this.cateringServices = ref.target.files[0].name :name=="Aircraft"? 
+                 this.airCraftCert = ref.target.files[0].name :name=="Arrival"?
+                 this.arrivalgendec = ref.target.files[0].name :name=="Departure"?
+                 this.departureGendec = ref.target.files[0].name:this.otherDocuments=ref.target.files[0].name;
+
+                this.attachement.push(res.data.data.attachments[0].id);
+                this.setDocumentText();
+                var obj= JSON.parse(localStorage.data);
+                obj.attachments = this.attachement;
+                localStorage.setItem('data', JSON.stringify(obj));
+              
             }
         }); 
         }
@@ -252,8 +217,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
       },
       deleteFile(name)
       {
-        debugger;
-        var textboxobj= localStorage.textboxdata != undefined ?  JSON.parse(localStorage.textboxdata):undefined;
+                
                 if(name == "fuel")
                 {
                  const filtersList = this.attachement.filter(element => element !== this.fuelattr)
@@ -291,89 +255,43 @@ import '@fortawesome/fontawesome-free/js/all.js';
                 this.otherDocuments="";
                 
                 }
-              
-                 if(textboxobj != undefined)
-                 { 
-                   textboxobj.fuelServices =      this.fuelServices;
-                   textboxobj.cateringServices =  this.cateringServices;
-                   textboxobj.airCraftCert =      this.airCraftCert;
-                    textboxobj.arrivalgendec =    this.arrivalgendec;
-                    textboxobj.departureGendec =   this.departureGendec;
-                   textboxobj.otherDocuments =     this.otherDocuments;
-                   localStorage.setItem('textboxdata', JSON.stringify(textboxobj));
-                 }
-                 var obj= JSON.parse(localStorage.data);
+                this.setDocumentText();
+                var obj= JSON.parse(localStorage.data);
                 obj.attachments = this.attachement;
                 localStorage.setItem('data', JSON.stringify(obj));
       },
+      setDocumentText()
+      {
+
+        var textboxobj= localStorage.textboxdata != undefined ?  JSON.parse(localStorage.textboxdata):undefined;
+         if(textboxobj != undefined)
+         {
+         textboxobj.fuelServices =      this.fuelServices;
+         textboxobj.cateringServices =  this.cateringServices;
+         textboxobj.airCraftCert =      this.airCraftCert;
+         textboxobj.arrivalgendec =    this.arrivalgendec;
+         textboxobj.departureGendec =   this.departureGendec;
+         textboxobj.otherDocuments =     this.otherDocuments;
+         localStorage.setItem('textboxdata', JSON.stringify(textboxobj));
+         }
+         else
+         {
+            var textobjinit = {};
+             textobjinit.fuelServices = this.fuelServices; 
+             textobjinit.cateringServices = this.cateringServices; 
+             textobjinit.airCraftCert = this.airCraftCert; 
+             textobjinit.arrivalgendec = this.arrivalgendec; 
+             textobjinit.departureGendec = this.departureGendec; 
+             textobjinit.otherDocuments = this.otherDocuments; 
+            localStorage.setItem('textboxdata', JSON.stringify(textobjinit));
+         }
+      },
        setData()
       {
-          debugger;
-            var obj= localStorage.data != undefined ?  JSON.parse(localStorage.data):undefined;
-     
-            var obj1 = {};
-            obj1.aircraft_type =  obj.aircraft_type;
-            obj1.registration_number =  obj.registration_number;
-            obj1.mtow =  obj.mtow;
-            obj1.lead_passenger_name =  obj.lead_passenger_name;   
-            obj1.landing_purpose = obj.landing_purpose;
-
-            obj1.arrival_call_sign=obj.arrival_call_sign;    
-            obj1.arriving_from_airport=obj.arriving_from_airport,    
-            obj1.estimated_time_of_arrival=obj.estimated_time_of_arrival,  
-            obj1.arrival_date=obj.arrival_date,   
-            obj1.arrival_flight_nature=obj.arrival_flight_nature,  
-            obj1.arrival_passenger_count=obj.arrival_passenger_count,    
-            obj1.departure_call_sign=obj.departure_call_sign,
-            obj1.departure_to_airport=obj.departure_to_airport,    
-            obj1.estimated_time_of_departure=obj.estimated_time_of_departure
-            obj1.departure_date=obj.departure_date,   
-            obj1.departure_flight_nature=obj.departure_flight_nature,    
-            obj1.departure_passenger_count=obj.departure_passenger_count,  
-
-            obj1.operator_full_name=obj.operator_full_name,    
-            obj1.operator_country=obj.operator_country,   
-              obj1.teldrop=  obj.teldrop;  
-            obj1.operator_tel_number=  obj.operator_tel_number,    
-            obj1.operator_email=obj.operator_email,   
-            obj1.operator_address=obj.operator_address,    
-            obj1.operator_billing_address=obj.operator_billing_address,
-            obj1.agent_fullname=obj.agent_fullname,   
-            obj1.agent_country=obj.agent_country,    
-            obj1.agent_phoneNumber=obj.agent_phoneNumber,    
-            obj1.agent_email=obj.agent_email,   
-            obj1.agent_address=obj.agent_address,    
-            obj1.agent_billing_address=obj.agent_billing_address, 
-            obj1.is_using_agent=obj.is_using_agent, 
-            obj1.services=obj.services, 
-            obj1.attachments= this.attachement,
-            obj1.transport_hotel_name=obj.transport_hotel_name,  
-            obj1.transport_time=obj.transport_time,  
-            obj1.remarks=this.remarks,
-            obj1.airport_name = this.airport_name;
-            obj1.airportoptions=obj.airportoptions;
-            obj1.countriesoptions=obj.countriesoptions;
-            obj1.formserviceoption=obj.formserviceoption;
-
-             localStorage.setItem('data', JSON.stringify(obj1));
-
-             var textboxobj = {};
-             textboxobj.fuelServices = this.fuelServices; 
-             textboxobj.cateringServices = this.cateringServices; 
-             textboxobj.airCraftCert = this.airCraftCert; 
-             textboxobj.arrivalgendec = this.arrivalgendec; 
-             textboxobj.departureGendec = this.departureGendec; 
-             textboxobj.otherDocuments = this.otherDocuments; 
-
-
-             textboxobj.fuelattr = this.fuelattr; 
-             textboxobj.cateringattr = this.cateringattr; 
-             textboxobj.airattr = this.airattr; 
-             textboxobj.arrgenattr = this.arrgenattr; 
-             textboxobj.depGenattr = this.depGenattr; 
-             textboxobj.otherDocattr = this.otherDocattr; 
-            localStorage.setItem('textboxdata', JSON.stringify(textboxobj));
-
+            var obj= JSON.parse(localStorage.data);
+            obj.attachments= this.attachement,
+            obj.remarks=this.remarks,
+            localStorage.setItem('data', JSON.stringify(obj));
       }
   }
 
