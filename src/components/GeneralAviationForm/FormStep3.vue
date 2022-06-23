@@ -70,6 +70,7 @@
                                        <div class="form-group">
                                             <label class="form-label text-capitalize">email address<span class="asterik">*</span></label>
                                             <input type="text" v-model="operator_email" class="form-control" placeholder="name@example.com">
+                                            <span style="color:red;" v-if="msg.email">{{msg.email}}</span>
                                         </div>
                                         <div class="form-group">
                                              <label for="exampleFormControlTextarea1" class="form-label text-capitalize">billing address<span class="asterik">*</span></label>
@@ -130,7 +131,7 @@
                       <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country && operator_tel_number
                        && operator_email && operator_address && operator_billing_address
                        && agent_fullname && agent_country && agent_phoneNumber
-                       && agent_email && agent_address && agent_billing_address 
+                       && agent_email && agent_address && agent_billing_address && !msg.email
                        
                        )" :disabled="notFormValid" @click="error()">
                             Next
@@ -138,7 +139,7 @@
                       <span v-if="operator_full_name && operator_country && operator_tel_number 
                         && operator_email && operator_address && operator_billing_address
                         && agent_fullname && agent_country && agent_phoneNumber
-                        && agent_email && agent_address && agent_billing_address 
+                        && agent_email && agent_address && agent_billing_address  && !msg.email
                         ">
                          <router-link to="/general-aviation-form4" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                          </span>
@@ -175,19 +176,34 @@ mounted () {
          countriesoptions:obj.countriesoptions,
          agent_billing_address:obj.agent_billing_address, 
          is_using_agent: obj.is_using_agent == false? 2: 1,
-         reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
+         msg: [],
+       //  reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
          //emailisvalid: (this.reg.test(this.operator_email)) ? true :false
      }
     },
-      methods:{
-        
+watch: {
+    operator_email(value){
+        debugger;
+      this.validateEmail(value);
+    },
+ 
+  },
+
+    methods:{
        error(){
         toastr.error('Kindly fillout required fields 🙁');
        },
-            isEmailValid: function(email) {
-                debugger;
-             return 
-              },
+    validateEmail(value)
+    {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value))
+     {
+        this.msg['email'] = '';
+     } 
+     else
+     {
+      this.msg['email'] = 'Invalid Email Address';
+     } 
+    },
        setData()
       {
           debugger;

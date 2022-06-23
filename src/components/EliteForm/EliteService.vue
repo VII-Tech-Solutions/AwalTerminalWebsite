@@ -348,7 +348,7 @@
                                             <li>
                                                 <div class="d-flex justify-content-between">
                                                     <p class="extra-small-text text-capitalize fw-normal">total</p>
-                                                    <p class="extra-small-text text-capitalize fw-normal">BHD 270.500</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">BHD {{elite_services.total}}</p>
                                                 </div>
                                             </li>
                                             <li>
@@ -362,7 +362,7 @@
                                     <div class="amount-footer">
                                         <div class="d-flex justify-content-between">
                                                 <p class="text-capitalize">Total Amount Due:</p>
-                                                <p class="text-capitalize">BHD 297.550</p>
+                                                <p class="text-capitalize"> BHD {{elite_services.total}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -377,14 +377,15 @@
          <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                <div class="d-block">
-                  <router-link to="/elite-form5" class="cancel-link d-inline-block text-decoration-none">Back
+                  <router-link to="" class="cancel-link d-inline-block text-decoration-none">Back
                   </router-link>
                </div>
                <div class="d-flex align-items-center">
-                  <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 sans">Total Amount:<span>BHD 297.550</span></p>
+                  <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 sans">Total Amount:<span>BHD {{elite_services.total}}</span></p>
                   <div class="d-block">
-                     <button @click="paynow()" class="btn-next d-inline-block align-top transition text-capitalize">pay
-                        now </button>
+                       <a :href="paymentlink" class="btn-next d-inline-block align-top transition text-capitalize">
+                  pay now</a>
+                    
                   </div>
                </div>
             </div>
@@ -399,7 +400,6 @@ import axios from 'axios';
 export default {
    mounted() {
       debugger;
-      console.log(this.$route.query.uuid) ;
       window.scrollTo(0, 0);
       this.getDropdownData();
    },
@@ -408,7 +408,8 @@ export default {
       return {
          elite_services:'',
          passengers:'',
-         booker:''
+         booker:'',
+         paymentlink :'',
 
       }
    },
@@ -427,6 +428,7 @@ export default {
                     this.elite_services = res.data.data.elite_services.length>0? res.data.data.elite_services[0]:res.data.data.elite_services;
                     this.passengers = res.data.data.passengers;
                     this.booker = res.data.data.booker[0];
+                    this.paymentlink = res.data.data.elite_services[0].payment_link;
                 })
                 .catch((err) => {
                     toastr.error('Server Error Please Try again.. 🙁');

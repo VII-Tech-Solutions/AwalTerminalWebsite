@@ -88,6 +88,7 @@ export default {
     mounted () {
      window.scrollTo(0, 0)
     },
+    
   data() {
       debugger;
       var obj = JSON.parse(localStorage.elitedata);

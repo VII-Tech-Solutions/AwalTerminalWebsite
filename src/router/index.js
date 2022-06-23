@@ -153,7 +153,7 @@ const routes = [
   },
 
   {
-    path: "/expired",
+    path: "/link-expired",
     name: "ExpiredPage",
     component: ExpiredPage,
   },

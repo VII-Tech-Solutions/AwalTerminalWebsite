@@ -323,25 +323,25 @@
                                             <li >
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text text-capitalize list-width">Aircraft Certifications Checklist</p>
-                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">{{textboxobj.airCraftCert}}</p></a>
+                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">{{textboxobj==undefined?'': textboxobj.airCraftCert}}</p></a>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text list-width text-capitalize">Arrival Gendec</p>
-                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">{{textboxobj.arrivalgendec}}</p></a>
+                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline">{{textboxobj==undefined?'': textboxobj.arrivalgendec}}</p></a>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text list-width text-capitalize">Departure Gendec</p>
-                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline"> {{textboxobj.departureGendec}}</p></a>
+                                                    <a href="#"><p class="extra-small-text fw-normal text-decoration-underline"> {{textboxobj==undefined?'': textboxobj.departureGendec}}</p></a>
                                                 </div>
                                             </li>
                                             <li class="mb-lg-5 mb-3">
                                                 <div class="d-flex align-items-baseline">
                                                     <p class="extra-small-text list-width text-capitalize">Other Documents</p>
-                                                    <p class="extra-small-text fw-normal">{{textboxobj.otherDocuments}}</p>
+                                                    <p class="extra-small-text fw-normal">{{textboxobj==undefined?'': textboxobj.otherDocuments}}</p>
                                                 </div>
                                             </li>
                                             <li>
@@ -392,17 +392,17 @@ export default{
      window.scrollTo(0, 0)
     },
    data() {
-          var obj= JSON.parse(localStorage.data);
+          var obj1= JSON.parse(localStorage.data);
         
           return {
          notFormValid: true,
          obj: JSON.parse(localStorage.data),
-         selectedservice: obj.formserviceoption.filter(o1 => obj.services.some(o2 => o1.id === o2)),
-         fromairport:  obj.airportoptions.filter(element => element.id == obj.arriving_from_airport),
-         toairport:  obj.airportoptions.filter(element => element.id == obj.departure_to_airport),
-         opcountry:  obj.countriesoptions.filter(element => element.id == obj.operator_country),
-         agcountry:  obj.countriesoptions.filter(element => element.id == obj.agent_country),
-         textboxobj: JSON.parse(localStorage.textboxdata)
+         selectedservice: obj1.formserviceoption.filter(o1 => obj1.services.some(o2 => o1.id === o2)),
+         fromairport:  obj1.airportoptions.filter(element => element.id == obj1.arriving_from_airport),
+         toairport:  obj1.airportoptions.filter(element => element.id == obj1.departure_to_airport),
+         opcountry:  obj1.countriesoptions.filter(element => element.id == obj1.operator_country),
+         agcountry:  obj1.countriesoptions.filter(element => element.id == obj1.agent_country),
+         textboxobj: localStorage.textboxdata != undefined? JSON.parse(localStorage.textboxdata) :undefined
      }
     },
       methods:{

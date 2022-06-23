@@ -13,7 +13,7 @@
                     <img class="img-fluid" src="../../assets/images/agentImg.png" alt="Hala Bahrain"/>
                   </figure>
                 </div>
-                <div class="d-flex mobile-centered-btn"><router-link to="/elite-form" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book elite services</router-link></div>
+                <div class="d-flex mobile-centered-btn"><router-link to="/elite-form" @click="clear" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book elite services</router-link></div>
               </div>
             </div>
         </div>
@@ -50,7 +50,12 @@ export default {
   components: {
     Banner,EliteService,PlanForComfort,ExperienceTerminal,FooterBanner
   },
-  
+  methods:{
+    clear()
+    {
+      localStorage.removeItem("elitedata");
+    },
+  }
 };
 </script>
 <style>
