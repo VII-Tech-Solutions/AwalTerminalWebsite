@@ -17,7 +17,7 @@
                         <p class="fw-semi-bold form-p mb-lg-3 mb-2">Here is an overview of all the details you
                            have submitted</p>
                      </fieldset>
-                     <div class="accordion detail-section" id="accordionExample">
+                     <div class="accordion detail-section pb-lg-4 pb-3" id="accordionExample">
                         <div class="accordion-item">
                            <div class="detail-section-header w-100">
                               <p class="-capitalize detail-section-title accordion-header" id="headingOne">
@@ -310,6 +310,63 @@
                            </div>
                         </div>
                      </div>
+                     <div class="payement-method">
+                                <div class="payement-header">
+                                    <p class="text-capitalize detail-section-title fw-semi-bold form-p accordion-header mb-md-3 mb-2">select Payment Method</p>
+                                   <div class="details-list">
+                                        <div class="row">
+                                            <div class="col-md-5 mb-md-0 mb-2">
+                                                <div class="credit-box">
+                                                    <div class="form-check px-0">
+                                                        <label class="radio-container text-capitalize">credit card 
+                                                            <input type="radio" checked="checked" name="radio"><span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <figure class="mb-0">
+                                                        <img class="img-fluid" src="../../assets/images/icons/credit-card.svg"/>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 mb-md-0 mb-2">
+                                                <div class="credit-box">
+                                                    <div class="form-check px-0">
+                                                        <label class="radio-container text-capitalize">debit card 
+                                                            <input type="radio" checked="checked" name="radio"><span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <figure class="mb-0">
+                                                        <img class="img-fluid" src="../../assets/images/icons/debit-card.svg"/>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="amount-box">
+                                    <div class="amount-header">
+                                        <ul class="ul_css">
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="extra-small-text text-capitalize fw-normal">total</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">BHD 270.500</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="extra-small-text text-capitalize fw-normal">VAT (10%)</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">BHD 27.050</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="amount-footer">
+                                        <div class="d-flex justify-content-between">
+                                                <p class="text-capitalize">Total Amount Due:</p>
+                                                <p class="text-capitalize">BHD 297.550</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                   </form>
                </div>
             </div>
