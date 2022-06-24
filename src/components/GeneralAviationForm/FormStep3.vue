@@ -233,7 +233,7 @@ watch: {
             obj1.operator_full_name=this.operator_full_name;    
             obj1.operator_country=this.operator_country;  
             obj1.teldrop=  this.teldrop;    
-            obj1.operator_tel_number=  this.operator_tel_number;    
+            obj1.operator_tel_number=  this.teldrop +' '+ this.operator_tel_number;    
             obj1.operator_email=this.operator_email,   
             obj1.operator_address=this.operator_address;    
             obj1.operator_billing_address=this.operator_billing_address;
