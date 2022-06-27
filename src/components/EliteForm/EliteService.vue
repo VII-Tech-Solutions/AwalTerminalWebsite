@@ -319,7 +319,7 @@
                                                 <div class="credit-box">
                                                     <div class="form-check px-0">
                                                         <label class="radio-container text-capitalize">credit card 
-                                                            <input type="radio" checked="checked" name="radio"><span class="checkmark"></span>
+                                                            <input type="radio"  value="1" @change="isCredit"   v-model="is_credit"   name="radio"><span class="checkmark"></span>
                                                         </label>
                                                     </div>
                                                     <figure class="mb-0">
@@ -331,7 +331,7 @@
                                                 <div class="credit-box">
                                                     <div class="form-check px-0">
                                                         <label class="radio-container text-capitalize">debit card 
-                                                            <input type="radio" checked="checked" name="radio"><span class="checkmark"></span>
+                                                            <input type="radio" value="2" @change="isCredit"   v-model="is_credit"   name="radio"><span class="checkmark"></span>
                                                         </label>
                                                     </div>
                                                     <figure class="mb-0">
@@ -409,14 +409,14 @@ export default {
          elite_services:'',
          passengers:'',
          booker:'',
-         paymentlink :'',
-
+         is_credit:1,
+         paymentlink :this.paymentlink + '?payment_method='+this.is_credit
+      
       }
    },
    methods: {
       getDropdownData()
 			{
-            debugger;
                 let axiosConfig = {
                     headers: {
                         'Content-Type': 'application/json;charset=UTF-8',
@@ -428,12 +428,18 @@ export default {
                     this.elite_services = res.data.data.elite_services.length>0? res.data.data.elite_services[0]:res.data.data.elite_services;
                     this.passengers = res.data.data.passengers;
                     this.booker = res.data.data.booker[0];
-                    this.paymentlink = res.data.data.elite_services[0].payment_link;
+                    this.paymentlink = res.data.data.elite_services[0].payment_link + '?payment_method='+this.is_credit ;
                 })
                 .catch((err) => {
                     toastr.error('Server Error Please Try again.. 🙁');
                 })
 			},
+         isCredit()
+         {
+            debugger;
+            this.paymentlink = this.paymentlink.split("?payment_method")[0] + '?payment_method='+this.is_credit
+
+         },
    }
 }
 </script>
