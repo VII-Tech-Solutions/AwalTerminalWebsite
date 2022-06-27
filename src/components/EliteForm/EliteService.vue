@@ -109,7 +109,7 @@
                                                          <p class="extra-small-text w-p text-capitalize">
                                                             Flight Status<span class="asterik">*</span></p>
                                                          <p class="extra-small-text text-capitalize fw-normal">
-                                                            {{elite_services.Is_arrival_flight == 0?'Depature':'Arrival'}}</p>
+                                                            {{(elite_services.is_arrival_flight == 0 ?'Arrival':'Depature')}}</p>
                                                       </div>
                                                    </li>
                                                    <li>
