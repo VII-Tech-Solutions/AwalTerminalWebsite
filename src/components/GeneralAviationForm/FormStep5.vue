@@ -26,7 +26,7 @@
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Fuel Services, upload Fuel Release (if available)</p>
                                             <div class="form-group">
                                                 <div class="form-border upload-form px-1"><input type="text" v-model="fuelServices" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
-                                                    <input type="file"  @change="uploadFile($event,'fuel')" ref="file" class="form-control upload-input" placeholder="" />
+                                                    <input type="file"  @change="uploadFile($event,'Fuel Release')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
@@ -42,7 +42,7 @@
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Catering Services, upload Catering Order (if available)</p>
                                             <div class="form-group">
                                                 <div class="form-border upload-form px-1"><input type="text" v-model="cateringServices" class="form-control border-0" placeholder="Upload catering order">
-                                                    <input type="file" @change="uploadFile($event,'Cater')" ref="file" class="form-control upload-input" placeholder="" />
+                                                    <input type="file" @change="uploadFile($event,'Catering Order')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
@@ -61,7 +61,7 @@
                                                     <a class="text-capitalize text-color-btn">download checklist template</a>
                                                 </div>
                                                 <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert" class="form-control border-0" placeholder="certificate_20220415_f8jq8cdh…">
-                                                    <input type="file" @change="uploadFile($event,'Aircraft')" ref="file" class="form-control upload-input" placeholder="" />
+                                                    <input type="file" @change="uploadFile($event,'Aircraft Certifications Checklist')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
@@ -77,7 +77,7 @@
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Arrival Gendec<span class="asterik">*</span></label>
                                                 <div class="form-border upload-form px-1"><input type="text" v-model="arrivalgendec" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
-                                                    <input type="file"   @change="uploadFile($event,'Arrival')" ref="file" class="form-control upload-input" placeholder="" />
+                                                    <input type="file"   @change="uploadFile($event,'Arrival Gendec')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
@@ -93,7 +93,7 @@
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Departure Gendec<span class="asterik">*</span></label>
                                                 <div class="form-border upload-form px-1"><input type="text"  v-model="departureGendec" class="form-control border-0" placeholder="departure_20220415_pkmai856as…">
-                                                    <input type="file" @change="uploadFile($event,'Departure')" ref="file" class="form-control upload-input" placeholder="" />
+                                                    <input type="file" @change="uploadFile($event,'Departure Gendec')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
@@ -198,27 +198,27 @@ import '@fortawesome/fontawesome-free/js/all.js';
         axios.post('https://awal.viitech.net/api/general-aviation/media', formData, { headers }).then((res) => {
             if(res.status == 200)
             {
-                if( name=="fuel")
+                if( name=="Fuel Release")
                 {
                 this.fuelServices = ref.target.files[0].name;
                 this.fuelid = res.data.data.attachments[0].id;
                 }
-                else if(name=="Cater")
+                else if(name=="Catering Order")
                 {
                 this.cateringServices = ref.target.files[0].name;
                 this.catid = res.data.data.attachments[0].id;
                 }
-                else if(name=="Aircraft")
+                else if(name=="Aircraft Certifications Checklist")
                 {
                 this.airCraftCert = ref.target.files[0].name;
                 this.airid = res.data.data.attachments[0].id;
                 }
-                else if(name=="Arrival")
+                else if(name=="Arrival Gendec")
                 {
                this.arrivalgendec = ref.target.files[0].name;
                this.arrid = res.data.data.attachments[0].id;
                 }
-                else if(name=="Departure")
+                else if(name=="Departure Gendec")
                 {
                  this.departureGendec = ref.target.files[0].name;
                  this.depid = res.data.data.attachments[0].id;                   
