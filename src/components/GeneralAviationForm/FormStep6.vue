@@ -416,8 +416,6 @@ export default{
       const obj =  JSON.parse(localStorage.data);
       const response = await axios.post("https://awal.viitech.net/api/general-aviation/", obj,axiosConfig)
       .then((res) => {
-         debugger;
-                toastr.success(res.data.message);
                 window.location.href=  "/general-aviation-thankyou";
                 localStorage.removeItem("data");
                 localStorage.removeItem("textboxdata");
