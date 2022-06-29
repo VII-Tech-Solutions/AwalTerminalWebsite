@@ -190,16 +190,16 @@ import axios from 'axios';
 export default {
     mounted () {
      window.scrollTo(0, 0);
-     this.getDropdownData();
+    // this.getDropdownData();
     },   
   data() {
       debugger;
         var obj = JSON.parse(localStorage.elitedata);
     return {
-        airportoptions:[],
-        countriesoptions:obj.countriesoptions,
-        flightoptions:this.flightoptions,
-        servicefeatureoptions:this.servicefeatureoptions,
+         airportoptions:obj.airportoptions,
+         countriesoptions:obj.countriesoptions,
+         flightoptions:this.flightoptions,
+         servicefeatureoptions:this.servicefeatureoptions,
          number_of_adults:obj==undefined ?0:obj.number_of_adults,
          number_of_children:obj==undefined ?0:obj.number_of_children,
          number_of_infants:obj==undefined ?0:obj.number_of_infants,
@@ -224,33 +224,12 @@ export default {
      }
         
     },
-   
    methods:{
          fligh_name(event){
                 debugger;
                 this.airport_name=this.airportoptions.find(x => x.id ==event.target.value).name;
             },
-           
-           getDropdownData()
-			{
-            debugger;
-                let axiosConfig = {
-                    headers: {
-                        'Content-Type': 'application/json;charset=UTF-8',
-                    }
-                };
-                axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
-                .then((res) => {
-                    debugger;
-                    this.airportoptions = res.data.data.airports;
-                    this.countriesoptions = res.data.data.countries;
-                    this.flightoptions = res.data.data.elite_service_types;
-                    this.servicefeatureoptions = res.data.data.elite_service_features;
-                })
-                .catch((err) => {
-                    toastr.error('Server Error Please Try again.. 🙁');
-                })
-			},
+
        AdultInc(){
            this.number_of_adults = this.number_of_adults + 1;
            
