@@ -65,7 +65,7 @@ export default {
 .book-elite-service .five_star h2{margin-bottom:40px; padding-bottom:0px;}
 .book-elite-service .five_star p{text-align:start;}
 .agent-img{width:185px;}
-.gold-text{font-size:16px; font-weight:600; line-height:20px;}
+.gold-text{font-size:16px; font-weight:600; line-height:20px;position: relative;top:-3px}
 .service-checklist ul li:not(:last-child){margin-bottom:20px;}
 .service-checklist ul li .checklist-points{display:flex; align-items:center;}
 .service-checklist ul li .checklist-points .icon{margin-right:10px; width:20px;}

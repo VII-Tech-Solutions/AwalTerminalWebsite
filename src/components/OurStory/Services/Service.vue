@@ -33,7 +33,7 @@
 											</p>
 										</div>
 										<div class="d-flex justify-content-center">
-											<a href="#" class="card-blue-btn text-uppercase d-inline">learn more</a>
+											<router-link to="/elite-services" class="card-blue-btn text-uppercase d-inline">learn more</router-link>
 										</div>
 									</div>
 								</div>
@@ -56,7 +56,7 @@
 											</p>
 										</div>
 										<div class="d-flex justify-content-center">
-											<a href="#" class="card-blue-btn text-uppercase d-inline">learn more</a>
+											<router-link to="/general-aviation" class="card-blue-btn text-uppercase d-inline">learn more</router-link>
 										</div>
 									</div>
 								</div>

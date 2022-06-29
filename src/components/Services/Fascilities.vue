@@ -75,7 +75,7 @@
                 </li>
             </ul>
             <div class="d-flex justify-content-center">
-                <a data-aos="fade-bottom" data-aos-duration="2500" href="#" class="blue-btn text-uppercase d-inline">Take a tour</a>
+                <router-link to="/tour" data-aos="fade-bottom" data-aos-duration="2500" href="#" class="blue-btn text-uppercase d-inline">Take a tour</router-link>
             </div>
         </div>
        </div>

@@ -87,7 +87,7 @@
                         +973 39471116</a> or <span class="effect-span"><a class="mail effect-box" href="mailto:cip@halabahrain.bh">cip@halabahrain.bh</a></span></p>
                     </div>
                      <div class="d-flex">
-                        <a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book now</a>
+                        <router-link to="/general-aviation-form1" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book now</router-link>
                     </div>
                 </div>
             </div>

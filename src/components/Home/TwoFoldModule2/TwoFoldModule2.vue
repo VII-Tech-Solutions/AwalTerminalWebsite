@@ -41,7 +41,7 @@
                                     <p>Personal assistant for Duty-Free shopping</p>
                                 </li>
                             </ul>
-                            <button data-aos="fade-bottom" data-aos-duration="2500" class="common-btn">All services</button>
+                            <router-link to="/services" data-aos="fade-bottom" data-aos-duration="2500" class="common-btn">All services</router-link>
                         </div>
                     </div>
                 </div>

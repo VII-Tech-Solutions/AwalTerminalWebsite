@@ -13,7 +13,7 @@
                         <p data-aos="fade-up" data-aos-duration="2500" class="description">The building was the Kingdom’s first international airport, operating in
                             the 1960s and 1970s. Following careful renovation to maintain its historical identity, the
                             terminal serves VIP and business private passengers.</p>
-                        <button data-aos="fade-bottom" data-aos-duration="2500" class="common-btn">Our story</button>
+                        <router-link to="/story" data-aos="fade-bottom" data-aos-duration="2500" class="common-btn">Our story</router-link>
                     </div>
                 </div>
             </div>

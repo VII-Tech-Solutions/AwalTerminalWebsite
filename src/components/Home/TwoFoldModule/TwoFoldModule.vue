@@ -16,7 +16,7 @@
                                 <img class="img-fluid" src="../../../assets/images/sublime-luxury.jpg"
                                     alt="sublime-luxury">
                             </div>
-                            <button data-aos="fade-bottom" data-aos-duration="2500" class="visit-terminal-btn">Visit the terminal</button>
+                            <router-link to="/tour" data-aos="fade-bottom" data-aos-duration="2500" class="visit-terminal-btn">Visit the terminal</router-link>
                         </div>
                     </div>
                 </div>

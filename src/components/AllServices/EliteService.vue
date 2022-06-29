@@ -7,7 +7,7 @@
                               <div class="page-title">
                                   <h2 class=" mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">A luxurious experience</h2>
                                   <p class="mx-auto w-100 mb-lg-4 mb-3" data-aos="fade-up" data-aos-duration="2500">For total comfort and sublime luxury, try our elite services. From your arrival or departure, we will take care of everything. We pride ourselves on extending the warm hospitality Bahrain is known for.</p>
-                                  <div class="d-flex justify-content-center"><a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book now</a></div>
+                                  <div class="d-flex justify-content-center"><router-link to="/elite-form" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">book now</router-link></div>
                               </div>
                           </div>
                           <div class="service-card">
@@ -74,7 +74,7 @@
 <style>
 .service-card-style.book-service-card{padding:40px 30px;}
 .service-card-body .service-cost{  font-size:26px; font-weight:800; line-height:30px; color:#caa17b;}
-.gold-text{font-size:16px; font-weight:600; line-height:20px;}
+.gold-text{font-size:16px; font-weight:600; line-height:20px;position: relative;top:-3px}
 .service-checklist ul li:not(:last-child){margin-bottom:20px;}
 .service-checklist ul li .checklist-points{display:flex; align-items:center;}
 .service-checklist ul li .checklist-points .icon{margin-right:10px; width:20px;}
