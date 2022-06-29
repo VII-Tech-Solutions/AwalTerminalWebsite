@@ -169,7 +169,7 @@ import axios from 'axios';
                         'Content-Type': 'application/json;charset=UTF-8',
                     }
                 };
-         axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+             axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
                 .then((res) => {
                      var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
                     this.airportoptions = res.data.data.airports;
@@ -213,7 +213,7 @@ import axios from 'axios';
 	.step-one-block {margin-bottom: 40px;}
 	@media only screen and (max-width:767px){
 		.elite-form .step-heading{font-size:40px;line-height:44px;}
-	}
+	}        
 	@media only screen and (max-width:767px){
 		.elite-form{padding:30px 0 65px;}
 		.elite-form .elit-form-logo{width:80px;}
