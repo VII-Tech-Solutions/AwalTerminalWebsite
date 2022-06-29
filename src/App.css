@@ -328,6 +328,7 @@ textarea {
 	text-transform: uppercase;
 	padding: 13px 20px;
 	transition: all ease-in-out .3s;
+	text-decoration: none;
 }
 .common-btn:hover{background: #011e41;color: #fff;}
 .tailored-list li{margin-bottom: 40px;}

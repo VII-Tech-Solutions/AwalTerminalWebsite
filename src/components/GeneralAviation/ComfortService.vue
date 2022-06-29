@@ -24,7 +24,7 @@
         <div class="container"><div class="mx-auto text-center" data-aos="fade-bottom" data-aos-duration="2500">
             
             
-                <a href="#" class="text-uppercase blue-btn text-center">book general aviation</a>
+                <router-link to="/general-aviation-form1" class="text-uppercase blue-btn text-center">book general aviation</router-link>
                 </div></div>
        </div>
     </div>

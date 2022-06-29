@@ -68,7 +68,7 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <button class="btn book-now-btn" type="submit">Book Now</button>
+              <router-link to="/services" class="btn book-now-btn" type="submit">Book Now</router-link>
             </form>
           </div>
           <div class="mobile-menu">

@@ -7,7 +7,7 @@
                       <p class="text-uppercase text-white mx-0">{{HeadingTopText}}</p>
                       <h2 class="text-white mx-0">{{MainHeading}}</h2>
                   </div>
-                  <a class="white-btn text-uppercase" data-aos="fade-bottom" data-aos-duration="2500">book now</a>
+                  <router-link to="/services" class="white-btn text-uppercase" data-aos="fade-bottom" data-aos-duration="2500">book now</router-link>
                   <div class="service-list">
                       <ul>
                           <li data-aos="fade-up" data-aos-duration="2500">
