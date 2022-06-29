@@ -29,17 +29,18 @@
 					<div class="d-flex flex-column flex-md-row">
 						<div class="elite-offer-service d-flex">
 							<label class="custom-radio">
-								<input type="radio" v-model="service_id" value="1" name="radio" />
+								<input type="radio"  v-model="service_id" value="1" name="radio" />
 								<div class="checkmark">
 									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
 									</div>
-									<strong class="service-name d-block mb-lg-3 mb-2">Common Lounge</strong>
-									<strong class="service-price d-block mb-3">BHD 100<sub>/adult</sub></strong>
+									<strong class="service-name d-block mb-lg-3 mb-2">{{eliteserviceoptions != undefined  ?eliteserviceoptions[0].name: ''}}</strong>
+									<strong class="service-price d-block mb-3">{{eliteserviceoptions != undefined  ?eliteserviceoptions[0].price_per_adult:''}}<sub>/adult</sub></strong>
 									<ul class="list-unstyled service-features">
-										<li class="position-relative">50% of the adult rate for children aged 2 to 12</li>
+										<li class="position-relative" v-for="item in commontype" :key="item.id">{{item.feature_details}}</li>
+										<!-- 50% of the adult rate for children aged 2 to 12
 										<li class="position-relative">Free entry for infants ( 0 to 2 years old)</li>
-										<li class="position-relative">10% group discount (5 PAX and above)</li>
+										<li class="position-relative">10% group discount (5 PAX and above)</li> -->
 									</ul>
 									<span class="tax-text">* 10% VAT on the total amount</span>
 								</div>
@@ -52,17 +53,18 @@
 									<div class="radio-circle mb-4">
 										<span class="cirle position-relative">&nbsp;</span>
 									</div>
-									<strong class="service-name d-block mb-lg-3 mb-2">Private Lounge</strong>
-									<strong class="service-price d-block mb-3">BHD 150<sub>/adult</sub></strong>
+									<strong class="service-name d-block mb-lg-3 mb-2">{{eliteserviceoptions != undefined  ?eliteserviceoptions[1].name: ''}}</strong>
+									<strong class="service-price d-block mb-3">{{eliteserviceoptions != undefined  ?eliteserviceoptions[1].price_per_adult:''}}<sub>/adult</sub></strong>
 									<ul class="list-unstyled service-features">
-										<li class="position-relative">Minimum of 2 adults full fares required to access a Private
-											Lounge</li>
+										<li class="position-relative" v-for="item in privatetype" :key="item.id">{{item.feature_details}}</li>
+										<!-- Minimum of 2 adults full fares required to access a Private
+											Lounge
 										<li class="position-relative">50% of the adult rate for children aged 2 to 12</li>
 										<li class="position-relative">Free entry for infants ( 0 to 2 years old)</li>
 										<li class="position-relative">Rates are per passenger capped at a total BHD 600.000 per
 											lounge</li>
 										<li class="position-relative">Rates apply to standard lounge size with a maximum of 6
-											passengers per lounge</li>
+											passengers per lounge</li> -->
 									</ul>
 									<span class="tax-text">* 10% VAT on the total amount</span>
 								</div>
@@ -90,9 +92,11 @@
 
 <script>
 import EliteFormFooter from './EliteFormFooter.vue';
+import axios from 'axios';
 	export default {
     mounted () {
-     window.scrollTo(0, 0)
+     window.scrollTo(0, 0);
+    this.getDropdownData();
     },
 		components: {
 			EliteFormFooter
@@ -101,12 +105,19 @@ import EliteFormFooter from './EliteFormFooter.vue';
 			debugger;
 			   var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
 			return {
-				service_id: obj == undefined ? 1 : obj.service_id==true?1:2,
+			    airportoptions:this.airportoptions,
+                countriesoptions:this.countriesoptions,
+                eliteserviceoptions:this.eliteserviceoptions,
+                servicefeatureoptions:this.servicefeatureoptions,
+				commontype:'',
+				privatetype:'',
+				service_id: obj == undefined ? 1 : obj.service_id,
+
 				number_of_adults:obj==undefined ?0:obj.number_of_adults,
                 number_of_children:obj==undefined ?0:obj.number_of_children,
                 number_of_infants:obj==undefined ?0:obj.number_of_infants,
 				Totle: obj==undefined ?0:obj.total,
-            countriesoptions: obj==undefined ?'':obj.countriesoptions,
+                countriesoptions: obj==undefined ?'':obj.countriesoptions,
 				notFormValid: true,
 				airport_id: obj==undefined ?0:obj.airport_id,
 				airport_name:obj==undefined ?0:obj.airport_name,
@@ -129,41 +140,51 @@ import EliteFormFooter from './EliteFormFooter.vue';
 		   }
 		},
 		methods :{
-			
-			Tosat(){
-
-				//Toast woek like below example ...!
-				//toastr.warning('Congratulation.!');
-
-
-				//Swal Work like below Example ...!
-				// Swal.fire(
-				// 'The Internet?',
-			 	//  'That thing is still around?',
-				// 'question'
-			   // );
-
-			},
 			setData(){
            var obj = {};
-             obj.service_id= this.service_id == 1 ?true:false;
+            obj.service_id=  this.service_id ;
             obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
-				obj.countriesoptions=this.countriesoptions;
+			obj.countriesoptions=this.countriesoptions;
             obj.airport_id =  this.airport_id;
-				obj.airport_name = this.airport_name;
+			obj.airport_name = this.airport_name;
             obj.date =  this.date;
             obj.time =  this.time;
             obj.flight_number =  this.flight_number;
             obj.is_arrival_flight = this.is_arrival_flight;
             obj.passengers = this.passengers; 
             obj.booker = this.booker;
-            debugger;
+			obj.airportoptions = this.airportoptions;
+			obj.countriesoptions= this.countriesoptions;
             localStorage.setItem('elitedata', JSON.stringify(obj));
 
-			}
+			},
+			getDropdownData()
+			{
+            debugger;
+                let axiosConfig = {
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8',
+                    }
+                };
+         axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+                .then((res) => {
+                     var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
+                    this.airportoptions = res.data.data.airports;
+                    this.countriesoptions = res.data.data.countries;
+                    this.eliteserviceoptions = res.data.data.elite_service_types;
+                    this.servicefeatureoptions = res.data.data.elite_service_features;
+                  
+					this.commontype = this.servicefeatureoptions.filter(element => element.service_id == this.eliteserviceoptions[0].id);
+					this.privatetype = this.servicefeatureoptions.filter(element => element.service_id == this.eliteserviceoptions[1].id);
+                    this.service_id = obj == undefined ? this.eliteserviceoptions[0].id: obj.service_id;  
+			   })
+                .catch((err) => {
+                    toastr.error('Server Error Please Try again.. 🙁');
+                })
+			},
 		}
 	};
 </script>
