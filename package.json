@@ -28,7 +28,7 @@
     "stylus-loader": "^3.0.2",
     "vue": "^3.2.36",
     "vue-router": "^4.0.15",
-    "vue-scroll": "^2.1.13", 
+    "vue-scroll": "^2.1.13",
     "vue-sweetalert2": "^5.0.5",
     "vue-toast-notification": "^3.0.4",
     "vue-toastr": "^2.1.2",
@@ -37,5 +37,5 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
     "vite": "^2.9.5"
-  }
+  } 
 }
