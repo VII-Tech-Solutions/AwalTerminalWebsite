@@ -23,14 +23,14 @@
                                 <p class="form-p fw-semi-bold mb-lg-3 mb-2">Select all the services that you require upon arrival/departure</p>
                                 <div class="form-service-check">
                                     <ul class="ul_css">
-                                        <li v-for="item in serviceoptions" :key="item.id">
+                                        <li v-for="item in serviceoptions.slice(0, 5)" :key="item.id">
                                             <label class="checked-container">{{item.name}}
-                                                <input type="checkbox" :value="item.id"  v-model="checkedNames" >
+                                                <input type="checkbox" @change="check" :value="item.id"  v-model="checkedNames" >
                                                 <span class="checkmark"></span>
                                             </label>
                                         </li>
   
-                                        <li>
+                                        <li v-show="houseselected">
 
                                             <div class="d-flex align-items-center ms-4">
                                                 <div class="form-group mb-0 w-100">
@@ -43,6 +43,13 @@
                                                     </span>
                                                 </div>
                                             </div>
+                                        </li>
+
+                                     <li v-for="item in serviceoptions.slice(6, serviceoptions.length)" :key="item.id">
+                                            <label class="checked-container">{{item.name}}
+                                                <input type="checkbox" :value="item.id"  v-model="checkedNames" >
+                                                <span class="checkmark"></span>
+                                            </label>
                                         </li>
                                     </ul>
                                 </div>
@@ -83,6 +90,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
          checkedNames:obj.services == ""?[]:obj.services,
          transport_hotel_name:obj.transport_hotel_name,
          transport_time:obj.transport_time,
+         houseselected: obj.houseselected 
      }
     },
       methods:{
@@ -127,16 +135,21 @@ import '@fortawesome/fontawesome-free/js/all.js';
             obj1.is_using_agent=obj.is_using_agent, 
             obj1.services=this.checkedNames, 
             obj1.attachments=obj.attachments,
-            obj1.transport_hotel_name=this.transport_hotel_name,  
-            obj1.transport_time=this.transport_time,  
+            obj1.transport_hotel_name= this.houseselected == false?'': this.transport_hotel_name,  
+            obj1.transport_time= this.houseselected == false?'': this.transport_time,  
             obj1.remarks=obj.remarks
             obj1.airport_name = this.airport_name;
-
+            obj1.houseselected = this.houseselected;
             obj1.airportoptions=obj.airportoptions;
             obj1.countriesoptions=obj.countriesoptions;
             obj1.formserviceoption=obj.formserviceoption;
 
              localStorage.setItem('data', JSON.stringify(obj1));
+      },
+      check()
+      {
+        debugger;
+        this.houseselected =     this.checkedNames.filter(o1 => o1 == 5).length>0?true:false
       }
   }
 

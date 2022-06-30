@@ -245,7 +245,7 @@
                                                                 <li>
                                                                     <div class="d-flex align-items-baseline">
                                                                         <p class="extra-small-text w-p text-capitalize">Country<span class="asterik">*</span></p>
-                                                                        <p class="extra-small-text text-capitalize fw-normal">{{agcountry[0].name}}</p>
+                                                                        <p class="extra-small-text text-capitalize fw-normal">{{agcountry[0] != undefined? agcountry[0].name:''}}</p>
                                                                     </div>
                                                                 </li>
                                                                 <li>

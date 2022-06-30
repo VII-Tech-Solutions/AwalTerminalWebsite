@@ -79,9 +79,9 @@
                                     </div> 
                                 </div>
                             </fieldset>
-                            <fieldset>
+                            <fieldset v-show="is_using_agent == 1">
                                 <legend class="form-title">Agent Information</legend>
-                                <div class="row">
+                                <div class="row" >
                                     <div class="col-lg-6 mb-0">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Full Name<span class="asterik">*</span></label>
@@ -129,17 +129,18 @@
                     </div>
                     <div class="d-block">
                       <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country && operator_tel_number
-                       && operator_email && operator_address && operator_billing_address
-                       && agent_fullname && agent_country && agent_phoneNumber
-                       && agent_email && agent_address && agent_billing_address && !msg.email
+                       && operator_email && operator_address && operator_billing_address && !msg.email
+                       && ((is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
+                       && agent_email && agent_address && agent_billing_address ))
                        
                        )" :disabled="notFormValid" @click="error()">
                             Next
                         </span>
                       <span v-if="operator_full_name && operator_country && operator_tel_number 
-                        && operator_email && operator_address && operator_billing_address
-                        && agent_fullname && agent_country && agent_phoneNumber
-                        && agent_email && agent_address && agent_billing_address  && !msg.email
+                        && operator_email && operator_address && operator_billing_address && !msg.email
+
+                        && ( (is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
+                        && agent_email && agent_address && agent_billing_address  ))
                         ">
                          <router-link to="/general-aviation-form4" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                          </span>
@@ -237,12 +238,12 @@ watch: {
             obj1.operator_email=this.operator_email,   
             obj1.operator_address=this.operator_address;    
             obj1.operator_billing_address=this.operator_billing_address;
-            obj1.agent_fullname=this.agent_fullname;   
-            obj1.agent_country=this.agent_country;   
-            obj1.agent_phoneNumber=this.agent_phoneNumber;    
-            obj1.agent_email=this.agent_email;   
-            obj1.agent_address=this.agent_address;    
-            obj1.agent_billing_address=this.agent_billing_address; 
+            obj1.agent_fullname= this.is_using_agent == "1"? this.agent_fullname:"";   
+            obj1.agent_country=this.is_using_agent == "1"? this.agent_country:"";   
+            obj1.agent_phoneNumber=this.is_using_agent == "1"? this.agent_phoneNumber:"";    
+            obj1.agent_email=this.is_using_agent == "1"? this.agent_email:"";   
+            obj1.agent_address=this.is_using_agent == "1"? this.agent_address:"";    
+            obj1.agent_billing_address=this.is_using_agent == "1"? this.agent_billing_address:""; 
              obj1.is_using_agent=this.is_using_agent == "1"?true:false; 
              
             obj1.airport_name = this.airport_name;

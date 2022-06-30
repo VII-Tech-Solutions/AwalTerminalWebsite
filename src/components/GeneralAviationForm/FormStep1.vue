@@ -36,9 +36,10 @@
                                             <label class="form-label text-capitalize" for="inputGroupSelect01">purpose of landing <span class="asterik">*</span></label>
                                             <select class="form-select" v-model="landing_purpose" id="inputGroupSelect01">
                                                 <option value="Other">Other</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option value="Military">Military</option>
+                                                <option value="Vip">Vip</option>
+                                                <option value="Medical">Medical</option>
+                                                <option value="Charter">Charter</option>
                                             </select>
                                         </div> 
                                     </div>
@@ -152,7 +153,7 @@ export default {
             obj1.transport_hotel_name=obj==undefined ?'':obj.transport_hotel_name,  
             obj1.transport_time=obj==undefined ?time:obj.transport_time,  
             obj1.remarks=obj==undefined ?'':obj.remarks,
-
+            obj1.houseselected = obj==undefined ?false:obj.houseselected;
             localStorage.setItem('data', JSON.stringify(obj1));
       }
   }
