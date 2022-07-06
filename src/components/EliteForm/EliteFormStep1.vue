@@ -124,7 +124,7 @@ import axios from 'axios';
 				date: obj==undefined ?0:obj.date,
 				time: obj==undefined ?0:obj.time,
 				flight_number: obj==undefined ?'':obj.flight_number,
-				is_arrival_flight: obj==undefined ?0:obj.is_arrival_flight,
+				is_arrival_flight: obj==undefined ?false:obj.is_arrival_flight,
 				// passengers info
 				passengers: obj==undefined ?'':obj.passengers,
 				//booker Info

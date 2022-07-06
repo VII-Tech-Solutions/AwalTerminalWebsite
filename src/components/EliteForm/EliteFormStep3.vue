@@ -86,7 +86,7 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize"
                                                 for="inputGroupSelect01">Class<span class="asterik">*</span></label>
-                                            <select class="form-select" required v-model="passenger.class_id"
+                                            <select class="form-select" required v-model="passenger.flight_class"
                                                 id="inputGroupSelect01">
                                                 <option value="Economy">Economy Class</option>
                                                 <option value="Business">Business Class</option>

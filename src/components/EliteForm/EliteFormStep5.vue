@@ -292,7 +292,7 @@
                                                                                 Class<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.class_id}}</p>
+                                                                                {{passenger.flight_class}}</p>
                                                                         </div>
                                                                     </li>
                                                                 </ul>

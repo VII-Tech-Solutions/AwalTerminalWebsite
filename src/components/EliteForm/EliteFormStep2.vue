@@ -27,13 +27,13 @@
                                             <div class="d-flex align-items-center justify-content-md-start justify-content-center">
                                                 <div class="form-check px-0 ms-0 me-4">
                                                     <label class="radio-container text-capitalize">Arrival
-                                                        <input type="radio"  v-model="is_arrival_flight" value="1" name="radio" >
+                                                        <input type="radio"  v-model="is_arrival_flight" value="true" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                                 <div class="form-check ms-0">
                                                     <label class="radio-container text-capitalize">Departure
-                                                        <input type="radio"  v-model="is_arrival_flight" value="2" name="radio" >
+                                                        <input type="radio"  v-model="is_arrival_flight" value="false" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
@@ -210,7 +210,7 @@ export default {
          date : obj==undefined ? '' : obj.date,  
          time : obj==undefined ? '': obj.time,  
          flight_number : obj==undefined ?'':obj.flight_number,
-         is_arrival_flight : obj == undefined ? 1 : obj.is_arrival_flight==true?1:2,
+         is_arrival_flight : obj.is_arrival_flight,
          passengers:[{
                     title:"",
                     first_name: "",
@@ -219,7 +219,7 @@ export default {
                     birth_date: "",
                     nationality_id: "",
                     nationality_title:"",
-                    class_id: ""
+                    flight_class: ""
                 }]
      }
         
@@ -276,7 +276,7 @@ export default {
                             birth_date: abc.passengers[i].birth_date,
                             nationality_id: abc.passengers[i].nationality_id,
                               nationality_title: abc.passengers[i].nationality_title,
-                            class_id: abc.passengers[i].class_id
+                            flight_class: abc.passengers[i].flight_class
                         })
                     }
                     else if(abc.passengers.length >= obj.total){
@@ -288,7 +288,7 @@ export default {
                             birth_date: abc.passengers[i].birth_date,
                             nationality_id: abc.passengers[i].nationality_id,
                                nationality_title: abc.passengers[i].nationality_title,
-                            class_id: abc.passengers[i].class_id
+                            flight_class: abc.passengers[i].flight_class
                         })
                     
 
@@ -302,7 +302,7 @@ export default {
                             birth_date: "",
                             nationality_id: "",
                             nationality_title: "",
-                            class_id: ""
+                            flight_class: ""
                         })
                     }
                 }
