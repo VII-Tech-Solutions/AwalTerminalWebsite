@@ -18,13 +18,14 @@
                                               <div class="service-card-body">
                                                   <div class="title-content">
                                                       <strong class="service-title text-capitalize theme mb-lg-3 mb-2 d-block">Common Lounge</strong>
-                                                      <p class="service-cost text-uppercase">bhd 100 <span class="text-lowercase gold-text">/adult</span></p>
+                                                      <p class="service-cost text-uppercase">bhd {{eliteserviceoptions != undefined  ?eliteserviceoptions[0].price_per_adult:''}} <span class="text-lowercase gold-text">/adult</span></p>
                                                   </div>
                                                   <div class="service-checklist">
                                                     <ul class="ul_css">
-                                                      <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>50% of the adult rate for children aged 2 to 12</p></div></li>
+										                <li class="position-relative" v-for="item in commontype" :key="item.id"><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>{{item.feature_details}}</p></div></li>
+                                                      <!-- <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>50% of the adult rate for children aged 2 to 12</p></div></li>
                                                       <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>Free entry for infants ( 0 to 2 years old)</p></div></li>
-                                                      <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>10% group discount (5 PAX and above)</p></div></li>
+                                                      <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>10% group discount (5 PAX and above)</p></div></li> -->
                                                     </ul>
                                                   </div>
                                               </div>
@@ -40,15 +41,16 @@
                                               <div class="service-card-body">
                                                   <div class="title-content">
                                                       <strong class="service-title text-capitalize theme mb-lg-3 mb-2 d-block">Private Lounge</strong>
-                                                      <p class="service-cost text-uppercase">bhd 150 <span class="text-lowercase gold-text">/adult</span></p>
+                                                      <p class="service-cost text-uppercase">bhd {{eliteserviceoptions != undefined  ?eliteserviceoptions[1].price_per_adult:''}} <span class="text-lowercase gold-text">/adult</span></p>
                                                   </div>
                                                   <div class="service-checklist">
                                                     <ul class="ul_css">
-                                                      <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>Minimum of 2 adults full fares required to access a Private Lounge</p></div></li>
+                                                        <li class="position-relative" v-for="item in privatetype" :key="item.id"><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>{{item.feature_details}}</p></div></li>
+                                                      <!-- <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>Minimum of 2 adults full fares required to access a Private Lounge</p></div></li>
                                                       <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>50% of the adult rate for children aged 2 to 12</p></div></li>
                                                       <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>Free entry for infants ( 0 to 2 years old)</p></div></li>
                                                       <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>Rates are per passenger capped at a total BHD 600.000 per lounge</p></div></li>
-                                                      <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>Rates apply to standard lounge size with a maximum of 6 passengers per lounge</p></div></li>
+                                                      <li><div class="checklist-points"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><p>Rates apply to standard lounge size with a maximum of 6 passengers per lounge</p></div></li> -->
                                                     </ul>
                                                   </div>
                                               </div>
@@ -70,6 +72,39 @@
 </template>  
 
 <script>
+import axios from 'axios';
+	export default {
+    mounted () {
+     window.scrollTo(0, 0);
+    this.getDropdownData();
+    },
+		data (){
+			return {
+                eliteserviceoptions:this.eliteserviceoptions,
+                servicefeatureoptions:this.servicefeatureoptions,
+				commontype:'',
+				privatetype:''
+		   }
+		},
+		methods :{
+			getDropdownData()
+			{
+            debugger;
+                let axiosConfig = {
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8',
+                    }
+                };
+             axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+                .then((res) => {
+                    this.eliteserviceoptions = res.data.data.elite_service_types;
+                    this.servicefeatureoptions = res.data.data.elite_service_features;
+					this.commontype = this.servicefeatureoptions.filter(element => element.service_id == this.eliteserviceoptions[0].id);
+					this.privatetype = this.servicefeatureoptions.filter(element => element.service_id == this.eliteserviceoptions[1].id);
+			   })
+			},
+		}
+	};
 </script>
 <style>
 .service-card-style.book-service-card{padding:40px 30px;}

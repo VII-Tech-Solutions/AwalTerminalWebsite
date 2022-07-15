@@ -147,9 +147,14 @@ export default {
          number_of_children:obj.number_of_children,
          number_of_infants:obj.number_of_infants,
          countriesoptions:obj.countriesoptions,
+         eliteserviceoptions:obj.eliteserviceoptions,
+         commontype:obj.commontype,
+         privatetype:obj.privatetype,
          notFormValid: true,
          service_id: obj.service_id,
-         Totle: obj.total,
+         Sum : 0,
+         TotalPrice:this.TotalPrice,
+         Totle: obj.Totle,
           airport_id : obj.airport_id,  
           airport_name: obj.airport_name,
          date : obj.date,  
@@ -165,10 +170,8 @@ export default {
        error(){
         toastr.error('Kindly fillout required fields 🙁');
        },
-       fetch_title(event,passenger){
-          debugger;
-           passenger.nationality_title=this.countriesoptions.find(x=>x.id== event.target.value).name;
-        //   passenger.nationality_title
+       TotapPrice(){
+          this.Total = (this.number_of_adults + this.number_of_children)*this.eliteserviceoptions
        },
       setData()
       {
@@ -179,8 +182,16 @@ export default {
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
+            if(this.service_id == true){
+                obj.sum = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) )* this.eliteserviceoptions[0].price_per_adult;
+            }else{
+                obj.sum = parseInt((parseInt(this.number_of_adults)* this.eliteserviceoptions[1].price_per_adult) + (parseInt(this.number_of_children)* this.eliteserviceoptions[1].price_per_adult));
+            }
             obj.service_id= this.service_id,
             obj.countriesoptions=this.countriesoptions,
+            obj.eliteserviceoptions= this.eliteserviceoptions;
+            obj.commontype = this.commontype;
+            obj.privatetype = this.privatetype;
             obj.airport_id =  this.airport_id;
             obj.airport_name = this.airport_name;
             obj.date =  this.date;

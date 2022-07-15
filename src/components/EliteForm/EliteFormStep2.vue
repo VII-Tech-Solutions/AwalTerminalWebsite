@@ -198,6 +198,10 @@ export default {
     return {
          airportoptions:obj.airportoptions,
          countriesoptions:obj.countriesoptions,
+         eliteserviceoptions:obj.eliteserviceoptions,
+         xyz:obj.xyz,
+         commontype:obj.commontype,
+         privatetype:obj.privatetype,
          flightoptions:this.flightoptions,
          servicefeatureoptions:this.servicefeatureoptions,
          number_of_adults:obj==undefined ?0:obj.number_of_adults,
@@ -312,6 +316,10 @@ export default {
            }  
             obj.service_id= this.service_id,
             obj.countriesoptions=this.countriesoptions;
+            obj.eliteserviceoptions= this.eliteserviceoptions;
+            obj.xyz = this.xyz;
+            obj.commontype = this.commontype;
+            obj.privatetype = this.privatetype;
             obj.airport_id =  this.airport_id;
             obj.airport_name =  this.airport_name;
             obj.date =  this.date;

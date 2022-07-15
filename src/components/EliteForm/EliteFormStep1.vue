@@ -105,25 +105,25 @@ import axios from 'axios';
 			debugger;
 			   var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
 			return {
-			    airportoptions:this.airportoptions,
-                countriesoptions:this.countriesoptions,
-                eliteserviceoptions:this.eliteserviceoptions,
-                servicefeatureoptions:this.servicefeatureoptions,
-				commontype:'',
-				privatetype:'',
+			   airportoptions:this.airportoptions,
+				countriesoptions:this.countriesoptions,
+				servicefeatureoptions:this.servicefeatureoptions,
+				eliteserviceoptions:this.eliteserviceoptions,
+				commontype:this.commontype,
+				privatetype:this.privatetype,
 				service_id: obj == undefined ? 1 : obj.service_id,
-
 				number_of_adults:obj==undefined ?0:obj.number_of_adults,
-                number_of_children:obj==undefined ?0:obj.number_of_children,
-                number_of_infants:obj==undefined ?0:obj.number_of_infants,
+				number_of_children:obj==undefined ?0:obj.number_of_children,
+				number_of_infants:obj==undefined ?0:obj.number_of_infants,
 				Totle: obj==undefined ?0:obj.total,
-                countriesoptions: obj==undefined ?'':obj.countriesoptions,
+				countriesoptions: obj==undefined ?'':obj.countriesoptions,
 				notFormValid: true,
 				airport_id: obj==undefined ?0:obj.airport_id,
 				airport_name:obj==undefined ?0:obj.airport_name,
 				date: obj==undefined ?0:obj.date,
 				time: obj==undefined ?0:obj.time,
 				flight_number: obj==undefined ?'':obj.flight_number,
+				xyz:this.xyz,
 				is_arrival_flight: obj==undefined ?false:obj.is_arrival_flight,
 				// passengers info
 				passengers: obj==undefined ?'':obj.passengers,
@@ -147,17 +147,21 @@ import axios from 'axios';
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
-			obj.countriesoptions=this.countriesoptions;
+			   obj.countriesoptions=this.countriesoptions;
             obj.airport_id =  this.airport_id;
-			obj.airport_name = this.airport_name;
+			   obj.airport_name = this.airport_name;
             obj.date =  this.date;
             obj.time =  this.time;
             obj.flight_number =  this.flight_number;
             obj.is_arrival_flight = this.is_arrival_flight;
             obj.passengers = this.passengers; 
             obj.booker = this.booker;
-			obj.airportoptions = this.airportoptions;
-			obj.countriesoptions= this.countriesoptions;
+			   obj.airportoptions = this.airportoptions;
+				obj.eliteserviceoptions= this.eliteserviceoptions;
+				obj.xyz = this.xyz;
+				obj.commontype = this.commontype;
+				obj.privatetype = this.privatetype;
+
             localStorage.setItem('elitedata', JSON.stringify(obj));
 
 			},
@@ -176,7 +180,7 @@ import axios from 'axios';
                     this.countriesoptions = res.data.data.countries;
                     this.eliteserviceoptions = res.data.data.elite_service_types;
                     this.servicefeatureoptions = res.data.data.elite_service_features;
-                  
+						  this.xyz = res.data.data.elite_service_types;
 					this.commontype = this.servicefeatureoptions.filter(element => element.service_id == this.eliteserviceoptions[0].id);
 					this.privatetype = this.servicefeatureoptions.filter(element => element.service_id == this.eliteserviceoptions[1].id);
                     this.service_id = obj == undefined ? this.eliteserviceoptions[0].id: obj.service_id;  

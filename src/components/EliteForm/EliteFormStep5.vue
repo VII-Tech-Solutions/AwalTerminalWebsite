@@ -47,12 +47,13 @@
                                                                 <strong class="service-price d-block mb-3">BHD
                                                                     100<sub>/adult</sub></strong>
                                                                 <ul class="list-unstyled service-features">
-                                                                    <li class="position-relative">50% of the adult rate
+                                                                    <li class="position-relative" v-for="item in commontype" :key="item.id">{{item.feature_details}}</li>
+                                                                    <!-- <li class="position-relative">50% of the adult rate
                                                                         for children aged 2 to 12</li>
                                                                     <li class="position-relative">Free entry for infants
                                                                         ( 0 to 2 years old)</li>
                                                                     <li class="position-relative">10% group discount (5
-                                                                        PAX and above)</li>
+                                                                        PAX and above)</li> -->
                                                                 </ul>
                                                                 <span class="tax-text">* 10% VAT on the total
                                                                     amount</span>
@@ -68,7 +69,8 @@
                                                                 <strong class="service-price d-block mb-3">BHD
                                                                     150<sub>/adult</sub></strong>
                                                                 <ul class="list-unstyled service-features">
-                                                                    <li class="position-relative">Minimum of 2 adults
+                                                                    <li class="position-relative" v-for="item in privatetype" :key="item.id">{{item.feature_details}}</li>
+                                                                    <!-- <li class="position-relative">Minimum of 2 adults
                                                                         full fares required to access a Private Lounge
                                                                     </li>
                                                                     <li class="position-relative">50% of the adult rate
@@ -80,7 +82,7 @@
                                                                         lounge</li>
                                                                     <li class="position-relative">Rates apply to
                                                                         standard lounge size with a maximum of 6
-                                                                        passengers per lounge</li>
+                                                                        passengers per lounge</li> -->
                                                                 </ul>
                                                                 <span class="tax-text">* 10% VAT on the total
                                                                     amount</span>
@@ -369,7 +371,7 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 text-green sans">Total Amount: <span>BHD
-                                297.550</span></p>
+                                {{sum}}</span></p>
                         <div class="d-block">
                             <router-link to="/elite-payement-form" @click="setData()"
                                 class="btn-next d-inline-block align-top transition text-capitalize">Submit Reservation
@@ -393,8 +395,11 @@ export default {
          number_of_adults:obj.number_of_adults,
          number_of_children:obj.number_of_children,
          number_of_infants:obj.number_of_infants,
+         sum:obj.sum,
          notFormValid: true,
         countriesoptions:obj.countriesoptions,
+         commontype:obj.commontype,
+         privatetype:obj.privatetype,
          service_id: obj.service_id,  
          Totle: obj.total,
          airport_id : obj.airport_id,  
@@ -434,6 +439,9 @@ export default {
             obj.airport_id =  this.airport_id;
             obj.airport_name = this.airport_name;
             obj.date =  this.date;
+            obj.sum=this.sum;
+            obj.privatetype=this.privatetype;
+            obj.commontype=this.commontype;
             obj.time =  this.time;
             obj.flight_number =  this.flight_number;
             obj.is_arrival_flight = this.is_arrival_flight;
