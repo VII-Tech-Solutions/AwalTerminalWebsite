@@ -1,12 +1,12 @@
 <template>
-    <section class="banner story-banner">
+    <section class="banner story-banner"  v-bind:style="{ backgroundImage: 'url(' + backgroundImage1 + ')' }">
         <div class="container">
             <div class="row ">
                 <div class="col-12">
                     <div class="banner-content" data-aos="fade-up" data-aos-duration="2500">
-                        <strong class="heading-top">Our Story</strong>
-                        <h1>The Awal Private <br/>Terminal</h1>
-                        <span class="sub-heading">The building was the Kingdom’s first international airport, operating in the 1960s and 1970s. The terminal serves VIP and business private passengers.</span>
+                        <strong class="heading-top">{{headingTop1}}</strong>
+                        <h1>{{heading1}}</h1>
+                        <span class="sub-heading">{{subheading1}}</span>
                     </div>
                 </div>
             </div>
@@ -15,12 +15,12 @@
 </template>
 <script>
 export default {
-//      props: {
-//     HeadingTopText: String,
-//     MainHeading: String,
-//     SubHeading: String,
-//     image: String,
-//   },
+    props: {
+        headingTop1: String,
+        heading1: String,
+        subheading1: String,
+        backgroundImage1: String
+    },
     name: "Banner",
     data() {
         return {

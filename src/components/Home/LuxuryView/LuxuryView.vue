@@ -1,7 +1,7 @@
 <template>
     <Section class="LuxuryView">
         <div class="luxury-view-img" data-aos="zoom-in" data-aos-duration="2500">
-            <img class="img-fluid w-100" src="../../../assets/images/luxury-view.jpg" alt="luxury view">
+            <img class="img-fluid w-100" :src="sectionImage1" alt="luxury view">
         </div>
         <div class="container">
             <div class="row">
@@ -17,6 +17,9 @@
 </template>
 <script>
 export default {
+    props:{
+        sectionImage1: String
+    },
     components: {
         name: "LuxuryView"
     }

@@ -1,25 +1,33 @@
 <template>
-    <section class="banner service-banner">
+    <section class="banner service-banner" v-bind:style="{ backgroundImage: 'url(' + backgroundImage1 + ')' }">
         <div class="container">
             <div class="row ">
                 <div class="col-12">
                     <div class="banner-content" data-aos="fade-up" data-aos-duration="2500">
-                        <strong class="heading-top">Our Services</strong>
-                        <h1>Unique and<br/> luxurious services</h1>
-                        <span class="sub-heading">Enjoy an exceptionally smooth, comfortable, and pleasant airport experience. Passengers are received by our agents who handle all travel formalities.</span>
+                        <strong class="heading-top">{{headingTop1}}</strong>
+                        <h1>{{heading1}}</h1>
+                        <span class="sub-heading">{{subheading1}}</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </template>
-<script >
+<script>
+export default {
+ props: {
+    headingTop1: String,
+    heading1: String,
+    subheading1: String,
+    backgroundImage1: String
+  },
+}
 
 </script>
 <style>
-.banner.service-banner {
+/* .banner.service-banner {
     background-image: url("../../assets/images/service-bg.jpg");
-}
+} */
 /* .banner {
     background: url("../../assets/images/banner-img.jpg");
     background-position: center;

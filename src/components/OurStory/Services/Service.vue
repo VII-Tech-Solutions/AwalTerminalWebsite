@@ -1,15 +1,15 @@
 <template>
 	<div class="services story-services">
 		<figure class="service-img mb-0" data-aos="zoom-out" data-aos-duration="2500">
-			<img src="../../../assets/images/story-services.jpg" class="img-fluid" />
+			<img :src="backgroundImage2" class="img-fluid" />
 		</figure>
 		<div class="service-bg">
 			<div class="container">
 				<div class="bg-white service-fixed">
 					<div class="main-page-title">
 						<div class="page-title" data-aos="fade-up" data-aos-duration="2500">
-							<h2 class=" mx-auto text-center">Services tailored to you</h2>
-							<p class="mx-auto w-100">Hala Bahrain offers a wide rande of premium hospitality services, packages, and facilities that turn your dream travel experience into a reality.</p>
+							<h2 class=" mx-auto text-center">{{heading5}}</h2>
+							<p class="mx-auto w-100">{{paragraph_4}}</p>
 						</div>
 					</div>
 					<div class="service-card">
@@ -22,14 +22,10 @@
 												<span class="icon">
                                         			<img src="../../../assets/images/icons/star-purple.svg" alt="couch" class=" img-fluid"/>
 												</span>
-												<strong class="service-title text-capitalize theme">Elite
-													Services</strong>
+												<strong class="service-title text-capitalize theme">{{column1heading1}}</strong>
 											</div>
 											<p>
-												Through our Elite Service, we ensure Commercially Important Persons
-												(CIPs) enjoy an exceptionally smooth, comfortable, and pleasant airport
-												experience. Passengers are received by our agents who handle all travel
-												formalities.
+												{{column1paragraph1}}
 											</p>
 										</div>
 										<div class="d-flex justify-content-center">
@@ -46,13 +42,10 @@
 												<span class="icon">
                                         			<img src="../../../assets/images/icons/flight.svg" alt="couch" class=" img-fluid"/>
 												</span>
-												<strong class="service-title text-capitalize theme">General
-													Aviation</strong>
+												<strong class="service-title text-capitalize theme">{{column2heading1}}</strong>
 											</div>
 											<p>
-												Hala Bahrain's experienced flight coordinators are on hand 24/7 to
-												provide exceptional support services to aircraft crew and prepare the
-												aircraft for the turnaround process.
+												{{column2paragraph1}}
 											</p>
 										</div>
 										<div class="d-flex justify-content-center">
@@ -68,9 +61,29 @@
 		</div>
 	</div>
 </template>                           
-<script>
+<script >
+export default {
+     props: {
+    backgroundImage2: String,
+    heading5: String,
+    paragraph_4: String,
+    column1heading1: String,
+    column1paragraph1: String,
+	column2heading1:String,
+    column2paragraph1: String
+  },
+    name: "Service",
+    // data() {
+    //     return {
+    //         HeadingTopText: "Welcome to Awal Private Terminal",
+    //         MainHeading: "We'll take it from here",
+    //         SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
+    //     };
+    // },
+}
 
 </script>
+
 <style>
 .story-services .service-img{margin-top: 0;}
 .story-services .service-bg{margin-top: -440px;}

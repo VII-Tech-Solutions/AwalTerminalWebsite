@@ -4,20 +4,20 @@
         <div class="container">
             <div class="main-page-title">
                 <div class="page-title" >
-                    <h2 class="text-capitalize mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">The Private Lounges</h2>
-                    <p class="mx-auto" data-aos="fade-up" data-aos-duration="2500">The Awal Private Terminal has 8 luxurious lounges. Each lounge is named after a city in Bahrain and fully designed for comfort.</p>
+                    <h2 class="text-capitalize mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">{{heading4}}</h2>
+                    <p class="mx-auto" data-aos="fade-up" data-aos-duration="2500">{{paragraph3}}</p>
                 </div>
             </div>
         </div>
         <div class="custom-carousal" data-aos="fade-up" data-aos-duration="2500">
             <Carousel :itemsToShow="2" :wrapAround="true">
-                <Slide v-for="slide in 10" :key="slide">
+                <Slide v-for="gallery in privateGallery" :key="gallery.id ">
                     <div class="carousel__item">
                       <div class="carousal-style">
                           <figure>
-                            <img src="../../assets/images/slider-img2.png" class="img-fluid"/>
+                            <img :src="gallery.image_url" class="img-fluid"/>
                           </figure>
-                          <p class="text-center slider-title">‘Manama’ Private Lounge, can seat up to 10 people</p>
+                          <p class="text-center slider-title">{{gallery.caption}}</p>
                       </div>
                     </div>
                 </Slide>
@@ -39,6 +39,12 @@
 import { Carousel, Navigation, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 export default {
+  props: {
+        heading4: String,
+        paragraph3: String,
+        privateGallery:Array
+    },
+
   components: {
     Carousel,
     Slide,

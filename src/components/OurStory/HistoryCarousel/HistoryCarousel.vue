@@ -9,8 +9,8 @@
             >
           </div>
           <div class="history-carousel-header text-center">
-            <h2>A walk through history</h2>
-            <p>Awal Private Terminal through the decades</p>
+            <h2>{{heading3}}</h2>
+            <p>{{subheading2}}</p>
           </div>
           <div class="slider-years">
             <ul class="d-flex mb-0">
@@ -180,6 +180,16 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
 
 export default {
+
+
+ props: {
+        heading3: String,
+        subheading2: String,
+        quote1: String,
+        image1: String
+    },
+    name: "HistoryCarousel",
+
   mounted() {
     // this.scrollAnimation();
   },

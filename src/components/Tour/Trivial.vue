@@ -5,20 +5,20 @@
         <div class="main-page-title">
             <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">our photo gallery</span></div>
             <div class="page-title" >
-                <h2 class="text-capitalize mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">Your Arrival</h2>
-                <p class="mx-auto" data-aos="fade-up" data-aos-duration="2500">Getting to Awal Private Terminal is easy. You’re greeted by our friendly and professional staff immediately, as they take care of all your travel needs.</p>
+                <h2 class="text-capitalize mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">{{heading2}}</h2>
+                <p class="mx-auto" data-aos="fade-up" data-aos-duration="2500">{{paragraph1}}</p>
             </div>
         </div>
        </div>
        <div class="custom-carousal" data-aos="fade-up" data-aos-duration="2500">
             <Carousel :itemsToShow="2" :wrapAround="true">
-                <Slide v-for="slide in 10" :key="slide">
+                <Slide v-for="galleryImg in ourPhotoGallery" :key="galleryImg.id">
                     <div class="carousel__item">
                     <div class="carousal-style">
                         <figure>
-                        <img src="../../assets/images/slider-img1.png" class="img-fluid"/>
+                          <img :src="galleryImg.image_url" class="img-fluid"/>
                         </figure>
-                        <p class="text-center slider-title">External view of the terminal after renovation</p>
+                        <p class="text-center slider-title">{{galleryImg.caption}}</p>
                     </div>
                     </div>
                 </Slide>
@@ -33,6 +33,14 @@
 import { Carousel, Navigation, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 export default {
+
+    props: {
+    heading2: String,
+    paragraph1: String,
+    ourPhotoGallery: Array,
+    subheading1: String
+  },
+
   components: {
     Carousel,
     Slide,
