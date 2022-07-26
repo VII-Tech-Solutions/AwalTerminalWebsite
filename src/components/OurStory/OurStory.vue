@@ -8,7 +8,7 @@
   <Service :backgroundImage2="background_image_2_url" :heading5="heading_5" :paragraph_4="paragraph_4" :column1heading1="column_1_heading_1" :column1paragraph1="column_1_paragraph_1" :column2heading1="column_2_heading_1" :column2paragraph1="column_2_paragraph_1" />
   <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_6" name="story-bg"
     service1="Meet & Greet" image1="tour-service-3" service2="Luxurious Lounges" image2="tour-service-2"
-    service3="Flawless Departure" image3="tour-service-1" :backgroundImage3="background_image_3_url" />
+    service3="Flawless Departure" image3="tour-service-1" :footerbg="background_image_3_url" />
 </template>                          
 <script>
 import Banner from "./Banner/Banner.vue";

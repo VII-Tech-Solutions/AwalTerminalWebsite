@@ -1,5 +1,5 @@
 <template>
-    <section class="banner">
+    <section class="banner" v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
         <div class="container">
             <div class="row ">
                 <div class="col-12">

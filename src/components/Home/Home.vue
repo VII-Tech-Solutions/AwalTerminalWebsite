@@ -7,7 +7,7 @@
 	<TourTerminal :image2="image_2" :paragraph4="paragraph_4" />
 	<FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_4" name="home-bg"
 		service1="Expert Handling" image1="home-service-1" service2="Luxury Transport" image2="home-service-2"
-		service3="Perfect Departure" image3="home-service-3" :backgroundImage4="background_image_4" />
+		service3="Perfect Departure" image3="home-service-3" :footerbg="background_image_4" />
 </template>
 
 <script>
