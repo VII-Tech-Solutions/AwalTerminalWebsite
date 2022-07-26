@@ -15,20 +15,20 @@
 </template>
 <script>
 export default {
-//      props: {
-//     HeadingTopText: String,
-//     MainHeading: String,
-//     SubHeading: String,
-//     image: String,
-//   },
+     props: {
+    HeadingTopText: String,
+    MainHeading: String,
+    SubHeading: String,
+    image: String,
+  },
     name: "Banner",
-    data() {
-        return {
-            HeadingTopText: "Welcome to Awal Private Terminal",
-            MainHeading: "We'll take it from here",
-            SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
-        };
-    },
+    // data() {
+    //     return {
+    //         HeadingTopText: "Welcome to Awal Private Terminal",
+    //         MainHeading: "We'll take it from here",
+    //         SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
+    //     };
+    // },
 }
 
 </script>

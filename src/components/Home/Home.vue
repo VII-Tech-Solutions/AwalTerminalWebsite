@@ -1,5 +1,4 @@
 <template>
-	<!-- <Banner HeadingTopText="Welcome to Awal Private Terminal" MainHeading="We’ll take it from here" SubHeading="Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights." image="banner-img.jpg"/> -->
 	<Banner :image="background_image_1" :HeadingTopText="heading_top_1" :MainHeading="heading_1" :SubHeading="subheading_1" />
 	<TwoFoldModuleVue :heading2="heading_2" :paragraph1="paragraph_1" :squareImage="square_image_1_url"  :backgroundImage2="background_image_2"  />
 	<OurStory :heading4="heading_4" :paragraph2="paragraph_2" :image1="image_1" />
