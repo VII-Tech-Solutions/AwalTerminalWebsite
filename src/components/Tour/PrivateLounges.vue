@@ -9,15 +9,15 @@
                 </div>
             </div>
         </div>
-        <div class="custom-carousal" data-aos="fade-up" data-aos-duration="2500">
-            <Carousel :itemsToShow="2" :wrapAround="true">
-                <Slide v-for="gallery in privateGallery" :key="gallery.id ">
+        <div class="custom-carousal" data-aos="fade-up" data-aos-duration="2500" >
+            <Carousel :itemsToShow="2" :wrapAround="true" v-if="privateGallery && privateGallery.length > 0">
+                <Slide v-for="slide in privateGallery" :key="slide.id">
                     <div class="carousel__item">
                       <div class="carousal-style">
                           <figure>
-                            <img :src="gallery.image_url" class="img-fluid"/>
+                            <img :src="slide.image_url" class="img-fluid"/>
                           </figure>
-                          <p class="text-center slider-title">{{gallery.caption}}</p>
+                          <p class="text-center slider-title">‘Manama’ Private Lounge, can seat up to 10 people</p>
                       </div>
                     </div>
                 </Slide>

@@ -8,7 +8,7 @@
             <img :src="image_1_url" class="img-fluid w-100" alt="5-Start Hospitality services" />
         </figure>
     </div>
-    <Trivial :heading2="heading_2" :paragraph1="paragraph_1" :ourPhotoGallery="private_and_personal_gallery" />
+    <Trivial :heading2="heading_2" :paragraph1="paragraph_1" :ourPhotoGallery="our_photo_gallery" />
 
     <WlakThroughTerminal v-if="visible_1 === 1" :heading3="heading_3" :paragraph2="paragraph_2" :video1="video_1" />
     <PrivateLounges :heading4="heading_4" :paragraph3="paragraph_3" :privateGallery="private_and_personal_gallery" />
