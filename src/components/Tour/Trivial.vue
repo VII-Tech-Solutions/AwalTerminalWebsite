@@ -11,7 +11,7 @@
         </div>
        </div>
        <div class="custom-carousal" data-aos="fade-up" data-aos-duration="2500">
-            <Carousel :itemsToShow="2" :wrapAround="true">
+            <!-- <Carousel :itemsToShow="2" :wrapAround="true">
                 <Slide v-for="galleryImg in ourPhotoGallery" :key="galleryImg.id">
                     <div class="carousel__item">
                     <div class="carousal-style">
@@ -25,7 +25,7 @@
                 <template #addons>
                     <Navigation />
                 </template>
-                </Carousel>
+                </Carousel> -->
         </div>
     </div>
 </template>
@@ -54,9 +54,6 @@ export default {
           dots: false,
         },
       }
-    },
-    created() {
-      console.log("i am in Trivial",this.ourPhotoGallery);
     }
 };
 </script>
