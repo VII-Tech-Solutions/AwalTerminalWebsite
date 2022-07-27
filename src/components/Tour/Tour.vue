@@ -7,10 +7,9 @@
             <img :src="image_1_url" class="img-fluid w-100" alt="5-Start Hospitality services" />
         </figure>
     </div>
-   
+    <Trivial :heading2="heading_2" :paragraph1="paragraph_1" :ourPhotoGallery="private_and_personal_gallery" />
 
     <WlakThroughTerminal v-if="visible_1 === 1" :heading3="heading_3" :paragraph2="paragraph_2" :video1="video_1" />
-
     <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_5" name="tour-bg"
         service1="Meet & Greet" image1="tour-service-3" service2="Luxurious Lounges" image2="tour-service-2"
         service3="Flawless Departure" image3="tour-service-1" :footerbg="background_image_2_url" />
