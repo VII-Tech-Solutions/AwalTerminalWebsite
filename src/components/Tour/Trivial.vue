@@ -30,6 +30,7 @@
     </div>
 </template>
 <script>
+
 import { Carousel, Navigation, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 export default {

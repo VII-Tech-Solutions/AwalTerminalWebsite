@@ -8,7 +8,8 @@
         </figure>
     </div>
     <Trivial :heading2="heading_2" :paragraph1="paragraph_1" :ourPhotoGallery="our_photo_gallery" />
-    <WlakThroughTerminal :heading3="heading_3" :paragraph3="paragraph_3" />
+
+    <WlakThroughTerminal v-if="visible_1 === 1" :heading3="heading_3" :paragraph3="paragraph_3" :video1="video_1" />
     <PrivateLounges :heading4="heading_4" :paragraph3="paragraph_3" :privateGallery="private_and_personal_gallery" />
     <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_5" name="tour-bg"
         service1="Meet & Greet" image1="tour-service-3" service2="Luxurious Lounges" image2="tour-service-2"
@@ -42,7 +43,9 @@ export default {
             "background_image_2_url": null,
             "image_1_url": null,
             "our_photo_gallery":[],
-            "private_and_personal_gallery":[]
+            "private_and_personal_gallery":[],
+            video_1:null,
+            visible_1:0
         }
     },
 
@@ -53,7 +56,7 @@ export default {
                 .then((response) => {
 
                     let data = response.data.data.tour_the_terminal_content;
-
+                    console.log(data.our_photo_gallery,"galleryyyyyyyyyyy");
                     this.heading_top_1 = data.heading_top_1,
                     this.heading_1 = data.heading_1,
                     this.subheading_1 = data.subheading_1,
@@ -70,6 +73,9 @@ export default {
                     this.image_1_url = data.image_1_url;
                     this.our_photo_gallery = data.our_photo_gallery;
                     this.private_and_personal_gallery = data.private_and_personal_gallery;
+                    this.video_1 = 'https://www.youtube.com/embed/0W6i5LYKCSI';
+                    this.visible_1 = data.visible_1;
+                    
                 })
                 .catch(function (error) {
                     console.log(error.response)
@@ -78,12 +84,13 @@ export default {
         }
     },
 
-    created() {
-        this.getTourContent();
-    },
+    // created() {
+        
+    // },
 
 
     mounted() {
+        this.getTourContent();
         window.scrollTo(0, 0)
     },
     components: {
