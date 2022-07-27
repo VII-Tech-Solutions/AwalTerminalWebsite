@@ -9,6 +9,7 @@
             </div>
             <div class="video-module">
                 <div class="ratio ratio-16x9">
+                    
                     <iframe width="683" height="384" :src="video1"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

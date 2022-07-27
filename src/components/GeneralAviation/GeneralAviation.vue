@@ -8,7 +8,7 @@
         </figure>
     </div>
     <ComfortService :headingTop2="heading_top_2" :heading4="heading_4" :paragraph3="paragraph_3" />
-    <TakeTour :heading5="heading_5" :paragraph4="paragraph_4" />
+    <TakeTour :heading5="heading_5" :paragraph4="paragraph_4" :squareImage2="square_image_2_url" />
     <FooterBanner HeadingTopText="5-star hospitality services" MainHeading="Premium hospitality"
         name="GeneralAviation-bg" service1="Expert Handling" image1="home-service-1" service2="Luxury Transport"
         image2="home-service-2" service3="Perfect Departure" image3="home-service-3" :footerbg="background_image_2_url" />

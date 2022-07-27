@@ -10,7 +10,7 @@
         </div>
         <div class="take-tour-details" >
             <figure data-aos="fade-up" data-aos-duration="2500">
-                <img class="img-fluid" src="../../assets/images/take-a-tour.png"/>
+                <img class="img-fluid"  :src="squareImage2" />
             </figure>
             <p class="text-center" data-aos="fade-up" data-aos-duration="2500">{{paragraph4}}</p>
             <div class="d-flex justify-center align-center"><button class="common-btn mx-auto" data-aos="fade-bottom" data-aos-duration="2500">tour the terminal</button></div>
@@ -22,7 +22,8 @@
 export default {
     props: {
         heading5: String,
-        paragraph4: String
+        paragraph4: String,
+        squareImage2:String
     }
 }
 </script>
