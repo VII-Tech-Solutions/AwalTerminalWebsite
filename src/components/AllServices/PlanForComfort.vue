@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
                         <div class="page-title" >
-                            <h2>Plan for comfort</h2>
+                            <h2>{{heading4}}</h2>
                         </div>
                         <div class="comfort-checklist">
                             <ul class="ul_css">
@@ -22,13 +22,13 @@
                     </div>
                     <div class="col-md-4 offset-lg-2 offset-md-1" >
                         <figure class="mb-0 plan-img">
-                            <img src="../../assets/images/plan-comfort.png" class="img-fluid" alt="Plan For Comfort">
+                            <img :src="squareImage1" class="img-fluid" alt="Plan For Comfort">
                         </figure>
                     </div>
                 </div>
                 <div class="booking-details">
                     <div data-aos="fade-up" data-aos-duration="2500">
-                        <p class="mb-lg-4 mb-3">When making the booking, we require details of everyone in your party:</p>
+                        <p class="mb-lg-4 mb-3">{{paragraph3}}:</p>
                         <div class="comfort-list">
                             <ul class="ul_css" >
                                 <li>
@@ -36,7 +36,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/person.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">Names</p>
+                                        <p class="text-capitalize">{{bulletPoint1}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -44,7 +44,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/event.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">Passport EXpory dates</p>
+                                        <p class="text-capitalize">{{bulletPoint5}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -52,7 +52,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/date-range.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-calendar">date of birth</p>
+                                        <p class="text-calendar">{{bulletPoint2}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -60,7 +60,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/flight.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">flight number</p>
+                                        <p class="text-capitalize">{{bulletPoint6}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -68,7 +68,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/flag.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">nationalities</p>
+                                        <p class="text-capitalize">{{bulletPoint3}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -76,7 +76,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/groups.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">guest names</p>
+                                        <p class="text-capitalize">{{bulletPoint7}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -84,7 +84,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/tag.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">passport numbers</p>
+                                        <p class="text-capitalize">{{bulletPoint4}}</p>
                                     </div>
                                 </li>
                             </ul>
@@ -103,6 +103,22 @@
 </template>  
 
 <script>
+export default {
+
+    props: {
+        heading4: String,
+        paragraph3: String,
+        bulletPoint1: String,
+        bulletPoint2: String,
+        bulletPoint3: String,
+        bulletPoint4: String,
+        bulletPoint5: String,
+        bulletPoint6: String,
+        bulletPoint7: String,
+        squareImage1: String,
+        
+    },
+}
 </script>
 <style>
 .plan-for-comfort{padding:150px 0px;}

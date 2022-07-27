@@ -8,25 +8,26 @@
             <form v-on:submit.prevent="submitForm">
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="fullname" class="form-label">First Name<span class="asterik">*</span></label>
-                <input type="text" class="form-control" v-model="first_name" id="fullname"
+                <input type="text" class="form-control" @change="checkError" v-model="first_name" id="fullname"
                   placeholder="Enter your full name" />
                 <p v-if="firstNameError" class="text-danger">please enter the first name</p>
               </div>
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="fullname" class="form-label">Last Name<span class="asterik">*</span></label>
-                <input type="text" class="form-control" v-model="last_name" id="fullname"
+                <input type="text" class="form-control" @change="checkError" v-model="last_name" id="fullname"
                   placeholder="Enter your full name" />
                 <p v-if="lastNameError" class="text-danger">please enter the last name</p>
               </div>
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="exampleInputEmail1" class="form-label">Email address<span class="asterik">*</span></label>
-                <input type="email" class="form-control" v-model="email" id="exampleInputEmail1"
+                <input type="text" class="form-control" @change="checkError" v-model="email" id="exampleInputEmail1"
                   aria-describedby="emailHelp" placeholder="yourname@exmaple.com" />
                 <p v-if="emailError" class="text-danger">please enter valid email address.</p>
               </div>
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="exampleInputEmail1" class="form-label">Your Message<span class="asterik">*</span></label>
-                <textarea class="form-control" v-model="message" rows="7">What would you like to discuss?</textarea>
+                <textarea class="form-control" @change="checkError" v-model="message"
+                  rows="7">What would you like to discuss?</textarea>
                 <p v-if="messageError" class="text-danger">please enter your message.</p>
               </div>
               <button data-aos="fade-bottom" data-aos-duration="2500" class="btn-blue">Send
@@ -65,6 +66,37 @@ export default {
     }
   },
   methods: {
+
+    checkError() {
+      console.log("asdasdasdasda");
+      if (this.first_name == '') {
+        this.firstNameError = true;
+      } else {
+        this.firstNameError = false;
+      }
+
+      if (this.last_name == '') {
+        this.lastNameError = true;
+      } else {
+        this.lastNameError = false;
+      }
+
+      if (this.email == '') {
+        this.emailError = true;
+      } else if (/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email)) {
+        this.emailError = false;
+      }
+      else {
+        this.emailError = true;
+      }
+
+      if (this.message == '') {
+        this.messageError = true;
+      } else {
+        this.messageError = false;
+      }
+    },
+
     submitForm() {
       //debugger;
       if (this.first_name == '') {
@@ -81,7 +113,10 @@ export default {
 
       if (this.email == '') {
         this.emailError = true;
-      } else {
+      } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+        this.emailError = true;
+      }
+      else {
         this.emailError = false;
       }
 
