@@ -54,6 +54,9 @@ export default {
         },
       }
     },
+    created() {
+      console.log("i am in Trivial",this.ourPhotoGallery);
+    }
 };
 </script>
 <style>
