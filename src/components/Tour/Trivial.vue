@@ -1,6 +1,6 @@
 
 <template>
-    <div class="trivial trival-carousel">
+    <div class="trivial trival-carousel aaaaaaaaa">
        <div class="container">
         <div class="main-page-title">
             <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">our photo gallery</span></div>

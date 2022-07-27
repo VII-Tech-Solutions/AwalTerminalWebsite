@@ -9,8 +9,8 @@
     </div>
     <Trivial :heading2="heading_2" :paragraph1="paragraph_1" :ourPhotoGallery="our_photo_gallery" />
 
-    <WlakThroughTerminal v-if="visible_1 === 1" :heading3="heading_3" :paragraph3="paragraph_3" :video1="video_1" />
-    <PrivateLounges :heading4="heading_4" :paragraph3="paragraph_3" :privateGallery="private_and_personal_gallery" />
+    <WlakThroughTerminal v-if="visible_1 === 1" :heading3="heading_3" :paragraph2="paragraph_2" :video1="video_1" />
+
     <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_5" name="tour-bg"
         service1="Meet & Greet" image1="tour-service-3" service2="Luxurious Lounges" image2="tour-service-2"
         service3="Flawless Departure" image3="tour-service-1" :footerbg="background_image_2_url" />
@@ -73,7 +73,7 @@ export default {
                     this.image_1_url = data.image_1_url;
                     this.our_photo_gallery = data.our_photo_gallery;
                     this.private_and_personal_gallery = data.private_and_personal_gallery;
-                    this.video_1 = 'https://www.youtube.com/embed/0W6i5LYKCSI';
+                    this.video_1 = data.video_1;
                     this.visible_1 = data.visible_1;
                     
                 })
