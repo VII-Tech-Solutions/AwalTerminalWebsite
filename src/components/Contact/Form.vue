@@ -133,7 +133,7 @@ export default {
         formData.append('first_name', this.first_name);
         formData.append('last_name', this.last_name);
         formData.append('email', this.email);
-        formData.append('message', this.append)
+        formData.append('message', this.message)
         let axiosConfig = {
           headers: {
             'Content-Type': 'Content-Type: multipart/form-data',
