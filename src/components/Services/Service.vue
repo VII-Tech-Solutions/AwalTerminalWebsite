@@ -75,6 +75,7 @@ import Banner from "./Banner.vue";
 import Fascilities from './Fascilities.vue'
 import FooterBanner from '../FooterBanner/FooterBanner.vue'
 import axios from 'axios'
+import AOS from "aos";
 
 export default {
 
@@ -151,7 +152,9 @@ export default {
 
 
     mounted() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+    AOS.init();
+
     },
     components: {
         Banner, Fascilities, FooterBanner,

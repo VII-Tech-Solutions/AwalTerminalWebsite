@@ -19,6 +19,8 @@ import LuxuryView from './LuxuryView/LuxuryView.vue'
 import TourTerminal from './TourTerminal/TourTerminal.vue'
 import FooterBanner from '../FooterBanner/FooterBanner.vue'
 import axios from 'axios'
+import AOS from "aos";
+
 export default {
 	data() {
 		return {
@@ -96,8 +98,8 @@ export default {
 	},
 
 	mounted() {
-
-		window.scrollTo(0, 0)
+    AOS.init();
+		window.scrollTo(0, 0);
 	},
 	components: {
 		Banner,

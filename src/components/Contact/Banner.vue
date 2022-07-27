@@ -1,25 +1,33 @@
 <template>
-    <section class="banner contact-banner">
+    <section class="banner contact-banner" v-bind:style="{ backgroundImage: 'url(' + backgroundImage1 + ')' }">
         <div class="container">
             <div class="row ">
                 <div class="col-12">
                     <div class="banner-content" data-aos="fade-up" data-aos-duration="2500">
-                        <strong class="heading-top">Contact Us</strong>
-                        <h1>How can we help</h1>
-                        <span class="sub-heading">We work for your traveling experience to be a dream turned into reality. Let us know how we can help you.</span>
+                        <strong class="heading-top">{{headingTop1}}</strong>
+                        <h1>{{heading1}}</h1>
+                        <span class="sub-heading">{{subheading1}}</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </template>
-<script >
+<script>
+export default {
+ props: {
+    headingTop1: String,
+    heading1: String,
+    subheading1: String,
+    backgroundImage1: String
+  },
+}
 
 </script>
 <style>
-.banner.contact-banner {
+/* .banner.contact-banner {
     background-image: url("../../assets/images/contact-banner.jpg");
-}
+} */
 /* .banner {
     background: url("../../assets/images/banner-img.jpg");
     background-position: center;
