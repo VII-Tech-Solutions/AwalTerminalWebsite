@@ -31,8 +31,8 @@
 </template>
 <script>
 
-import { Carousel, Navigation, Slide } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
+//import { Carousel, Navigation, Slide } from "vue3-carousel";
+//import "vue3-carousel/dist/carousel.css";
 export default {
 
     props: {
@@ -43,9 +43,6 @@ export default {
   },
 
   components: {
-    Carousel,
-    Slide,
-    Navigation,
   },
    data() {
       return {
