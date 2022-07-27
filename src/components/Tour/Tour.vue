@@ -1,6 +1,7 @@
 
 <template>
-    <Banner :backgroundImage1="background_image_1_url" :headingTop1="heading_top_1" :heading1="heading_1" :subheading1="subheading_1" />
+    <Banner :backgroundImage1="background_image_1_url" :headingTop1="heading_top_1" :heading1="heading_1"
+        :subheading1="subheading_1" />
 
     <div class="tour" data-aos="fade-up" data-aos-duration="2500">
         <figure class="mb-0">
@@ -11,9 +12,9 @@
 
     <WlakThroughTerminal v-if="visible_1 === 1" :heading3="heading_3" :paragraph2="paragraph_2" :video1="video_1" />
     <PrivateLounges :heading4="heading_4" :paragraph3="paragraph_3" :privateGallery="private_and_personal_gallery" />
-    <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_5" name="tour-bg"
-        service1="Meet & Greet" image1="tour-service-3" service2="Luxurious Lounges" image2="tour-service-2"
-        service3="Flawless Departure" image3="tour-service-1" :footerbg="background_image_2_url" />
+    <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_5" name="tour-bg" service1="Meet & Greet"
+        image1="tour-service-3" service2="Luxurious Lounges" image2="tour-service-2" service3="Flawless Departure"
+        image3="tour-service-1" :footerbg="background_image_2_url" />
 </template>                          
 <script>
 import Trivial from "./Trivial.vue";
@@ -42,10 +43,10 @@ export default {
             "background_image_1_url": null,
             "background_image_2_url": null,
             "image_1_url": null,
-            "our_photo_gallery":[],
-            "private_and_personal_gallery":[],
-            video_1:null,
-            visible_1:0
+            "our_photo_gallery": [],
+            "private_and_personal_gallery": [],
+            video_1: null,
+            visible_1: 0
         }
     },
 
@@ -55,37 +56,37 @@ export default {
             axios.get('https://awal.viitech.net/api/tour-the-terminal-content')
                 .then((response) => {
 
-                    let data = response.data.data.tour_the_terminal_content;
-                    console.log(data.our_photo_gallery,"galleryyyyyyyyyyy");
-                    this.heading_top_1 = data.heading_top_1,
-                    this.heading_1 = data.heading_1,
-                    this.subheading_1 = data.subheading_1,
-                    this.paragraph_1 = data.paragraph_1,
-                    this.heading_top_2 = data.heading_top_2,
-                    this.heading_2 = data.heading_2,
-                    this.heading_3 = data.heading_3,
-                    this.heading_4 = data.heading_4,
-                    this.heading_5 = data.heading_5,
-                    this.paragraph_2 = data.paragraph_2,
-                    this.paragraph_3 = data.paragraph_3,
-                    this.background_image_1_url = data.background_image_1_url,
-                    this.background_image_2_url = data.background_image_2_url,
-                    this.image_1_url = data.image_1_url;
-                    this.our_photo_gallery = data.our_photo_gallery;
-                    this.private_and_personal_gallery = data.private_and_personal_gallery;
-                    this.video_1 = data.video_1;
-                    this.visible_1 = data.visible_1;
-                    
+                    let data = response.data.data.tour_the_terminal_content
+                    console.log(data.our_photo_gallery, "galleryyyyyyyyyyy")
+                    this.heading_top_1 = data.heading_top_1
+                    this.heading_1 = data.heading_1
+                    this.subheading_1 = data.subheading_1
+                    this.paragraph_1 = data.paragraph_1
+                    this.heading_top_2 = data.heading_top_2
+                    this.heading_2 = data.heading_2
+                    this.heading_3 = data.heading_3
+                    this.heading_4 = data.heading_4
+                    this.heading_5 = data.heading_5
+                    this.paragraph_2 = data.paragraph_2
+                    this.paragraph_3 = data.paragraph_3
+                    this.background_image_1_url = data.background_image_1_url
+                    this.background_image_2_url = data.background_image_2_url
+                    this.image_1_url = data.image_1_url
+                    this.our_photo_gallery = data.our_photo_gallery
+                    this.private_and_personal_gallery = data.private_and_personal_gallery
+                    this.video_1 = data.video_1
+                    this.visible_1 = data.visible_1
+
                 })
                 .catch(function (error) {
                     console.log(error.response)
-                   
+
                 })
         }
     },
 
     // created() {
-        
+
     // },
 
 
