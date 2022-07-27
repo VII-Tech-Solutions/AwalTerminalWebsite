@@ -17,7 +17,7 @@
                           <figure>
                             <img :src="slide.image_url" class="img-fluid"/>
                           </figure>
-                          <p class="text-center slider-title">‘Manama’ Private Lounge, can seat up to 10 people</p>
+                          <p class="text-center slider-title">{{slide.caption}}</p>
                       </div>
                     </div>
                 </Slide>

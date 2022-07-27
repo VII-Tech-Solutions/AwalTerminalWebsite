@@ -13,13 +13,13 @@
     </div>
     <div class="custom-carousal" data-aos="fade-up" data-aos-duration="2500">
       <Carousel :itemsToShow="2" :wrapAround="true" v-if="ourPhotoGallery && ourPhotoGallery.length > 0">
-                <Slide v-for="slide in ourPhotoGallery" :key="slide">
+                <Slide v-for="slide in ourPhotoGallery" :key="slide.id">
                     <div class="carousel__item">
                     <div class="carousal-style">
                         <figure>
                         <img :src="slide.image_url" class="img-fluid"/>
                         </figure>
-                        <p class="text-center slider-title">External view of the terminal after renovation</p>
+                        <p class="text-center slider-title">{{slide.caption}}</p>
                     </div>
                     </div>
                 </Slide>
