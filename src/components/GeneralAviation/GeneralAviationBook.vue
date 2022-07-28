@@ -29,10 +29,10 @@
                         </ul>
                     </div>
                     <div class="custom-mb mb-lg-5 mb-3">
-                        <p class="text-start w-100 custom-mb">{{ paragraph2 }}</p>
-                        <strong>
+                        <p class="text-start w-100 custom-mb" v-html="paragraph2"></p>
+                        <!-- <strong>
                             <p class="theme-color fw-bold">Requests require a minimum of 24 hours to be confirmed.</p>
-                        </strong>
+                        </strong> -->
                     </div>
                 </div>
                 <div class="col-md-4 offset-lg-2 offset-md-1">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <div class="contact-address d-block" data-aos="fade-up" data-aos-duration="2500">
-                    <p>{{ text1 }}</p>
+                    <p v-html="text1"></p>
                 </div>
                 <div class="d-flex">
                     <router-link to="/general-aviation-form1" data-aos="fade-bottom" data-aos-duration="2500"
@@ -200,8 +200,12 @@ export default {
     padding-bottom: 50px
 }
 
-.contact-address p {
-    line-height: 1.5;
+.contact-address p a {
+    color: inherit;
+    text-decoration: none;
+}
+.contact-address p a + a{
+    text-decoration: underline;
 }
 
 .contact-address .phone,
@@ -219,7 +223,9 @@ export default {
 .contact-address .phone {
     text-decoration: none;
 }
-
+p.custom-mb p + p {
+    margin-top: 40px;
+}
 @media (max-width:1199px) {
     .plan-for-comfort {
         padding: 100px 0px;

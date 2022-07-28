@@ -16,7 +16,7 @@
                             </ul>
                         </div>
                         <div class="custom-mb mb-lg-5 mb-3">
-                            <p class="text-start w-100 custom-mb" style="white-space:pre-line">{{paragraph3}}</p>
+                            <p class="text-start w-100 custom-mb" style="white-space:pre-line" v-html="paragraph3"></p>
                             <!-- <strong><p class="theme-color fw-bold">Requests require a minimum of 24 hours to be confirmed.</p></strong> -->
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="contact-address d-block" data-aos="fade-up" data-aos-duration="2500">
-                        <p>{{ text_1 }}</p>
+                        <p v-html="text_1"></p>
                     </div>
                      <div class="d-flex justify-content-start">
                         <router-link to="/elite-form" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">Book Elite Services</router-link>
@@ -134,11 +134,20 @@ export default {
 .comfort-item span .svg-inline--fa{color: #011e41; fill: #011e41;}
 .contact-address{padding-bottom:50px}  
 .comfort-item p{text-align:start; width:auto; line-height:1.5;}
-.contact-address p{line-height:1.5;}
+.contact-address p a {
+    color: inherit;
+    text-decoration: none;
+}
+.contact-address p a + a{
+    text-decoration: underline;
+}
 .contact-address .phone, .contact-address .mail{color: #011e41;background-color:transparent;transition:all ease-in-out .3s;}
 .icon-none{opacity: 0;}
 /* .contact-address .phone:hover{border} */
 .contact-address .phone{text-decoration:none;}
+p.custom-mb p + p {
+    margin-top: 40px;
+}
 @media (max-width:1199px) {
 .plan-for-comfort{padding:100px 0px;}
 .plan-for-comfort .page-title h2{padding-bottom:25px;}
