@@ -4,7 +4,9 @@
       <div class="row">
         <div class="col-12">
           <div class="horizon">
-            <span class="page-subtitle text-uppercase">our memorable journey</span>
+            <span class="page-subtitle text-uppercase"
+              >our memorable journey</span
+            >
           </div>
           <div class="history-carousel-header text-center">
             <h2>{{ heading3 }}</h2>
@@ -14,11 +16,18 @@
           <div class="slider-years">
             <ul class="d-flex mb-0">
               <li>
-                <span id="span1" class="carousel-item-private active" @click="item()">
-                  60s</span>
+                <span
+                  id="span1"
+                  class="carousel-item-private active"
+                  @click="item()"
+                >
+                  60s</span
+                >
               </li>
               <li>
-                <span id="span2" class="carousel-item-private" @click="item1()">2022s</span>
+                <span id="span2" class="carousel-item-private" @click="item1()"
+                  >2022s</span
+                >
               </li>
             </ul>
           </div>
@@ -27,41 +36,73 @@
     </div>
     <div class="slider-wrapper">
       <div class="history-sliders active" id="60s">
-        <carousel :items-to-show="1.5" :wrap-around="true">
+        <carousel
+          :settings="settings"
+          :breakpoints="breakpoints"
+          :wrap-around="true"
+        >
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/old-history-1.png" class="img-fluid" />
+              <img
+                src="../../../assets/images/old-history-1.png"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">1960s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/old-history-2.png" class="img-fluid" />
+              <img
+                src="../../../assets/images/old-history-2.png"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">1960s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/old-history-3.png" class="img-fluid" />
+              <img
+                src="../../../assets/images/old-history-3.png"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">1960s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/old-history-4.png" class="img-fluid" />
+              <img
+                src="../../../assets/images/old-history-4.png"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">1960s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/old-history-5.png" class="img-fluid" />
+              <img
+                src="../../../assets/images/old-history-5.png"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">1960s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/old-history-6.png" class="img-fluid" />
+              <img
+                src="../../../assets/images/old-history-6.png"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">1960s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/old-history-7.png" class="img-fluid" />
+              <img
+                src="../../../assets/images/old-history-7.png"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">1960s</strong>
           </slide>
           <!-- <div class="carousel-wrapper">
               <div class="carousal-style">
@@ -93,46 +134,73 @@
             </div> -->
           <template #addons>
             <navigation />
-            <!-- <pagination /> -->
           </template>
         </carousel>
       </div>
       <div class="history-sliders" id="2022s">
-        <carousel :items-to-show="1.5" :wrap-around="true">
+        <carousel  :settings="settings2" :wrap-around="true">
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/new-history-1.jpg" class="img-fluid" />
+              <img
+                src="../../../assets/images/new-history-1.jpg"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">2022s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/new-history-2.jpg" class="img-fluid" />
+              <img
+                src="../../../assets/images/new-history-2.jpg"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">2022s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/new-history-3.jpg" class="img-fluid" />
+              <img
+                src="../../../assets/images/new-history-3.jpg"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">2022s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/new-history-4.jpg" class="img-fluid" />
+              <img
+                src="../../../assets/images/new-history-4.jpg"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">2022s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/new-history-5.jpg" class="img-fluid" />
+              <img
+                src="../../../assets/images/new-history-5.jpg"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">2022s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/new-history-6.jpg" class="img-fluid" />
+              <img
+                src="../../../assets/images/new-history-6.jpg"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">2022s</strong>
           </slide>
           <slide :key="slide">
             <figure>
-              <img src="../../../assets/images/new-history-7.jpg" class="img-fluid" />
+              <img
+                src="../../../assets/images/new-history-7.jpg"
+                class="img-fluid"
+              />
             </figure>
+            <strong class="slider-date">2022s</strong>
           </slide>
           <template #addons>
             <navigation />
@@ -150,39 +218,42 @@
 
 // import { gsap } from "gsap";
 // import ScrollTrigger from "gsap/ScrollTrigger";
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 export default {
   data() {
     return {
       settings: {
-        "centerMode": true,
-        // "centerPadding": "20px",
-        "focusOnSelect": true,
-        "infinite": true,
-        "slidesToShow": 1.5,
-        "speed": 500,
-        snapAlign: 'center',
+        itemsToShow: 1,
+        snapAlign: "center",
+        autoplay:"2000"
       },
+       settings2: {
+        itemsToShow: 1,
+        snapAlign: "center",
+        autoplay:"2000"
+      },
+      // breakpoints are mobile first
+      // any settings not specified will fallback to the carousel settings
       breakpoints: {
         // 700px and up
         700: {
           itemsToShow: 1,
-
+          snapAlign: "center",
         },
         // 1024 and up
-        // 1024: {
-        //   itemsToShow: 5,
-        //   snapAlign: 'start',
-        // },
+        1024: {
+          itemsToShow: 1.5,
+          snapAlign: "start",
+        },
       },
-    }
+    };
   },
   props: {
     heading3: String,
     subheading2: String,
     quote1: String,
-    image1: String
+    image1: String,
   },
   name: "HistoryCarousel",
 
@@ -209,16 +280,16 @@ export default {
       // window.scrollTo(0, 20);
       // gsap.to(".slider-wrapper", { x: "0%" });
       // this.ressetClassesFunction(1);
-      $("#60s").addClass('active');
-      $("#2022s").removeClass('active');
-      $("#span1").addClass('active');
-      $("#span2").removeClass('active');
+      $("#60s").addClass("active");
+      $("#2022s").removeClass("active");
+      $("#span1").addClass("active");
+      $("#span2").removeClass("active");
     },
     item1() {
-      $("#2022s").addClass('active');
-      $("#60s").removeClass('active');
-      $("#span2").addClass('active');
-      $("#span1").removeClass('active');
+      $("#2022s").addClass("active");
+      $("#60s").removeClass("active");
+      $("#span2").addClass("active");
+      $("#span1").removeClass("active");
     },
     // item2() {
     //   gsap.to(".slider-wrapper", { x: "-158%" });
@@ -280,7 +351,12 @@ export default {
 
 .slider-wrapper .carousel__prev,
 .carousel__next {
-  background-color: #001f41;
+  width: 55px;
+    height: 55px;
+    border: 1px solid #011e41 !important;
+    color: #011e41;
+    border-radius: 0%;
+    background-color: #fff;
 }
 
 .slider-wrapper .carousel__prev,
@@ -431,6 +507,9 @@ export default {
 
 .history-carousel .slider-wrapper .carousel__slide {
   padding: 0 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .history-carousel .slider-wrapper .carousel__slide .slider-date {
@@ -439,6 +518,7 @@ export default {
   left: -160px;
   opacity: 1;
   bottom: auto;
+  opacity: 0.3;
 }
 
 .history-carousel .slider-wrapper .carousel__slide .slider-description {
@@ -540,7 +620,7 @@ export default {
   .slider-years ul li span {
     font-size: 22px;
   }
-  .history-carousel .slider-wrapper .carousel__slide{
+  .history-carousel .slider-wrapper .carousel__slide {
     padding: 0 10px;
     /* width: 117% !important; */
   }

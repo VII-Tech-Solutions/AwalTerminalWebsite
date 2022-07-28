@@ -1,7 +1,7 @@
 <template>
 	<Banner :image="background_image_1" :HeadingTopText="heading_top_1" :MainHeading="heading_1" :SubHeading="subheading_1" />
 	<TwoFoldModuleVue :heading2="heading_2" :paragraph1="paragraph_1" :squareImage="square_image_1_url"  :backgroundImage2="background_image_2"  />
-	<OurStory :heading4="heading_4" :paragraph2="paragraph_2" :image1="image_1" />
+	<OurStory heading4="where tradition meets luxury" :paragraph2="paragraph_2" :image1="image_1" />
 	<LuxuryView :sectionImage1="section_image_1" />
 	<TwoFoldModuleVue2 :heading3="heading_3" :paragraph3="paragraph_3" :bulletPoint1="bullet_point_1" :bulletPoint2="bullet_point_2" :bulletPoint3="bullet_point_3" :bulletPoint4="bullet_point_4" :bulletPoint5="bullet_point_5" />
 	<TourTerminal :image2="image_2" :paragraph4="paragraph_4" />

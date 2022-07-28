@@ -23,7 +23,7 @@
       </div>
     </div>
     <EliteService :heading3="heading_3" :paragraph2="paragraph_2" :backgroundImage2="background_image_2_url" />
-    <PlanForComfort :heading4="heading_4" :paragraph3="paragraph_3" :bulletPoint1="bullet_point_1" :bulletPoint2="bullet_point_2" :bulletPoint3="bullet_point_3" :bulletPoint4="bullet_point_4" :bulletPoint5="bullet_point_5" :bulletPoint6="bullet_point_6" :bulletPoint7="bullet_point_7" :squareImage1="square_image_1_url" />
+    <PlanForComfort :text_1="text_1" :heading4="heading_4" :paragraph3="paragraph_3" :bulletPoint1="bullet_point_1" :bulletPoint2="bullet_point_2" :bulletPoint3="bullet_point_3" :bulletPoint4="bullet_point_4" :bulletPoint5="bullet_point_5" :bulletPoint6="bullet_point_6" :bulletPoint7="bullet_point_7" :squareImage1="square_image_1_url" />
     <ExperienceTerminal :bigImage1="big_image_1_url" :heading5="heading_5" :paragraph4="paragraph_4" :squareImage2="square_image_2_url" />
     <FooterBanner HeadingTopText="5-star hospitality services" MainHeading="The VIP service" name="elite-story-bg"
       service1="Detailed Interiors" image1="elite-service-1" service2="Absolute Comfort" image2="elite-service-2"

@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-md-4 offset-lg-2 offset-md-1">
                     <figure class="mb-0 plan-img">
-                        <img src="../../assets/images/plan-comfort.png" class="img-fluid" alt="Plan For Comfort">
+                        <img :src="square_image_2_url" class="img-fluid" alt="Plan For Comfort">
                     </figure>
                 </div>
             </div>
@@ -117,7 +117,7 @@
 <script>
 export default {
     props: {
-        heading2: String,
+        heading3: String,
         paragraph2: String,
         bulletPoint1: String,
         bulletPoint2: String,
@@ -126,6 +126,7 @@ export default {
         bulletPoint5: String,
         bulletPoint6: String,
         text1: String,
+        square_image_2_url: String,
     }
 }
 </script>

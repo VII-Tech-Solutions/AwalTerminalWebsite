@@ -3,8 +3,7 @@
   <div class="trivial trival-carousel">
     <div class="container">
       <div class="main-page-title">
-        <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">our
-            photo gallery</span></div>
+        <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">BROWSE OUR GALLERY</span></div>
         <div class="page-title">
           <h2 class="text-capitalize mx-auto text-center" data-aos="fade-up" data-aos-duration="2500">{{ heading2 }}</h2>
           <p class="mx-auto" data-aos="fade-up" data-aos-duration="2500">{{ paragraph1 }}</p>

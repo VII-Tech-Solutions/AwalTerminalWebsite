@@ -1,5 +1,5 @@
 <template>
-    <section class="two-fold support-service">
+    <section class="two-fold support-service" v-bind:style="{ backgroundImage: 'url(' + big_image_1_url + ')' }" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-10 col-12">
@@ -27,7 +27,8 @@ export default {
     props: {
         heading2: String,
         paragraph1: String,
-        squareImage1: String
+        squareImage1: String,
+        big_image_1_url: String
     },
     methods: {
         clearStorage() {

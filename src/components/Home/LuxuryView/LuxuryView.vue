@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="main-page-title " >
-                        <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">experiences tailored to you</span>
+                        <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">experiences truly tailor-made</span>
                         </div>
                     </div>
                 </div>

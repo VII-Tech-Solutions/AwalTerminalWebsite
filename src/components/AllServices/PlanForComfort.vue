@@ -16,8 +16,8 @@
                             </ul>
                         </div>
                         <div class="custom-mb mb-lg-5 mb-3">
-                            <p class="text-start w-100 custom-mb">Once your booking is received, our team will review the details and an email will be sent back confirming the booking.</p>
-                            <strong><p class="theme-color fw-bold">Requests require a minimum of 24 hours to be confirmed.</p></strong>
+                            <p class="text-start w-100 custom-mb" style="white-space:pre-line">{{paragraph3}}</p>
+                            <!-- <strong><p class="theme-color fw-bold">Requests require a minimum of 24 hours to be confirmed.</p></strong> -->
                         </div>
                     </div>
                     <div class="col-md-4 offset-lg-2 offset-md-1" >
@@ -28,7 +28,7 @@
                 </div>
                 <div class="booking-details">
                     <div data-aos="fade-up" data-aos-duration="2500">
-                        <p class="mb-lg-4 mb-3">{{paragraph3}}:</p>
+                        <p class="mb-lg-4 mb-3">When booking for elite services, we require details of everyone in your party:</p>
                         <div class="comfort-list">
                             <ul class="ul_css" >
                                 <li>
@@ -91,8 +91,7 @@
                         </div>
                     </div>
                     <div class="contact-address d-block" data-aos="fade-up" data-aos-duration="2500">
-                        <p>For further assistance, please contact the Bookings Team on <a class="phone" href="tel:+973 39471116">
-                        +973 39471116</a> or <span class="effect-span"><a class="mail effect-box" href="mailto:cip@halabahrain.bh">cip@halabahrain.bh</a></span></p>
+                        <p>{{ text_1 }}</p>
                     </div>
                      <div class="d-flex justify-content-start">
                         <router-link to="/elite-form" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">Book Elite Services</router-link>
@@ -106,6 +105,7 @@
 export default {
 
     props: {
+        text_1: String,
         heading4: String,
         paragraph3: String,
         bulletPoint1: String,

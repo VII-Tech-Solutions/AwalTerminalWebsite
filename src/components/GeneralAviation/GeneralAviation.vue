@@ -1,17 +1,15 @@
 <template>
     <Banner :headingTop1="heading_top_1" :heading1="heading_1" :subheading1="subheading_1" :backgroundImage1="background_image_1_url" />
-    <SupportServiceTwoFold :heading2="heading_2" :paragraph1="paragraph_1" :squareImage1="square_image_1_url" />
-    <GeneralAviationBook :heading3="heading_3" :paragraph2="paragraph_2" :bulletPoint1="bullet_point_1" :bulletPoint2="bullet_point_2" :bulletPoint3="bullet_point_3" :bulletPoint4="bullet_point_4" :bulletPoint5="bullet_point_5" :bulletPoint6="bullet_point_6" :text1="text_1" />
+    <SupportServiceTwoFold :heading2="heading_2" :paragraph1="paragraph_1" :squareImage1="square_image_1_url" :big_image_1_url="big_image_1_url" />
+    <GeneralAviationBook :heading3="heading_3" :paragraph2="paragraph_2" :bulletPoint1="bullet_point_1" :bulletPoint2="bullet_point_2" :bulletPoint3="bullet_point_3" :bulletPoint4="bullet_point_4" :bulletPoint5="bullet_point_5" :bulletPoint6="bullet_point_6" :text1="text_1" :square_image_2_url="square_image_2_url"/>
     <div class="d-block">
         <figure class="mb-0" data-aos="zoom-in" data-aos-duration="2500">
             <img class="cover-img img-fluid w-100" :src="section_image_1_url" />
         </figure>
     </div>
-    <ComfortService :headingTop2="heading_top_2" :heading4="heading_4" :paragraph3="paragraph_3" />
-    <TakeTour :heading5="heading_5" :paragraph4="paragraph_4" :squareImage2="square_image_2_url" />
-    <FooterBanner HeadingTopText="5-star hospitality services" MainHeading="Premium hospitality"
-        name="GeneralAviation-bg" service1="Expert Handling" image1="home-service-1" service2="Luxury Transport"
-        image2="home-service-2" service3="Perfect Departure" image3="home-service-3" :footerbg="background_image_2_url" />
+    <ComfortService headingTop2="5-star hospitality services" :heading4="heading_4" :paragraph3="paragraph_3" />
+    <TakeTour :heading5="heading_5" :paragraph4="paragraph_4" :image_1="image_1_url" />
+    <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_6"  name="GeneralAviation-bg" service1="Expert Handling" image1="home-service-1" service2="Luxury Transport"  image2="home-service-2" service3="Perfect Departure" image3="home-service-3" :footerbg="background_image_2_url" />
 </template>  
 
 <script>
@@ -48,9 +46,11 @@ export default {
             bullet_point_6: null,
             background_image_1_url: null,
             background_image_2_url: null,
+            image_1_url:null,
             square_image_1_url: null,
             square_image_2_url: null,
-            section_image_1_url: null
+            section_image_1_url: null,
+            big_image_1_url: null
         }
     },
     mounted() {
@@ -88,11 +88,14 @@ export default {
                     this.bullet_point_4 = data.bullet_point_4;
                     this.bullet_point_5 = data.bullet_point_5;
                     this.bullet_point_6 = data.bullet_point_6;
+                    this.image_1_url = data.image_1_url;
                     this.background_image_1_url = data.background_image_1_url;
                     this.background_image_2_url = data.background_image_2_url;
                     this.square_image_1_url = data.square_image_1_url;
                     this.square_image_2_url = data.square_image_2_url;
                     this.section_image_1_url = data.section_image_1_url;
+                    this.big_image_1_url = data.big_image_1_url;
+                    
                 })
                 .catch(function (error) {
                     console.log(error.response)
