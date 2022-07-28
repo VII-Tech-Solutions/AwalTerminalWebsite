@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row ">
                 <div class="col-12">
-                    <div class="banner-content" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="banner-content" data-aos-offset="0" data-aos="fade-up" data-aos-duration="2500">
                         <strong class="heading-top">{{HeadingTopText}}</strong>
                         <h1>{{MainHeading}}</h1>
                         <span class="sub-heading">{{SubHeading}}</span>
