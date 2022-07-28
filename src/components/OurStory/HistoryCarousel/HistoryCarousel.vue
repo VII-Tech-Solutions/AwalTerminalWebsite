@@ -138,7 +138,7 @@
         </carousel>
       </div>
       <div class="history-sliders" id="2022s">
-        <carousel  :settings="settings2" :wrap-around="true">
+        <carousel  :settings="settings2" :breakpoints="breakpoints" :wrap-around="true">
           <slide :key="slide">
             <figure>
               <img
