@@ -7,7 +7,7 @@
                         <h2 data-aos="fade-up" data-aos-duration="2500">{{heading2}}</h2>
                         <div class="two-fold-inner">
                             <div class="two-fold-inner-text" data-aos="fade-up" data-aos-duration="2500">
-                                <p>{{paragraph1}}</p>
+                                <p v-html="paragraph1"></p>
                             </div>
                             <div class="sublime-luxury-img" data-aos="fade-up" data-aos-duration="2500">
                                 <img class="img-fluid" :src="squareImage"

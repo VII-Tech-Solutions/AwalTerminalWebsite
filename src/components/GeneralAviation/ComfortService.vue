@@ -6,7 +6,7 @@
             <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">{{headingTop2}}</span></div>
             <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
                 <h2 class=" mx-auto text-center">{{heading4}}</h2>
-                <p class="mx-auto">{{paragraph3}}</p>
+                <p class="mx-auto" v-html="paragraph3"></p>
             </div>
         </div>
         <div class="comfort-grid-cards" data-aos="fade-up" data-aos-duration="2500">

@@ -8,7 +8,7 @@
             <div class="centered">
               <h2 class="text-lowecase mx-auto" data-aos="fade-up" data-aos-duration="2500">{{heading_top_2}}
               </h2>
-              <p data-aos="fade-up" data-aos-duration="2500">{{paragraph_1}}
+              <p data-aos="fade-up" data-aos-duration="2500" v-html="paragraph_1">
               </p>
             </div>
             <figure class="mb-0 agent-img" data-aos="fade-in" data-aos-duration="2500">
