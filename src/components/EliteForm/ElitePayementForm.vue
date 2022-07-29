@@ -468,7 +468,7 @@ export default {
                   
                     console.log(res,'aaaaaaaaaaaaa')
                     localStorage.removeItem("elitedata");
-                    window.location.href = '/elite-service?uuid='+res.data.data.uuid;
+                    window.location.href = '/elite-service?uuid='+res.data.data.elite_services.uuid;
                 })
                 .catch((err) => {
                     debugger
