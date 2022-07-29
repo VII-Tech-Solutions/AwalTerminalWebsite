@@ -158,7 +158,7 @@ const routes = [
     component: ExpiredPage,
   },
   {
-    path: "/elite-service",
+    path: "/elite-service",query: { uuid: 'private' },
     name: "Elite ThankYouPage",
     component: EliteEliteService,
   },
