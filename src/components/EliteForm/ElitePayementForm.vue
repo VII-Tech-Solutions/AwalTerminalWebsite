@@ -398,7 +398,7 @@ export default {
         window.scrollTo(0, 0)
     },
     data() {
-        debugger;
+      //  debugger;
         var obj = JSON.parse(localStorage.elitedata);
         return {
             number_of_adults: obj.number_of_adults,
@@ -436,7 +436,7 @@ export default {
     },
     methods: {
         setData() {
-            debugger;
+            //debugger;
             var obj = {};
             obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children);
@@ -455,7 +455,7 @@ export default {
             localStorage.setItem('elitedata', JSON.stringify(obj));
         },
         paynow() {
-            debugger;
+            //debugger;
             const postData = JSON.parse(localStorage.elitedata);
             let axiosConfig = {
                 headers: {
