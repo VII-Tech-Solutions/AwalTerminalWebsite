@@ -459,11 +459,12 @@ export default {
             const postData = JSON.parse(localStorage.elitedata);
             let axiosConfig = {
                 headers: {
-                    'Content-Type': 'application/json;charset=UTF-8',
+                    'Content-Type': 'application/json',
                 }
             };
             axios.post('https://awal.viitech.net/api/elite-service', postData, axiosConfig)
                 .then((res) => {
+                    console.log(res,'aaaaaaaaaaaaa')
                     //localStorage.removeItem("elitedata");
                     //window.location.href = '/payment-received';
                 })
