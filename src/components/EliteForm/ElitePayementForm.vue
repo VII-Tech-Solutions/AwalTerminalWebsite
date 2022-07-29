@@ -464,8 +464,8 @@ export default {
             };
             axios.post('https://awal.viitech.net/api/elite-service', postData, axiosConfig)
                 .then((res) => {
-                    localStorage.removeItem("elitedata");
-                    window.location.href = '/payment-received';
+                    //localStorage.removeItem("elitedata");
+                    //window.location.href = '/payment-received';
                 })
                 .catch((err) => {
                     debugger
