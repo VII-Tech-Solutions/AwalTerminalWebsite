@@ -39,7 +39,7 @@
                                         <div class="accordion-body elite-form">
                                             <div class="elite-offer-services d-flex flex-column">
                                                 <div class="d-flex flex-column flex-md-row">
-                                                    <div  v-if="service_id == true" class="elite-offer-service d-flex">
+                                                    <div v-if="service_id == true" class="elite-offer-service d-flex">
                                                         <label class="custom-radio">
                                                             <div class="checkmark">
                                                                 <strong class="service-name d-block mb-lg-3 mb-2">Common
@@ -47,7 +47,9 @@
                                                                 <strong class="service-price d-block mb-3">BHD
                                                                     100<sub>/adult</sub></strong>
                                                                 <ul class="list-unstyled service-features">
-                                                                    <li class="position-relative" v-for="item in commontype" :key="item.id">{{item.feature_details}}</li>
+                                                                    <li class="position-relative"
+                                                                        v-for="item in commontype" :key="item.id">
+                                                                        {{ item.feature_details }}</li>
                                                                     <!-- <li class="position-relative">50% of the adult rate
                                                                         for children aged 2 to 12</li>
                                                                     <li class="position-relative">Free entry for infants
@@ -60,7 +62,7 @@
                                                             </div>
                                                         </label>
                                                     </div>
-                                                    <div v-else  class="elite-offer-service">
+                                                    <div v-else class="elite-offer-service">
                                                         <label class="custom-radio">
                                                             <div class="checkmark">
                                                                 <strong
@@ -69,7 +71,9 @@
                                                                 <strong class="service-price d-block mb-3">BHD
                                                                     150<sub>/adult</sub></strong>
                                                                 <ul class="list-unstyled service-features">
-                                                                    <li class="position-relative" v-for="item in privatetype" :key="item.id">{{item.feature_details}}</li>
+                                                                    <li class="position-relative"
+                                                                        v-for="item in privatetype" :key="item.id">
+                                                                        {{ item.feature_details }}</li>
                                                                     <!-- <li class="position-relative">Minimum of 2 adults
                                                                         full fares required to access a Private Lounge
                                                                     </li>
@@ -132,7 +136,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{airport_name}}</p>
+                                                                                {{ airport_name }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -142,7 +146,7 @@
                                                                                 date<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{date}}</p>
+                                                                                {{ date }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -152,7 +156,7 @@
                                                                                 time<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{time}}</p>
+                                                                                {{ time }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -163,7 +167,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{flight_number}}</p>
+                                                                                {{ flight_number }}</p>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -182,7 +186,7 @@
                                                                                 adults<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{number_of_adults}}</p>
+                                                                                {{ number_of_adults }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -193,7 +197,7 @@
                                                                             </p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{number_of_children}}</p>
+                                                                                {{ number_of_children }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -204,7 +208,7 @@
                                                                             </p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{number_of_infants}}</p>
+                                                                                {{ number_of_infants }}</p>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -228,13 +232,15 @@
                                         aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="accordian-ul">
-                                                <ul class="ul_css" v-for="(passenger, index) in passengers" :key="passenger">
+                                                <ul class="ul_css" v-for="(passenger, index) in passengers"
+                                                    :key="passenger">
                                                     <li>
                                                         <div class="d-flex mobile-col">
-                                                            <p class="extra-small-text w-p text-capitalize">Passenger {{index+1}}
+                                                            <p class="extra-small-text w-p text-capitalize">Passenger
+                                                                {{ index + 1 }}
                                                             </p>
                                                             <div class="details-list">
-                                                                <ul class="ul_css" >
+                                                                <ul class="ul_css">
                                                                     <li>
                                                                         <div class="d-flex align-items-baseline">
                                                                             <p
@@ -242,7 +248,7 @@
                                                                                 Title<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.title}}</p>
+                                                                                {{ passenger.title }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -253,7 +259,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.first_name}}</p>
+                                                                                {{ passenger.first_name }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -264,7 +270,7 @@
                                                                             </p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.last_name}}</p>
+                                                                                {{ passenger.last_name }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -273,7 +279,7 @@
                                                                                 Birth<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.birth_date}}</p>
+                                                                                {{ passenger.birth_date }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -284,7 +290,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.nationality_title}}</p>
+                                                                                {{ passenger.nationality_title }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -294,7 +300,7 @@
                                                                                 Class<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.flight_class}}</p>
+                                                                                {{ passenger.flight_class }}</p>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -324,7 +330,8 @@
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">first
                                                                 name<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text text-capitalize fw-normal">{{booker.first_name}}
+                                                            <p class="extra-small-text text-capitalize fw-normal">
+                                                                {{ booker.first_name }}
                                                             </p>
                                                         </div>
                                                     </li>
@@ -332,7 +339,8 @@
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">last
                                                                 name<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text text-capitalize fw-normal">{{booker.last_name}}
+                                                            <p class="extra-small-text text-capitalize fw-normal">
+                                                                {{ booker.last_name }}
                                                             </p>
                                                         </div>
                                                     </li>
@@ -340,14 +348,15 @@
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">email
                                                                 address<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text fw-normal">{{booker.email}}</p>
+                                                            <p class="extra-small-text fw-normal">{{ booker.email }}</p>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">mobile
                                                                 number<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text text-capitalize fw-normal">+97{{booker.mobile_number}}</p>
+                                                            <p class="extra-small-text text-capitalize fw-normal">
+                                                                +97{{ booker.mobile_number }}</p>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -371,7 +380,7 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 text-green sans">Total Amount: <span>BHD
-                                {{sum}}</span></p>
+                                {{ amount }}</span></p>
                         <div class="d-block">
                             <router-link to="/elite-payement-form" @click="setData()"
                                 class="btn-next d-inline-block align-top transition text-capitalize">Submit Reservation
@@ -386,71 +395,98 @@
 <script>
 
 import '@fortawesome/fontawesome-free/js/all.js';
+import axios from 'axios';
+
 export default {
-   
-  data() {
-      debugger;
-      var obj = JSON.parse(localStorage.elitedata);
-    return {
-         number_of_adults:obj.number_of_adults,
-         number_of_children:obj.number_of_children,
-         number_of_infants:obj.number_of_infants,
-         sum:obj.sum,
-         notFormValid: true,
-        countriesoptions:obj.countriesoptions,
-         commontype:obj.commontype,
-         privatetype:obj.privatetype,
-         service_id: obj.service_id,  
-         Totle: obj.total,
-         airport_id : obj.airport_id,  
-         airport_name : obj.airport_name,
-         date : obj.date,  
-         time : obj.time,  
-         flight_number : obj.flight_number,  
-         is_arrival_flight : obj.is_arrival_flight,
-			// passengers info
-         passengers:obj.passengers,
-         //booker Info
-		booker:{
-            first_name:obj.booker.first_name,
-			last_name:obj.booker.last_name,
-			mobile_number:obj.booker.mobile_number,
-			comments:obj.booker.comments,
-            //optional pram
-            email: obj.booker.email
-         }
-         
-     }
-        
+
+    data() {
+
+        var obj = JSON.parse(localStorage.elitedata);
+        return {
+            number_of_adults: obj.number_of_adults,
+            number_of_children: obj.number_of_children,
+            number_of_infants: obj.number_of_infants,
+            sum: obj.sum,
+            notFormValid: true,
+            countriesoptions: obj.countriesoptions,
+            commontype: obj.commontype,
+            privatetype: obj.privatetype,
+            service_id: obj.service_id,
+            Totle: obj.total,
+            airport_id: obj.airport_id,
+            airport_name: obj.airport_name,
+            date: obj.date,
+            time: obj.time,
+            flight_number: obj.flight_number,
+            is_arrival_flight: obj.is_arrival_flight,
+            // passengers info
+            passengers: obj.passengers,
+            //booker Info
+            booker: {
+                first_name: obj.booker.first_name,
+                last_name: obj.booker.last_name,
+                mobile_number: obj.booker.mobile_number,
+                comments: obj.booker.comments,
+                //optional pram
+                email: obj.booker.email
+            },
+            amount:0
+        }
+
     },
-   methods:{
-      setData()
-      {
-        //toast 
-          //toastr.info('Are you sure you want to buy ');
-           debugger;
+    methods: {
+
+        setData() {
+
+            //toastr.info('Are you sure you want to buy ');
+
             var obj = {};
             obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
-            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
+            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children);
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
-            obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
-            obj.service_id= this.service_id,
-            obj.countriesoptions=this.countriesoptions,
-            obj.airport_id =  this.airport_id;
+            obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
+            obj.service_id = this.service_id,
+                obj.countriesoptions = this.countriesoptions,
+                obj.airport_id = this.airport_id;
             obj.airport_name = this.airport_name;
-            obj.date =  this.date;
-            obj.sum=this.sum;
-            obj.privatetype=this.privatetype;
-            obj.commontype=this.commontype;
-            obj.time =  this.time;
-            obj.flight_number =  this.flight_number;
+            obj.date = this.date;
+            obj.sum = this.sum;
+            obj.privatetype = this.privatetype;
+            obj.commontype = this.commontype;
+            obj.time = this.time;
+            obj.flight_number = this.flight_number;
             obj.is_arrival_flight = this.is_arrival_flight;
-            obj.passengers = this.passengers; 
+            obj.passengers = this.passengers;
             obj.booker = this.booker;
             localStorage.setItem('elitedata', JSON.stringify(obj));
-      }
-  }
-  }
+        },
+
+        getPaymentTotal() {
+            var obj = JSON.parse(localStorage.elitedata);
+            const get_param = {
+                params: {
+                    number_of_adults: obj.number_of_adults,
+                    number_of_children: obj.number_of_children,
+                    service_id: obj.service_id,
+                }
+            };
+
+            axios.get('https://awal.viitech.net/api/calculate-price', get_param)
+                .then((res) => {
+                    console.log(res,"aaaaa");   
+                    this.amount = res.data.data.total_price;
+                    console.log(this.amount,"Price TOtal");   
+                })
+                .catch((err) => {
+                    toastr.error('Api Error Please Try again.. 🙁');
+                })
+        }
+    },
+
+     created() {
+        this.getPaymentTotal();
+    }
+}
 </script>
 <style>
 input[type="date"]::-webkit-inner-spin-button,
@@ -463,6 +499,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     z-index: 999999;
     position: absolute;
 }
+
 input[type="time"]::-webkit-inner-spin-button,
 input[type="time"]::-webkit-calendar-picker-indicator {
     height: 100%;
@@ -473,6 +510,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     z-index: 999999;
     position: absolute;
 }
+
 /*  */
 .form-p.text-green {
     color: #00ab8d;
