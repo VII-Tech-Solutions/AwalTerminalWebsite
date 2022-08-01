@@ -382,7 +382,7 @@
                         <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 text-green sans">Total Amount: <span>BHD
                                 {{ amount }}</span></p>
                         <div class="d-block">
-                            <router-link to="/elite-payement-form" @click="setData()"
+                            <router-link to="/elite-thankyou" @click="setData()"
                                 class="btn-next d-inline-block align-top transition text-capitalize">Submit Reservation
                             </router-link>
                         </div>

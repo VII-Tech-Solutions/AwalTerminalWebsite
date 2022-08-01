@@ -383,7 +383,7 @@
                <div class="d-flex align-items-center">
                   <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 sans">Total Amount:<span>BHD {{elite_services.total}}</span></p>
                   <div class="d-block">
-                       <a href="/elite-thankyou" class="btn-next d-inline-block align-top transition text-capitalize">
+                       <a :href="paymentlink" class="btn-next d-inline-block align-top transition text-capitalize">
                   pay now</a>
                     
                   </div>
