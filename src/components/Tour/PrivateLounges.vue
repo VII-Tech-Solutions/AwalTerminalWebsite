@@ -52,10 +52,10 @@ export default {
   },
    data() {
       return {
-        settings: {
-          arrows: true,
-          dots: false,
-        },
+        // settings: {
+        //   arrows: true,
+        //   dots: false,
+        // },
       }
     },
 };

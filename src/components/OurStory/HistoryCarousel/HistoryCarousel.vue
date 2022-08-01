@@ -104,34 +104,7 @@
             </figure>
             <strong class="slider-date">1960s</strong>
           </slide>
-          <!-- <div class="carousel-wrapper">
-              <div class="carousal-style">
-                <figure>
-                  <img src="../../../assets/images/history-slider.jpg" class="img-fluid" />
-                </figure>
-              </div>
-            </div>
-            <div class="carousel-wrapper">
-              <div class="carousal-style">
-                <figure>
-                  <img src="../../../assets/images/history-slider.jpg" class="img-fluid" />
-                </figure>
-              </div>
-            </div>
-            <div class="carousel-wrapper">
-              <div class="carousal-style">
-                <figure>
-                  <img src="../../../assets/images/history-slider.jpg" class="img-fluid" />
-                </figure>
-              </div>
-            </div>
-            <div class="carousel-wrapper">
-              <div class="carousal-style">
-                <figure>
-                  <img src="../../../assets/images/history-slider.jpg" class="img-fluid" />
-                </figure>
-              </div>
-            </div> -->
+         
           <template #addons>
             <navigation />
           </template>
@@ -350,7 +323,7 @@ export default {
 }
 
 .slider-wrapper .carousel__prev,
-.carousel__next {
+.slider-wrapper .carousel__next {
   width: 55px;
     height: 55px;
     border: 1px solid #011e41 !important;
@@ -506,7 +479,7 @@ export default {
 }
 
 .history-carousel .slider-wrapper .carousel__slide {
-  padding: 0 110px;
+  padding: 0 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -514,7 +487,7 @@ export default {
 
 .history-carousel .slider-wrapper .carousel__slide .slider-date {
   position: relative;
-  top: -130px;
+  top: -80px;
   left: -160px;
   opacity: 1;
   bottom: auto;
@@ -524,7 +497,8 @@ export default {
 .history-carousel .slider-wrapper .carousel__slide .slider-description {
   opacity: 1;
 }
-
+/* @media (max-width: 1199px) {
+} */
 @media (max-width: 1199px) {
   .history-carousel {
     padding: 120px 0 0 0;
@@ -536,6 +510,14 @@ export default {
 
   .history-carousel .slider-wrapper .carousel__slide {
     padding: 0 50px;
+  }
+  .history-carousel .carousel__track{
+    margin-bottom: 50px;
+  }
+ .history-carousel  .carousel__slide .slider-date{
+    font-size: 150px;
+    left: -150px;
+    top: -100px
   }
 }
 
@@ -549,7 +531,7 @@ export default {
   }
 
   .history-carousel .carousel__slide .slider-date {
-    font-size: 150px;
+    font-size: 120px;
     bottom: -90px;
     left: -50px;
   }
@@ -595,7 +577,7 @@ export default {
   }
 
   .history-carousel .carousel__slide .slider-date {
-    font-size: 110px;
+    font-size: 80px;
     bottom: -65px;
     left: -10px;
   }
@@ -624,6 +606,15 @@ export default {
     padding: 0 10px;
     /* width: 117% !important; */
   }
+  .history-carousel .carousel__track{
+  margin-bottom: 30px;
+}
+.slider-wrapper .carousel__prev,
+.slider-wrapper .carousel__next {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
 }
 
 @media (max-width: 575px) {
@@ -638,16 +629,18 @@ export default {
   .slider-years ul li span {
     margin-right: 20px;
   }
-
+.history-carousel .carousel__track{
+  margin-bottom: 30px;
+}
   .history-carousel .carousel__slide .slider-date {
-    font-size: 80px;
+    font-size: 50px;
     bottom: -45px;
     left: -30px;
   }
 
   .history-carousel .slider-wrapper .carousel__slide .slider-date {
     top: -45px;
-    left: -30px;
+    left: 0px;
   }
 
   .history-carousel {
@@ -656,6 +649,10 @@ export default {
 
   .slider-years ul li span {
     font-size: 20px;
+  }
+  .slider-wrapper .history-sliders.active{
+    padding: 0 40px;
+
   }
 }
 </style>

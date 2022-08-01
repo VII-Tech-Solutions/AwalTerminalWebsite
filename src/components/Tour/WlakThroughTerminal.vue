@@ -4,7 +4,7 @@
       <div class="main-page-title">
         <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
           <h2 class="mx-auto text-center">{{ heading3 }}</h2>
-          <p class="mx-auto">{{ paragraph3 }}</p>
+          <p class="mx-auto">{{ paragraph2 }}</p>
         </div>
       </div>
       <div class="video-module">
@@ -33,7 +33,7 @@
 export default {
   props: {
     heading3: String,
-    paragraph3: String,
+    paragraph2: String,
     video1: String,
   },
   name: "WlakThroughTerminal",

@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="custom-carousal" data-aos="fade-up" data-aos-duration="2500">
-      <Carousel :itemsToShow="2" :wrapAround="true" v-if="ourPhotoGallery && ourPhotoGallery.length > 0">
+      <Carousel :itemsToShow="2" :wrapAround="true" v-if="ourPhotoGallery && ourPhotoGallery.length > 0" >
                 <Slide v-for="slide in ourPhotoGallery" :key="slide.id">
                     <div class="carousel__item">
                     <div class="carousal-style">
@@ -23,7 +23,7 @@
                     </div>
                 </Slide>
                 <template #addons>
-                    <Navigation />
+                    <navigation />
                 </template>
                 </Carousel>
     </div>
@@ -49,14 +49,14 @@ export default {
   },
   data() {
     return {
-      settings: {
-        arrows: true,
-        dots: false,
-      },
+      // settings: {
+      //   arrows: true,
+      //   dots: false,
+      // },
     }
   },
   created() {
-    console.log("i am in Trivial", this.ourPhotoGallery);
+    // console.log("i am in Trivial", this.ourPhotoGallery);
   }
 };
 </script>
