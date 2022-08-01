@@ -77,7 +77,7 @@ const routes = [
   },
   {
     path: "/elite-thankyou",
-    name: "Elite ThankYouPage",
+    name: "Elite Thank You",
     component: EliteThankYouPage,
   },
   {
@@ -159,7 +159,7 @@ const routes = [
   },
   {
     path: "/elite-service",query: { uuid: 'private' },
-    name: "Elite ThankYouPage",
+    name: "Elite Services",
     component: EliteEliteService,
   },
 ];
