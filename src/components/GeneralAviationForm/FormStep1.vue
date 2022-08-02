@@ -69,7 +69,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <router-link to="/" class="light-button d-inline-block">cancel</router-link>
+                        <router-link to="/general-aviation" class="light-button d-inline-block">cancel</router-link>
                     </div>
                     <div class="d-block">
                         <span class="beige-button d-inline-block" v-if="!(aircraft_type && registration_number && mtow && lead_passenger_name && landing_purpose)" :disabled="notFormValid" @click="error()" >

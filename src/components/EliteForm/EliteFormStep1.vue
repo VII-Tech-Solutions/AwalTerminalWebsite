@@ -138,7 +138,7 @@
         <div class="row align-items-center">
           <div class="col-6">
             <router-link
-              to="/"
+              to="/elite-services"
               class="cancel-link d-inline-block text-decoration-none"
               >Cancel</router-link
             >
