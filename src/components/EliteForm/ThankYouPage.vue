@@ -14,7 +14,7 @@
                         <p class="mb-4 ">We will send an email to <a class="contact-links" v-bind:href="'mailto:'+booker.email" >{{ booker.email }}</a> to complete the payment process and reserve your booking.</p>
                         <p class="">If you require any further assistance please contact the Bookings Team on  <a class="contact-links text-decoration-none" href="tel:+973 39471116">+973 39471116</a> or <a class="contact-links text-decoration-none" href="mailto:cip@halabahrain.bh">cip@halabahrain.bh</a></p>
                 </div>
-                <div class="d-flex"><router-link to="/elite-payement-form" class="blue-btn d-inline">Back to home</router-link></div>
+                <div class="d-flex"><router-link to="/" class="blue-btn d-inline">Back to home</router-link></div>
             </div>
         </div>
     </div>    
