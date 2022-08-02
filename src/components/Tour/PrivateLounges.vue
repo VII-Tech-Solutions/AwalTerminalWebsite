@@ -29,7 +29,7 @@
         <div class="container">
             <div class="mx-auto text-center">
                 
-                    <a href="#" data-aos="fade-bottom" data-aos-duration="2500" class="text-uppercase blue-btn text-center">book a private lounge</a>
+                    <router-link to="/elite-form" data-aos="fade-bottom" data-aos-duration="2500" class="text-uppercase blue-btn text-center">book a private lounge</router-link>
                 
             </div>
         </div>  

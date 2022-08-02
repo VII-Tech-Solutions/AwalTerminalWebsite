@@ -720,7 +720,10 @@ import axios from "axios";
 
 export default {
   data() {
+
+      
     var obj = JSON.parse(localStorage.elitedata);
+      console.log(obj.passengers, "obj.passengersobj.passengers");
     return {
       number_of_adults: obj.number_of_adults,
       number_of_children: obj.number_of_children,
@@ -786,8 +789,9 @@ export default {
       obj.booker = this.booker;
       localStorage.setItem("elitedata", JSON.stringify(obj));
 
+    
 
-      this.paynow()
+      this.paynow();
     },
 
     paynow() {
@@ -806,11 +810,11 @@ export default {
         )
         .then((res) => {
           console.log(res, "aaaaaaaaaaaaa");
-         // localStorage.removeItem("elitedata");
+          // localStorage.removeItem("elitedata");
 
           //window.location.href = "/elite-thankyou";
-        //   window.location.href =
-        //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
+          //   window.location.href =
+          //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
         })
         .catch((err) => {
           debugger;

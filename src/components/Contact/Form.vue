@@ -21,13 +21,13 @@
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="exampleInputEmail1" class="form-label">Email address<span class="asterik">*</span></label>
                 <input type="text" class="form-control" @change="checkError" v-model="email" id="exampleInputEmail1"
-                  aria-describedby="emailHelp" placeholder="yourname@exmaple.com" />
+                  aria-describedby="emailHelp" placeholder="yourname@example.com" />
                 <p v-if="emailError" class="text-danger">please enter valid email address.</p>
               </div>
               <div class="form-group" data-aos="fade-up" data-aos-duration="2500">
                 <label for="exampleInputEmail1" class="form-label">Your Message<span class="asterik">*</span></label>
                 <textarea class="form-control" @change="checkError" v-model="message"
-                  rows="7">What would you like to discuss?</textarea>
+                  rows="7" placeholder="What would you like to discuss?">What would you like to discuss?</textarea>
                 <p v-if="messageError" class="text-danger">please enter your message.</p>
               </div>
               <button data-aos="fade-bottom" data-aos-duration="2500" class="btn-blue">Send

@@ -15,7 +15,7 @@
                         <h3 class="form-h3 text-capitalize">General Aviation</h3>
                         <p class="form-p lora-semi m-0">Step <span>1</span> of <span>6</span></p>
                     </div>
-                    <p class="form-p custom-w"><strong>To reserve and book a general aviation service, please fill in the following form.</strong> If you would like to book an elite service, please <a class="text--btn" href="#">click here.</a></p>
+                    <p class="form-p custom-w"><strong>To reserve and book a general aviation service, please fill in the following form.</strong> If you would like to book an elite service, please <router-link class="text--btn" to="/elite-form">click here.</router-link></p>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-10">
@@ -69,7 +69,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <a class="light-button d-inline-block">cancel</a>
+                        <router-link to="/" class="light-button d-inline-block">cancel</router-link>
                     </div>
                     <div class="d-block">
                         <span class="beige-button d-inline-block" v-if="!(aircraft_type && registration_number && mtow && lead_passenger_name && landing_purpose)" :disabled="notFormValid" @click="error()" >

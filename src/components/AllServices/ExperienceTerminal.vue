@@ -13,7 +13,7 @@
                                 <img class="img-fluid" :src="squareImage2"
                                     alt="sublime-luxury">
                             </div>
-                            <button class="common-btn" data-aos="fade-bottom" data-aos-duration="2500">take a tour</button>
+                            <router-link to="/tour" class="common-btn" data-aos="fade-bottom" data-aos-duration="2500">take a tour</router-link>
                         </div>
                     </div>
                 </div>

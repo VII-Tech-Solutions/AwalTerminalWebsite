@@ -193,10 +193,14 @@ export default {
     // this.getDropdownData();
     },   
   data() {
-      debugger;
+      //debugger;
+      
+        var airporOptions = JSON.parse(localStorage.airportoptions1);
+
         var obj = JSON.parse(localStorage.elitedata);
+        console.log(obj.airportoptions,"airportoptionsairportoptions");
     return {
-         airportoptions:obj.airportoptions,
+         airportoptions:airporOptions,
          countriesoptions:obj.countriesoptions,
          eliteserviceoptions:obj.eliteserviceoptions,
          xyz:obj.xyz,
@@ -230,7 +234,7 @@ export default {
     },
    methods:{
          fligh_name(event){
-                debugger;
+               // debugger;
                 this.airport_name=this.airportoptions.find(x => x.id ==event.target.value).name;
             },
 
@@ -263,6 +267,7 @@ export default {
             var abc= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata) : undefined;
             debugger;
             console.log("abc Data");
+            console.log(abc);
             console.table(abc);
             var obj = {};
             obj.number_of_adults =  parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
