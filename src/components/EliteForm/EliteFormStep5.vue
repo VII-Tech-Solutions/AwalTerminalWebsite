@@ -825,7 +825,7 @@ export default {
         )
         .then((res) => {
           console.log(res, "aaaaaaaaaaaaa");
-          localStorage.removeItem("elitedata");
+          // localStorage.removeItem("elitedata");
 
           window.location.href = "/elite-thankyou";
           //   window.location.href =
