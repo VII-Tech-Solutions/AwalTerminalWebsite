@@ -77,7 +77,7 @@ const routes = [
   },
   {
     path: "/elite-thankyou",
-    name: "Elite Thank You",
+    name: "Thank You",
     component: EliteThankYouPage,
   },
   {
