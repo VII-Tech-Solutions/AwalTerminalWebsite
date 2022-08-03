@@ -1157,7 +1157,7 @@ export default {
         )
         .then((res) => {
 
-          localStorage.set('aviation_user_email',obj.operator_email)
+          localStorage.setItem('aviation_user_email',obj.operator_email)
           localStorage.removeItem("data");
           localStorage.removeItem("textboxdata");
           window.location.href = "/general-aviation-thankyou";

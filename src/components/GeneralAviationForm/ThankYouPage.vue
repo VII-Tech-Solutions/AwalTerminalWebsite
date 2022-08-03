@@ -19,8 +19,8 @@
             We will send an email to
             <a
               class="contact-links"
-              v-bind:href="'mailto:' + booker"
-              >{{ booker }}</a
+              v-bind:href="'mailto:' + booker.email"
+              >{{ booker.email }}</a
             >
             once your request has been approved.
           </p>
@@ -53,7 +53,7 @@ export default {
   data() {
     return {
       booker: {
-        email: localStorage.aviation_user_email,
+        email: localStorage.getItem('aviation_user_email')
       },
     };
   },
