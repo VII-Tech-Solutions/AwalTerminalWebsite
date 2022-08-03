@@ -4,41 +4,41 @@
             <div class="row">
                 <div class="col-lg-7 offset-lg-5">
                     <div class="two-fold-content" >
-                        <h2 data-aos="fade-up" data-aos-duration="2500">Tailored to suit your needs.</h2>
+                        <h2 data-aos="fade-up" data-aos-duration="2500">{{heading3}}</h2>
                         <div data-aos="fade-up" data-aos-duration="2500">
                             <div class="two-fold-inner-text">
-                                <p>Hala Bahrain agents will assist you with all travel formalities while you relax in one of our luxurious lounges and enjoy our warm hospitality.</p>
+                                <p>{{paragraph3}}</p>
                             </div>
                             <ul class="tailored-list p-0" data-aos="fade-up" data-aos-duration="2500">
                                 <li class="d-flex align-items-center">
                                     <div class="tailored-icon">
                                         <img src="../../../assets/images/icons/weekend.svg" alt="couch" class="icon img-fluid"/>
                                     </div>
-                                    <p>8 private lounges as well as common lounges</p>
+                                    <p>{{bulletPoint1}}</p>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <div class="tailored-icon">
                                         <img src="../../../assets/images/icons/drive-eta.svg" alt="couch" class="icon img-fluid"/>
                                     </div>
-                                    <p>Dedicated and luxury transportation services </p>
+                                    <p>{{bulletPoint2}} </p>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <div class="tailored-icon">
                                         <img src="../../../assets/images/icons/luggage.svg" alt="couch" class="icon img-fluid"/>
                                     </div>
-                                    <p>All travel formalities are handled</p>
+                                    <p>{{bulletPoint3}}</p>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <div class="tailored-icon">
                                         <img src="../../../assets/images/icons/groups.svg" alt="couch" class="icon img-fluid"/>
                                     </div>
-                                    <p>Passengers' guests are welcome to stay</p>
+                                    <p>{{bulletPoint4}}</p>
                                 </li>
                                 <li class="d-flex align-items-center mb-0">
                                     <div class="tailored-icon">
                                         <img src="../../../assets/images/icons/person.svg" alt="couch" class="icon img-fluid"/>
                                     </div>
-                                    <p>Personal assistant for Duty-Free shopping</p>
+                                    <p>{{bulletPoint5}}</p>
                                 </li>
                             </ul>
                             <router-link to="/services" data-aos="fade-bottom" data-aos-duration="2500" class="common-btn">All services</router-link>
@@ -51,6 +51,15 @@
 </template>
 <script>
 export default {
+    props:{
+        heading3:  String,
+        paragraph3: String,
+        bulletPoint1: String,
+        bulletPoint2: String,
+        bulletPoint3: String,
+        bulletPoint4: String,
+        bulletPoint5: String
+    },
     name: "TwoFolderModule2",
 }
 </script>

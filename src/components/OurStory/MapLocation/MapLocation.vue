@@ -5,10 +5,8 @@
 				<div class="col-12">
 					<div class="location-wrapper">
 						<div class="loaction-heading" data-aos="fade-up" data-aos-duration="2500">
-							<h2 >A prime location</h2>
-							<p>The Awal Private Terminal is located in Muharraq and provides services to those
-								travelling by private jet or on commercial flights. The terminal is operated by premium
-								hospitality service provider, Hala Bahrain.</p>
+							<h2 >{{heading4}}</h2>
+							<p>{{paragraph2}}</p>
 						</div>
 						<div class="company-logo" data-aos="fade-in" data-aos-duration="2500">
 							<img class="img-fluid" src="../../../assets/images/company-logo.png" alt="Logo">
@@ -22,6 +20,28 @@
 		</div>
 	</Section>
 </template>
+
+<script >
+export default {
+    props: {
+        heading4: String,
+        paragraph2: String,
+        quote1: String,
+        image1: String
+    },
+    name: "MapLocation",
+    // data() {
+    //     return {
+    //         HeadingTopText: "Welcome to Awal Private Terminal",
+    //         MainHeading: "We'll take it from here",
+    //         SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
+    //     };
+    // },
+}
+
+</script>
+
+
 <style>
 .map-location{padding: 0 0 57px 0}
 .location-wrapper{margin-bottom: 50px;display: flex;justify-content: space-between;}

@@ -1,6 +1,6 @@
 
 <template>
-    <div class="footer-service" :class="[name]">
+    <div class="footer-service" v-bind:style="{ backgroundImage: 'url(' + footerbg + ')' }" >
               <div class="container">
                   <div class="footer-content">
                   <div class="footer-booking" data-aos="fade-up" data-aos-duration="2500">
@@ -56,6 +56,7 @@ export default {
     image2: String,
     service3: String,
     image3: String,
+    footerbg: String,
   },
 }
 

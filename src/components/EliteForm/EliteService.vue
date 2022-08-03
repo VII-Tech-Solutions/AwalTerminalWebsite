@@ -348,13 +348,13 @@
                                             <li>
                                                 <div class="d-flex justify-content-between">
                                                     <p class="extra-small-text text-capitalize fw-normal">total</p>
-                                                    <p class="extra-small-text text-capitalize fw-normal">BHD {{elite_services.total}}</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">BHD {{elite_services.subtotal}}</p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex justify-content-between">
                                                     <p class="extra-small-text text-capitalize fw-normal">VAT (10%)</p>
-                                                    <p class="extra-small-text text-capitalize fw-normal">BHD 27.050</p>
+                                                    <p class="extra-small-text text-capitalize fw-normal">BHD {{elite_services.vat_amount}}</p>
                                                 </div>
                                             </li>
                                         </ul>

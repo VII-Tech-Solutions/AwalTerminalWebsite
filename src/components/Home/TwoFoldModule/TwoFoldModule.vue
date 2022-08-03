@@ -1,19 +1,16 @@
 <template>
-    <section class="two-fold">
+    <section class="two-fold" v-bind:style="{ backgroundImage: 'url(' + backgroundImage2 + ')' }">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-10 col-12">
                     <div class="two-fold-content">
-                        <h2 data-aos="fade-up" data-aos-duration="2500">Total Comfort. Sublime Luxury</h2>
+                        <h2 data-aos="fade-up" data-aos-duration="2500">{{heading2}}</h2>
                         <div class="two-fold-inner">
                             <div class="two-fold-inner-text" data-aos="fade-up" data-aos-duration="2500">
-                                <p>Whether you are arriving at or departing from the Kingdom of Bahrain, we will assist
-                                    you with all travel formalities.</p>
-                                <p>The terminal is also open to passengers' guests who are not traveling with convenient
-                                    VIP parking and drop-off.</p>
+                                <p v-html="paragraph1"></p>
                             </div>
                             <div class="sublime-luxury-img" data-aos="fade-up" data-aos-duration="2500">
-                                <img class="img-fluid" src="../../../assets/images/sublime-luxury.jpg"
+                                <img class="img-fluid" :src="squareImage"
                                     alt="sublime-luxury">
                             </div>
                             <router-link to="/tour" data-aos="fade-bottom" data-aos-duration="2500" class="visit-terminal-btn">Visit the terminal</router-link>
@@ -24,12 +21,23 @@
         </div>
     </section>
 </template>
-<script >
-// import { onMounted } from "vue";
-
-// onMounted(() => {
-//     AOS.init();
-// })
+<script>
+export default {
+     props: {
+    heading2: String,
+    paragraph1: String,
+    squareImage: String,
+    backgroundImage2: String
+  },
+    name: "TwoFoldModuleVue",
+    // data() {
+    //     return {
+    //         HeadingTopText: "Welcome to Awal Private Terminal",
+    //         MainHeading: "We'll take it from here",
+    //         SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
+    //     };
+    // },
+}
 
 </script>
 <style>

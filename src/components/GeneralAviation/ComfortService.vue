@@ -3,10 +3,10 @@
     <div class="comfort-service">
        <div class="container">
         <div class="main-page-title">
-            <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">5-star hospitality services</span></div>
+            <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">{{headingTop2}}</span></div>
             <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
-                <h2 class=" mx-auto text-center">Convenient & <br> comfortable services</h2>
-                <p class="mx-auto">Whether you are arriving at or departing from the Kingdom, <strong class="fw-bold">Hala Bahrain</strong> agents will assist you with all travel formalities while you relax in one of our luxurious lounges and enjoy our warm hospitality.</p>
+                <h2 class=" mx-auto text-center">{{heading4}}</h2>
+                <p class="mx-auto" v-html="paragraph3"></p>
             </div>
         </div>
         <div class="comfort-grid-cards" data-aos="fade-up" data-aos-duration="2500">
@@ -30,6 +30,14 @@
     </div>
 </template>
 <script>
+
+export default {
+    props: {
+        headingTop2: String,
+        heading4: String,
+        paragraph3: String
+    }
+}
 </script>
 <style>
 .comfort-grid-cards {display:grid; grid-template-columns:repeat(5, 1fr); grid-template-rows:repeat(2, auto); gap:13px; margin-inline:auto; padding-bottom:60px;  grid-template-columns: repeat(auto-fill, 200px); justify-content:center;}

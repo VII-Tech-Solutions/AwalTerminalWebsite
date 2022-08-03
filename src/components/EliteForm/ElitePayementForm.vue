@@ -2,11 +2,11 @@
     <div class="aviation-form bg-white">
         <div class="container">
             <div class="form-header">
-                 <router-link  to="/">
+                <router-link to="/">
                     <figure class="mb-0 form-logo">
-                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png"/>
+                        <img class="img-fluid" src="../../assets/images/forms-header-logo.png" />
                     </figure>
-                 </router-link>
+                </router-link>
             </div>
             <div class="form-body">
                 <div class="form-page-title">
@@ -38,7 +38,7 @@
                                         <div class="accordion-body elite-form">
                                             <div class="elite-offer-services d-flex flex-column">
                                                 <div class="d-flex flex-column flex-md-row">
-                                                    <div v-if="service_id == true"  class="elite-offer-service d-flex">
+                                                    <div v-if="service_id == true" class="elite-offer-service d-flex">
                                                         <label class="custom-radio">
                                                             <div class="checkmark">
                                                                 <strong class="service-name d-block mb-lg-3 mb-2">Common
@@ -46,19 +46,22 @@
                                                                 <strong class="service-price d-block mb-3">BHD
                                                                     100<sub>/adult</sub></strong>
                                                                 <ul class="list-unstyled service-features">
-                                                                    <li class="position-relative">50% of the adult rate
+                                                                    <li class="position-relative"
+                                                                        v-for="item in commontype" :key="item.id">
+                                                                        {{ item.feature_details }}</li>
+                                                                    <!-- <li class="position-relative">50% of the adult rate
                                                                         for children aged 2 to 12</li>
                                                                     <li class="position-relative">Free entry for infants
                                                                         ( 0 to 2 years old)</li>
                                                                     <li class="position-relative">10% group discount (5
-                                                                        PAX and above)</li>
+                                                                        PAX and above)</li> -->
                                                                 </ul>
                                                                 <span class="tax-text">* 10% VAT on the total
                                                                     amount</span>
                                                             </div>
                                                         </label>
                                                     </div>
-                                                    <div v-else  class="elite-offer-service">
+                                                    <div v-else class="elite-offer-service">
                                                         <label class="custom-radio">
                                                             <div class="checkmark">
                                                                 <strong
@@ -67,7 +70,10 @@
                                                                 <strong class="service-price d-block mb-3">BHD
                                                                     150<sub>/adult</sub></strong>
                                                                 <ul class="list-unstyled service-features">
-                                                                    <li class="position-relative">Minimum of 2 adults
+                                                                    <li class="position-relative"
+                                                                        v-for="item in privatetype" :key="item.id">
+                                                                        {{ item.feature_details }}</li>
+                                                                    <!-- <li class="position-relative">Minimum of 2 adults
                                                                         full fares required to access a Private Lounge
                                                                     </li>
                                                                     <li class="position-relative">50% of the adult rate
@@ -79,7 +85,7 @@
                                                                         lounge</li>
                                                                     <li class="position-relative">Rates apply to
                                                                         standard lounge size with a maximum of 6
-                                                                        passengers per lounge</li>
+                                                                        passengers per lounge</li> -->
                                                                 </ul>
                                                                 <span class="tax-text">* 10% VAT on the total
                                                                     amount</span>
@@ -129,7 +135,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{airport_name}}</p>
+                                                                                {{ airport_name }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -139,7 +145,7 @@
                                                                                 date<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{date}}</p>
+                                                                                {{ date }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -149,7 +155,7 @@
                                                                                 time<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{time}}</p>
+                                                                                {{ time }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -160,7 +166,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{flight_number}}</p>
+                                                                                {{ flight_number }}</p>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -179,7 +185,7 @@
                                                                                 adults<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{number_of_adults}}</p>
+                                                                                {{ number_of_adults }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -190,7 +196,7 @@
                                                                             </p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{number_of_children}}</p>
+                                                                                {{ number_of_children }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -201,7 +207,7 @@
                                                                             </p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{number_of_infants}}</p>
+                                                                                {{ number_of_infants }}</p>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -228,7 +234,8 @@
                                                 <ul class="ul_css">
                                                     <li v-for="(passenger, index) in passengers" :key="passenger">
                                                         <div class="d-flex mobile-col">
-                                                            <p class="extra-small-text w-p text-capitalize">Passenger {{index+1}}
+                                                            <p class="extra-small-text w-p text-capitalize">Passenger
+                                                                {{ index + 1 }}
                                                             </p>
                                                             <div class="details-list">
                                                                 <ul class="ul_css">
@@ -239,7 +246,7 @@
                                                                                 Title<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.title}}</p>
+                                                                                {{ passenger.title }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -250,7 +257,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.first_name}}</p>
+                                                                                {{ passenger.first_name }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -261,7 +268,7 @@
                                                                             </p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.last_name}}</p>
+                                                                                {{ passenger.last_name }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -270,7 +277,7 @@
                                                                                 Birth<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.birth_date}}</p>
+                                                                                {{ passenger.birth_date }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -281,7 +288,7 @@
                                                                                     class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.nationality_id}}</p>
+                                                                                {{ passenger.nationality_id }}</p>
                                                                         </div>
                                                                     </li>
                                                                     <li>
@@ -291,7 +298,7 @@
                                                                                 Class<span class="asterik">*</span></p>
                                                                             <p
                                                                                 class="extra-small-text text-capitalize fw-normal">
-                                                                                {{passenger.class_id}}</p>
+                                                                                {{ passenger.class_id }}</p>
                                                                         </div>
                                                                     </li>
                                                                 </ul>
@@ -321,7 +328,8 @@
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">first
                                                                 name<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text text-capitalize fw-normal">{{booker.first_name}}
+                                                            <p class="extra-small-text text-capitalize fw-normal">
+                                                                {{ booker.first_name }}
                                                             </p>
                                                         </div>
                                                     </li>
@@ -329,7 +337,8 @@
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">last
                                                                 name<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text text-capitalize fw-normal">{{booker.last_name}}
+                                                            <p class="extra-small-text text-capitalize fw-normal">
+                                                                {{ booker.last_name }}
                                                             </p>
                                                         </div>
                                                     </li>
@@ -337,14 +346,15 @@
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">email
                                                                 address<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text fw-normal">{{booker.email}}</p>
+                                                            <p class="extra-small-text fw-normal">{{ booker.email }}</p>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="d-flex align-items-baseline">
                                                             <p class="extra-small-text w-p text-capitalize">mobile
                                                                 number<span class="asterik">*</span></p>
-                                                            <p class="extra-small-text text-capitalize fw-normal">+97{{booker.mobile_number}}</p>
+                                                            <p class="extra-small-text text-capitalize fw-normal">
+                                                                +97{{ booker.mobile_number }}</p>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -363,155 +373,405 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-block">
-                        <router-link to="/elite-form5" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
+                        <router-link to="/elite-form5" class="cancel-link d-inline-block text-decoration-none">Back
+                        </router-link>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 sans">Total Amount:<span>BHD 297.550</span></p>
+                        <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 sans">Total Amount:<span>BHD {{ amount }}</span>
+                        </p>
                         <div class="d-block">
-                            <button  @click="paynow()" class="btn-next d-inline-block align-top transition text-capitalize">pay now </button>
+                            <button @click="paynow()"
+                                class="btn-next d-inline-block align-top transition text-capitalize">pay now </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </template>  
 
 <script>
 import '@fortawesome/fontawesome-free/js/all.js';
 import axios from 'axios';
 export default {
-    mounted () {
-     window.scrollTo(0, 0)
+    mounted() {
+        window.scrollTo(0, 0)
     },
-  data() {
-      debugger;
-      var obj = JSON.parse(localStorage.elitedata);
-    return {
-         number_of_adults:obj.number_of_adults,
-         number_of_children:obj.number_of_children,
-         number_of_infants:obj.number_of_infants,
-        countriesoptions:obj.countriesoptions,
-         notFormValid: true,
-         route:'',
-         service_id: obj.service_id,  
-         Totle: obj.total,
-          airport_id : obj.airport_id,  
-         airport_name: obj.airport_name,
-         date : obj.date,  
-         time : obj.time,  
-         flight_number : obj.flight_number,  
-         arrival_call_sign : obj.arrival_call_sign,    
-			// passengers info
-         passengers:obj.passengers,
-         //booker Info
-			booker:{
-             first_name:obj.booker.first_name,
-			last_name:obj.booker.last_name,
-			mobile_number:obj.booker.mobile_number,
-			comments:obj.booker.comments,
-            //optional pram
-            email: obj.booker.email
-         }
-         
-     }
-        
+    data() {
+      //  debugger;
+        var obj = JSON.parse(localStorage.elitedata);
+        return {
+            number_of_adults: obj.number_of_adults,
+            number_of_children: obj.number_of_children,
+            number_of_infants: obj.number_of_infants,
+            countriesoptions: obj.countriesoptions,
+            notFormValid: true,
+            sum: obj.sum,
+            route: '',
+            commontype: obj.commontype,
+            privatetype: obj.privatetype,
+            service_id: obj.service_id,
+            Totle: obj.total,
+            airport_id: obj.airport_id,
+            airport_name: obj.airport_name,
+            date: obj.date,
+            time: obj.time,
+            flight_number: obj.flight_number,
+            arrival_call_sign: obj.arrival_call_sign,
+            // passengers info
+            passengers: obj.passengers,
+            //booker Info
+            booker: {
+                first_name: obj.booker.first_name,
+                last_name: obj.booker.last_name,
+                mobile_number: obj.booker.mobile_number,
+                comments: obj.booker.comments,
+                //optional pram
+                email: obj.booker.email
+            },
+            amount: 0,
+
+        }
+
     },
-   methods:{
-      setData()
-      {
-           debugger;
+    methods: {
+        setData() {
+            //debugger;
             var obj = {};
             obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
-            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );
+            obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children);
             obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
-            obj.airport_id =  this.airport_id;
+            obj.airport_id = this.airport_id;
             obj.airport_name = this.airport_name;
-            obj.countriesoptions=this.countriesoptions,
-            obj.date =  this.date;
-            obj.time =  this.time;
-            obj.flight_number =  this.flight_number;
+            obj.countriesoptions = this.countriesoptions,
+                obj.date = this.date;
+            obj.time = this.time;
+            obj.sum = this.sum;
+            obj.flight_number = this.flight_number;
             obj.is_arrival_flight = this.is_arrival_flight;
-            obj.passengers = this.passengers; 
+            obj.passengers = this.passengers;
             obj.booker = this.booker;
             localStorage.setItem('elitedata', JSON.stringify(obj));
-      },
-       paynow() {
-           debugger;
-           const postData = JSON.parse(localStorage.elitedata);
-           let axiosConfig = {
+        },
+        paynow() {
+            //debugger;
+            const postData = JSON.parse(localStorage.elitedata);
+            let axiosConfig = {
                 headers: {
-                    'Content-Type': 'application/json;charset=UTF-8',
+                    'Content-Type': 'application/json',
                 }
             };
             axios.post('https://awal.viitech.net/api/elite-service', postData, axiosConfig)
-            .then((res) => {
-                localStorage.removeItem("elitedata");
-                window.location.href='/payment-received';
-            })
-            .catch((err) => {
-                debugger
-                console.log("AXIOS ERROR: ", err);
-                toastr.error('Server Error Please Try again.. 🙁');
-               
-            })
-           
-   
-       }
-  }
-  }
+                .then((res) => {
+
+                  
+                    console.log(res,'aaaaaaaaaaaaa')
+                    localStorage.removeItem("elitedata");
+                    window.location.href = '/elite-service?uuid='+res.data.data.elite_services.uuid;
+                })
+                .catch((err) => {
+                    debugger
+                    console.log("AXIOS ERROR: ", err);
+                    toastr.error('Server Error Please Try again.. 🙁');
+
+                })
+
+
+        },
+        getPaymentTotal() {
+            var obj = JSON.parse(localStorage.elitedata);
+            const get_param = {
+                params: {
+                    number_of_adults: obj.number_of_adults,
+                    number_of_children: obj.number_of_children,
+                    service_id: obj.service_id,
+                }
+            };
+
+            axios.get('https://awal.viitech.net/api/calculate-price', get_param)
+                .then((res) => {
+                    console.log(res, "aaaaa");
+                    this.amount = res.data.data.total_price;
+                    console.log(this.amount, "Price TOtal");
+                })
+                .catch((err) => {
+                    toastr.error('Api Error Please Try again.. 🙁');
+                })
+        }
+
+    },
+
+    created() {
+        this.getPaymentTotal();
+    }
+
+}
 </script>
 <style>
 /*  */
-.sans{font-family: 'Source Sans Pro';}
-.payement-header .form-p{font-family:"Lora";}
-/* .x-line{border-bottom:1px solid #011e41; margin-bottom: 20px;} */
-.payement-method{margin-bottom:80px;}
-.payement-header{padding:20px; border-bottom:1px solid #011e41; margin-bottom: 20px;}
-.amount-box{padding:20px 20px 0px 20px; background-color:#f3f3f3;}
-.amount-box .amount-header {border-bottom:1px solid #979797;}
-.amount-box .amount-header ul li{margin-bottom:13px;}
-.amount-box .amount-footer{padding:20px 0px;}
-.amount-box .amount-footer p{font-size:18px; line-height:27px; font-weight:600; color:#011e41}
-.credit-box{border:1px solid #011e41; display:flex; align-items:baseline; justify-content:space-between; padding:15px; height:60px;}
-.detail-section{padding-bottom:50px;}  .accordian-ul > ul > li:not(:last-child){padding-bottom:50px;}
-.detail-section .accordion-item{border-top: 2px solid #011e41 !important; border: 0px solid rgba(0, 0, 0, 0.125); border-radius: 0px !important;}
-.detail-section .accordion-item:last-child{border-bottom: 2px solid #011e41 !important;}
-/* .detail-section .detail-section-header{display:flex; justify-content:space-between; margin-bottom:20px;} */
-.detail-section .detail-section-title{ font-family:"Lora"; font-size:18px; font-weight:600; line-height:27px; color: #011e41;}
-.details-list ul li{margin-bottom:10px;}
-.detail-section .accordion-button:not(.collapsed) {color:#091f40; background-color:transparent; box-shadow:none;}
-.detail-section .list-width{width:214px; margin-right:51px;}
-/* ELITE-FORM */
-.elite-form {padding: 60px 0 80px;}
-.elite-form .step-text-block p{font-size:18px;line-height:27px;}
-.elite-form .step-heading{font-size:50px;line-height:54px;}
-.elite-form h3{font-size:20px;line-height:24px;}
-.elite-form .logo-holder {margin: 0 0 50px;}
-.elite-form .elit-form-logo {width: 120px;}
-.elite-offer-services .elite-offer-service {width: 360px;margin: 0 20px 20px 0;}
-.elite-form .custom-radio {width:100%;position: relative;padding-left: 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
-.elite-form .custom-radio input {position: absolute;opacity: 0;cursor: pointer;}
-.elite-form .custom-radio .checkmark {border: 1px solid #011e41;padding: 30px 30px 35px;min-height:424px;}
-.elite-form .custom-radio input:checked ~ .checkmark {background-color: #f3f3f3;}
-.elite-form .custom-radio .checkmark:after {content: "";position: absolute;display: none;}
-.elite-form .radio-circle span{width:20px;height:20px;display:block;border:1px solid #011e41;border-radius:100%;}
-.elite-form .radio-circle span:after{content:"";width:14px;height:14px;position:absolute;left:2px;top:2px;border-radius:100%;background:#011e41;display:none;}
-.elite-form .custom-radio input:checked ~ .checkmark .radio-circle span:after{display:block;}
-.elite-offer-services .service-name {font-size: 28px;line-height: 32px;font-weight: 500;font-family: "Lora";color:#011e41;}
-.elite-offer-services .service-price{font-size:20px;line-height:23px;font-family:'Source Sans Pro';color:#caa17b;}
-.elite-offer-services .service-price sub{font-size:12px;line-height:15px;font-weight:normal;}
-.elite-offer-services .service-features{font-size:14px;line-height:17px;color:#011e41;}
-.elite-offer-services .service-features li{margin:0 0 10px;padding:0 0 0 15px;}
-.elite-offer-services .service-features li:before{content:"";width: 5px;height: 10px;border: solid #011e41;position:absolute;left:0;top:1px;border-width: 0 1px 1px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}	.elite-offer-services .tax-text{font-size:10px;line-height:12px;position:absolute;left:30px;bottom:20px;}
-@media (max-width:567px) {
-.w-p {width:110px;}
-.detail-section .detail-section-title{font-size:16px; line-height:20px;}
-.extra-small-text {font-size:14px; line-height:20px;}
-.credit-box{height:50px; padding:8px;}
+.sans {
+    font-family: 'Source Sans Pro';
 }
+
+.payement-header .form-p {
+    font-family: "Lora";
+}
+
+/* .x-line{border-bottom:1px solid #011e41; margin-bottom: 20px;} */
+.payement-method {
+    margin-bottom: 80px;
+}
+
+.payement-header {
+    padding: 20px;
+    border-bottom: 1px solid #011e41;
+    margin-bottom: 20px;
+}
+
+.amount-box {
+    padding: 20px 20px 0px 20px;
+    background-color: #f3f3f3;
+}
+
+.amount-box .amount-header {
+    border-bottom: 1px solid #979797;
+}
+
+.amount-box .amount-header ul li {
+    margin-bottom: 13px;
+}
+
+.amount-box .amount-footer {
+    padding: 20px 0px;
+}
+
+.amount-box .amount-footer p {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    color: #011e41
+}
+
+.credit-box {
+    border: 1px solid #011e41;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 15px;
+    height: 60px;
+}
+
+.detail-section {
+    padding-bottom: 50px;
+}
+
+.accordian-ul>ul>li:not(:last-child) {
+    padding-bottom: 50px;
+}
+
+.detail-section .accordion-item {
+    border-top: 2px solid #011e41 !important;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0px !important;
+}
+
+.detail-section .accordion-item:last-child {
+    border-bottom: 2px solid #011e41 !important;
+}
+
+/* .detail-section .detail-section-header{display:flex; justify-content:space-between; margin-bottom:20px;} */
+.detail-section .detail-section-title {
+    font-family: "Lora";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #011e41;
+}
+
+.details-list ul li {
+    margin-bottom: 10px;
+}
+
+.detail-section .accordion-button:not(.collapsed) {
+    color: #091f40;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.detail-section .list-width {
+    width: 214px;
+    margin-right: 51px;
+}
+
+/* ELITE-FORM */
+.elite-form {
+    padding: 60px 0 80px;
+}
+
+.elite-form .step-text-block p {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.elite-form .step-heading {
+    font-size: 50px;
+    line-height: 54px;
+}
+
+.elite-form h3 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.elite-form .logo-holder {
+    margin: 0 0 50px;
+}
+
+.elite-form .elit-form-logo {
+    width: 120px;
+}
+
+.elite-offer-services .elite-offer-service {
+    width: 360px;
+    margin: 0 20px 20px 0;
+}
+
+.elite-form .custom-radio {
+    width: 100%;
+    position: relative;
+    padding-left: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.elite-form .custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.elite-form .custom-radio .checkmark {
+    border: 1px solid #011e41;
+    padding: 30px 30px 35px;
+    min-height: 424px;
+}
+
+.elite-form .custom-radio input:checked~.checkmark {
+    background-color: #f3f3f3;
+}
+
+.elite-form .custom-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.elite-form .radio-circle span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 1px solid #011e41;
+    border-radius: 100%;
+}
+
+.elite-form .radio-circle span:after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 100%;
+    background: #011e41;
+    display: none;
+}
+
+.elite-form .custom-radio input:checked~.checkmark .radio-circle span:after {
+    display: block;
+}
+
+.elite-offer-services .service-name {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 500;
+    font-family: "Lora";
+    color: #011e41;
+}
+
+.elite-offer-services .service-price {
+    font-size: 20px;
+    line-height: 23px;
+    font-family: 'Source Sans Pro';
+    color: #caa17b;
+}
+
+.elite-offer-services .service-price sub {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+}
+
+.elite-offer-services .service-features {
+    font-size: 14px;
+    line-height: 17px;
+    color: #011e41;
+}
+
+.elite-offer-services .service-features li {
+    margin: 0 0 10px;
+    padding: 0 0 0 15px;
+}
+
+.elite-offer-services .service-features li:before {
+    content: "";
+    width: 5px;
+    height: 10px;
+    border: solid #011e41;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.elite-offer-services .tax-text {
+    font-size: 10px;
+    line-height: 12px;
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+}
+
+@media (max-width:567px) {
+    .w-p {
+        width: 110px;
+    }
+
+    .detail-section .detail-section-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .extra-small-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .credit-box {
+        height: 50px;
+        padding: 8px;
+    }
+}
+
 @media (max-width:467px) {
-.mobile-col {flex-direction:column;}
+    .mobile-col {
+        flex-direction: column;
+    }
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-    <section class="banner">
+    <section class="banner" v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
         <div class="container">
             <div class="row ">
                 <div class="col-12">
-                    <div class="banner-content" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="banner-content" data-aos-offset="0" data-aos="fade-up" data-aos-duration="2500">
                         <strong class="heading-top">{{HeadingTopText}}</strong>
                         <h1>{{MainHeading}}</h1>
                         <span class="sub-heading">{{SubHeading}}</span>
@@ -15,20 +15,20 @@
 </template>
 <script>
 export default {
-//      props: {
-//     HeadingTopText: String,
-//     MainHeading: String,
-//     SubHeading: String,
-//     image: String,
-//   },
+     props: {
+    HeadingTopText: String,
+    MainHeading: String,
+    SubHeading: String,
+    image: String,
+  },
     name: "Banner",
-    data() {
-        return {
-            HeadingTopText: "Welcome to Awal Private Terminal",
-            MainHeading: "We'll take it from here",
-            SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
-        };
-    },
+    // data() {
+    //     return {
+    //         HeadingTopText: "Welcome to Awal Private Terminal",
+    //         MainHeading: "We'll take it from here",
+    //         SubHeading: "Awal Private Terminal is setting new standards of luxury for private aircraft users and Elite guests on commercial flights.",
+    //     };
+    // },
 }
 
 </script>

@@ -1,13 +1,13 @@
 <template>
     <Section class="LuxuryView">
         <div class="luxury-view-img" data-aos="zoom-in" data-aos-duration="2500">
-            <img class="img-fluid w-100" src="../../../assets/images/luxury-view.jpg" alt="luxury view">
+            <img class="img-fluid w-100" :src="sectionImage1" alt="luxury view">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="main-page-title " >
-                        <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">experiences tailored to you</span>
+                        <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">experiences truly tailor-made</span>
                         </div>
                     </div>
                 </div>
@@ -17,6 +17,9 @@
 </template>
 <script>
 export default {
+    props:{
+        sectionImage1: String
+    },
     components: {
         name: "LuxuryView"
     }

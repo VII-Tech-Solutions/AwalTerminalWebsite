@@ -27,13 +27,13 @@
                                             <div class="d-flex align-items-center justify-content-md-start justify-content-center">
                                                 <div class="form-check px-0 ms-0 me-4">
                                                     <label class="radio-container text-capitalize">Arrival
-                                                        <input type="radio"  v-model="is_arrival_flight" value="1" name="radio" >
+                                                        <input type="radio"  v-model="is_arrival_flight" value="true" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                                 <div class="form-check ms-0">
                                                     <label class="radio-container text-capitalize">Departure
-                                                        <input type="radio"  v-model="is_arrival_flight" value="2" name="radio" >
+                                                        <input type="radio"  v-model="is_arrival_flight" value="false" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
@@ -193,11 +193,19 @@ export default {
     // this.getDropdownData();
     },   
   data() {
-      debugger;
+      //debugger;
+      
+        var airporOptions = JSON.parse(localStorage.airportoptions1);
+
         var obj = JSON.parse(localStorage.elitedata);
+        console.log(obj.airportoptions,"airportoptionsairportoptions");
     return {
-         airportoptions:obj.airportoptions,
+         airportoptions:airporOptions,
          countriesoptions:obj.countriesoptions,
+         eliteserviceoptions:obj.eliteserviceoptions,
+         xyz:obj.xyz,
+         commontype:obj.commontype,
+         privatetype:obj.privatetype,
          flightoptions:this.flightoptions,
          servicefeatureoptions:this.servicefeatureoptions,
          number_of_adults:obj==undefined ?0:obj.number_of_adults,
@@ -210,7 +218,7 @@ export default {
          date : obj==undefined ? '' : obj.date,  
          time : obj==undefined ? '': obj.time,  
          flight_number : obj==undefined ?'':obj.flight_number,
-         is_arrival_flight : obj == undefined ? 1 : obj.is_arrival_flight==true?1:2,
+         is_arrival_flight : obj.is_arrival_flight,
          passengers:[{
                     title:"",
                     first_name: "",
@@ -219,14 +227,14 @@ export default {
                     birth_date: "",
                     nationality_id: "",
                     nationality_title:"",
-                    class_id: ""
+                    flight_class: ""
                 }]
      }
         
     },
    methods:{
          fligh_name(event){
-                debugger;
+               // debugger;
                 this.airport_name=this.airportoptions.find(x => x.id ==event.target.value).name;
             },
 
@@ -259,6 +267,7 @@ export default {
             var abc= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata) : undefined;
             debugger;
             console.log("abc Data");
+            console.log(abc);
             console.table(abc);
             var obj = {};
             obj.number_of_adults =  parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
@@ -276,7 +285,7 @@ export default {
                             birth_date: abc.passengers[i].birth_date,
                             nationality_id: abc.passengers[i].nationality_id,
                               nationality_title: abc.passengers[i].nationality_title,
-                            class_id: abc.passengers[i].class_id
+                            flight_class: abc.passengers[i].flight_class
                         })
                     }
                     else if(abc.passengers.length >= obj.total){
@@ -288,7 +297,7 @@ export default {
                             birth_date: abc.passengers[i].birth_date,
                             nationality_id: abc.passengers[i].nationality_id,
                                nationality_title: abc.passengers[i].nationality_title,
-                            class_id: abc.passengers[i].class_id
+                            flight_class: abc.passengers[i].flight_class
                         })
                     
 
@@ -302,7 +311,7 @@ export default {
                             birth_date: "",
                             nationality_id: "",
                             nationality_title: "",
-                            class_id: ""
+                            flight_class: ""
                         })
                     }
                 }
@@ -312,6 +321,10 @@ export default {
            }  
             obj.service_id= this.service_id,
             obj.countriesoptions=this.countriesoptions;
+            obj.eliteserviceoptions= this.eliteserviceoptions;
+            obj.xyz = this.xyz;
+            obj.commontype = this.commontype;
+            obj.privatetype = this.privatetype;
             obj.airport_id =  this.airport_id;
             obj.airport_name =  this.airport_name;
             obj.date =  this.date;

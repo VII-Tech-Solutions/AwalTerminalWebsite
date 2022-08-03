@@ -98,6 +98,9 @@ export default {
          number_of_infants:obj.number_of_infants,
          notFormValid: true,
         countriesoptions:obj.countriesoptions,
+        eliteserviceoptions:obj.eliteserviceoptions,
+         commontype:obj.commontype,
+         privatetype:obj.privatetype,
          service_id: obj.service_id,
          Totle: obj.total,
         airport_id : obj.airport_id,  
@@ -137,7 +140,11 @@ export default {
             obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants)); 
            obj.service_id= this.service_id,
             obj.countriesoptions=this.countriesoptions,
+            obj.eliteserviceoptions= this.eliteserviceoptions;
+            obj.commontype = this.commontype;
+            obj.privatetype = this.privatetype;
             obj.airport_id =  this.airport_id;
+            obj.sum = this.sum;
             obj.airport_name = this.airport_name;
             obj.date =  this.date;
             obj.time =  this.time;

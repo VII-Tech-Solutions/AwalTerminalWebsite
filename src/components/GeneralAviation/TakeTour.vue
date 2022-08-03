@@ -3,22 +3,29 @@
     <div class="take-tour">
        <div class="container">
         <div>
-            <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">Private lounges, dining, and shopping</span></div>
+            <div class="horizon" data-aos="fade-up" data-aos-duration="2500"><span class="page-subtitle text-uppercase">Private lounges, delightful dining, and luxurious shopping</span></div>
             <div class="page-title" data-aos="fade-up" data-aos-duration="2500">
-                <h2 class=" mx-auto text-center">Take a tour</h2>
+                <h2 class=" mx-auto text-center">{{heading5}}</h2>
             </div>
         </div>
         <div class="take-tour-details" >
             <figure data-aos="fade-up" data-aos-duration="2500">
-                <img class="img-fluid" src="../../assets/images/take-a-tour.png"/>
+                <img class="img-fluid"  :src="image_1" />
             </figure>
-            <p class="text-center" data-aos="fade-up" data-aos-duration="2500">Awal Terminal Building contains eight private lounges, along with common lounges. Each lounge follows a specific theme and color palette.</p>
+            <p class="text-center" data-aos="fade-up" data-aos-duration="2500">{{paragraph4}}</p>
             <div class="d-flex justify-center align-center"><button class="common-btn mx-auto" data-aos="fade-bottom" data-aos-duration="2500">tour the terminal</button></div>
         </div>
        </div>
     </div>
 </template>
 <script>
+export default {
+    props: {
+        heading5: String,
+        paragraph4: String,
+        image_1:String
+    }
+}
 </script>
 <style>
 .take-tour-details{width:70%; margin:0 auto;}

@@ -361,7 +361,7 @@ textarea {
 .asterik{color:#d30202;}
 .form-small-text{font-size:20px; font-weight:600; line-height:27px; color:#011e41;}
 .extra-small-text{font-size:16px; font-weight:600; line-height:1.69; color:#011e41;}
-.aviation-form{ height:100%; display:flex; flex-direction:column; justify-content:space-between;padding-bottom: 65px;}
+.aviation-form{ height:100%; display:flex; flex-direction:column; justify-content:space-between;padding-bottom: 65px;min-height: 100vh;}
 .form-header{padding:58px 0px 21px 0px;}
 .form-footer{padding:20px 0px; background-color:#011e41; position:fixed; bottom:0; width:100%;}
 .form-header .form-logo{width:120px; height:68px;} .form-header .form-logo img{width:100%; height:100%; object-fit:contain;}
@@ -412,6 +412,31 @@ textarea {
     text-align: center;
     padding-left: 25px;
     padding-right: 25px;
+}
+.form-body .form-check.terms{
+	margin-bottom: 50px;
+	padding: 0;
+}
+.form-body .form-check.terms label {
+    font-size: 16px;
+    color: #000;
+    padding-left: 25px;
+}
+.form-body .form-check.terms label span.checkmark {
+    border-radius: 4px;
+}
+.form-body .form-check.terms label a {
+    color: #000;
+}
+.form-check.terms .checked-container .checkmark:after {
+    top: -1px;
+    width: 5px;
+    height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+}
+.elite-forrm-footer .btn-next[disabled] ,.beige-button[disabled]{
+    cursor: not-allowed;
 }
 /* MEDIA QUERY */
 @media (max-width: 1199px) {

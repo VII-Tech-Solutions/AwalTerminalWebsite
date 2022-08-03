@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
                         <div class="page-title" >
-                            <h2>Plan for comfort</h2>
+                            <h2>{{heading4}}</h2>
                         </div>
                         <div class="comfort-checklist">
                             <ul class="ul_css">
@@ -16,19 +16,19 @@
                             </ul>
                         </div>
                         <div class="custom-mb mb-lg-5 mb-3">
-                            <p class="text-start w-100 custom-mb">Once your booking is received, our team will review the details and an email will be sent back confirming the booking.</p>
-                            <strong><p class="theme-color fw-bold">Requests require a minimum of 24 hours to be confirmed.</p></strong>
+                            <p class="text-start w-100 custom-mb" style="white-space:pre-line" v-html="paragraph3"></p>
+                            <!-- <strong><p class="theme-color fw-bold">Requests require a minimum of 24 hours to be confirmed.</p></strong> -->
                         </div>
                     </div>
                     <div class="col-md-4 offset-lg-2 offset-md-1" >
                         <figure class="mb-0 plan-img">
-                            <img src="../../assets/images/plan-comfort.png" class="img-fluid" alt="Plan For Comfort">
+                            <img :src="squareImage1" class="img-fluid" alt="Plan For Comfort">
                         </figure>
                     </div>
                 </div>
                 <div class="booking-details">
                     <div data-aos="fade-up" data-aos-duration="2500">
-                        <p class="mb-lg-4 mb-3">When making the booking, we require details of everyone in your party:</p>
+                        <p class="mb-lg-4 mb-3">When booking for elite services, we require details of everyone in your party:</p>
                         <div class="comfort-list">
                             <ul class="ul_css" >
                                 <li>
@@ -36,7 +36,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/person.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">Names</p>
+                                        <p class="text-capitalize">{{bulletPoint1}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -44,7 +44,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/event.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">Passport EXpory dates</p>
+                                        <p class="text-capitalize">{{bulletPoint5}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -52,7 +52,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/date-range.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-calendar">date of birth</p>
+                                        <p class="text-calendar">{{bulletPoint2}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -60,7 +60,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/flight.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">flight number</p>
+                                        <p class="text-capitalize">{{bulletPoint6}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -68,7 +68,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/flag.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">nationalities</p>
+                                        <p class="text-capitalize">{{bulletPoint3}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -76,7 +76,7 @@
                                         <span>
                                             <img src="../../assets/images/icons/groups.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">guest names</p>
+                                        <p class="text-capitalize">{{bulletPoint7}}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -84,15 +84,14 @@
                                         <span>
                                             <img src="../../assets/images/icons/tag.svg" alt="luggage" class=" img-fluid"/>
                                         </span>
-                                        <p class="text-capitalize">passport numbers</p>
+                                        <p class="text-capitalize">{{bulletPoint4}}</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="contact-address d-block" data-aos="fade-up" data-aos-duration="2500">
-                        <p>For further assistance, please contact the Bookings Team on <a class="phone" href="tel:+973 39471116">
-                        +973 39471116</a> or <span class="effect-span"><a class="mail effect-box" href="mailto:cip@halabahrain.bh">cip@halabahrain.bh</a></span></p>
+                        <p v-html="text_1"></p>
                     </div>
                      <div class="d-flex justify-content-start">
                         <router-link to="/elite-form" data-aos="fade-bottom" data-aos-duration="2500" class="blue-btn text-uppercase d-inline">Book Elite Services</router-link>
@@ -103,6 +102,23 @@
 </template>  
 
 <script>
+export default {
+
+    props: {
+        text_1: String,
+        heading4: String,
+        paragraph3: String,
+        bulletPoint1: String,
+        bulletPoint2: String,
+        bulletPoint3: String,
+        bulletPoint4: String,
+        bulletPoint5: String,
+        bulletPoint6: String,
+        bulletPoint7: String,
+        squareImage1: String,
+        
+    },
+}
 </script>
 <style>
 .plan-for-comfort{padding:150px 0px;}
@@ -118,11 +134,20 @@
 .comfort-item span .svg-inline--fa{color: #011e41; fill: #011e41;}
 .contact-address{padding-bottom:50px}  
 .comfort-item p{text-align:start; width:auto; line-height:1.5;}
-.contact-address p{line-height:1.5;}
+.contact-address p a {
+    color: inherit;
+    text-decoration: none;
+}
+.contact-address p a + a{
+    text-decoration: underline;
+}
 .contact-address .phone, .contact-address .mail{color: #011e41;background-color:transparent;transition:all ease-in-out .3s;}
 .icon-none{opacity: 0;}
 /* .contact-address .phone:hover{border} */
 .contact-address .phone{text-decoration:none;}
+p.custom-mb p + p {
+    margin-top: 40px;
+}
 @media (max-width:1199px) {
 .plan-for-comfort{padding:100px 0px;}
 .plan-for-comfort .page-title h2{padding-bottom:25px;}
