@@ -1148,7 +1148,7 @@ export default {
         )
         .then((res) => {
           window.location.href = "/general-aviation-thankyou";
-          localStorage.removeItem("data");
+          // localStorage.removeItem("data");
           localStorage.removeItem("textboxdata");
         })
         .catch((err) => {

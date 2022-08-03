@@ -44,6 +44,8 @@ export default {
             var obj = {};
    
             obj.booker = this.booker;
+          localStorage.removeItem("elitedata");
+
         },
 
         

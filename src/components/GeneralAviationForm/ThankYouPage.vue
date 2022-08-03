@@ -12,7 +12,7 @@
                 <div class="thankyou-p">
                     <h2>Thank you for <br>applying for General Aviation!</h2>
                     
-                        <p class="mb-4 ">We will send an email to <a class="contact-links" href="mailto:ahmad@example.com">ahmad@example.com</a> once your request has been approved.</p>
+                        <p class="mb-4 ">We will send an email to <a class="contact-links" v-bind:href="'mailto:'+obj.operator_email">{{ obj.operator_email }}</a> once your request has been approved.</p>
                         <p class="">If you require any further assistance please contact the Bookings Team on  <a class="contact-links text-decoration-none" href="tel:+973 39471116">+973 39471116</a> or <a class="contact-links text-decoration-none" href="mailto:cip@halabahrain.bh">cip@halabahrain.bh</a></p>
                     
                 </div>
@@ -23,6 +23,39 @@
 </template>  
 
 <script>
+
+export default {
+
+    data() {
+
+        var obj = JSON.parse(localStorage.data);
+        return {
+           
+            booker: {
+                email: obj.booker.email
+            },
+            
+        }
+
+    },
+    methods: {
+
+        setData() {
+
+            //toastr.info('Are you sure you want to buy ');
+
+            var obj = {};
+   
+          localStorage.removeItem("data");
+            
+
+        },
+
+        
+    },
+
+     
+}
 </script>
 <style>
 .background-gradient{
