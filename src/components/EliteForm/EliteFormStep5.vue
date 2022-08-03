@@ -825,9 +825,9 @@ export default {
         )
         .then((res) => {
           console.log(res, "aaaaaaaaaaaaa");
-          // localStorage.removeItem("elitedata");
+          localStorage.removeItem("elitedata");
 
-          //window.location.href = "/elite-thankyou";
+          window.location.href = "/elite-thankyou";
           //   window.location.href =
           //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
         })
