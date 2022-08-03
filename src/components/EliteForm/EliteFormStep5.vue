@@ -670,6 +670,19 @@
                   </div>
                 </div>
               </div>
+              <div class="form-check terms">
+                <label class="checked-container text-capitalize"
+                  >By submitting this form, you are agreeing to our
+                  <router-link to="">Terms and Conditions</router-link>
+                  <input
+                    type="checkbox"
+                    value="1"
+                    name="radio"
+                    @change="check($event)"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
             </form>
           </div>
         </div>
@@ -704,6 +717,8 @@
                   transition
                   text-capitalize
                 "
+                type="button"
+                :disabled="disabled ? false : true"
               >
                 Submit Reservation
               </button>
@@ -720,10 +735,8 @@ import axios from "axios";
 
 export default {
   data() {
-
-      
     var obj = JSON.parse(localStorage.elitedata);
-      console.log(obj.passengers, "obj.passengersobj.passengers");
+    console.log(obj.passengers, "obj.passengersobj.passengers");
     return {
       number_of_adults: obj.number_of_adults,
       number_of_children: obj.number_of_children,
@@ -753,9 +766,13 @@ export default {
         email: obj.booker.email,
       },
       amount: 0,
+      disabled: false,
     };
   },
   methods: {
+    check(e) {
+      this.disabled = e.target.checked;
+    },
     setData() {
       //toastr.info('Are you sure you want to buy ');
 
@@ -788,8 +805,6 @@ export default {
       obj.passengers = this.passengers;
       obj.booker = this.booker;
       localStorage.setItem("elitedata", JSON.stringify(obj));
-
-    
 
       this.paynow();
     },
