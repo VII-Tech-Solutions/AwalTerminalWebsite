@@ -1061,7 +1061,12 @@
                 <label class="checked-container text-capitalize"
                   >By submitting this form, you are agreeing to our
                   <router-link to="">Terms and Conditions</router-link>
-                  <input type="checkbox" value="1" name="radio" @change="check($event)" />
+                  <input
+                    type="checkbox"
+                    value="1"
+                    name="radio"
+                    @change="check($event)"
+                  />
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -1082,7 +1087,11 @@
             >
           </div>
           <div class="d-block">
-            <button @click="submitData()" class="beige-button d-inline-block" :disabled="disabled ? false : true">
+            <button
+              @click="submitData()"
+              class="beige-button d-inline-block"
+              :disabled="disabled ? false : true"
+            >
               submit application
             </button>
 
@@ -1130,7 +1139,7 @@ export default {
     };
   },
   methods: {
-     check(e) {
+    check(e) {
       this.disabled = e.target.checked;
     },
     async submitData() {
@@ -1147,9 +1156,11 @@ export default {
           axiosConfig
         )
         .then((res) => {
-          window.location.href = "/general-aviation-thankyou";
-          // localStorage.removeItem("data");
+
+          localStorage.set('aviation_user_email',obj.operator_email)
+          localStorage.removeItem("data");
           localStorage.removeItem("textboxdata");
+          window.location.href = "/general-aviation-thankyou";
         })
         .catch((err) => {
           toastr.error(err.message);
