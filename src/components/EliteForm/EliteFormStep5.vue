@@ -824,8 +824,11 @@ export default {
           axiosConfig
         )
         .then((res) => {
-          console.log(res, "aaaaaaaaaaaaa");
-          // localStorage.removeItem("elitedata");
+          
+
+          
+           localStorage.setItem("useremail", postData.booker.email);
+           localStorage.removeItem("elitedata");
 
           window.location.href = "/elite-thankyou";
           //   window.location.href =
