@@ -1,4 +1,4 @@
-<template>
+<template class="bg-white">
     <div class="aviation-form bg-white">
         <div class="container">
             <div class="form-header">
