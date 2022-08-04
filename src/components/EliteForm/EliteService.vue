@@ -857,7 +857,6 @@ export default {
         )
         .then((res) => {
          
-
           this.elite_services =
             res.data.data.elite_services.length > 0
               ? res.data.data.elite_services[0]

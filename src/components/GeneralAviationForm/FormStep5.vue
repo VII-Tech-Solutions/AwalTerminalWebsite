@@ -58,7 +58,7 @@
                                             <div class="form-group">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <label class="form-label text-capitalize"> Aircraft Certifications Checklist<span class="asterik">*</span></label>
-                                                    <a class="text-capitalize text-color-btn">download checklist template</a>
+                                                    <router-link className="text-capitalize text-color-btn"  to="/aircraft-certificates-checklist.pdf" target="_blank">download checklist template</router-link>
                                                 </div>
                                                 <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert" class="form-control border-0" placeholder="certificate_20220415_f8jq8cdh…">
                                                     <input type="file" @change="uploadFile($event,'Aircraft Certifications Checklist')" ref="file" class="form-control upload-input" placeholder="" />

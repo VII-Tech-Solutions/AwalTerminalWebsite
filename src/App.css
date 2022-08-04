@@ -124,6 +124,7 @@ textarea {
 	border-bottom:2px solid #011e41;
 	text-decoration: none;
 	transition: all ease-in-out .3s;
+	cursor: pointer;
 }
 .text-color-btn:hover{
 	color: #011e41;
