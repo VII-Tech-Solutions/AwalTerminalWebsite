@@ -856,7 +856,7 @@ export default {
           axiosConfig
         )
         .then((res) => {
-          console.log(res.data.data, "response");
+         
 
           this.elite_services =
             res.data.data.elite_services.length > 0
