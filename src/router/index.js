@@ -23,6 +23,7 @@ import ThankYouPage from "../components/GeneralAviationForm/ThankYouPage.vue"
 import OurStory from "../components/OurStory/OurStory.vue"
 import AllService from "../components/AllServices/AllService.vue"
 import Contact from "../components/Contact/Contact.vue"
+import Privacy from "../components/Privacy/Privacy.vue"
 import ExpiredPage from "../components/EliteForm/ExpiredPage.vue"
 import EliteEliteService from "../components/EliteForm/EliteService.vue";
 import '@fortawesome/fontawesome-free/js/all.js';
@@ -151,7 +152,11 @@ const routes = [
     name: "Contact",
     component: Contact,
   },
-
+  {
+    path: "/privacy-policy",
+    name: "Privacy Policy",
+    component: Privacy,
+  },
   {
     path: "/link-expired",
     name: "ExpiredPage",

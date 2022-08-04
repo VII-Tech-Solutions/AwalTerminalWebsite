@@ -82,7 +82,9 @@ export default {
 .footer-service.GeneralAviation-bg {
     background-image: url('../../assets/images/general-service-footer-bg.jpg');
 }
-
+.footer-service.privacy-bg {
+    background-image: url('../../assets/images/privacy-bg.jpg') !important;
+}
 .footer-content {
     height: 100%;
     display: flex;

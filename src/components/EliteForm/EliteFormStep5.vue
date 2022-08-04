@@ -673,7 +673,9 @@
               <div class="form-check terms">
                 <label class="checked-container text-capitalize"
                   >By submitting this form, you are agreeing to our
-                  <router-link to="">Terms and Conditions</router-link>
+                  <router-link to="/privacy-policy"
+                    >Terms and Conditions</router-link
+                  >
                   <input
                     type="checkbox"
                     value="1"
@@ -736,7 +738,7 @@ import axios from "axios";
 export default {
   data() {
     var obj = JSON.parse(localStorage.elitedata);
-    console.log(obj.passengers, "obj.passengersobj.passengers");
+   
     return {
       number_of_adults: obj.number_of_adults,
       number_of_children: obj.number_of_children,
@@ -824,13 +826,13 @@ export default {
           axiosConfig
         )
         .then((res) => {
-          
-
-          
-           localStorage.setItem("useremail", postData.booker.email);
-           localStorage.removeItem("elitedata");
-
+         
+          localStorage.setItem("useremail", postData.booker.email);
+          localStorage.removeItem("elitedata");
           window.location.href = "/elite-thankyou";
+
+
+
           //   window.location.href =
           //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
         })
@@ -854,9 +856,9 @@ export default {
       axios
         .get("https://awal.viitech.net/api/calculate-price", get_param)
         .then((res) => {
-          console.log(res, "aaaaa");
+        
           this.amount = res.data.data.total_price;
-          console.log(this.amount, "Price TOtal");
+          
         })
         .catch((err) => {
           toastr.error("Api Error Please Try again.. 🙁");
