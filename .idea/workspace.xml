@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Email Address validation in General aviation form">
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep1.vue" afterDir="false" />
+    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Change the registration number to string">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteService.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteService.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659880202319</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Change the registration number to string">
+      <created>1659880481295</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659880481295</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +124,8 @@
     <MESSAGE value="Terms and conditions page" />
     <MESSAGE value="Email address validation in elite service form" />
     <MESSAGE value="Email Address validation in General aviation form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Email Address validation in General aviation form" />
+    <MESSAGE value="Change the registration number to string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the registration number to string" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

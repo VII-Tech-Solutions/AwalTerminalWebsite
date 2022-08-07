@@ -772,11 +772,7 @@
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-block">
-            <router-link
-              to=""
-              class="cancel-link d-inline-block text-decoration-none"
-              >Back
-            </router-link>
+
           </div>
           <div class="d-flex align-items-center">
             <p class="fw-semi-bold form-p mb-0 me-lg-3 me-2 sans">
