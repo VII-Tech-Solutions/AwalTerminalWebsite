@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Change the registration number to string">
+    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="hide the back in elite services approve payment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteService.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteService.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659880481295</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="hide the back in elite services approve payment">
+      <created>1659882257434</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659882257434</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +131,8 @@
     <MESSAGE value="Email address validation in elite service form" />
     <MESSAGE value="Email Address validation in General aviation form" />
     <MESSAGE value="Change the registration number to string" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change the registration number to string" />
+    <MESSAGE value="hide the back in elite services approve payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide the back in elite services approve payment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

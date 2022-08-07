@@ -74,7 +74,7 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Flight Number <span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" v-model="flight_number" placeholder="e.g. BAH2233">
+                                            <input type="text" class="form-control" v-model="flight_number" placeholder="e.g. BAH2233" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
                                         </div>  
                                     </div>
                                 </div>
