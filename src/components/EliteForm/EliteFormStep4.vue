@@ -39,13 +39,13 @@
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Email Address<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" v-model="booker.email" placeholder="Enter your first name">
+                                            <input type="text" class="form-control" v-model="booker.email" placeholder="Enter your Email Address">
                                         </div>  
                                     </div>
                                     <div class="col-lg-3 ">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Mobile Number<span class="asterik">*</span></label>
-                                            <input type="text" class="form-control" v-model="booker.mobile_number" placeholder="Enter your last name">
+                                            <input type="text" class="form-control" v-model="booker.mobile_number" placeholder="Enter your Mobile Number">
                                         </div>  
                                     </div>
                                 </div>
@@ -69,10 +69,10 @@
                         <router-link to="/elite-form3" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
                     </div>
                     <div class="d-block">
-                       <span class="btn-next d-inline-block align-top transition" v-if="!(booker.first_name && booker.last_name && booker.mobile_number)" :disabled="notFormValid" @click="error()" >
+                       <span class="btn-next d-inline-block align-top transition" v-if="!(booker.first_name && booker.last_name && booker.mobile_number && booker.email && booker.email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))" :disabled="notFormValid" @click="error()" >
                             Next
                         </span>
-                       <span  v-if="booker.first_name && booker.last_name && booker.mobile_number">
+                       <span  v-if="booker.first_name && booker.last_name && booker.mobile_number && booker.email && booker.email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)">
                        <router-link to="/elite-form5" @click="setData()"  class="btn-next d-inline-block align-top transition">Next</router-link>
                         </span>
                     </div>
