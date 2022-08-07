@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Terms and conditions page">
+    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Email address validation in elite service form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep4.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <workItem from="1655275589158" duration="757000" />
       <workItem from="1655276374131" duration="4942000" />
       <workItem from="1659535440549" duration="449000" />
-      <workItem from="1659854944320" duration="17716000" />
+      <workItem from="1659854944320" duration="18118000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659877357696</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Email address validation in elite service form">
+      <created>1659878812517</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659878812517</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +107,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Privacy policy" />
     <MESSAGE value="Terms and conditions page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terms and conditions page" />
+    <MESSAGE value="Email address validation in elite service form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email address validation in elite service form" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
