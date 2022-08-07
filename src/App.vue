@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     currentRouteName() {
-      return this.$route.name == 'Home' || this.$route.name == 'Tour' || this.$route.name == 'Service' || this.$route.name == 'OurStory' || this.$route.name == 'AllService'|| this.$route.name == 'GeneralAviation' || this.$route.name == 'Contact' ? true : false ;
+      return this.$route.name == 'Home' || this.$route.name == 'About'|| this.$route.name == 'PrivacyPolicy' || this.$route.name == 'Tour' || this.$route.name == 'Service' || this.$route.name == 'OurStory' || this.$route.name == 'AllService'|| this.$route.name == 'GeneralAviation' || this.$route.name == 'Contact' ? true : false ;
     },
   },
 };

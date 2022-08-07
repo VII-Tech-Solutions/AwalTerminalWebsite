@@ -82,7 +82,7 @@ export default {
 						this.bullet_point_3 = data.bullet_point_3;
 						this.bullet_point_4 = data.bullet_point_4;
 						this.bullet_point_5 = data.bullet_point_5;
-					
+
 				})
 				.catch(function (error) {
 					console.log(error.response)

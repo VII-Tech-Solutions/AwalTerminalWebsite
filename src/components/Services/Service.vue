@@ -68,7 +68,7 @@
     <Fascilities :heading3="heading_3" :bulletPoint1="bullet_point_1" :bulletPoint2="bullet_point_2" :bulletPoint3="bullet_point_3" :bulletPoint4="bullet_point_4" :bulletPoint5="bullet_point_5" :bulletPoint6="bullet_point_6" :bulletPoint7="bullet_point_7" :bulletPoint8="bullet_point_8" />
     <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_4" name="services-bg"
         service1="Excellent Service" image1="services-service-1" service2="Private Lounges"
-        image2="services-service-2" service3="Personal Assistant " image3="services-service-3" :footerbg="background_image_3_url" />
+        image2="services-service-2" service3="Personal Assistant" image3="services-service-3" :footerbg="background_image_3_url" />
 </template>                           
 <script>
 import Banner from "./Banner.vue";

@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/PrivacyPolicy/PrivacyPolicy.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Services/Service.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Services/Service.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +21,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,6 +70,7 @@
       <workItem from="1655275589158" duration="757000" />
       <workItem from="1655276374131" duration="4942000" />
       <workItem from="1659535440549" duration="449000" />
+      <workItem from="1659854944320" duration="14384000" />
     </task>
     <servers />
   </component>
@@ -74,5 +87,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

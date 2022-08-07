@@ -33,7 +33,7 @@
                             <div class="footer-copyrigt-links">
                                 <ul>
                                     <li><router-link class="text-capitalize" to="/">Terms & Conditions</router-link></li>
-                                    <li><router-link class="text-capitalize" to="/">Privacy Policy</router-link></li>
+                                    <li><router-link class="text-capitalize" to="/privacy-policy">Privacy Policy</router-link></li>
                                     <li><router-link class="text-capitalize" to="/">Cookies Policy</router-link></li>
                                 </ul>
                             </div>
