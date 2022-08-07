@@ -1,6 +1,6 @@
 
 <template>
-    <div class="footer-service" v-bind:style="{ backgroundImage: 'url(' + footerbg + ')' }" >
+    <div class="footer-service" v-bind:class="name" v-bind:style="{ backgroundImage: 'url(' + footerbg + ')' }" >
               <div class="container">
                   <div class="footer-content">
                   <div class="footer-booking" data-aos="fade-up" data-aos-duration="2500">

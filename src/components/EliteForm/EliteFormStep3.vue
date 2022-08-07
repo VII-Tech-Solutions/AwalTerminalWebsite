@@ -126,7 +126,7 @@
                         required
                         v-model="passenger.nationality_id"
                         id="inputGroupSelect01"
-                        @change="fetch_title($event, passenger)"
+                        @change="fetch_title($event, index)"
                       >
                         <option
                           v-for="item in countriesoptions"
@@ -258,9 +258,10 @@ export default {
     };
   },
   methods: {
-    fetch_title(event, passenger) {
-      this.passengers[0].nationality_title =
-        event.target.options[event.target.options.selectedIndex].text;
+    fetch_title(event, index) {
+      //this.passengers[0].nationality_title = event.target.options[event.target.options.selectedIndex].text;
+
+       this.passengers[index].nationality_title = event.target.options[event.target.options.selectedIndex].text;
     },
 
     error() {
