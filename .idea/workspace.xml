@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="working on disable the zoom in the mobile screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +65,8 @@
       <workItem from="1655276374131" duration="4942000" />
       <workItem from="1659535440549" duration="449000" />
       <workItem from="1659854944320" duration="18118000" />
+      <workItem from="1659886039065" duration="1104000" />
+      <workItem from="1659890034649" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
@@ -115,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659883196269</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="working on disable the zoom in the mobile screen">
+      <created>1659884411118</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659884411119</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
