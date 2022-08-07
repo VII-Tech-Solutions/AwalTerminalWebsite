@@ -129,18 +129,18 @@
                     </div>
                     <div class="d-block">
                       <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country && operator_tel_number
-                       && operator_email && operator_address && operator_billing_address && !msg.email
+                       && operator_email && operator_address && operator_billing_address && operator_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) && !msg.email
                        && ((is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
-                       && agent_email && agent_address && agent_billing_address ))
+                       && agent_email && agent_address && agent_billing_address && agent_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)))
                        
                        )" :disabled="notFormValid" @click="error()">
                             Next
                         </span>
                       <span v-if="operator_full_name && operator_country && operator_tel_number 
-                        && operator_email && operator_address && operator_billing_address && !msg.email
+                        && operator_email && operator_address && operator_billing_address && operator_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) && !msg.email
 
                         && ( (is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
-                        && agent_email && agent_address && agent_billing_address  ))
+                        && agent_email && agent_address && agent_billing_address && agent_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ))
                         ">
                          <router-link to="/general-aviation-form4" @click="setData()"  class="beige-button d-inline-block">Next</router-link>
                          </span>

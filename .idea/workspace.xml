@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Email address validation in elite service form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
