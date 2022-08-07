@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/PrivacyPolicy/PrivacyPolicy.vue" afterDir="false" />
+    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Privacy policy">
+      <change afterPath="$PROJECT_DIR$/src/components/TermsAndConditions/TermsAndConditions.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Services/Service.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Services/Service.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +67,16 @@
       <workItem from="1655275589158" duration="757000" />
       <workItem from="1655276374131" duration="4942000" />
       <workItem from="1659535440549" duration="449000" />
-      <workItem from="1659854944320" duration="14384000" />
+      <workItem from="1659854944320" duration="16499000" />
     </task>
+    <task id="LOCAL-00001" summary="Privacy policy">
+      <created>1659875171553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659875171553</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +92,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Privacy policy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Privacy policy" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

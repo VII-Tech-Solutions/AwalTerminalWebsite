@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from "../components/Home/Home.vue";
 import About from "../components/About/About.vue";
 import PrivacyPolicy from "../components/PrivacyPolicy/PrivacyPolicy.vue";
+import Terms from "../components/TermsAndConditions/TermsAndConditions.vue";
 import Tour from "../components/Tour/Tour.vue";
 import EliteForm from "../components/EliteForm/EliteFormStep1.vue";
 import EliteForm2 from "../components/EliteForm/EliteFormStep2.vue";
@@ -47,6 +48,11 @@ const routes = [
     name: "PrivacyPolicy",
     meta: { requiresAuth: 'true' },
     component: PrivacyPolicy,
+  },
+  {
+    path: "/terms-conditions",
+    name: "TermsConditions",
+    component: Terms,
   },
   {
     path: "/tour",
