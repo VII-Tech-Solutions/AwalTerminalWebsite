@@ -46,7 +46,7 @@
                                     <div class="col-lg-6 mb-0">
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">registration<span class="asterik">*</span></label>
-                                            <input type="number" v-model="registration_number" class="form-control" placeholder="Registration number">
+                                            <input type="text" v-model="registration_number" class="form-control" placeholder="Registration number">
                                         </div>  
                                         <div class="form-group">
                                             <label class="form-label text-capitalize"> lead passenger name<span class="asterik">*</span></label>
