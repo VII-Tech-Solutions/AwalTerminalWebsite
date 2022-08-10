@@ -13,7 +13,7 @@
                 <img class="img-fluid"  :src="image_1" />
             </figure>
             <p class="text-center" data-aos="fade-up" data-aos-duration="2500">{{paragraph4}}</p>
-            <div class="d-flex justify-center align-center"><button class="common-btn mx-auto" data-aos="fade-bottom" data-aos-duration="2500" @click="$router.push('tour')">tour the terminal</button></div>
+            <div class="d-flex justify-center align-center"><router-link to="/tour" class="common-btn mx-auto" data-aos="fade-bottom" data-aos-duration="2500">tour the terminal</router-link></div>
         </div>
        </div>
     </div>
