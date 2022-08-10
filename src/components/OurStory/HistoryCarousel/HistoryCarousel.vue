@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="slider-wrapper">
-      <div class="history-sliders active" id="60s">
+      <div v-if="slider1" class="history-sliders active" id="60s">
         <carousel
           :settings="settings"
           :breakpoints="breakpoints"
@@ -110,7 +110,7 @@
           </template>
         </carousel>
       </div>
-      <div class="history-sliders" id="2022s">
+      <div v-if="slider2" class="history-sliders active" id="2022s">
         <carousel  :settings="settings2" :breakpoints="breakpoints" :wrap-around="true">
           <slide :key="slide">
             <figure>
@@ -196,6 +196,8 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 export default {
   data() {
     return {
+      slider1: true,
+      slider2: false,
       settings: {
         itemsToShow: 1,
         snapAlign: "center",
@@ -235,64 +237,24 @@ export default {
   },
 
   methods: {
-    // scrollAnimation() {
-    //   gsap
-    //     .timeline({
-    //       scrollTrigger: {
-    //         trigger: ".slider-wrapper",
-    //         start: "center center",
-    //         end: "bottom top",
-    //         markers: false,
-    //         scrub: true,
-    //         pin: true,
-    //       },
-    //     })
-    //     .to(".slider-wrapper", { x: "-470%", duration: 50 });
-    // },
+    
     item() {
-      // window.scrollTo(0, 20);
-      // gsap.to(".slider-wrapper", { x: "0%" });
-      // this.ressetClassesFunction(1);
+       this.slider1=true;
+      this.slider2= false;
       $("#60s").addClass("active");
       $("#2022s").removeClass("active");
       $("#span1").addClass("active");
       $("#span2").removeClass("active");
     },
     item1() {
+       this.slider1=false;
+      this.slider2= true;
       $("#2022s").addClass("active");
       $("#60s").removeClass("active");
       $("#span2").addClass("active");
       $("#span1").removeClass("active");
     },
-    // item2() {
-    //   gsap.to(".slider-wrapper", { x: "-158%" });
-    //   this.ressetClassesFunction(3);
-    // },
-    // item3() {
-    //   gsap.to(".slider-wrapper", { x: "-238%" });
-    //   this.ressetClassesFunction(4);
-    // },
-    // item4() {
-    //   gsap.to(".slider-wrapper", { x: "-318%" });
-    //   this.ressetClassesFunction(5);
-    // },
-    // item5() {
-    //   gsap.to(".slider-wrapper", { x: "-398%" });
-    //   this.ressetClassesFunction(6);
-    // },
-    // item6() {
-    //   gsap.to(".slider-wrapper", { x: "-470%" });
-    //   this.ressetClassesFunction(7);
-    // },
-    // ressetClassesFunction(num) {
-    //   let items = document.getElementsByClassName("carousel-item-private");
-    //   for (let i = 0; i < items.length; i++) {
-    //     items[i].classList.remove("active");
-    //   }
-
-    //   let element = document.getElementById("span" + num);
-    //   element.classList.add("active");
-    // },
+    
   },
   components: {
     Carousel,
