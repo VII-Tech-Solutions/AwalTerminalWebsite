@@ -84,23 +84,11 @@
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Full Name<span class="asterik">*</span></label>
                                             <input type="text" v-model="agent_fullname" class="form-control" placeholder="Full Name">
-                                        </div>
-
+                                        </div>  
                                         <div class="form-group">
                                             <label class="form-label">Telephone Number<span class="asterik">*</span></label>
-                                            <div class="form-border">
-                                                 <select  v-model="teldrop1"  class="form-select phone-select h-100"  id="inputGroupSelect01">
-                                                    <option value="973" selected>973</option>
-                                                    <option :value="option" v-for="option in dialCode">{{ option }}</option>
-                                                </select>
-                                                <input type="text" v-model="agent_phoneNumber" class="form-control border-0" placeholder="1234 5678">
-                                            </div>
-                                        </div>
-
-                                        <!-- <div class="form-group">
-                                            <label class="form-label">Telephone Number<span class="asterik">*</span></label>
                                             <input type="text" v-model="agent_phoneNumber" class="form-control" placeholder="+973 1234 5678">
-                                        </div>    -->
+                                        </div>   
                                         <div class="form-group">
                                              <label for="exampleFormControlTextarea1" class="form-label text-capitalize">address<span class="asterik">*</span></label>
                                              <textarea class="form-control" v-model="agent_address" placeholder="Enter your address" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -181,7 +169,6 @@ mounted () {
          operator_billing_address:obj.operator_billing_address,  
          agent_country:obj.agent_country,   
          agent_fullname:obj.agent_fullname,   
-         teldrop1:'',
          agent_phoneNumber:obj.agent_phoneNumber,  
          agent_email:obj.agent_email,   
          agent_address:obj.agent_address,  
@@ -504,7 +491,7 @@ watch: {
             obj1.operator_billing_address=this.operator_billing_address;
             obj1.agent_fullname= this.is_using_agent == "1"? this.agent_fullname:"";   
             obj1.agent_country=this.is_using_agent == "1"? this.agent_country:"";   
-            obj1.agent_phoneNumber=this.is_using_agent == "1"? this.teldrop1 + this.agent_phoneNumber:"";    
+            obj1.agent_phoneNumber=this.is_using_agent == "1"? this.agent_phoneNumber:"";    
             obj1.agent_email=this.is_using_agent == "1"? this.agent_email:"";   
             obj1.agent_address=this.is_using_agent == "1"? this.agent_address:"";    
             obj1.agent_billing_address=this.is_using_agent == "1"? this.agent_billing_address:""; 
