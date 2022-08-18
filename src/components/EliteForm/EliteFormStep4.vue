@@ -12,7 +12,7 @@
                 <div class="form-page-title">
                     <div class="d-flex flex-md-row flex-column align-items-center justify-content-between">
                         <h3 class="form-h3 text-capitalize">Elite Service</h3>
-                        <p class="form-p lora-semi m-0">Step <span>3</span> of <span>4</span></p>
+                        <p class="form-p lora-semi m-0">Step <span>4</span> of <span>5</span></p>
                     </div>
                 </div>
                 <div class="row">

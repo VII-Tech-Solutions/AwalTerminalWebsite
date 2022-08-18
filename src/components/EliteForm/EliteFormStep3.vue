@@ -23,7 +23,7 @@
           >
             <h3 class="form-h3 text-capitalize">Elite Service</h3>
             <p class="form-p lora-semi m-0">
-              Step <span>2</span> of <span>5</span>
+              Step <span>3</span> of <span>5</span>
             </p>
           </div>
         </div>

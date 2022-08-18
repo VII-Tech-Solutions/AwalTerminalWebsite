@@ -59,7 +59,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Passenger Count<span class="asterik">*</span></label>
-                                            <input type="number" v-model="arrival_passenger_count" class="form-control" min="1" placeholder="Passenger Count">
+                                            <input type="text" v-model="arrival_passenger_count" class="form-control" min="1" placeholder="Passenger Count">
                                         </div> 
                                     </div> 
                                 </div>
@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label text-capitalize">Passenger Count<span class="asterik">*</span></label>
-                                            <input type="number" v-model="departure_passenger_count" class="form-control" min="1" placeholder="Passenger Count">
+                                            <input type="text" v-model="departure_passenger_count" class="form-control" min="1" placeholder="Passenger Count">
                                         </div> 
                                     </div> 
                                 </div>
