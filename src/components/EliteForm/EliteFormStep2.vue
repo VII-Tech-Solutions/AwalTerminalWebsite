@@ -27,13 +27,13 @@
                                             <div class="d-flex align-items-center justify-content-md-start justify-content-center">
                                                 <div class="form-check px-0 ms-0 me-4">
                                                     <label class="radio-container text-capitalize">Arrival
-                                                        <input type="radio"  v-model="is_arrival_flight" value="true" name="radio" >
+                                                        <input type="radio"  v-model="is_arrival_flight" v-bind:value="true" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
                                                 <div class="form-check ms-0">
                                                     <label class="radio-container text-capitalize">Departure
-                                                        <input type="radio"  v-model="is_arrival_flight" value="false" name="radio" >
+                                                        <input type="radio"  v-model="is_arrival_flight" v-bind:value="false" name="radio" >
                                                         <span class="checkmark"></span>
                                                     </label>
                                                 </div>
@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="col-lg-3 ">
                                          <div class="form-group">
-                                            <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
+                                            <label class="form-label" for="inputGroupSelect01">{{is_arrival_flight == true ? 'Arriving from' :'Departing from'}}<span class="asterik">*</span></label>
                                             <select class="form-select" v-model="airport_id" id="inputGroupSelect01" @change="fligh_name($event)">
                                                 <option  v-for="item in airportoptions" :key="item.id" :value="item.id">{{item.name}}</option>
                                             </select>
@@ -233,6 +233,8 @@ export default {
         
     },
    methods:{
+
+    
          fligh_name(event){
                // debugger;
                 this.airport_name=this.airportoptions.find(x => x.id ==event.target.value).name;
