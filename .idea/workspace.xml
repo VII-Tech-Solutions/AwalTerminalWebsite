@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="dial codes in the general aviation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,7 @@
       <workItem from="1659854944320" duration="18118000" />
       <workItem from="1659886039065" duration="1104000" />
       <workItem from="1659890034649" duration="638000" />
-      <workItem from="1660978221985" duration="1995000" />
+      <workItem from="1660978221985" duration="2272000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
