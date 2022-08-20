@@ -7,7 +7,7 @@ import Tour from "../components/Tour/Tour.vue";
 import EliteForm from "../components/EliteForm/EliteFormStep1.vue";
 import EliteForm2 from "../components/EliteForm/EliteFormStep2.vue";
 import EliteForm3 from "../components/EliteForm/EliteFormStep3.vue";
-import EliteForm4 from "../components/EliteForm/EliteFormStep4.vue";
+import EliteForm4 from "../components /EliteForm/EliteFormStep4.vue";
 import EliteForm5 from "../components/EliteForm/EliteFormStep5.vue";
 import ElitePayementForm from "../components/EliteForm/ElitePayementForm.vue";
 import EliteThankYouPage from "../components/EliteForm/ThankYouPage.vue";
@@ -183,8 +183,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes, 
+  history: createWebHistory('https://dev.awalvip.bh'),
+  routes,
   // linkActiveClass: 'active',
   //   linkExactActiveClass: 'active',
 });
