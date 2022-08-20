@@ -183,8 +183,9 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('https://dev.awalvip.bh'),
-  routes,
+  history: createWebHistory(),
+  //routes,
+  routes: [{ path: '/:pathMatch(.*)' }],
   // linkActiveClass: 'active',
   //   linkExactActiveClass: 'active',
 });
