@@ -184,9 +184,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{ path: '/:pathMatch(.*)', component: NotFoundComponent }
-      //..
-  ],
+  routes, 
   // linkActiveClass: 'active',
   //   linkExactActiveClass: 'active',
 });
