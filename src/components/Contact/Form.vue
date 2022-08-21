@@ -140,7 +140,7 @@ export default {
           }
         };
         //debugger;
-        axios.post('https://awal.viitech.net/api/contact-us', formData, axiosConfig)
+        axios.post('https://admin-dev.awalvip.bh/api/contact-us', formData, axiosConfig)
           .then((res) => {
             console.log("RESPONSE RECEIVED: ", res);
             toastr.success('Congratulation! Conform Ticket 🙂');

@@ -128,7 +128,7 @@ export default {
                     'Content-Type': 'application/json;charset=UTF-8',
                 }
             };
-            axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+            axios.get('https://admin-dev.awalvip.bh/api/metadata', axiosConfig)
                 .then((res) => {
                     this.eliteserviceoptions = res.data.data.elite_service_types;
                     this.servicefeatureoptions = res.data.data.elite_service_features;

@@ -87,7 +87,7 @@ export default {
   methods: {
 
     getEliteServcContent() {
-      axios.get('https://awal.viitech.net/api/elite-services-content')
+      axios.get('https://admin-dev.awalvip.bh/api/elite-services-content')
         .then((response) => {
 
           let data = response.data.data.elite_services_content;

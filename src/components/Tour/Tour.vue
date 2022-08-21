@@ -53,7 +53,7 @@ export default {
     methods: {
 
         getTourContent() {
-            axios.get('https://awal.viitech.net/api/tour-the-terminal-content')
+            axios.get('https://admin-dev.awalvip.bh/api/tour-the-terminal-content')
                 .then((response) => {
 
                     let data = response.data.data.tour_the_terminal_content

@@ -54,7 +54,7 @@ export default {
   methods: {
 
     getHomeContent() {
-      axios.get('https://awal.viitech.net/api/our-story-content')
+      axios.get('https://admin-dev.awalvip.bh/api/our-story-content')
         .then((response) => {
 
           let data = response.data.data.our_story_content;

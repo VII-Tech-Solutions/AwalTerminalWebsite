@@ -63,7 +63,7 @@ export default {
 
     methods: {
         getGeneralAviationServiceContent() {
-            axios.get('https://awal.viitech.net/api/general-aviation-content')
+            axios.get('https://admin-dev.awalvip.bh/api/general-aviation-content')
                 .then((response) => {
 
                     let data = response.data.data.general_aviation_content;

@@ -26,7 +26,7 @@ export default {
   methods: {
 
     getContactContent() {
-      axios.get('https://awal.viitech.net/api/contact-us-content')
+      axios.get('https://admin-dev.awalvip.bh/api/contact-us-content')
         .then((response) => {
 
           let data = response.data.data.contact_us_content;

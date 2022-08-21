@@ -52,7 +52,7 @@ export default {
 	methods: {
 
 		getHomeContent() {
-			axios.get('https://awal.viitech.net/api/homepage-content')
+			axios.get('https://admin-dev.awalvip.bh/api/homepage-content')
 				.then((response) => {
 
 					let data = response.data.data.homepage_content;

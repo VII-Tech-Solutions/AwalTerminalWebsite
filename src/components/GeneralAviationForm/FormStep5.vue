@@ -215,7 +215,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
         const formData = new FormData();
         formData.append('file', ref.target.files[0]);
         const headers = { 'Content-Type': 'multipart/form-data' };
-        axios.post('https://awal.viitech.net/api/general-aviation/media', formData, { headers }).then((res) => {
+        axios.post('https://admin-dev.awalvip.bh/api/general-aviation/media', formData, { headers }).then((res) => {
             if(res.status == 200)
             {
                 if( name=="Fuel Release")

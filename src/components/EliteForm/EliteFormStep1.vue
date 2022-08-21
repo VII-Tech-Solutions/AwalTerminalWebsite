@@ -240,7 +240,7 @@ import axios from 'axios';
                         'Content-Type': 'application/json;charset=UTF-8',
                     }
                 };
-             axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+             axios.get('https://admin-dev.awalvip.bh/api/metadata', axiosConfig)
                 .then((res) => {
                      var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
 

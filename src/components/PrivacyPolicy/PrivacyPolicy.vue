@@ -190,7 +190,7 @@ export default {
       console.log("after",this.route);
 
 
-      axios.get('https://awal.viitech.net/api/'+this.route)
+      axios.get('https://admin-dev.awalvip.bh/api/'+this.route)
           .then((response) => {
             console.log("data",this.dataRequest);
             let data = response.data.data.homepage_content;

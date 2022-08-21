@@ -186,7 +186,7 @@
                         'Content-Type': 'application/json;charset=UTF-8',
                     }
                 };
-                axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+                axios.get('https://admin-dev.awalvip.bh/api/metadata', axiosConfig)
                 .then((res) => {
                     debugger;
                     this.airportoptions = res.data.data.airports;

@@ -462,7 +462,7 @@ export default {
                     'Content-Type': 'application/json',
                 }
             };
-            axios.post('https://awal.viitech.net/api/elite-service', postData, axiosConfig)
+            axios.post('https://admin-dev.awalvip.bh/api/elite-service', postData, axiosConfig)
                 .then((res) => {
 
                   
@@ -489,7 +489,7 @@ export default {
                 }
             };
 
-            axios.get('https://awal.viitech.net/api/calculate-price', get_param)
+            axios.get('https://admin-dev.awalvip.bh/api/calculate-price', get_param)
                 .then((res) => {
                     console.log(res, "aaaaa");
                     this.amount = res.data.data.total_price;
