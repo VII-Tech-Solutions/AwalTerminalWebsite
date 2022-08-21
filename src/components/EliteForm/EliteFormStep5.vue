@@ -821,7 +821,7 @@ export default {
       };
       axios
         .post(
-          "https://awal.viitech.net/api/elite-service",
+          "https://admin-dev.awalvip.bh/api/elite-service",
           postData,
           axiosConfig
         )
@@ -854,7 +854,7 @@ export default {
       };
 
       axios
-        .get("https://awal.viitech.net/api/calculate-price", get_param)
+        .get("https://admin-dev.awalvip.bh/api/calculate-price", get_param)
         .then((res) => {
         
           this.amount = res.data.data.total_price;

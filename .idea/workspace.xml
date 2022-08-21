@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="dial codes in the general aviation">
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteService.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteService.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep6.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep6.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -68,7 +72,7 @@
       <workItem from="1659854944320" duration="18118000" />
       <workItem from="1659886039065" duration="1104000" />
       <workItem from="1659890034649" duration="638000" />
-      <workItem from="1660978221985" duration="3129000" />
+      <workItem from="1660978221985" duration="5296000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>

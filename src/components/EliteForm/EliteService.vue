@@ -829,7 +829,7 @@ export default {
         },
       };
       axios
-        .get("https://awal.viitech.net/api/metadata", axiosConfig)
+        .get("https://admin-dev.awalvip.bh/api/metadata", axiosConfig)
         .then((res) => {
           this.airportoptions = res.data.data.airports;
           this.countriesoptions = res.data.data.countries;
@@ -847,7 +847,7 @@ export default {
       };
       axios
         .get(
-          "https://awal.viitech.net/api/elite-service/" +
+          "https://admin-dev.awalvip.bh/api/elite-service/" +
             this.$route.query.uuid,
           axiosConfig
         )
