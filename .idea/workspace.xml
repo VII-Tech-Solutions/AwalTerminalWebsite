@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="dial codes in the general aviation">
+    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Adjust the nationality id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep4.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659884411119</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adjust the nationality id">
+      <created>1661153424360</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661153424361</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +172,8 @@
     <MESSAGE value="Change the registration number to string" />
     <MESSAGE value="hide the back in elite services approve payment" />
     <MESSAGE value="working on disable the zoom in the mobile screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on disable the zoom in the mobile screen" />
+    <MESSAGE value="Adjust the nationality id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust the nationality id" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

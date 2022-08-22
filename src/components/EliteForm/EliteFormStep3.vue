@@ -342,7 +342,9 @@ export default {
       obj.is_arrival_flight = this.is_arrival_flight;
       obj.passengers = this.passengers;
       console.log("mY Pessenegerss");
-      obj.passengers[0].nationality_id = obj.passengers[0].nationality_id.id;
+      console.log("passenger",obj.passengers);
+      console.log("passenger length",obj.passengers.length);
+
       console.log("passenger",obj.passengers);
       // console.log("passenger",obj.passengers.nationality_id.id);
       // console.log(obj.passengers);

@@ -806,6 +806,10 @@ export default {
       obj.flight_number = this.flight_number;
       obj.is_arrival_flight = this.is_arrival_flight;
       obj.passengers = this.passengers;
+      for(let i=0; i<obj.passengers.length; i++){
+        obj.passengers[i].nationality_id = obj.passengers[i].nationality_id.id;
+
+      }
       obj.booker = this.booker;
       localStorage.setItem("elitedata", JSON.stringify(obj));
 
