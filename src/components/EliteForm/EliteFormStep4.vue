@@ -90,7 +90,6 @@ export default {
     },
     
   data() {
-      debugger;
       var obj = JSON.parse(localStorage.elitedata);
     return {
         number_of_adults:obj.number_of_adults,
@@ -132,7 +131,6 @@ export default {
        },
       setData()
       {
-           debugger;
             var obj = {};
             obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children );

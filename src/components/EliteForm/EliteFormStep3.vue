@@ -141,7 +141,7 @@
                       item-text="name"
                       item-value="id"
                       label="name"
-                      v-model="passenger.nationality_id[0]"
+                      v-model="passenger.nationality_id"
                   >
                   </v-select>
                   <div class="col-lg-3">
@@ -327,7 +327,7 @@ export default {
               this.eliteserviceoptions[1].price_per_adult
         );
       }
-      console.log("passenger",obj.passengers);
+      // console.log("passenger",obj.passengers);
 
       (obj.service_id = this.service_id),
         (obj.countriesoptions = this.countriesoptions),
@@ -342,7 +342,10 @@ export default {
       obj.is_arrival_flight = this.is_arrival_flight;
       obj.passengers = this.passengers;
       console.log("mY Pessenegerss");
-      console.table(this.passengers);
+      obj.passengers[0].nationality_id = obj.passengers[0].nationality_id.id;
+      console.log("passenger",obj.passengers);
+      // console.log("passenger",obj.passengers.nationality_id.id);
+      // console.log(obj.passengers);
       obj.booker = abc == undefined ? "" : abc.booker;
       // var obj = {};
       // debugger;
