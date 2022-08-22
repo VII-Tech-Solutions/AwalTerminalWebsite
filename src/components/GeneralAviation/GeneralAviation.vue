@@ -20,6 +20,7 @@ import GeneralAviationBook from "./GeneralAviationBook.vue";
 import ComfortService from './ComfortService.vue';
 import TakeTour from './TakeTour.vue';
 import axios from 'axios'
+import configs from "../constants";
 
 export default {
     data() {
@@ -63,7 +64,7 @@ export default {
 
     methods: {
         getGeneralAviationServiceContent() {
-            axios.get('https://admin-dev.awalvip.bh/api/general-aviation-content')
+            axios.get(configs.base_url + '/api/general-aviation-content')
                 .then((response) => {
 
                     let data = response.data.data.general_aviation_content;

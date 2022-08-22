@@ -147,6 +147,9 @@
 
     import '@fortawesome/fontawesome-free/js/all.js';
     import axios from 'axios';
+    import configs from '../constants';
+
+
     export default{
     mounted () {
      window.scrollTo(0, 0);
@@ -186,7 +189,7 @@
                         'Content-Type': 'application/json;charset=UTF-8',
                     }
                 };
-                axios.get('https://admin-dev.awalvip.bh/api/metadata', axiosConfig)
+                axios.get(configs.base_url + '/api/metadata', axiosConfig)
                 .then((res) => {
                     debugger;
                     this.airportoptions = res.data.data.airports;

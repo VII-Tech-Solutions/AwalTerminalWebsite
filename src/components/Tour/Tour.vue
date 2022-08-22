@@ -23,6 +23,7 @@ import PrivateLounges from "./PrivateLounges.vue";
 import Banner from "./Banner.vue";
 import FooterBanner from "../FooterBanner/FooterBanner.vue";
 import axios from 'axios';
+import configs from "../constants";
 
 export default {
 
@@ -53,7 +54,7 @@ export default {
     methods: {
 
         getTourContent() {
-            axios.get('https://admin-dev.awalvip.bh/api/tour-the-terminal-content')
+            axios.get(configs.base_url + '/api/tour-the-terminal-content')
                 .then((response) => {
 
                     let data = response.data.data.tour_the_terminal_content

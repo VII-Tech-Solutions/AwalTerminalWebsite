@@ -734,6 +734,7 @@
 <script>
 import "@fortawesome/fontawesome-free/js/all.js";
 import axios from "axios";
+import configs from "../constants";
 
 export default {
   data() {
@@ -821,7 +822,7 @@ export default {
       };
       axios
         .post(
-          "https://admin-dev.awalvip.bh/api/elite-service",
+          configs.base_url + "/api/elite-service",
           postData,
           axiosConfig
         )
@@ -854,7 +855,7 @@ export default {
       };
 
       axios
-        .get("https://admin-dev.awalvip.bh/api/calculate-price", get_param)
+        .get(configs.base_url + "/api/calculate-price", get_param)
         .then((res) => {
         
           this.amount = res.data.data.total_price;

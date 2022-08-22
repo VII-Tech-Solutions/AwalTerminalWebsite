@@ -802,6 +802,8 @@
 <script>
 import "@fortawesome/fontawesome-free/js/all.js";
 import axios from "axios";
+import configs from "../constants";
+
 export default {
   mounted() {
     //debugger;
@@ -829,7 +831,7 @@ export default {
         },
       };
       axios
-        .get("https://admin-dev.awalvip.bh/api/metadata", axiosConfig)
+        .get(configs.base_url + "/api/metadata", axiosConfig)
         .then((res) => {
           this.airportoptions = res.data.data.airports;
           this.countriesoptions = res.data.data.countries;
@@ -847,7 +849,7 @@ export default {
       };
       axios
         .get(
-          "https://admin-dev.awalvip.bh/api/elite-service/" +
+          configs.base_url + "/api/elite-service/" +
             this.$route.query.uuid,
           axiosConfig
         )

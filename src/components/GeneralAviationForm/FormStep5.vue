@@ -25,7 +25,7 @@
                                         <li>
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Fuel Services, upload Fuel Release (if available)</p>
                                             <div class="form-group">
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="fuelServices" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="fuelServices" class="form-control border-0" placeholder="">
                                                     <input type="file"  @change="uploadFile($event,'Fuel Release',1)" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span  class="fa fa-arrow-up border-bottom me-2"></span>upload file
@@ -41,7 +41,7 @@
                                         <li>
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Catering Services, upload Catering Order (if available)</p>
                                             <div class="form-group">
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="cateringServices" class="form-control border-0" placeholder="Upload catering order">
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="cateringServices" class="form-control border-0" placeholder="">
                                                     <input type="file" @change="uploadFile($event,'Catering Order',2)" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
@@ -60,7 +60,7 @@
                                                     <label class="form-label text-capitalize"> Aircraft Certifications Checklist<span class="asterik">*</span></label>
                                                     <router-link className="text-capitalize text-color-btn"  to="/aircraft-certificates-checklist.pdf" target="_blank">download checklist template</router-link>
                                                 </div>
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert" class="form-control border-0" placeholder="certificate_20220415_f8jq8cdh…">
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert" class="form-control border-0" placeholder="">
                                                     <input type="file" @change="uploadFile($event,'Aircraft Certifications Checklist',3)" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
@@ -76,7 +76,7 @@
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Arrival Gendec<span class="asterik">*</span></label>
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="arrivalgendec" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="arrivalgendec" class="form-control border-0" placeholder="">
                                                     <input type="file"   @change="uploadFile($event,'Arrival Gendec',4)" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
@@ -92,7 +92,7 @@
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Departure Gendec<span class="asterik">*</span></label>
-                                                <div class="form-border upload-form px-1"><input type="text"  v-model="departureGendec" class="form-control border-0" placeholder="departure_20220415_pkmai856as…">
+                                                <div class="form-border upload-form px-1"><input type="text"  v-model="departureGendec" class="form-control border-0" placeholder="">
                                                     <input type="file" @change="uploadFile($event,'Departure Gendec',5)" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
@@ -108,7 +108,7 @@
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">other documents</label>
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="otherDocuments" class="form-control border-0" placeholder="Upload other documents">
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="otherDocuments" class="form-control border-0" placeholder="">
                                                     <input type="file" @change="uploadFile($event,'other',6)" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
@@ -160,6 +160,8 @@
 <script>
 import axios  from 'axios'
 import '@fortawesome/fontawesome-free/js/all.js';
+import configs from '../constants';
+
     export default{
     mounted () {
      window.scrollTo(0, 0)
@@ -215,7 +217,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
         const formData = new FormData();
         formData.append('file', ref.target.files[0]);
         const headers = { 'Content-Type': 'multipart/form-data' };
-        axios.post('https://admin-dev.awalvip.bh/api/general-aviation/media', formData, { headers }).then((res) => {
+        axios.post(configs.base_url + '/api/general-aviation/media', formData, { headers }).then((res) => {
             if(res.status == 200)
             {
                 if( name=="Fuel Release")

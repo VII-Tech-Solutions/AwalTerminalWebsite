@@ -19,6 +19,8 @@ import LuxuryView from './LuxuryView/LuxuryView.vue'
 import TourTerminal from './TourTerminal/TourTerminal.vue'
 import FooterBanner from '../FooterBanner/FooterBanner.vue'
 import axios from 'axios'
+import configs from '../constants'
+
 export default {
 	data() {
 		return {
@@ -52,7 +54,7 @@ export default {
 	methods: {
 
 		getHomeContent() {
-			axios.get('https://admin-dev.awalvip.bh/api/homepage-content')
+			axios.get(configs.base_url + '/api/homepage-content')
 				.then((response) => {
 
 					let data = response.data.data.homepage_content;

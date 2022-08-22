@@ -68,13 +68,14 @@
     <Fascilities :heading3="heading_3" :bulletPoint1="bullet_point_1" :bulletPoint2="bullet_point_2" :bulletPoint3="bullet_point_3" :bulletPoint4="bullet_point_4" :bulletPoint5="bullet_point_5" :bulletPoint6="bullet_point_6" :bulletPoint7="bullet_point_7" :bulletPoint8="bullet_point_8" />
     <FooterBanner :HeadingTopText="heading_top_2" :MainHeading="heading_4" name="services-bg"
         service1="Excellent Service" image1="services-service-1" service2="Private Lounges"
-        image2="services-service-2" service3="Personal Assistant" image3="services-service-3" :footerbg="background_image_3_url" />
+        image2="services-service-2" service3="Personal Assistant" image3="services-service-3" :footerbg="background_image_3_url"  booknow="/elite-services" />
 </template>                           
 <script>
 import Banner from "./Banner.vue";
 import Fascilities from './Fascilities.vue'
 import FooterBanner from '../FooterBanner/FooterBanner.vue'
 import axios from 'axios'
+import configs from "../constants";
 
 export default {
 
@@ -109,7 +110,7 @@ export default {
     methods: {
 
         getHomeContent() {
-            axios.get('https://admin-dev.awalvip.bh/api/services-content')
+            axios.get(configs.base_url + '/api/services-content')
                 .then((response) => {
 
                     let data = response.data.data.services_content;
