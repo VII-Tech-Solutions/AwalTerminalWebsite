@@ -9,7 +9,7 @@
                   </div>
 
 
-                  <router-link :to="booknow" class="white-btn text-uppercase" data-aos="fade-bottom" data-aos-duration="2500">book now</router-link>
+                  <router-link :to="''+ booknow +''" class="white-btn text-uppercase" data-aos="fade-bottom" data-aos-duration="2500">book now</router-link>
                   <div class="service-list">
                       <ul>
                           <li data-aos="fade-up" data-aos-duration="2500">
@@ -61,7 +61,7 @@ export default {
     footerbg: String,
     booknow: {
         default: '/services',
-        booknow: String
+        type: String
     }
  }
 }
