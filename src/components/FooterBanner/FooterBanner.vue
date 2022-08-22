@@ -60,8 +60,8 @@ export default {
     image3: String,
     footerbg: String,
     booknow: {
-        type: String,
-        default: '/services--'
+        default: '/services',
+        booknow: String
     }
  }
 }

@@ -27,7 +27,7 @@
     <ExperienceTerminal :bigImage1="big_image_1_url" :heading5="heading_5" :paragraph4="paragraph_4" :squareImage2="square_image_2_url" />
     <FooterBanner HeadingTopText="5-star hospitality services" MainHeading="The VIP service" name="elite-story-bg"
       service1="Detailed Interiors" image1="elite-service-1" service2="Absolute Comfort" image2="elite-service-2"
-      service3="Relaxing Atmosphere" image3="elite-service-3" :footerbg="background_image_3_url" booknow="/elite-services" />
+      service3="Relaxing Atmosphere" image3="elite-service-3" :footerbg="background_image_3_url" booknow="/elite-services"  />
   </div>
 </template>  
 
