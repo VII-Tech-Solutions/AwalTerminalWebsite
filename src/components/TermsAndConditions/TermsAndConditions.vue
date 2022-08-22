@@ -85,6 +85,7 @@
 import FooterBanner from "../FooterBanner/FooterBanner.vue";
 import Banner from "../Banner/Banner.vue";
 import axios from "axios";
+import configs from "../constants";
 
 export default {
   name: "TermsAndConditions.vue",
@@ -200,7 +201,7 @@ export default {
       console.log("after",this.route);
 
 
-      axios.get('https://awal.viitech.net/api/'+this.route)
+      axios.get(configs.base_url + '/api/'+this.route)
           .then((response) => {
             console.log("data",this.dataRequest);
             let data = response.data.data.homepage_content;

@@ -40,6 +40,7 @@ import ExperienceTerminal from "./ExperienceTerminal.vue";
 import FooterBanner from "../FooterBanner/FooterBanner.vue";
 import './service.css'
 import axios from 'axios'
+import configs from "../constants";
 
 export default {
 
@@ -87,7 +88,7 @@ export default {
   methods: {
 
     getEliteServcContent() {
-      axios.get('https://awal.viitech.net/api/elite-services-content')
+      axios.get(configs.base_url + '/api/elite-services-content')
         .then((response) => {
 
           let data = response.data.data.elite_services_content;

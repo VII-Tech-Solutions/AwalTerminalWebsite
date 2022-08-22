@@ -10,6 +10,7 @@
 <script >
 import Header from "./components/Header/Header.vue";
 import Footer from "./components/Footer/Footer.vue";
+import configs from "./components/constants";
 import AOS from "aos";
 
 export default {
@@ -28,7 +29,7 @@ export default {
   mounted() {
     AOS.init();
     window.scrollTo(0, 0)
-
+    
   },
   components: {
     Header,

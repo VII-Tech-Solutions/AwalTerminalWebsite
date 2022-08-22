@@ -393,6 +393,7 @@
 <script>
 import '@fortawesome/fontawesome-free/js/all.js';
 import axios from 'axios';
+import configs from '../constants';
 export default {
     mounted() {
         window.scrollTo(0, 0)
@@ -462,7 +463,7 @@ export default {
                     'Content-Type': 'application/json',
                 }
             };
-            axios.post('https://awal.viitech.net/api/elite-service', postData, axiosConfig)
+            axios.post(configs.base_url + '/api/elite-service', postData, axiosConfig)
                 .then((res) => {
 
                   
@@ -489,7 +490,7 @@ export default {
                 }
             };
 
-            axios.get('https://awal.viitech.net/api/calculate-price', get_param)
+            axios.get(configs.base_url + '/api/calculate-price', get_param)
                 .then((res) => {
                     console.log(res, "aaaaa");
                     this.amount = res.data.data.total_price;

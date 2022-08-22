@@ -1095,6 +1095,8 @@
 <script>
 import axios from "axios";
 import "@fortawesome/fontawesome-free/js/all.js";
+import configs from "../constants";
+
 export default {
   mounted() {
     window.scrollTo(0, 0);
@@ -1140,7 +1142,7 @@ export default {
       const obj = JSON.parse(localStorage.data);
       const response = await axios
         .post(
-          "https://awal.viitech.net/api/general-aviation/",
+          configs.base_url + "/api/general-aviation/",
           obj,
           axiosConfig
         )

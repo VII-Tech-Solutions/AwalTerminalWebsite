@@ -75,6 +75,7 @@ import Banner from "./Banner.vue";
 import Fascilities from './Fascilities.vue'
 import FooterBanner from '../FooterBanner/FooterBanner.vue'
 import axios from 'axios'
+import configs from "../constants";
 
 export default {
 
@@ -109,7 +110,7 @@ export default {
     methods: {
 
         getHomeContent() {
-            axios.get('https://awal.viitech.net/api/services-content')
+            axios.get(configs.base_url + '/api/services-content')
                 .then((response) => {
 
                     let data = response.data.data.services_content;
