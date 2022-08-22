@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="dial codes in the general aviation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviation/TakeTour.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviation/TakeTour.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tour/PrivateLounges.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/PrivateLounges.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tour/Tour.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/Tour.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +38,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/fatima/Desktop/Projects/ATP001_AwalTerminalWebsite&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/viitech/Desktop/ATP001_AwalTerminalWebsite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/EliteForm" />
@@ -69,6 +72,7 @@
       <workItem from="1659854944320" duration="18118000" />
       <workItem from="1659886039065" duration="1104000" />
       <workItem from="1659890034649" duration="638000" />
+      <workItem from="1660723510273" duration="65922000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
@@ -137,7 +141,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/intern-staging" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -24,6 +24,7 @@
     "font-awesome": "^4.7.0",
     "gsap": "^3.10.4",
     "material-icons": "^1.11.0",
+    "npm-watch": "^0.11.0",
     "require": "^0.4.4",
     "requirejs": "^2.3.6",
     "stylus": "^0.58.1",
@@ -32,6 +33,7 @@
     "vue": "^3.2.36",
     "vue-router": "^4.0.15",
     "vue-scroll": "^2.1.13",
+    "vue-select": "^4.0.0-beta.3",
     "vue-toast-notification": "^3.0.4",
     "vue-toastr": "^2.1.2",
     "vue3-carousel": "^0.1.40"

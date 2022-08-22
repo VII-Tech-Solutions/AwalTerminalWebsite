@@ -229,7 +229,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ airport_name }}
+                                        {{ airport_id }}
                                       </p>
                                     </div>
                                   </li>
@@ -738,6 +738,7 @@ import axios from "axios";
 export default {
   data() {
     var obj = JSON.parse(localStorage.elitedata);
+    console.log(obj);
    
     return {
       number_of_adults: obj.number_of_adults,
