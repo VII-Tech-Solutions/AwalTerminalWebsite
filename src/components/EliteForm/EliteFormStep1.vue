@@ -242,6 +242,7 @@ import configs from '../constants';
                         'Content-Type': 'application/json;charset=UTF-8',
                     }
                 };
+
              axios.get(configs.base_url + '/api/metadata', axiosConfig)
                 .then((res) => {
                      var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
