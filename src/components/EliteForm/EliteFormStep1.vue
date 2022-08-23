@@ -160,6 +160,8 @@
 <script>
 import EliteFormFooter from './EliteFormFooter.vue';
 import axios from 'axios';
+import configs from '../constants';
+
 	export default {
     mounted () {
      window.scrollTo(0, 0);
@@ -240,7 +242,7 @@ import axios from 'axios';
                         'Content-Type': 'application/json;charset=UTF-8',
                     }
                 };
-             axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+             axios.get(configs.base_url + '/api/metadata', axiosConfig)
                 .then((res) => {
                      var obj= localStorage.elitedata != undefined ?  JSON.parse(localStorage.elitedata):undefined;
 
