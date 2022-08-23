@@ -729,6 +729,8 @@
         </div>
       </div>
     </div>
+    <div class="loading" v-if="loader == true"><div id="loader"></div></div>
+
   </div>
 </template>
 <script>
@@ -770,6 +772,7 @@ export default {
       },
       amount: 0,
       disabled: false,
+      loader: false
     };
   },
   methods: {
@@ -778,7 +781,9 @@ export default {
     },
     setData() {
       //toastr.info('Are you sure you want to buy ');
-
+      
+      this.loader =  true;
+      
       var obj = {};
       obj.number_of_adults = parseInt(
         this.number_of_adults == null ? 0 : this.number_of_adults

@@ -1089,6 +1089,8 @@
         </div>
       </div>
     </div>
+    <div class="loading" v-if="loader == true"><div id="loader"></div></div>
+    
   </div>
 </template>  
 
@@ -1127,6 +1129,7 @@ export default {
           ? JSON.parse(localStorage.textboxdata)
           : undefined,
       disabled: false,
+      loader:false
     };
   },
   methods: {
@@ -1134,6 +1137,8 @@ export default {
       this.disabled = e.target.checked;
     },
     async submitData() {
+
+      this.loader = true;
       let axiosConfig = {
         headers: {
           "Content-Type": "application/json;charset=UTF-8",
@@ -1147,7 +1152,7 @@ export default {
           axiosConfig
         )
         .then((res) => {
-
+          this.loader = false;
           localStorage.setItem('aviation_user_email',obj.operator_email)
           localStorage.removeItem("data");
           localStorage.removeItem("textboxdata");
