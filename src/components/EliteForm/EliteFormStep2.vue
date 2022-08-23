@@ -43,7 +43,7 @@
                   <div class="col-lg-3 ">
                     <div class="form-group">
                       <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
-                      <v-select  :options="airportoptions" label="name" class="form-select" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
+                      <v-select  :options="airportoptions" label="name" :class="{'azul':!color}" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
                     </div>
                   </div>
                   <div class="col-lg-2">
@@ -373,6 +373,10 @@ export default {
 
 <style>
 
+.azul{
+  border:1px solid #4d627a !important; font-size:12px; line-height:18px;  border-radius:0%; font-family: 'Source Sans Pro'; background-color:#fff;height: 40px;
+}
+
 .radio-container {
   display: block;
   position: relative;
@@ -423,5 +427,13 @@ export default {
   height: 8px;
   border-radius: 50%;
   background: #011e41;
+}
+:root {
+  --vs-colors--lightest: clear;
+  --vs-colors--light: #4d627a;
+  --vs-dropdown-bg: #f1f1f1;
+  --vs-dropdown-max-height: 200px;
+  --vs-controls-size: 0.8;
+  --vs-controls--deselect-text-shadow: 0 1px 0 #fff;
 }
 </style>

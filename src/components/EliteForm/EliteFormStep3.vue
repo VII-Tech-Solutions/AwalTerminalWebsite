@@ -122,7 +122,7 @@
                         >Nationality<span class="asterik">*</span></label
                       >
                       <v-select
-                          class="form-select"
+                          :class="{'azul':!color}"
                           :options="countriesoptions"
                           required
                           label="name"
@@ -130,6 +130,9 @@
                           v-model="passenger.nationality_title"
                       >
                       </v-select>
+
+                      <!--id="inputGroupSelect01"
+                        class="form-select"-->
                     </div>
                     </div>
                   <div class="col-lg-3">
@@ -351,6 +354,11 @@ export default {
 };
 </script>
 <style>
+
+.azul{
+  border:1px solid #4d627a !important; font-size:12px; line-height:18px;  border-radius:0%; font-family: 'Source Sans Pro'; background-color:#fff;height: 40px;
+}
+
 .radio-container {
   display: block;
   position: relative;
@@ -405,6 +413,15 @@ export default {
 .bottom-line {
   border-bottom: 1px solid #011e41;
   opacity: inherit;
+}
+
+:root {
+  --vs-colors--lightest: clear;
+  --vs-colors--light: #4d627a;
+  --vs-dropdown-bg: #f1f1f1;
+  --vs-dropdown-max-height: 200px;
+  --vs-controls-size: 0.8;
+  --vs-controls--deselect-text-shadow: 0 1px 0 #fff;
 }
 
 
