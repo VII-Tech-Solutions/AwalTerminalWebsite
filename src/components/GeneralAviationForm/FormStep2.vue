@@ -183,7 +183,7 @@
       methods:{
         getDropdownData()
 			{
-            debugger;
+            //debugger;
                 let axiosConfig = {
                     headers: {
                         'Content-Type': 'application/json;charset=UTF-8',
@@ -191,7 +191,7 @@
                 };
                 axios.get(configs.base_url + '/api/metadata', axiosConfig)
                 .then((res) => {
-                    debugger;
+                    //debugger;
                     this.airportoptions = res.data.data.airports;
                     this.countriesoptions = res.data.data.countries;
                     this.formserviceoption = res.data.data.form_services;

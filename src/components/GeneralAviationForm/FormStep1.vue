@@ -123,17 +123,17 @@ export default {
             obj1.lead_passenger_name =  this.lead_passenger_name;   
             obj1.landing_purpose = this.landing_purpose;
             obj1.arrival_call_sign=obj==undefined ?'':obj.arrival_call_sign;    
-            obj1.arriving_from_airport=obj==undefined ?'1':obj.arriving_from_airport,    
+            obj1.arriving_from_airport=obj==undefined ?'':obj.arriving_from_airport,    
             obj1.estimated_time_of_arrival=obj==undefined ?time:obj.estimated_time_of_arrival,  
             obj1.arrival_date=obj==undefined ?date:obj.arrival_date,   
             obj1.arrival_flight_nature=obj==undefined ?'':obj.arrival_flight_nature,  
-            obj1.arrival_passenger_count=obj==undefined ?1:obj.arrival_passenger_count,    
+            obj1.arrival_passenger_count=obj==undefined ? '':obj.arrival_passenger_count,    
             obj1.departure_call_sign=obj==undefined ?'':obj.departure_call_sign,
-            obj1.departure_to_airport=obj==undefined ?'1':obj.departure_to_airport,    
+            obj1.departure_to_airport=obj==undefined ?'':obj.departure_to_airport,    
             obj1.estimated_time_of_departure=obj==undefined ?time:obj.estimated_time_of_departure,
             obj1.departure_date=obj==undefined ?date:obj.departure_date,   
             obj1.departure_flight_nature=obj==undefined ?'':obj.departure_flight_nature,    
-            obj1.departure_passenger_count=obj==undefined ?'1':obj.departure_passenger_count,  
+            obj1.departure_passenger_count=obj==undefined ?'':obj.departure_passenger_count,  
             obj1.operator_full_name=obj==undefined ?'':obj.operator_full_name,    
             obj1.operator_country=obj==undefined ?'1':obj.operator_country,   
             obj1.teldrop=obj==undefined ?'1-684':obj.teldrop,  
