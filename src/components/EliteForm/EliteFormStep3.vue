@@ -121,29 +121,17 @@
                         for="inputGroupSelect01"
                         >Nationality<span class="asterik">*</span></label
                       >
-                      <!--<v-select
-                          :options="countriesoptions"
-                          label="name"
+                      <v-select
                           class="form-select"
+                          :options="countriesoptions"
                           required
-                          name="selected"
-                          v-model="passenger.nationality_id"
+                          label="name"
                           id="inputGroupSelect01"
-                          @change="fetch_title()"
+                          v-model="passenger.nationality_title"
                       >
                       </v-select>
-                      -->
                     </div>
                     </div>
-                  <v-select
-                      :options="countriesoptions"
-                      required
-                      item-text="name"
-                      item-value="id"
-                      label="name"
-                      v-model="passenger.nationality_id"
-                  >
-                  </v-select>
                   <div class="col-lg-3">
                     <div class="form-group">
                       <label
@@ -194,7 +182,7 @@
                             !(
                               passenger.first_name &&
                               passenger.title &&
-                              passenger.nationality_id &&
+                              passenger.nationality_title &&
                               passenger.last_name &&
                               passenger.birth_date
                             )
@@ -207,7 +195,7 @@
                           v-if="
                             passenger.first_name &&
                             passenger.title &&
-                            passenger.nationality_id&&
+                            passenger.nationality_title&&
                             passenger.last_name &&
                             passenger.birth_date
                           "
@@ -247,8 +235,6 @@ export default {
   data() {
     // debugger;
     var obj = JSON.parse(localStorage.elitedata);
-    // obj.passengers.nationality_id = obj.passengers.nationality_id.id;
-    // console.log("passenger",obj.passengers[0].nationality_id.id);
     return {
       number_of_adults: obj.number_of_adults,
       number_of_children: obj.number_of_children,
@@ -277,13 +263,10 @@ export default {
       this.passengers[index].nationality_id = event.id;
       this.$emit("input", val);
       },
-
-    fetch_title() {
-     // this.passengers[0].nationality_title = event.target.options[event.target.options.selectedIndex].text;
-      this.passengers[0].nationality_title= 'hi';
-     // console.log('inputValue', this.passengers[0].nationality_title);
-       //this.passengers[index].nationality_title = event;
-    },
+      fetch_title(event, index) {
+        //this.passengers[0].nationality_title = event.target.options[event.target.options.selectedIndex].text;
+        this.passengers[index].nationality_title = event.target.options[event.target.options.selectedIndex].text;
+      },
 
     error() {
       toastr.error("Kindly fillout required fields 🙁");
@@ -327,31 +310,42 @@ export default {
               this.eliteserviceoptions[1].price_per_adult
         );
       }
-      // console.log("passenger",obj.passengers);
-
       (obj.service_id = this.service_id),
         (obj.countriesoptions = this.countriesoptions),
         (obj.eliteserviceoptions = this.eliteserviceoptions);
-      obj.commontype = this.commontype;
-      obj.privatetype = this.privatetype;
-      obj.airport_id = this.airport_id;
-      obj.airport_name = this.airport_name;
-      obj.date = this.date;
-      obj.time = this.time;
-      obj.flight_number = this.flight_number;
-      obj.is_arrival_flight = this.is_arrival_flight;
-      obj.passengers = this.passengers;
-      console.log("mY Pessenegerss");
-      console.log("passenger",obj.passengers);
-      console.log("passenger length",obj.passengers.length);
+        obj.commontype = this.commontype;
+        obj.privatetype = this.privatetype;
+        obj.airport_id = this.airport_id;
+        obj.airport_name = this.airport_name;
+        obj.date = this.date;
+        obj.time = this.time;
+        obj.flight_number = this.flight_number;
+        obj.is_arrival_flight = this.is_arrival_flight;
+        obj.passengers = this.passengers;
 
-      console.log("passenger",obj.passengers);
-      // console.log("passenger",obj.passengers.nationality_id.id);
-      // console.log(obj.passengers);
-      obj.booker = abc == undefined ? "" : abc.booker;
-      // var obj = {};
-      // debugger;
-      localStorage.setItem("elitedata", JSON.stringify(obj));
+        for(let i=0; i<this.passengers.length; i++)
+        {
+          console.log("hi passenger",obj.passengers[i].nationality_title);
+          if (this.passengers[i].nationality_title.id != undefined && this.passengers[i].nationality_title.name != undefined)
+          {
+            this.passengers[i].nationality_id = this.passengers[i].nationality_title.id;
+            this.passengers[i].nationality_title = this.passengers[i].nationality_title.name;
+            obj.passengers[i].nationality_id = this.passengers[i].nationality_id;
+            obj.passengers[i].nationality_title = this.passengers[i].nationality_title;
+          }
+          else
+          {
+            obj.passengers[i].nationality_id = this.passengers[i].nationality_id;
+            obj.passengers[i].nationality_title = this.passengers[i].nationality_title;
+          }
+
+        }
+      //console.log("passenger paassed",this.passengers);
+        obj.booker = abc == undefined ? "" : abc.booker;
+        // var obj = {};
+        // debugger;
+        localStorage.setItem("elitedata", JSON.stringify(obj));
+      //console.log("OBJ paassed",obj);
     },
   },
 };

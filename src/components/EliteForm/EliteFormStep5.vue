@@ -229,7 +229,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ airport_id }}
+                                        {{ airport_name }}
                                       </p>
                                     </div>
                                   </li>

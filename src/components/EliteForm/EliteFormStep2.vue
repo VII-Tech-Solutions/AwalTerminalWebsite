@@ -43,8 +43,7 @@
                   <div class="col-lg-3 ">
                     <div class="form-group">
                       <label class="form-label" for="inputGroupSelect01">Arriving from<span class="asterik">*</span></label>
-                      <v-select  :options="airportoptions" label="name" class="form-select" v-model="airport_id" id="inputGroupSelect01" v-on:change="fligh_name">
-                      </v-select>
+                      <v-select  :options="airportoptions" label="name" class="form-select" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
                     </div>
                   </div>
                   <div class="col-lg-2">
@@ -171,10 +170,10 @@
             <router-link to="/elite-form" class="cancel-link d-inline-block text-decoration-none">Back</router-link>
           </div>
           <div class="d-block">
-                      <span class="btn-next d-inline-block align-top transition" v-if="!(airport_id && date && time && flight_number && number_of_adults )" :disabled="notFormValid" @click="error()" >
+                      <span class="btn-next d-inline-block align-top transition" v-if="!(airport_name  && date && time && flight_number && number_of_adults )" :disabled="notFormValid" @click="error()" >
                             Next
                         </span>
-            <span v-if="airport_id && date && time && flight_number && number_of_adults ">
+            <span v-if=" airport_name && date && time && flight_number && number_of_adults ">
                          <router-link to="/elite-form3" @click="setData()"  class="btn-next d-inline-block align-top transition">Next</router-link>
                          </span>
           </div>
@@ -219,7 +218,6 @@ export default {
       notFormValid: true,
       service_id: obj.service_id,
       airport_id : obj==undefined ?'':obj.airport_id,
-      search : 'Ada Airport',
       airport_name : obj==undefined ?'':obj.airport_name,
       date : obj==undefined ? '' : obj.date,
       time : obj==undefined ? '': obj.time,
@@ -255,10 +253,10 @@ export default {
   methods:{
     fligh_name(event){
       // debugger;
-      console.log(event);
+      console.log('..',event);
       console.log(event.src);
       console.log(event);
-      this.airport_name=this.airportoptions.filter(x => x.id ==event.src.target.value).name;
+     // this.airport_name=this.airportoptions.filter(x => x.id ==event.src.target.value).name;
     },
 
     AdultInc(){
@@ -347,8 +345,18 @@ export default {
       obj.xyz = this.xyz;
       obj.commontype = this.commontype;
       obj.privatetype = this.privatetype;
-      obj.airport_id =  this.airport_id.id;
-      obj.airport_name =  this.airport_id.name;
+      if (this.airport_name.name != undefined && this.airport_name.id != undefined)
+      {
+        this.airport_id = this.airport_name.id;
+        this.airport_name = this.airport_name.name;
+        obj.airport_id =  this.airport_id;
+        obj.airport_name =  this.airport_name;
+      }
+      else
+      {
+        obj.airport_id =  this.airport_id;
+        obj.airport_name =  this.airport_name;
+      }
       obj.date =  this.date;
       obj.time =  this.time;
       obj.flight_number =  this.flight_number;
@@ -356,6 +364,7 @@ export default {
       obj.passengers = this.passengers;
       obj.booker = abc == undefined ?  '': abc.booker;
       localStorage.setItem('elitedata',JSON.stringify(obj));
+      console.log('objects passsed', obj);
     }
   }
 
