@@ -64,7 +64,12 @@
                                     <div class="col-lg-2 ">
                                         <div class="form-group">
                                             <label class="form-label">Time<span class="asterik">*</span></label>
-                                            <div class="form-border"><input onkeydown="return false"  type="time" class="form-control border-0" v-model="time" placeholder="HH:MM">
+                                            <div class="form-border">
+                                                <!-- <input onkeydown="return false"  type="time" class="form-control border-0" v-model="time" placeholder="HH:MM"> -->
+
+                                                <vue-timepicker v-model="time" class="form-control border-0" format="hh:mm a"></vue-timepicker>
+
+
                                                 <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
                                             </div>
                                         </div>  
@@ -187,12 +192,15 @@
 <script>
 import '@fortawesome/fontawesome-free/js/all.js';
 import axios from 'axios';
+import VueTimepicker from 'vue3-timepicker'
+
 export default {
     mounted () {
      window.scrollTo(0, 0);
     // this.getDropdownData();
     },   
   data() {
+    
       //debugger;
       
         var airporOptions = JSON.parse(localStorage.airportoptions1);
@@ -200,6 +208,13 @@ export default {
         var obj = JSON.parse(localStorage.elitedata);
         console.log(obj.airportoptions,"airportoptionsairportoptions");
     return {
+    //     yourFormat: 'hh:mm:ss a',
+    // yourData: {
+    //   hh: '03',
+    //   mm: '05',
+    //   ss: '00',
+    //   a: 'am'
+    // },
          airportoptions:airporOptions,
          countriesoptions:obj.countriesoptions,
          eliteserviceoptions:obj.eliteserviceoptions,
@@ -338,9 +353,12 @@ export default {
             debugger;
             localStorage.setItem('elitedata',JSON.stringify(obj));
       }
+  },
+  components: {
+    VueTimepicker,
+  },
   }
-  
-  }
+    
 </script>
 
 <style>

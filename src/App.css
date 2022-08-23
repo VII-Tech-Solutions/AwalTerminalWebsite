@@ -500,7 +500,11 @@ textarea {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
   }
-  
+  .vue__time-picker input.vue__time-picker-input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
 /* MEDIA QUERY */
 @media (max-width: 1199px) {
 .container{max-width: 960px;}
