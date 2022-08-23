@@ -783,7 +783,7 @@ export default {
       //toastr.info('Are you sure you want to buy ');
       
       this.loader =  true;
-      
+
       var obj = {};
       obj.number_of_adults = parseInt(
         this.number_of_adults == null ? 0 : this.number_of_adults
@@ -1060,6 +1060,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 12px;
   line-height: 15px;
   font-weight: normal;
+  bottom: 0;
+
 }
 
 .elite-offer-services .service-features {
