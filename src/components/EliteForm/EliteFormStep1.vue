@@ -221,7 +221,7 @@ import axios from 'axios';
             obj.time =  this.time;
             obj.flight_number =  this.flight_number;
             obj.is_arrival_flight = this.is_arrival_flight;
-            obj.passengers = this.passengers; 
+            obj.passengers = this.passengers;
             obj.booker = this.booker;
 			   obj.airportoptions = this.airportoptions;
 				obj.eliteserviceoptions= this.eliteserviceoptions;
