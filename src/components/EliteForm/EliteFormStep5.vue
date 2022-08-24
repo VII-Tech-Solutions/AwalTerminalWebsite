@@ -835,6 +835,7 @@ export default {
          
           localStorage.setItem("useremail", postData.booker.email);
           localStorage.removeItem("elitedata");
+          
           window.location.href = "/elite-thankyou";
 
 

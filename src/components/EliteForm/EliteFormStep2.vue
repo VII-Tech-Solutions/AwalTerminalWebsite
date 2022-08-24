@@ -65,9 +65,9 @@
                                         <div class="form-group">
                                             <label class="form-label">Time<span class="asterik">*</span></label>
                                             <div class="form-border">
-                                                <!-- <input onkeydown="return false"  type="time" class="form-control border-0" v-model="time" placeholder="HH:MM"> -->
+                                                <!-- <input onkeydown="return false"  type="time" class="form-control border-0" v-model="time" placeholder="HH:MM" @change="changeTime"> -->
 
-                                                <vue-timepicker v-model="time" class="form-control border-0" format="hh:mm a"></vue-timepicker>
+                                                <vue-timepicker v-model="time" class="form-control border-0" format="HH:mm" @change="changeTime"></vue-timepicker>
 
 
                                                 <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch" class="img-fluid"></span>
@@ -249,7 +249,9 @@ export default {
     },
    methods:{
 
-    
+        changeTime(event) {
+            this.time = event.displayTime;
+        },
          fligh_name(event){
                // debugger;
                 this.airport_name=this.airportoptions.find(x => x.id ==event.target.value).name;
