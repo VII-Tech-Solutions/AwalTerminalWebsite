@@ -505,6 +505,13 @@ textarea {
     box-shadow: none;
     outline: none;
 }
+.vue__time-picker .dropdown ul::-webkit-scrollbar{
+	width: 0;
+}
+.vue__time-picker .dropdown ul li:not([disabled]).active, .vue__time-picker .dropdown ul li:not([disabled]).active:focus, .vue__time-picker .dropdown ul li:not([disabled]).active:hover {
+    background: #011e41;
+    color: #fff;
+}
 /* MEDIA QUERY */
 @media (max-width: 1199px) {
 .container{max-width: 960px;}
