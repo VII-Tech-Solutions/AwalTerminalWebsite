@@ -493,7 +493,6 @@ export default{
       obj1.departure_flight_nature=obj.departure_flight_nature;
       obj1.departure_passenger_count=obj.departure_passenger_count;
       obj1.operator_full_name=this.operator_full_name;
-      //console.log(this.operator_country);
       if (this.operator_country.name != undefined )
       {
         this.operator_country = this.operator_country.name;
@@ -513,7 +512,6 @@ export default{
       {
         if (this.agent_country.name != undefined)
         {
-          //console.log(this.agent_country);
           this.agent_country = this.agent_country.name;
           obj1.agent_country =  this.agent_country;
         }
@@ -543,7 +541,6 @@ export default{
       obj1.airportoptions=obj.airportoptions;
       obj1.countriesoptions=obj.countriesoptions;
       obj1.formserviceoption=obj.formserviceoption;
-      console.log(obj1);
       localStorage.setItem('data', JSON.stringify(obj1));
     }
   }
