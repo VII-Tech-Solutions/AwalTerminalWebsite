@@ -29,10 +29,8 @@
                     <div class="form-group">
                       <label class="form-label">Telephone Number<span class="asterik">*</span></label>
                       <div class="form-border">
-                        <select  v-model="teldrop"  class="form-select phone-select h-100"  id="inputGroupSelect01">
-                          <option value="973" selected>973</option>
-                          <option :value="option" v-for="option in dialCode">{{ option }}</option>
-                        </select>
+                        <v-select  :class="{'azul':!color}" value="973" selected :clearable= 'null'  :options="dialCode"  id="inputGroupSelect01" v-model="teldrop">
+                        </v-select>
                         <input type="text" v-model="operator_tel_number" class="form-control border-0" placeholder="1234 5678">
                       </div>
                     </div>
@@ -61,7 +59,7 @@
                   <div class="col-lg-6 mb-0">
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
-                      <v-select :class="{'azul':!color}" :options="countriesoptions" required label="name" id="inputGroupSelect01" v-model="operator_country">
+                      <v-select   :class="{'azul':!color}" :options="countriesoptions" required label="name" id="inputGroupSelect01" v-model="operator_country">
                       </v-select>
                     </div>
                     <div class="form-group">
@@ -96,7 +94,9 @@
                   <div class="col-lg-6 mb-0">
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
-                      <v-select :class="{'azul':!color}" :options="countriesoptions" required label="name" id="inputGroupSelect01" v-model="agent_country">
+                      <v-select
+                          :class="{'azul':!color}"
+                          :options="countriesoptions" required label="name" id="inputGroupSelect01" v-model="agent_country">
                       </v-select>
                     </div>
                     <div class="form-group">
@@ -159,6 +159,16 @@ export default{
   },
   data() {
     var obj= JSON.parse(localStorage.data);
+    console.log('hi',obj.teldrop);
+    if(obj.operator_tel_number !=undefined)
+    {
+      var tel_number= obj.operator_tel_number;
+      tel_number = tel_number.split(' ');
+      if(tel_number.length >0)
+      obj.operator_tel_number=tel_number[1];
+      else
+      obj.operator_tel_number=tel_number[0];
+    }
     return {
       notFormValid: true,
       airport_name: obj.airport_name,
@@ -431,7 +441,8 @@ export default{
         212,
         967,
         260,
-        263
+        263,
+          973
       ]
     }
   },
@@ -461,9 +472,7 @@ export default{
     setData()
     {
       //debugger;
-
       var obj= localStorage.data != undefined ?  JSON.parse(localStorage.data):undefined;
-
       var obj1 = {};
       obj1.aircraft_type =  obj.aircraft_type;
       obj1.registration_number =  obj.registration_number;
@@ -495,9 +504,9 @@ export default{
         obj1.operator_country =  this.operator_country;
       }
       obj1.teldrop=  this.teldrop;
-      obj1.operator_tel_number=  this.teldrop +' '+ this.operator_tel_number;
+      obj1.operator_tel_number=  this.teldrop +' '+ this.operator_tel_number.trim(' ');
       obj1.operator_email=this.operator_email,
-          obj1.operator_address=this.operator_address;
+      obj1.operator_address=this.operator_address;
       obj1.operator_billing_address=this.operator_billing_address;
       obj1.agent_fullname= this.is_using_agent == "1"? this.agent_fullname:"";
       if(this.is_using_agent == 1)
@@ -593,17 +602,36 @@ export default{
   border-radius: 50%;
   background: #011e41;
 }
-.phone-select{width:160px !important; border-right: 1px solid #000 !important; border-top: 0px solid transparent !important; border-bottom: 0px solid transparent !important; border-left: 0px solid transparent !important;}
-
+.phone-select {width:160px !important; border-right: 1px solid #000 !important; border-top: 0px solid transparent !important; border-bottom: 0px solid transparent !important; border-left: 0px solid transparent !important;}
 .azul{
-  border:1px solid #4d627a !important; font-size:12px; line-height:18px;  border-radius:0%; font-family: 'Source Sans Pro'; background-color:#fff;height: 40px;
+  border:none !important; font-size:12px; line-height:18px;  border-radius:0%; font-family: 'Source Sans Pro'; background-color:#fff;height: 40px;
 }
-:root {
-  --vs-colors--lightest: clear;
+.vs__dropdown-toggle
+{
+  border:1px solid #4d627a !important;
+  font-size:12px;
+  line-height:18px;
+  border-radius:0%;
+  font-family: 'Source Sans Pro';
+  background-color:#fff;
+  height: 40px;
+  width: 100%;
   --vs-colors--light: #4d627a;
-  --vs-dropdown-bg: #f1f1f1;
-  --vs-dropdown-max-height: 200px;
-  --vs__dropdown-toggle: 200px;
-  --vs-controls-size: 0.8;
+}
+
+.vs__actions {
+  display: flex;
+  align-items: center;
+  padding: 4px 6px 0 3px;
+
+}
+.vs__open-indicator
+{
+  fill: #4d627a;
+}
+
+.vs__clear
+{
+  fill: #4d627a;
 }
 </style>

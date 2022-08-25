@@ -669,7 +669,7 @@
                               </div>
                             </div>
                           </li>
-                          <li>
+                          <li v-if="obj.is_using_agent === true">
                             <div class="d-flex mobile-col">
                               <p class="extra-small-text w-p text-capitalize">
                                 Agent
@@ -1131,6 +1131,10 @@ export default {
     };
   },
   methods: {
+    using_agent()
+    {
+      this.is_using_agent = true;
+    },
     check(e) {
       this.disabled = e.target.checked;
     },
