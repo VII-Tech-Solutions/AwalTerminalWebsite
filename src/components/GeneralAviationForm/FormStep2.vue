@@ -216,7 +216,6 @@ export default{
       obj1.lead_passenger_name =  obj.lead_passenger_name;
       obj1.landing_purpose = obj.landing_purpose;
       obj1.arrival_call_sign=this.arrival_call_sign;
-      //console.log(this.arriving_from_airport);
       if (this.arriving_from_airport.name != undefined )
       {
         this.arriving_from_airport = this.arriving_from_airport.name;
@@ -231,7 +230,6 @@ export default{
           obj1.arrival_flight_nature=this.arrival_flight_nature,
           obj1.arrival_passenger_count=this.arrival_passenger_count,
           obj1.departure_call_sign=this.departure_call_sign,
-          console.log(this.departure_to_airport);
       if (this.departure_to_airport.name != undefined )
       {
         this.departure_to_airport = this.departure_to_airport.name;
@@ -269,7 +267,6 @@ export default{
       obj1.countriesoptions=this.countriesoptions;
       obj1.formserviceoption=this.formserviceoption;
       obj1.airport_name = this.airport_name;
-      console.log(obj1);
       localStorage.setItem('data', JSON.stringify(obj1));
     }
   }
