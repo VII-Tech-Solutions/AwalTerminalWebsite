@@ -229,7 +229,7 @@ export default{
           obj1.arrival_date=this.arrival_date,
           obj1.arrival_flight_nature=this.arrival_flight_nature,
           obj1.arrival_passenger_count=this.arrival_passenger_count,
-          obj1.departure_call_sign=this.departure_call_sign,
+          obj1.departure_call_sign=this.departure_call_sign
       if (this.departure_to_airport.name != undefined )
       {
         this.departure_to_airport = this.departure_to_airport.name;
