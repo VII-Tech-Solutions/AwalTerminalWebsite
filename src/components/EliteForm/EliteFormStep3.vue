@@ -328,7 +328,7 @@ export default {
 
         for(let i=0; i<this.passengers.length; i++)
         {
-          console.log("hi passenger",obj.passengers[i].nationality_title);
+          //console.log("hi passenger",obj.passengers[i].nationality_title);
           if (this.passengers[i].nationality_title.id != undefined && this.passengers[i].nationality_title.name != undefined)
           {
             this.passengers[i].nationality_id = this.passengers[i].nationality_title.id;
