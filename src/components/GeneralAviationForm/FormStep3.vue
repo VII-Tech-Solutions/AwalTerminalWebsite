@@ -59,7 +59,7 @@
                   <div class="col-lg-6 mb-0">
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
-                      <v-select   :class="{'azul':!color}" :options="countriesoptions" required label="name" id="inputGroupSelect01" v-model="operator_country">
+                      <v-select  placeholder="Select a country" :class="{'azul':!color}" :options="countriesoptions" required label="name" id="inputGroupSelect01" v-model="operator_country">
                       </v-select>
                     </div>
                     <div class="form-group">
@@ -95,6 +95,7 @@
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span class="asterik">*</span></label>
                       <v-select
+                          placeholder="Select a country"
                           :class="{'azul':!color}"
                           :options="countriesoptions" required label="name" id="inputGroupSelect01" v-model="agent_country">
                       </v-select>

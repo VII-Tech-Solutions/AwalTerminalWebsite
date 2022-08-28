@@ -44,7 +44,7 @@
                   <div class="col-lg-6 mb-0">
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">From Airport<span class="asterik">*</span></label>
-                      <v-select :class="{'azul':!color}" :options="airportoptions"  required label="name" id="inputGroupSelect01" v-model="arriving_from_airport" :value="airport_name" ></v-select>
+                      <v-select placeholder="Select an airport" :class="{'azul':!color}" :options="airportoptions"  required label="name" id="inputGroupSelect01" v-model="arriving_from_airport" :value="airport_name" ></v-select>
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">arrival date<span class="asterik">*</span></label>
@@ -84,7 +84,7 @@
                   <div class="col-lg-6 mb-0">
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">to Airport<span class="asterik">*</span></label>
-                      <v-select  :class="{'azul':!color}" :options="airportoptions"  required label="name" id="inputGroupSelect01" v-model="departure_to_airport" :value="airport_name" ></v-select>
+                      <v-select  placeholder="Select an airport" :class="{'azul':!color}" :options="airportoptions"  required label="name" id="inputGroupSelect01" v-model="departure_to_airport" :value="airport_name" ></v-select>
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">departure date<span class="asterik">*</span></label>

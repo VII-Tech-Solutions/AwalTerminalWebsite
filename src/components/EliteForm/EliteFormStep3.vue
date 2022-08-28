@@ -122,6 +122,7 @@
                         >Nationality<span class="asterik">*</span></label
                       >
                       <v-select
+                          placeholder="Select a nationality"
                           :class="{'azul':!color}"
                           :options="countriesoptions"
                           required
