@@ -31,7 +31,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button :fileid="fuelid"   @click="deleteFile($event,'fuel')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="fuelid"   @click="deleteFile($event,'fuel')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="fuelServices">
                                                     <span  class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -47,7 +47,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button  :fileid="catid" @click="deleteFile($event,'Cater')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button  :fileid="catid" @click="deleteFile($event,'Cater')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="cateringServices">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -66,7 +66,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button :fileid="airid"  @click="deleteFile($event,'Aircraft')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="airid"  @click="deleteFile($event,'Aircraft')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="airCraftCert">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -82,7 +82,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button :fileid="arrid" @click="deleteFile($event,'Arrival')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="arrid" @click="deleteFile($event,'Arrival')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="arrivalgendec">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -98,7 +98,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button  :fileid="depid"  @click="deleteFile($event,'Departure')"  class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button  :fileid="depid"  @click="deleteFile($event,'Departure')"  class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="departureGendec">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -114,7 +114,7 @@
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload 
                                                     </button>
                                                 </div>
-                                                <button :fileid="othid"   @click="deleteFile($event,'other')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="othid"   @click="deleteFile($event,'other')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="otherDocuments">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement

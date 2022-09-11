@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Adjust the nationality id">
+    <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="Hide the debugger">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/ElitePayementForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/ElitePayementForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep4.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/Tab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/Tab.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +74,7 @@
       <workItem from="1661671431828" duration="108000" />
       <workItem from="1661685891456" duration="104000" />
       <workItem from="1661698805737" duration="1206000" />
-      <workItem from="1662905788898" duration="835000" />
+      <workItem from="1662905788898" duration="1585000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
@@ -152,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661237711144</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Hide the debugger">
+      <created>1662906770357</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662906770357</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +191,8 @@
     <MESSAGE value="hide the back in elite services approve payment" />
     <MESSAGE value="working on disable the zoom in the mobile screen" />
     <MESSAGE value="Fix steps movments in elite form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix steps movments in elite form" />
+    <MESSAGE value="Hide the debugger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hide the debugger" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
