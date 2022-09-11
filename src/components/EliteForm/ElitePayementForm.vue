@@ -436,7 +436,6 @@ export default {
     },
     methods: {
         setData() {
-            //debugger;
             var obj = {};
             obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children);
@@ -455,7 +454,6 @@ export default {
             localStorage.setItem('elitedata', JSON.stringify(obj));
         },
         paynow() {
-            //debugger;
             const postData = JSON.parse(localStorage.elitedata);
             let axiosConfig = {
                 headers: {
@@ -471,7 +469,6 @@ export default {
                     window.location.href = '/elite-service?uuid='+res.data.data.elite_services.uuid;
                 })
                 .catch((err) => {
-                    debugger
                     console.log("AXIOS ERROR: ", err);
                     toastr.error('Server Error Please Try again.. 🙁');
 

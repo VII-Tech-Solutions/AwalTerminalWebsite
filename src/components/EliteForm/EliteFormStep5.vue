@@ -817,7 +817,6 @@ export default {
     },
 
     paynow() {
-      //debugger;
       const postData = JSON.parse(localStorage.elitedata);
       let axiosConfig = {
         headers: {
@@ -842,7 +841,6 @@ export default {
           //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
         })
         .catch((err) => {
-          debugger;
           console.log("AXIOS ERROR: ", err);
           toastr.error("Server Error Please Try again.. 🙁");
         });

@@ -111,7 +111,6 @@ export default {
        },
       setData()
       {
-          debugger;
             var today = new Date();
             var date =  (today.getFullYear()+'-'+((today.getMonth()+1)<10?'0'+ (today.getMonth()+1):(today.getMonth()+1))+'-'+today.getDate()).toString();
             var time = ((today.getHours()<10?'0'+ today.getHours():today.getHours()) + ":" + (today.getMinutes()<10?'0'+today.getMinutes():today.getMinutes())).toString();

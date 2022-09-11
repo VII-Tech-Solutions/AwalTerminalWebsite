@@ -165,7 +165,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
      window.scrollTo(0, 0)
     },
     data() {
-        debugger;
           var obj= JSON.parse(localStorage.data);
           var textboxobj= localStorage.textboxdata != undefined ?  JSON.parse(localStorage.textboxdata):undefined;
         return {
@@ -253,7 +252,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
       },
       deleteFile(ref,name)
       {
-                debugger;
                 if(name == "fuel")
                 {
                  this.fuelServices = "";  
@@ -278,7 +276,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
                 {
                 this.otherDocuments="";
                 }
-                debugger;
                 this.attachement = this.attachement.filter(element => element != ref.currentTarget.attributes["fileid"].nodeValue)
                 this.setDocumentText();
                 var obj= JSON.parse(localStorage.data);
