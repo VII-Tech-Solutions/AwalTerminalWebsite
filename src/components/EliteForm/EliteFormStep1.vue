@@ -187,8 +187,8 @@ import configs from '../constants';
 				Totle: obj==undefined ?0:obj.total,
 				countriesoptions: obj==undefined ?'':obj.countriesoptions,
 				notFormValid: true,
-				airport_id: obj==undefined ?0:obj.airport_id,
-				airport_name:obj==undefined ?0:obj.airport_name,
+				airport_id: obj==undefined ?'':obj.airport_id,
+				airport_name:obj==undefined ?'':obj.airport_name,
 				date: obj==undefined ?0:obj.date,
 				time: obj==undefined ?0:obj.time,
 				flight_number: obj==undefined ?'':obj.flight_number,
@@ -223,7 +223,7 @@ import configs from '../constants';
             obj.time =  this.time;
             obj.flight_number =  this.flight_number;
             obj.is_arrival_flight = this.is_arrival_flight;
-            obj.passengers = this.passengers; 
+            obj.passengers = this.passengers;
             obj.booker = this.booker;
 			   obj.airportoptions = this.airportoptions;
 				obj.eliteserviceoptions= this.eliteserviceoptions;
@@ -236,7 +236,6 @@ import configs from '../constants';
 			},
 			getDropdownData()
 			{
-            debugger;
                 let axiosConfig = {
                     headers: {
                         'Content-Type': 'application/json;charset=UTF-8',

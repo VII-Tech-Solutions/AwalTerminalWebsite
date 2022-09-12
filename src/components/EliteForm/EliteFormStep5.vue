@@ -741,6 +741,7 @@ import configs from "../constants";
 export default {
   data() {
     var obj = JSON.parse(localStorage.elitedata);
+    console.log(obj);
    
     return {
       number_of_adults: obj.number_of_adults,
@@ -811,6 +812,10 @@ export default {
       obj.flight_number = this.flight_number;
       obj.is_arrival_flight = this.is_arrival_flight;
       obj.passengers = this.passengers;
+      for(let i=0; i<obj.passengers.length; i++){
+        obj.passengers[i].nationality_id = obj.passengers[i].nationality_id.id;
+
+      }
       obj.booker = this.booker;
       localStorage.setItem("elitedata", JSON.stringify(obj));
 
@@ -818,7 +823,6 @@ export default {
     },
 
     paynow() {
-      //debugger;
       const postData = JSON.parse(localStorage.elitedata);
       let axiosConfig = {
         headers: {
@@ -844,7 +848,6 @@ export default {
           //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
         })
         .catch((err) => {
-          debugger;
           console.log("AXIOS ERROR: ", err);
           toastr.error("Server Error Please Try again.. 🙁");
         });

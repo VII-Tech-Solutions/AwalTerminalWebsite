@@ -15,7 +15,6 @@ export default{
     },
 
     data(){
-        debugger;
         return{
             isActive: false,
             
@@ -23,7 +22,6 @@ export default{
     },
 
     created(){
-         debugger;
         this.isActive = this.selected
     },
 }

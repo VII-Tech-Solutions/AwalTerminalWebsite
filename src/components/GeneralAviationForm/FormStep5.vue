@@ -25,13 +25,13 @@
                                         <li>
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Fuel Services, upload Fuel Release (if available)</p>
                                             <div class="form-group">
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="fuelServices" class="form-control border-0" placeholder="">
-                                                    <input type="file"  @change="uploadFile($event,'Fuel Release',1)" ref="file" class="form-control upload-input" placeholder="" />
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="fuelServices" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
+                                                    <input type="file"  @change="uploadFile($event,'Fuel Release')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
-                                                        <span  class="fa fa-arrow-up border-bottom me-2"></span>upload file
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button v-if="showonly1 || fuelServices" :fileid="fuelid"   @click="deleteFile($event,'fuel')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="fuelid"   @click="deleteFile($event,'fuel')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="fuelServices">
                                                     <span  class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -41,13 +41,13 @@
                                         <li>
                                             <p class="fw-semi-bold extra-small-text mb-2">You requested Catering Services, upload Catering Order (if available)</p>
                                             <div class="form-group">
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="cateringServices" class="form-control border-0" placeholder="">
-                                                    <input type="file" @change="uploadFile($event,'Catering Order',2)" ref="file" class="form-control upload-input" placeholder="" />
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="cateringServices" class="form-control border-0" placeholder="Upload catering order">
+                                                    <input type="file" @change="uploadFile($event,'Catering Order')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
-                                                    </button> 
+                                                    </button>
                                                 </div>
-                                                <button v-if="showonly2 || cateringServices" :fileid="catid" @click="deleteFile($event,'Cater')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button  :fileid="catid" @click="deleteFile($event,'Cater')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="cateringServices">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -60,13 +60,13 @@
                                                     <label class="form-label text-capitalize"> Aircraft Certifications Checklist<span class="asterik">*</span></label>
                                                     <router-link className="text-capitalize text-color-btn"  to="/aircraft-certificates-checklist.pdf" target="_blank">download checklist template</router-link>
                                                 </div>
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert" class="form-control border-0" placeholder="">
-                                                    <input type="file" @change="uploadFile($event,'Aircraft Certifications Checklist',3)" ref="file" class="form-control upload-input" placeholder="" />
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert" class="form-control border-0" placeholder="certificate_20220415_f8jq8cdh…">
+                                                    <input type="file" @change="uploadFile($event,'Aircraft Certifications Checklist')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button  class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button v-if="showonly3 || airCraftCert" :fileid="airid"  @click="deleteFile($event,'Aircraft')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="airid"  @click="deleteFile($event,'Aircraft')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="airCraftCert">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -76,13 +76,13 @@
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Arrival Gendec<span class="asterik">*</span></label>
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="arrivalgendec" class="form-control border-0" placeholder="">
-                                                    <input type="file"   @change="uploadFile($event,'Arrival Gendec',4)" ref="file" class="form-control upload-input" placeholder="" />
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="arrivalgendec" class="form-control border-0" placeholder="arrival_20220415_fasdolaw97w3…">
+                                                    <input type="file"   @change="uploadFile($event,'Arrival Gendec')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button v-if="showonly4 || arrivalgendec" :fileid="arrid" @click="deleteFile($event,'Arrival')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="arrid" @click="deleteFile($event,'Arrival')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="arrivalgendec">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -92,13 +92,13 @@
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">Departure Gendec<span class="asterik">*</span></label>
-                                                <div class="form-border upload-form px-1"><input type="text"  v-model="departureGendec" class="form-control border-0" placeholder="">
-                                                    <input type="file" @change="uploadFile($event,'Departure Gendec',5)" ref="file" class="form-control upload-input" placeholder="" />
+                                                <div class="form-border upload-form px-1"><input type="text"  v-model="departureGendec" class="form-control border-0" placeholder="departure_20220415_pkmai856as…">
+                                                    <input type="file" @change="uploadFile($event,'Departure Gendec')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
                                                         <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                                                     </button>
                                                 </div>
-                                                <button  v-if="showonly5 || departureGendec" :fileid="depid"  @click="deleteFile($event,'Departure')"  class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button  :fileid="depid"  @click="deleteFile($event,'Departure')"  class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="departureGendec">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -108,13 +108,13 @@
                                         <li>
                                             <div class="form-group">
                                                 <label class="form-label text-capitalize">other documents</label>
-                                                <div class="form-border upload-form px-1"><input type="text" v-model="otherDocuments" class="form-control border-0" placeholder="">
-                                                    <input type="file" @change="uploadFile($event,'other',6)" ref="file" class="form-control upload-input" placeholder="" />
+                                                <div class="form-border upload-form px-1"><input type="text" v-model="otherDocuments" class="form-control border-0" placeholder="Upload other documents">
+                                                    <input type="file" @change="uploadFile($event,'other')" ref="file" class="form-control upload-input" placeholder="" />
                                                     <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
-                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
+                                                        <span class="fa fa-arrow-up border-bottom me-2"></span>upload 
                                                     </button>
                                                 </div>
-                                                <button v-if="showonly6 || otherDocuments" :fileid="othid"   @click="deleteFile($event,'other')" class="form-error-btn text-capitalize my-2 d-flex align-items-center">
+                                                <button :fileid="othid"   @click="deleteFile($event,'other')" class="form-error-btn text-capitalize my-2 d-flex align-items-center" v-if="otherDocuments">
                                                     <span class="input-icon delete-icon me-2">
                                                         <img src="../../assets/images/icons/delete.svg" alt="couch" class=" img-fluid"/>
                                                     </span>delete attachement
@@ -160,18 +160,14 @@
 <script>
 import axios  from 'axios'
 import '@fortawesome/fontawesome-free/js/all.js';
-import configs from '../constants';
-
     export default{
     mounted () {
      window.scrollTo(0, 0)
     },
     data() {
-        debugger;
           var obj= JSON.parse(localStorage.data);
           var textboxobj= localStorage.textboxdata != undefined ?  JSON.parse(localStorage.textboxdata):undefined;
         return {
-         
          remarks:obj.remarks,
          fuelServices:    textboxobj == undefined ? '' : textboxobj.fuelServices,
          cateringServices:textboxobj == undefined ? '' : textboxobj.cateringServices,
@@ -186,29 +182,10 @@ import configs from '../constants';
          arrid:0,
          depid:0,
          othid:0,
-         showonly1:false,
-         showonly2:false,
-         showonly3:false,
-         showonly4:false,
-         showonly5:false,
-         showonly6:false,
      }
     },
       methods:{
-       uploadFile(ref,name,id) {
-        if(id==1){
-            this.showonly1=true;
-        } else if(id==2){
-            this.showonly2=true;
-        } else if(id==3){
-            this.showonly3=true;
-        } else if(id==4){
-            this.showonly4=true;
-        } else if(id==5){
-            this.showonly5=true;
-        } else if(id==6){
-            this.showonly6=true;
-        }
+       uploadFile(ref,name) {
         var ext =     ref.target.files[0].name.split('.').pop(); 
         if((name !="other" && (parseFloat(ref.target.files[0].size / (1024 * 1024)).toFixed(2)) <= 2) || (name =="other" && (parseFloat(ref.target.files[0].size / (1024 * 1024)).toFixed(2)) <= 10) )
         {
@@ -217,7 +194,7 @@ import configs from '../constants';
         const formData = new FormData();
         formData.append('file', ref.target.files[0]);
         const headers = { 'Content-Type': 'multipart/form-data' };
-        axios.post(configs.base_url + '/api/general-aviation/media', formData, { headers }).then((res) => {
+        axios.post('https://awal.viitech.net/api/general-aviation/media', formData, { headers }).then((res) => {
             if(res.status == 200)
             {
                 if( name=="Fuel Release")
@@ -275,7 +252,6 @@ import configs from '../constants';
       },
       deleteFile(ref,name)
       {
-                debugger;
                 if(name == "fuel")
                 {
                  this.fuelServices = "";  
@@ -300,7 +276,6 @@ import configs from '../constants';
                 {
                 this.otherDocuments="";
                 }
-                debugger;
                 this.attachement = this.attachement.filter(element => element != ref.currentTarget.attributes["fileid"].nodeValue)
                 this.setDocumentText();
                 var obj= JSON.parse(localStorage.data);
