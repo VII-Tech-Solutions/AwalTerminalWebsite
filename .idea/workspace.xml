@@ -6,22 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c888b982-f583-4c33-b03f-62f645644fb5" name="Changes" comment="merge search function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep4.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/ElitePayementForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/ElitePayementForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep4.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep6.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep6.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/Tab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/Tab.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,16 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tasleem.alsharqi/Desktop/Projects/ATP001_AwalTerminalWebsite",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tasleem.alsharqi/Desktop/Projects/ATP001_AwalTerminalWebsite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/EliteForm" />
@@ -75,7 +63,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="" />
+      <changelist id="c888b982-f583-4c33-b03f-62f645644fb5" name="Changes" comment="merge search function" />
       <created>1655275587901</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -93,6 +81,8 @@
       <workItem from="1661698805737" duration="1206000" />
       <workItem from="1662905788898" duration="1585000" />
       <workItem from="1660978221985" duration="5296000" />
+      <workItem from="1663060360272" duration="3000" />
+      <workItem from="1663071332392" duration="475000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
@@ -171,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662906770357</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="merge search function">
+      <created>1662985182643</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662985182644</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
