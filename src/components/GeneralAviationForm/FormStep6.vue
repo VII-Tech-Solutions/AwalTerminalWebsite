@@ -5,8 +5,8 @@
         <router-link to="/">
           <figure class="mb-0 form-logo">
             <img
-              class="img-fluid"
-              src="../../assets/images/forms-header-logo.png"
+                class="img-fluid"
+                src="../../assets/images/forms-header-logo.png"
             />
           </figure>
         </router-link>
@@ -14,7 +14,7 @@
       <div class="form-body">
         <div class="form-page-title">
           <div
-            class="
+              class="
               d-flex
               flex-md-row flex-column
               align-items-center
@@ -42,30 +42,30 @@
                 <div class="accordion-item">
                   <div class="detail-section-header w-100">
                     <p
-                      class="-capitalize detail-section-title accordion-header"
-                      id="headingOne"
+                        class="-capitalize detail-section-title accordion-header"
+                        id="headingOne"
                     >
                       <button
-                        class="
+                          class="
                           accordion-button
                           text-capitalize
                           detail-section-title
                         "
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
                       >
                         flight information
                       </button>
                     </p>
                   </div>
                   <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample"
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="details-list">
@@ -76,7 +76,7 @@
                                 aircraft type <span class="asterik">*</span>
                               </p>
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   fw-normal
@@ -92,7 +92,7 @@
                                 Registration<span class="asterik">*</span>
                               </p>
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   fw-normal
@@ -108,7 +108,7 @@
                                 MTOW (KG)<span class="asterik">*</span>
                               </p>
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   fw-normal
@@ -122,11 +122,11 @@
                             <div class="d-flex align-items-baseline">
                               <p class="extra-small-text w-p text-capitalize">
                                 Lead Passenger Name<span class="asterik"
-                                  >*</span
-                                >
+                              >*</span
+                              >
                               </p>
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   fw-normal
@@ -142,7 +142,7 @@
                                 Purpose of Landing<span class="asterik">*</span>
                               </p>
                               <p class="extra-small-text fw-normal">
-                                {{ obj.landing_purpose }} <br />
+                                {{ obj.landing_purpose }} <br/>
                               </p>
                             </div>
                           </li>
@@ -153,33 +153,33 @@
                 </div>
                 <div class="accordion-item">
                   <p
-                    class="
+                      class="
                       text-capitalize
                       detail-section-title
                       accordion-header
                     "
-                    id="headingTwo"
+                      id="headingTwo"
                   >
                     <button
-                      class="
+                        class="
                         accordion-button
                         text-capitalize
                         detail-section-title
                       "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="true"
-                      aria-controls="collapseTwo"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="true"
+                        aria-controls="collapseTwo"
                     >
                       your journey
                     </button>
                   </p>
                   <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample"
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="accordian-ul">
@@ -194,7 +194,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -203,7 +203,7 @@
                                         Call Sign<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -216,42 +216,42 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         from Airport<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
                                         "
                                       >
-                                        {{ fromairport[0].name }}
+                                        {{ obj.arriving_from_airport }}
                                       </p>
                                     </div>
                                   </li>
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         ETD (UTC Time)<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -264,18 +264,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Arrival Date<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -288,18 +288,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-inherit
                                         "
                                       >
                                         Nature of Flight<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -312,18 +312,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Passenger Count<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -347,7 +347,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -356,7 +356,7 @@
                                         Call Sign<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -369,7 +369,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -378,31 +378,31 @@
                                         To Airport<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
                                         "
                                       >
-                                        {{ toairport[0].name }}
+                                        {{ obj.departure_to_airport }}
                                       </p>
                                     </div>
                                   </li>
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         ETD (UTC Time)<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -415,18 +415,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Departure Date<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -439,18 +439,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-inherit
                                         "
                                       >
                                         Nature of Flight<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -463,18 +463,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Passenger Count<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -495,33 +495,33 @@
                 </div>
                 <div class="accordion-item">
                   <p
-                    class="
+                      class="
                       text-capitalize
                       detail-section-title
                       accordion-header
                     "
-                    id="headingThree"
+                      id="headingThree"
                   >
                     <button
-                      class="
+                        class="
                         accordion-button
                         text-capitalize
                         detail-section-title
                       "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="true"
-                      aria-controls="collapseThree"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="true"
+                        aria-controls="collapseThree"
                     >
                       Operator & Agent Information
                     </button>
                   </p>
                   <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample"
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="accordian-ul">
@@ -536,7 +536,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -545,7 +545,7 @@
                                         Full Name<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -557,7 +557,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -566,30 +566,30 @@
                                         Country<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
                                       >
-                                        {{ opcountry[0].name }}
+                                        {{ obj.operator_country }}
                                       </p>
                                     </div>
                                   </li>
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Telephone Number<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -601,18 +601,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Email Address<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -624,7 +624,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -633,7 +633,7 @@
                                         Address<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -645,18 +645,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Billing Address<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -669,7 +669,7 @@
                               </div>
                             </div>
                           </li>
-                          <li>
+                          <li v-if="obj.is_using_agent === true">
                             <div class="d-flex mobile-col">
                               <p class="extra-small-text w-p text-capitalize">
                                 Agent
@@ -679,7 +679,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -688,7 +688,7 @@
                                         Full Name<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -700,7 +700,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -709,15 +709,15 @@
                                         Country<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
                                       >
                                         {{
-                                          agcountry[0] != undefined
-                                            ? agcountry[0].name
-                                            : ""
+                                          obj.agent_country != undefined
+                                              ? obj.agent_country
+                                              : ""
                                         }}
                                       </p>
                                     </div>
@@ -725,18 +725,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Telephone Number<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -749,18 +749,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Email Address<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -772,7 +772,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -781,7 +781,7 @@
                                         Address<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -793,18 +793,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Billing Address<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           fw-normal
                                         "
@@ -824,33 +824,33 @@
                 </div>
                 <div class="accordion-item">
                   <p
-                    class="
+                      class="
                       text-capitalize
                       detail-section-title
                       accordion-header
                     "
-                    id="headingFour"
+                      id="headingFour"
                   >
                     <button
-                      class="
+                        class="
                         accordion-button
                         text-capitalize
                         detail-section-title
                       "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                      aria-expanded="true"
-                      aria-controls="collapseFour"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="true"
+                        aria-controls="collapseFour"
                     >
                       Required Services
                     </button>
                   </p>
                   <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExample"
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="accordian-ul">
@@ -863,12 +863,12 @@
                               <div class="details-list">
                                 <ul class="ul_css">
                                   <li
-                                    v-for="item in selectedservice"
-                                    :key="item"
+                                      v-for="item in selectedservice"
+                                      :key="item"
                                   >
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -889,33 +889,33 @@
                 </div>
                 <div class="accordion-item">
                   <p
-                    class="
+                      class="
                       text-capitalize
                       detail-section-title
                       accordion-header
                     "
-                    id="headingFive"
+                      id="headingFive"
                   >
                     <button
-                      class="
+                        class="
                         accordion-button
                         text-capitalize
                         detail-section-title
                       "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive"
-                      aria-expanded="true"
-                      aria-controls="collapseFive"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="true"
+                        aria-controls="collapseFive"
                     >
                       Documents & Remarks
                     </button>
                   </p>
                   <div
-                    id="collapseFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFive"
-                    data-bs-parent="#accordionExample"
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="details-list">
@@ -923,7 +923,7 @@
                           <li>
                             <div class="d-flex align-items-baseline">
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   list-width
@@ -932,26 +932,26 @@
                                 Aircraft Certifications Checklist
                               </p>
                               <a href="#"
-                                ><p
+                              ><p
                                   class="
                                     extra-small-text
                                     fw-normal
                                     text-decoration-underline
                                   "
-                                >
-                                  {{
-                                    textboxobj == undefined
+                              >
+                                {{
+                                  textboxobj == undefined
                                       ? ""
                                       : textboxobj.airCraftCert
-                                  }}
-                                </p></a
+                                }}
+                              </p></a
                               >
                             </div>
                           </li>
                           <li>
                             <div class="d-flex align-items-baseline">
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   list-width
                                   text-capitalize
@@ -960,26 +960,26 @@
                                 Arrival Gendec
                               </p>
                               <a href="#"
-                                ><p
+                              ><p
                                   class="
                                     extra-small-text
                                     fw-normal
                                     text-decoration-underline
                                   "
-                                >
-                                  {{
-                                    textboxobj == undefined
+                              >
+                                {{
+                                  textboxobj == undefined
                                       ? ""
                                       : textboxobj.arrivalgendec
-                                  }}
-                                </p></a
+                                }}
+                              </p></a
                               >
                             </div>
                           </li>
                           <li>
                             <div class="d-flex align-items-baseline">
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   list-width
                                   text-capitalize
@@ -988,26 +988,26 @@
                                 Departure Gendec
                               </p>
                               <a href="#"
-                                ><p
+                              ><p
                                   class="
                                     extra-small-text
                                     fw-normal
                                     text-decoration-underline
                                   "
-                                >
-                                  {{
-                                    textboxobj == undefined
+                              >
+                                {{
+                                  textboxobj == undefined
                                       ? ""
                                       : textboxobj.departureGendec
-                                  }}
-                                </p></a
+                                }}
+                              </p></a
                               >
                             </div>
                           </li>
                           <li class="mb-lg-5 mb-3">
                             <div class="d-flex align-items-baseline">
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   list-width
                                   text-capitalize
@@ -1018,8 +1018,8 @@
                               <p class="extra-small-text fw-normal">
                                 {{
                                   textboxobj == undefined
-                                    ? ""
-                                    : textboxobj.otherDocuments
+                                      ? ""
+                                      : textboxobj.otherDocuments
                                 }}
                               </p>
                             </div>
@@ -1027,7 +1027,7 @@
                           <li>
                             <div class="d-flex align-items-baseline">
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   list-width
                                   text-capitalize
@@ -1048,13 +1048,13 @@
               </div>
               <div class="form-check terms">
                 <label class="checked-container text-capitalize"
-                  >By submitting this form, you are agreeing to our
+                >By submitting this form, you are agreeing to our
                   <router-link to="/privacy-policy">Terms and Conditions</router-link>
                   <input
-                    type="checkbox"
-                    value="1"
-                    name="radio"
-                    @change="check($event)"
+                      type="checkbox"
+                      value="1"
+                      name="radio"
+                      @change="check($event)"
                   />
                   <span class="checkmark"></span>
                 </label>
@@ -1070,16 +1070,17 @@
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-block">
             <router-link
-              to="/general-aviation-form5"
-              class="light-button d-inline-block"
-              >back</router-link
+                to="/general-aviation-form5"
+                class="light-button d-inline-block"
+            >back
+            </router-link
             >
           </div>
           <div class="d-block">
             <button
-              @click="submitData()"
-              class="beige-button d-inline-block"
-              :disabled="disabled ? false : true"
+                @click="submitData()"
+                class="beige-button d-inline-block"
+                :disabled="disabled ? false : true"
             >
               submit application
             </button>
@@ -1090,12 +1091,11 @@
       </div>
     </div>
   </div>
-</template>  
+</template>
 
 <script>
 import axios from "axios";
 import "@fortawesome/fontawesome-free/js/all.js";
-import configs from "../constants";
 
 export default {
   mounted() {
@@ -1103,16 +1103,18 @@ export default {
   },
   data() {
     var obj1 = JSON.parse(localStorage.data);
-
+    //console.log(obj1);
     return {
       notFormValid: true,
       obj: JSON.parse(localStorage.data),
       selectedservice: obj1.formserviceoption.filter((o1) =>
-        obj1.services.some((o2) => o1.id === o2)
+          obj1.services.some((o2) => o1.id === o2)
       ),
+      /*
       fromairport: obj1.airportoptions.filter(
         (element) => element.id == obj1.arriving_from_airport
       ),
+
       toairport: obj1.airportoptions.filter(
         (element) => element.id == obj1.departure_to_airport
       ),
@@ -1122,14 +1124,19 @@ export default {
       agcountry: obj1.countriesoptions.filter(
         (element) => element.id == obj1.agent_country
       ),
+      */
       textboxobj:
-        localStorage.textboxdata != undefined
-          ? JSON.parse(localStorage.textboxdata)
-          : undefined,
+          localStorage.textboxdata != undefined
+              ? JSON.parse(localStorage.textboxdata)
+              : undefined,
       disabled: false,
     };
   },
   methods: {
+    using_agent()
+    {
+      this.is_using_agent = true;
+    },
     check(e) {
       this.disabled = e.target.checked;
     },
@@ -1141,22 +1148,21 @@ export default {
       };
       const obj = JSON.parse(localStorage.data);
       const response = await axios
-        .post(
-          configs.base_url + "/api/general-aviation/",
-          obj,
-          axiosConfig
-        )
-        .then((res) => {
-
-          localStorage.setItem('aviation_user_email',obj.operator_email)
-          localStorage.removeItem("data");
-          localStorage.removeItem("textboxdata");
-          window.location.href = "/general-aviation-thankyou";
-        })
-        .catch((err) => {
-          toastr.error(err.message);
-        });
-      debugger;
+          .post(
+              "https://awal.viitech.net/api/general-aviation/",
+              obj,
+              axiosConfig
+          )
+          .then((res) => {
+            localStorage.setItem('aviation_user_email', obj.operator_email)
+            localStorage.removeItem("data");
+            localStorage.removeItem("textboxdata");
+            window.location.href = "/general-aviation-thankyou";
+          })
+          .catch((err) => {
+            toastr.error(err.message);
+          });
+      //debugger;
       //   if(response.status == 200)
       //   {
       //     debugger;
@@ -1173,17 +1179,21 @@ export default {
 .detail-section {
   padding-bottom: 50px;
 }
+
 .accordian-ul > ul > li:not(:last-child) {
   padding-bottom: 50px;
 }
+
 .detail-section .accordion-item {
   border-top: 1px solid #011e41 !important;
   border: 0px solid rgba(0, 0, 0, 0.125);
   border-radius: 0px !important;
 }
+
 .detail-section .accordion-item:last-child {
   border-bottom: 1px solid #011e41 !important;
 }
+
 /* .detail-section .detail-section-header{display:flex; justify-content:space-between; margin-bottom:20px;} */
 .detail-section .detail-section-title {
   font-family: "Lora";
@@ -1192,38 +1202,47 @@ export default {
   line-height: 27px;
   color: #011e41;
 }
+
 .details-list ul li {
   margin-bottom: 10px;
 }
+
 .detail-section .accordion-button:not(.collapsed) {
   color: #091f40;
   background-color: transparent;
   box-shadow: none;
 }
+
 .detail-section .list-width {
   width: 214px;
   margin-right: 51px;
 }
+
 .general-form .detail-section .accordion-button:not(.collapsed)::after {
   background-image: url("../../assets/images/icons/accordian-icon.svg") !important;
   /* transform: rotate(-180dg) */
 }
+
 .general-form .detail-section .accordion-button::after {
   background-image: url("../../assets/images/icons/accordian-icon.svg") !important;
 }
+
 @media (max-width: 567px) {
   .w-p {
     width: 110px;
   }
+
   .detail-section .detail-section-title {
     font-size: 16px;
     line-height: 20px;
   }
+
   .extra-small-text {
     font-size: 14px;
     line-height: 20px;
   }
 }
+
 @media (max-width: 467px) {
   .mobile-col {
     flex-direction: column;

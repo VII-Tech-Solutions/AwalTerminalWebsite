@@ -13,6 +13,8 @@ import Footer from "./components/Footer/Footer.vue";
 import configs from "./components/constants";
 import AOS from "aos";
 
+import 'vue3-timepicker/dist/VueTimepicker.css'
+
 export default {
   // state
   data() {

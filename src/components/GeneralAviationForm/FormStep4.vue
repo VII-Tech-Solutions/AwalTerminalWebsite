@@ -82,7 +82,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
      window.scrollTo(0, 0)
     },
     data() {
-        debugger;
           var obj= JSON.parse(localStorage.data);
         return {
          notFormValid: true,
@@ -96,7 +95,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
       methods:{
        setData()
       {
-          debugger;
             var obj= localStorage.data != undefined ?  JSON.parse(localStorage.data):undefined;
      
             var obj1 = {};
@@ -148,7 +146,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
       },
       check()
       {
-        debugger;
         this.houseselected =     this.checkedNames.filter(o1 => o1 == 5).length>0?true:false
       }
   }

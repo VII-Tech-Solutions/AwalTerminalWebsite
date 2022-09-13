@@ -1085,6 +1085,8 @@ export default {
   font-size: 12px;
   line-height: 15px;
   font-weight: normal;
+  bottom: 0;
+
 }
 
 .elite-offer-services .service-features {
