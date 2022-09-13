@@ -51,9 +51,10 @@
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">From Airport<span
                           class="asterik">*</span></label>
-                      <v-select :class="{'azul':!color}" :options="airportoptions" required label="name"
+                      <v-select placeholder="Select an airport" :class="{'azul':!color}"
+                                :options="airportoptions"  required label="name"
                                 id="inputGroupSelect01" v-model="arriving_from_airport"
-                                :value="airport_name"></v-select>
+                                :value="airport_name" ></v-select>
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">arrival date<span class="asterik">*</span></label>
@@ -234,7 +235,6 @@ export default {
       obj1.lead_passenger_name = obj.lead_passenger_name;
       obj1.landing_purpose = obj.landing_purpose;
       obj1.arrival_call_sign = this.arrival_call_sign;
-      //console.log(this.arriving_from_airport);
       if (this.arriving_from_airport.name != undefined) {
         this.arriving_from_airport = this.arriving_from_airport.name;
         obj1.arriving_from_airport = this.arriving_from_airport;
@@ -245,8 +245,7 @@ export default {
           obj1.arrival_date = this.arrival_date,
           obj1.arrival_flight_nature = this.arrival_flight_nature,
           obj1.arrival_passenger_count = this.arrival_passenger_count,
-          obj1.departure_call_sign = this.departure_call_sign,
-          console.log(this.departure_to_airport);
+          obj1.departure_call_sign=this.departure_call_sign
       if (this.departure_to_airport.name != undefined) {
         this.departure_to_airport = this.departure_to_airport.name;
         obj1.departure_to_airport = this.departure_to_airport;
@@ -281,7 +280,6 @@ export default {
       obj1.countriesoptions = this.countriesoptions;
       obj1.formserviceoption = this.formserviceoption;
       obj1.airport_name = this.airport_name;
-      console.log(obj1);
       localStorage.setItem('data', JSON.stringify(obj1));
     }
   }

@@ -1133,7 +1133,8 @@ export default {
     };
   },
   methods: {
-    using_agent() {
+    using_agent()
+    {
       this.is_using_agent = true;
     },
     check(e) {

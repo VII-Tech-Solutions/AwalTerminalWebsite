@@ -29,10 +29,9 @@
                     <div class="form-group">
                       <label class="form-label">Telephone Number<span class="asterik">*</span></label>
                       <div class="form-border">
-                        <select v-model="teldrop" class="form-select phone-select h-100" id="inputGroupSelect01">
-                          <option value="973" selected>973</option>
-                          <option :value="option" v-for="option in dialCode">{{ option }}</option>
-                        </select>
+                        <v-select :class="{'azul':!color}" value="973" selected :clearable='null' :options="dialCode"
+                                  id="inputGroupSelect01" v-model="teldrop">
+                        </v-select>
                         <input type="text" v-model="operator_tel_number" class="form-control border-0"
                                placeholder="1234 5678">
                       </div>
@@ -67,10 +66,10 @@
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span
                           class="asterik">*</span></label>
-                      <v-select :class="{'azul':!color}" :options="countriesoptions" required label="name"
+                      <v-select placeholder="Select a country" :class="{'azul':!color}"
+                                :options="countriesoptions" required label="name"
                                 id="inputGroupSelect01" v-model="operator_country">
                       </v-select>
-
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">email address<span class="asterik">*</span></label>
@@ -110,8 +109,11 @@
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span
                           class="asterik">*</span></label>
-                      <v-select :class="{'azul':!color}" :options="countriesoptions" required label="name"
-                                id="inputGroupSelect01" v-model="agent_country">
+                      <v-select
+                          placeholder="Select a country"
+                          :class="{'azul':!color}"
+                          :options="countriesoptions" required label="name" id="inputGroupSelect01"
+                          v-model="agent_country">
                       </v-select>
                     </div>
                     <div class="form-group">
@@ -179,6 +181,15 @@ export default {
   },
   data() {
     var obj = JSON.parse(localStorage.data);
+    console.log('hi', obj.teldrop);
+    if (obj.operator_tel_number != undefined) {
+      var tel_number = obj.operator_tel_number;
+      tel_number = tel_number.split(' ');
+      if (tel_number.length > 0)
+        obj.operator_tel_number = tel_number[1];
+      else
+        obj.operator_tel_number = tel_number[0];
+    }
     return {
       notFormValid: true,
       airport_name: obj.airport_name,
@@ -451,7 +462,8 @@ export default {
         212,
         967,
         260,
-        263
+        263,
+        973
       ]
     }
   },
@@ -508,7 +520,7 @@ export default {
         obj1.operator_country = this.operator_country;
       }
       obj1.teldrop = this.teldrop;
-      obj1.operator_tel_number = this.teldrop + ' ' + this.operator_tel_number;
+      obj1.operator_tel_number = this.teldrop + ' ' + this.operator_tel_number.trim(' ');
       obj1.operator_email = this.operator_email,
           obj1.operator_address = this.operator_address;
       obj1.operator_billing_address = this.operator_billing_address;
@@ -541,7 +553,6 @@ export default {
       obj1.airportoptions = obj.airportoptions;
       obj1.countriesoptions = obj.countriesoptions;
       obj1.formserviceoption = obj.formserviceoption;
-      console.log(obj1);
       localStorage.setItem('data', JSON.stringify(obj1));
     }
 

@@ -44,8 +44,7 @@
                     <div class="form-group">
                       <label class="form-label" for="inputGroupSelect01">Arriving from<span
                           class="asterik">*</span></label>
-                      <v-select :options="airportoptions" label="name" :class="{'azul':!color}" v-model="airport_name"
-                                :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
+                      <v-select  placeholder="Select an airport" :options="airportoptions" label="name" :class="{'azul':!color}" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
                     </div>
                   </div>
                   <div class="col-lg-2">
