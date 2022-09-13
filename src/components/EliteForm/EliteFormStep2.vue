@@ -286,7 +286,7 @@ export default {
     },
     setData() {
       var abc = localStorage.elitedata != undefined ? JSON.parse(localStorage.elitedata) : undefined;
-      debugger;
+      // debugger;
       console.log("abc Data");
       console.log(abc);
       console.table(abc);
@@ -357,7 +357,7 @@ export default {
       obj.is_arrival_flight = this.is_arrival_flight;
       obj.passengers = this.passengers;
       obj.booker = abc == undefined ? '' : abc.booker;
-      debugger;
+      // debugger;
       localStorage.setItem('elitedata', JSON.stringify(obj));
       console.log('objects passsed', obj);
     }
