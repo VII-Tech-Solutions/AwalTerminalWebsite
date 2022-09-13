@@ -65,8 +65,8 @@
                   <div class="col-lg-2 ">
                     <div class="form-group">
                       <label class="form-label">Time<span class="asterik">*</span></label>
-                      <div class="form-border"><input onkeydown="return false" type="time" class="form-control border-0"
-                                                      v-model="time" placeholder="HH:MM">
+                      <div class="form-border">
+                        <vue-timepicker v-model="time" class="form-control border-0" format="HH:mm" @change="changeTime"></vue-timepicker>
                         <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch"
                                                       class="img-fluid"></span>
                       </div>
@@ -190,10 +190,12 @@
 <script>
 import vSelect from "vue-select"
 import '@fortawesome/fontawesome-free/js/all.js';
+import VueTimepicker from 'vue3-timepicker'
 
 export default {
   components: {
-    vSelect
+    vSelect,
+    VueTimepicker,
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -254,6 +256,9 @@ export default {
         }
       },
   methods: {
+    changeTime(event) {
+      this.time = event.displayTime;
+    },
     fligh_name(event) {
       // debugger;
       console.log('..', event);

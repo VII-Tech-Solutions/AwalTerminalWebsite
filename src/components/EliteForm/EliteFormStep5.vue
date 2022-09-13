@@ -1033,7 +1033,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   line-height: 15px;
   font-weight: normal;
   bottom: 0;
-
 }
 
 .elite-offer-services .service-features {
