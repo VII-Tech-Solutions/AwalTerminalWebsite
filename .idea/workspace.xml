@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c888b982-f583-4c33-b03f-62f645644fb5" name="Changes" comment="merge search function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EliteForm/EliteFormStep5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep3.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662985182644</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="merge search function">
+      <created>1663084642334</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663084642335</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

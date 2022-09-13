@@ -142,7 +142,7 @@
                                 Purpose of Landing<span class="asterik">*</span>
                               </p>
                               <p class="extra-small-text fw-normal">
-                                {{ obj.landing_purpose }} <br />
+                                {{ obj.landing_purpose }} <br/>
                               </p>
                             </div>
                           </li>
@@ -233,7 +233,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{obj.arriving_from_airport }}
+                                        {{ obj.arriving_from_airport }}
                                       </p>
                                     </div>
                                   </li>
@@ -1072,7 +1072,8 @@
             <router-link
                 to="/general-aviation-form5"
                 class="light-button d-inline-block"
-            >back</router-link
+            >back
+            </router-link
             >
           </div>
           <div class="d-block">
@@ -1095,6 +1096,7 @@
 <script>
 import axios from "axios";
 import "@fortawesome/fontawesome-free/js/all.js";
+
 export default {
   mounted() {
     window.scrollTo(0, 0);
@@ -1131,8 +1133,7 @@ export default {
     };
   },
   methods: {
-    using_agent()
-    {
+    using_agent() {
       this.is_using_agent = true;
     },
     check(e) {
@@ -1152,7 +1153,7 @@ export default {
               axiosConfig
           )
           .then((res) => {
-            localStorage.setItem('aviation_user_email',obj.operator_email)
+            localStorage.setItem('aviation_user_email', obj.operator_email)
             localStorage.removeItem("data");
             localStorage.removeItem("textboxdata");
             window.location.href = "/general-aviation-thankyou";
@@ -1177,17 +1178,21 @@ export default {
 .detail-section {
   padding-bottom: 50px;
 }
+
 .accordian-ul > ul > li:not(:last-child) {
   padding-bottom: 50px;
 }
+
 .detail-section .accordion-item {
   border-top: 1px solid #011e41 !important;
   border: 0px solid rgba(0, 0, 0, 0.125);
   border-radius: 0px !important;
 }
+
 .detail-section .accordion-item:last-child {
   border-bottom: 1px solid #011e41 !important;
 }
+
 /* .detail-section .detail-section-header{display:flex; justify-content:space-between; margin-bottom:20px;} */
 .detail-section .detail-section-title {
   font-family: "Lora";
@@ -1196,38 +1201,47 @@ export default {
   line-height: 27px;
   color: #011e41;
 }
+
 .details-list ul li {
   margin-bottom: 10px;
 }
+
 .detail-section .accordion-button:not(.collapsed) {
   color: #091f40;
   background-color: transparent;
   box-shadow: none;
 }
+
 .detail-section .list-width {
   width: 214px;
   margin-right: 51px;
 }
+
 .general-form .detail-section .accordion-button:not(.collapsed)::after {
   background-image: url("../../assets/images/icons/accordian-icon.svg") !important;
   /* transform: rotate(-180dg) */
 }
+
 .general-form .detail-section .accordion-button::after {
   background-image: url("../../assets/images/icons/accordian-icon.svg") !important;
 }
+
 @media (max-width: 567px) {
   .w-p {
     width: 110px;
   }
+
   .detail-section .detail-section-title {
     font-size: 16px;
     line-height: 20px;
   }
+
   .extra-small-text {
     font-size: 14px;
     line-height: 20px;
   }
 }
+
 @media (max-width: 467px) {
   .mobile-col {
     flex-direction: column;
