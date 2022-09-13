@@ -5,8 +5,8 @@
         <router-link to="/">
           <figure class="mb-0 form-logo">
             <img
-              class="img-fluid"
-              src="../../assets/images/forms-header-logo.png"
+                class="img-fluid"
+                src="../../assets/images/forms-header-logo.png"
             />
           </figure>
         </router-link>
@@ -14,7 +14,7 @@
       <div class="form-body">
         <div class="form-page-title">
           <div
-            class="
+              class="
               d-flex
               flex-md-row flex-column
               align-items-center
@@ -40,64 +40,52 @@
                 <div class="accordion-item">
                   <div class="detail-section-header w-100">
                     <p
-                      class="-capitalize detail-section-title accordion-header"
-                      id="headingOne"
+                        class="-capitalize detail-section-title accordion-header"
+                        id="headingOne"
                     >
                       <button
-                        class="
+                          class="
                           accordion-button
                           text-capitalize
                           detail-section-title
                         "
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
                       >
                         Your Service
                       </button>
                     </p>
                   </div>
                   <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample"
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body elite-form">
                       <div class="elite-offer-services d-flex flex-column">
                         <div class="d-flex flex-column flex-md-row">
                           <div
-                            v-if="service_id == true"
-                            class="elite-offer-service d-flex"
-                          >
+                              v-if="service_id == true"
+                              class="elite-offer-service d-flex">
                             <label class="custom-radio">
                               <div class="checkmark">
                                 <strong
-                                  class="service-name d-block mb-lg-3 mb-2"
-                                  >Common Lounge</strong
-                                >
-                                <strong class="service-price d-block mb-3"
-                                  >BHD 100<sub>/adult</sub></strong
-                                >
+                                    class="service-name d-block mb-lg-3 mb-2">Common Lounge</strong>
+                                <strong class="service-price d-block mb-3">BHD 100<sub>/adult</sub></strong>
                                 <ul class="list-unstyled service-features">
                                   <li
-                                    class="position-relative"
-                                    v-for="item in commontype"
-                                    :key="item.id"
-                                  >
+                                      class="position-relative"
+                                      v-for="item in commontype"
+                                      :key="item.id">
                                     {{ item.feature_details }}
                                   </li>
-                                  <!-- <li class="position-relative">50% of the adult rate
-                                                                        for children aged 2 to 12</li>
-                                                                    <li class="position-relative">Free entry for infants
-                                                                        ( 0 to 2 years old)</li>
-                                                                    <li class="position-relative">10% group discount (5
-                                                                        PAX and above)</li> -->
                                 </ul>
                                 <span class="tax-text"
-                                  >* 10% VAT on the total amount</span
+                                >* 10% VAT on the total amount</span
                                 >
                               </div>
                             </label>
@@ -106,36 +94,18 @@
                             <label class="custom-radio">
                               <div class="checkmark">
                                 <strong
-                                  class="service-name d-block mb-lg-3 mb-2"
-                                  >Private Lounge</strong
-                                >
-                                <strong class="service-price d-block mb-3"
-                                  >BHD 150<sub>/adult</sub></strong
-                                >
+                                    class="service-name d-block mb-lg-3 mb-2">Private Lounge</strong>
+                                <strong class="service-price d-block mb-3">BHD 150<sub>/adult</sub></strong>
                                 <ul class="list-unstyled service-features">
                                   <li
-                                    class="position-relative"
-                                    v-for="item in privatetype"
-                                    :key="item.id"
-                                  >
+                                      class="position-relative"
+                                      v-for="item in privatetype"
+                                      :key="item.id">
                                     {{ item.feature_details }}
                                   </li>
-                                  <!-- <li class="position-relative">Minimum of 2 adults
-                                                                        full fares required to access a Private Lounge
-                                                                    </li>
-                                                                    <li class="position-relative">50% of the adult rate
-                                                                        for children aged 2 to 12</li>
-                                                                    <li class="position-relative">Free entry for infants
-                                                                        ( 0 to 2 years old)</li>
-                                                                    <li class="position-relative">Rates are per
-                                                                        passenger capped at a total BHD 600.000 per
-                                                                        lounge</li>
-                                                                    <li class="position-relative">Rates apply to
-                                                                        standard lounge size with a maximum of 6
-                                                                        passengers per lounge</li> -->
                                 </ul>
                                 <span class="tax-text"
-                                  >* 10% VAT on the total amount</span
+                                >* 10% VAT on the total amount</span
                                 >
                               </div>
                             </label>
@@ -146,34 +116,30 @@
                   </div>
                 </div>
                 <div class="accordion-item">
-                  <p
-                    class="
+                  <p class="
                       text-capitalize
                       detail-section-title
-                      accordion-header
-                    "
-                    id="headingTwo"
-                  >
+                      accordion-header"
+                     id="headingTwo">
                     <button
-                      class="
+                        class="
                         accordion-button
                         text-capitalize
-                        detail-section-title
-                      "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="true"
-                      aria-controls="collapseTwo"
+                        detail-section-title"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="true"
+                        aria-controls="collapseTwo"
                     >
                       Your Journey
                     </button>
                   </p>
                   <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample"
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="accordian-ul">
@@ -188,18 +154,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Flight Status<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -212,18 +178,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Arriving From<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -236,7 +202,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -245,7 +211,7 @@
                                         date<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -258,7 +224,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -267,7 +233,7 @@
                                         time<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -280,18 +246,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Flight number<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -315,7 +281,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -324,7 +290,7 @@
                                         adults<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -337,7 +303,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -346,7 +312,7 @@
                                         children<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -359,7 +325,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -368,7 +334,7 @@
                                         infants<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -389,40 +355,40 @@
                 </div>
                 <div class="accordion-item">
                   <p
-                    class="
+                      class="
                       text-capitalize
                       detail-section-title
                       accordion-header
                     "
-                    id="headingThree"
+                      id="headingThree"
                   >
                     <button
-                      class="
+                        class="
                         accordion-button
                         text-capitalize
                         detail-section-title
                       "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="true"
-                      aria-controls="collapseThree"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="true"
+                        aria-controls="collapseThree"
                     >
                       Passenger Details
                     </button>
                   </p>
                   <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample"
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="accordian-ul">
                         <ul
-                          class="ul_css"
-                          v-for="(passenger, index) in passengers"
-                          :key="passenger"
+                            class="ul_css"
+                            v-for="(passenger, index) in passengers"
+                            :key="passenger"
                         >
                           <li>
                             <div class="d-flex mobile-col">
@@ -435,7 +401,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -444,7 +410,7 @@
                                         Title<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -457,18 +423,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         First Name*<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -481,7 +447,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -490,7 +456,7 @@
                                         Last Name<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -504,11 +470,11 @@
                                     <div class="d-flex align-items-baseline">
                                       <p class="extra-small-text w-p">
                                         Date of Birth<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -521,18 +487,18 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
                                         "
                                       >
                                         Nationality<span class="asterik"
-                                          >*</span
-                                        >
+                                      >*</span
+                                      >
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -545,7 +511,7 @@
                                   <li>
                                     <div class="d-flex align-items-baseline">
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           w-p
                                           text-capitalize
@@ -554,7 +520,7 @@
                                         Class<span class="asterik">*</span>
                                       </p>
                                       <p
-                                        class="
+                                          class="
                                           extra-small-text
                                           text-capitalize
                                           fw-normal
@@ -575,33 +541,33 @@
                 </div>
                 <div class="accordion-item">
                   <p
-                    class="
+                      class="
                       text-capitalize
                       detail-section-title
                       accordion-header
                     "
-                    id="headingFour"
+                      id="headingFour"
                   >
                     <button
-                      class="
+                        class="
                         accordion-button
                         text-capitalize
                         detail-section-title
                       "
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                      aria-expanded="true"
-                      aria-controls="collapseFour"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="true"
+                        aria-controls="collapseFour"
                     >
                       Booker’s Details
                     </button>
                   </p>
                   <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExample"
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
                       <div class="details-list">
@@ -612,7 +578,7 @@
                                 first name<span class="asterik">*</span>
                               </p>
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   fw-normal
@@ -628,7 +594,7 @@
                                 last name<span class="asterik">*</span>
                               </p>
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   fw-normal
@@ -654,7 +620,7 @@
                                 mobile number<span class="asterik">*</span>
                               </p>
                               <p
-                                class="
+                                  class="
                                   extra-small-text
                                   text-capitalize
                                   fw-normal
@@ -672,15 +638,16 @@
               </div>
               <div class="form-check terms">
                 <label class="checked-container text-capitalize"
-                  >By submitting this form, you are agreeing to our
+                >By submitting this form, you are agreeing to our
                   <router-link to="/terms-conditions"
-                    >Terms and Conditions</router-link
+                  >Terms and Conditions
+                  </router-link
                   >
                   <input
-                    type="checkbox"
-                    value="1"
-                    name="radio"
-                    @change="check($event)"
+                      type="checkbox"
+                      value="1"
+                      name="radio"
+                      @change="check($event)"
                   />
                   <span class="checkmark"></span>
                 </label>
@@ -696,9 +663,9 @@
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-block">
             <router-link
-              to="/elite-form4"
-              class="cancel-link d-inline-block text-decoration-none"
-              >Back
+                to="/elite-form4"
+                class="cancel-link d-inline-block text-decoration-none"
+            >Back
             </router-link>
           </div>
           <div class="d-flex align-items-center">
@@ -711,16 +678,16 @@
                             </router-link> -->
 
               <button
-                @click="setData()"
-                class="
+                  @click="setData()"
+                  class="
                   btn-next
                   d-inline-block
                   align-top
                   transition
                   text-capitalize
                 "
-                type="button"
-                :disabled="disabled ? false : true"
+                  type="button"
+                  :disabled="disabled ? false : true"
               >
                 Submit Reservation
               </button>
@@ -729,7 +696,9 @@
         </div>
       </div>
     </div>
-    <div class="loading" v-if="loader == true"><div id="loader"></div></div>
+    <div class="loading" v-if="loader == true">
+      <div id="loader"></div>
+    </div>
 
   </div>
 </template>
@@ -742,7 +711,7 @@ export default {
   data() {
     var obj = JSON.parse(localStorage.elitedata);
     console.log(obj);
-   
+
     return {
       number_of_adults: obj.number_of_adults,
       number_of_children: obj.number_of_children,
@@ -782,27 +751,27 @@ export default {
     },
     setData() {
       //toastr.info('Are you sure you want to buy ');
-      
-      this.loader =  true;
+
+      this.loader = true;
 
       var obj = {};
       obj.number_of_adults = parseInt(
-        this.number_of_adults == null ? 0 : this.number_of_adults
+          this.number_of_adults == null ? 0 : this.number_of_adults
       );
       obj.number_of_children = parseInt(
-        this.number_of_children == null ? 0 : this.number_of_children
+          this.number_of_children == null ? 0 : this.number_of_children
       );
       obj.number_of_infants = parseInt(
-        this.number_of_infants == null ? 0 : this.number_of_infants
+          this.number_of_infants == null ? 0 : this.number_of_infants
       );
       obj.total = parseInt(
-        parseInt(this.number_of_adults) +
+          parseInt(this.number_of_adults) +
           parseInt(this.number_of_children) +
           parseInt(this.number_of_infants)
       );
       (obj.service_id = this.service_id),
-        (obj.countriesoptions = this.countriesoptions),
-        (obj.airport_id = this.airport_id);
+          (obj.countriesoptions = this.countriesoptions),
+          (obj.airport_id = this.airport_id);
       obj.airport_name = this.airport_name;
       obj.date = this.date;
       obj.sum = this.sum;
@@ -812,7 +781,7 @@ export default {
       obj.flight_number = this.flight_number;
       obj.is_arrival_flight = this.is_arrival_flight;
       obj.passengers = this.passengers;
-      for(let i=0; i<obj.passengers.length; i++){
+      for (let i = 0; i < obj.passengers.length; i++) {
         obj.passengers[i].nationality_id = obj.passengers[i].nationality_id.id;
 
       }
@@ -830,27 +799,26 @@ export default {
         },
       };
       axios
-        .post(
-          configs.base_url + "/api/elite-service",
-          postData,
-          axiosConfig
-        )
-        .then((res) => {
-         
-          localStorage.setItem("useremail", postData.booker.email);
-          localStorage.removeItem("elitedata");
-          
-          window.location.href = "/elite-thankyou";
+          .post(
+              configs.base_url + "/api/elite-service",
+              postData,
+              axiosConfig
+          )
+          .then((res) => {
+
+            localStorage.setItem("useremail", postData.booker.email);
+            localStorage.removeItem("elitedata");
+
+            window.location.href = "/elite-thankyou";
 
 
-
-          //   window.location.href =
-          //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
-        })
-        .catch((err) => {
-          console.log("AXIOS ERROR: ", err);
-          toastr.error("Server Error Please Try again.. 🙁");
-        });
+            //   window.location.href =
+            //     "/elite-service?uuid=" + res.data.data.elite_services.uuid;
+          })
+          .catch((err) => {
+            console.log("AXIOS ERROR: ", err);
+            toastr.error("Server Error Please Try again.. 🙁");
+          });
     },
 
     getPaymentTotal() {
@@ -864,15 +832,15 @@ export default {
       };
 
       axios
-        .get(configs.base_url + "/api/calculate-price", get_param)
-        .then((res) => {
-        
-          this.amount = res.data.data.total_price;
-          
-        })
-        .catch((err) => {
-          toastr.error("Api Error Please Try again.. 🙁");
-        });
+          .get(configs.base_url + "/api/calculate-price", get_param)
+          .then((res) => {
+
+            this.amount = res.data.data.total_price;
+
+          })
+          .catch((err) => {
+            toastr.error("Api Error Please Try again.. 🙁");
+          });
     },
   },
 
