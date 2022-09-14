@@ -300,6 +300,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   z-index: 999999;
   position: absolute;
 }
-
+[type=search] {
+  font-size: 12px;
+  color: gray;
+}
+.vs__search:focus{
+  font-size: 12px !important;
+  color: gray !important;
+}
 
 </style>
