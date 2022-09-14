@@ -54,7 +54,7 @@
                       <v-select placeholder="Select an airport" :class="{'azul':!color}"
                                 :options="airportoptions"  required label="name"
                                 id="inputGroupSelect01" v-model="arriving_from_airport"
-                                :value="airport_name" ></v-select>
+                                :value="arriving_from_airport.name" ></v-select>
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">arrival date<span class="asterik">*</span></label>
@@ -104,7 +104,7 @@
                       <label class="form-label text-capitalize" for="inputGroupSelect01">to Airport<span
                           class="asterik">*</span></label>
                       <v-select :class="{'azul':!color}" :options="airportoptions" required label="name"
-                                id="inputGroupSelect01" v-model="departure_to_airport" :value="airport_name"></v-select>
+                                id="inputGroupSelect01" v-model="departure_to_airport" :value="departure_to_airport_name"></v-select>
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">departure date<span class="asterik">*</span></label>
@@ -188,6 +188,7 @@ export default {
       notFormValid: true,
       arrival_call_sign: obj.arrival_call_sign,
       arriving_from_airport: obj.arriving_from_airport,
+      arriving_from_airport_name: obj.arriving_from_airport_name,
 
       estimated_time_of_arrival: obj.estimated_time_of_arrival,
       arrival_date: obj.arrival_date,
@@ -196,6 +197,7 @@ export default {
 
       departure_call_sign: obj.departure_call_sign,
       departure_to_airport: obj.departure_to_airport,
+      departure_to_airport_name: obj.departure_to_airport_name,
       estimated_time_of_departure: obj.estimated_time_of_departure,
       departure_date: obj.departure_date,
       departure_flight_nature: obj.departure_flight_nature,
@@ -237,10 +239,15 @@ export default {
       obj1.landing_purpose = obj.landing_purpose;
       obj1.arrival_call_sign = this.arrival_call_sign;
       if (this.arriving_from_airport.name != undefined) {
-        this.arriving_from_airport = this.arriving_from_airport.name;
+        this.arriving_from_airport = this.arriving_from_airport.id;
+        this.arriving_from_airport_name = this.arriving_from_airport.name;
         obj1.arriving_from_airport = this.arriving_from_airport;
+        obj1.arriving_from_airport_name = this.arriving_from_airport_name;
+        obj1.airport_name = this.arriving_from_airport.name;
       } else {
         obj1.arriving_from_airport = this.arriving_from_airport;
+        obj1.arriving_from_airport_name = this.arriving_from_airport_name;
+        obj1.airport_name = this.arriving_from_airport.name;
       }
       obj1.estimated_time_of_arrival = this.estimated_time_of_arrival,
           obj1.arrival_date = this.arrival_date,
@@ -248,9 +255,12 @@ export default {
           obj1.arrival_passenger_count = this.arrival_passenger_count,
           obj1.departure_call_sign=this.departure_call_sign
       if (this.departure_to_airport.name != undefined) {
-        this.departure_to_airport = this.departure_to_airport.name;
+        this.departure_to_airport = this.departure_to_airport.id;
+        this.departure_to_airport_name = this.departure_to_airport.name;
+        obj1.departure_to_airport_name = this.departure_to_airport_name;
         obj1.departure_to_airport = this.departure_to_airport;
       } else {
+        obj1.departure_to_airport_name = this.departure_to_airport_name;
         obj1.departure_to_airport = this.departure_to_airport;
       }
       obj1.estimated_time_of_departure = this.estimated_time_of_departure,
@@ -280,7 +290,6 @@ export default {
       obj1.airportoptions = this.airportoptions;
       obj1.countriesoptions = this.countriesoptions;
       obj1.formserviceoption = this.formserviceoption;
-      obj1.airport_name = this.airport_name;
       localStorage.setItem('data', JSON.stringify(obj1));
     }
   }

@@ -233,7 +233,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ obj.arriving_from_airport }}
+                                        {{ obj.arriving_from_airport.name }}
                                       </p>
                                     </div>
                                   </li>
@@ -384,7 +384,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ obj.departure_to_airport }}
+                                        {{ obj.departure_to_airport.name }}
                                       </p>
                                     </div>
                                   </li>
@@ -1101,6 +1101,8 @@ import configs from "../constants";
 export default {
   mounted() {
     window.scrollTo(0, 0);
+    const obj = JSON.parse(localStorage.data);
+    console.log("obj",obj);
   },
   data() {
     var obj1 = JSON.parse(localStorage.data);
@@ -1148,6 +1150,7 @@ export default {
         },
       };
       const obj = JSON.parse(localStorage.data);
+      console.log("obj",obj);
       const response = await axios
           .post(
               configs.base_url + "/api/general-aviation/",

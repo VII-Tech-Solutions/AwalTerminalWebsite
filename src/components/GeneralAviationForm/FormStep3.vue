@@ -67,7 +67,7 @@
                       <label class="form-label text-capitalize" for="inputGroupSelect01">Country<span
                           class="asterik">*</span></label>
                       <v-select placeholder="Select a country" :class="{'azul':!color}"
-                                :options="countriesoptions" required label="name"
+                                :options="countriesoptions" required label="name" :value="operator_country_name"
                                 id="inputGroupSelect01" v-model="operator_country">
                       </v-select>
                     </div>
@@ -195,12 +195,14 @@ export default {
       airport_name: obj.airport_name,
       operator_full_name: obj.operator_full_name,
       operator_country: obj.operator_country,
+      operator_country_name: obj.operator_country_name,
       teldrop: obj.teldrop,
       operator_tel_number: obj.operator_tel_number,
       operator_email: obj.operator_email,
       operator_address: obj.operator_address,
       operator_billing_address: obj.operator_billing_address,
       agent_country: obj.agent_country,
+      agent_country_name: obj.agent_country_name,
       agent_fullname: obj.agent_fullname,
       agent_phoneNumber: obj.agent_phoneNumber,
       agent_email: obj.agent_email,
@@ -507,6 +509,7 @@ export default {
       obj1.arrival_passenger_count = obj.arrival_passenger_count;
       obj1.departure_call_sign = obj.departure_call_sign;
       obj1.departure_to_airport = obj.departure_to_airport;
+      obj1.departure_to_airport_name = obj.departure_to_airport_name;
       obj1.estimated_time_of_departure = obj.estimated_time_of_departure;
       obj1.departure_date = obj.departure_date;
       obj1.departure_flight_nature = obj.departure_flight_nature;
@@ -514,10 +517,15 @@ export default {
       obj1.operator_full_name = this.operator_full_name;
       //console.log(this.operator_country);
       if (this.operator_country.name != undefined) {
-        this.operator_country = this.operator_country.name;
+        this.operator_country = this.operator_country.id;
+        this.operator_country_name = this.operator_country.name;
+        // this.operator_country_id = this.operator_country.id;
+        // this.airport_name = this.airport_name.name;
         obj1.operator_country = this.operator_country;
+        obj1.operator_country_name = this.operator_country_name;
       } else {
         obj1.operator_country = this.operator_country;
+        obj1.operator_country_name = this.operator_country_name;
       }
       obj1.teldrop = this.teldrop;
       obj1.operator_tel_number = this.teldrop + ' ' + this.operator_tel_number.trim(' ');
@@ -528,10 +536,13 @@ export default {
       if (this.is_using_agent == 1) {
         if (this.agent_country.name != undefined) {
           //console.log(this.agent_country);
-          this.agent_country = this.agent_country.name;
+          this.agent_country = this.agent_country.id;
+          this.agent_country_name = this.agent_country.name;
+          obj1.agent_country_name = this.agent_country_name;
           obj1.agent_country = this.agent_country;
         } else {
           obj1.agent_country = this.agent_country;
+          obj1.agent_country_name = this.agent_country_name;
         }
       } else if (this.is_using_agent == 2) {
         this.agent_country = "";
