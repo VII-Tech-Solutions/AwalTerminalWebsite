@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dcf2963-a73f-4e13-bd0f-7ccc493046aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep5.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep6.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviationForm/FormStep6.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +43,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "node.js.selected.package.tslint": "(autodetect)"
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/tasleemalsharqi/Desktop/Projects/ATP001_AwalTerminalWebsite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -57,7 +62,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="" />
+      <changelist id="1dcf2963-a73f-4e13-bd0f-7ccc493046aa" name="Changes" comment="" />
       <created>1655275587901</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -69,6 +74,7 @@
       <workItem from="1659886039065" duration="1104000" />
       <workItem from="1659890034649" duration="638000" />
       <workItem from="1660978221985" duration="5296000" />
+      <workItem from="1663160854163" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
