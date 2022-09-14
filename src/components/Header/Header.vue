@@ -281,6 +281,7 @@ export default {
   font-family: "Lora";
   font-size: 14px;
 }
+
 .nav-item .dropdown-menu .dropdown-item:hover,
 .nav-item .dropdown-menu .dropdown-item:focus,
 .nav-item .dropdown-menu .dropdown-item.active,

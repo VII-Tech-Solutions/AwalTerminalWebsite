@@ -168,6 +168,7 @@
 import '@fortawesome/fontawesome-free/js/all.js';
 import axios from 'axios';
 import vSelect from "vue-select";
+import configs from "../constants";
 
 export default {
   components: {
@@ -209,7 +210,7 @@ export default {
           'Content-Type': 'application/json;charset=UTF-8',
         }
       };
-      axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+      axios.get(configs.base_url +'/api/metadata', axiosConfig)
           .then((res) => {
             // debugger;
             this.airportoptions = res.data.data.airports;
@@ -224,7 +225,7 @@ export default {
       this.airport_name = this.airportoptions.find(x => x.id == event.target.value).name;
     },
     error() {
-      toastr.error('Kindly fillout required fields 🙁');
+      toastr.error('Kindly fill out required fields 🙁');
     },
     setData() {
       var obj = localStorage.data != undefined ? JSON.parse(localStorage.data) : undefined;

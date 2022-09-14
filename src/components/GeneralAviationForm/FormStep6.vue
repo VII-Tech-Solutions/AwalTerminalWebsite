@@ -1096,6 +1096,7 @@
 <script>
 import axios from "axios";
 import "@fortawesome/fontawesome-free/js/all.js";
+import configs from "../constants";
 
 export default {
   mounted() {
@@ -1133,8 +1134,7 @@ export default {
     };
   },
   methods: {
-    using_agent()
-    {
+    using_agent() {
       this.is_using_agent = true;
     },
     check(e) {
@@ -1144,12 +1144,13 @@ export default {
       let axiosConfig = {
         headers: {
           "Content-Type": "application/json;charset=UTF-8",
+          'Access-Control-Allow-Origin': '*'
         },
       };
       const obj = JSON.parse(localStorage.data);
       const response = await axios
           .post(
-              "https://awal.viitech.net/api/general-aviation/",
+              configs.base_url + "/api/general-aviation/",
               obj,
               axiosConfig
           )
