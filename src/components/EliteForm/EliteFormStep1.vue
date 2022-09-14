@@ -145,13 +145,17 @@
             >
           </div>
           <div class="col-6 text-end">
-            <router-link
+            <router-link v-if="goNext"
+                to="#"
+                disabled
+                class="btn-next d-inline-block align-top transition">Next
+            </router-link>
+            <router-link v-else
                 to="/elite-form2"
+
                 @click="setData()"
-                class="btn-next d-inline-block align-top transition"
-            >Next
-            </router-link
-            >
+                class="btn-next d-inline-block align-top transition">Next
+            </router-link>
           </div>
         </div>
       </div>
@@ -176,6 +180,7 @@ export default {
     //debugger;
     var obj = localStorage.elitedata != undefined ? JSON.parse(localStorage.elitedata) : undefined;
     return {
+      goNext:true,
       airportoptions: this.airportoptions,
       // countriesoptions: this.countriesoptions,
       servicefeatureoptions: this.servicefeatureoptions,
@@ -257,6 +262,8 @@ export default {
             this.service_id = obj == undefined ? this.eliteserviceoptions[0].id : obj.service_id;
 
             localStorage.setItem('airportoptions1', JSON.stringify(res.data.data.airports));
+            console.log("disable the next", this.goNext);
+            this.goNext = false;
 
           })
           .catch((err) => {
