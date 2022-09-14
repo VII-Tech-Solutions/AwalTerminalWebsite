@@ -1145,15 +1145,15 @@ export default {
     async submitData() {
       let axiosConfig = {
         headers: {
-          "Content-Type": "application/json;charset=UTF-8",
-          'Access-Control-Allow-Origin': '*'
+          "Content-Type": "application/json",
+          // 'Access-Control-Allow-Origin': '*'
         },
       };
       const obj = JSON.parse(localStorage.data);
       console.log("obj",obj);
       const response = await axios
           .post(
-              configs.base_url + "/api/general-aviation/",
+              configs.base_url + "/api/general-aviation",
               obj,
               axiosConfig
           )
