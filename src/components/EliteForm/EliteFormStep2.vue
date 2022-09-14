@@ -267,21 +267,28 @@ export default {
     },
 
     AdultInc() {
-      this.number_of_adults = this.number_of_adults + 1;
+      if (this.number_of_adults === 0){
+        this.number_of_adults = 1;
+
+      }
+      else{
+        this.number_of_adults ++;
+
+      }
 
     }, AdultDec() {
       if (this.number_of_adults > 0)
         this.number_of_adults = this.number_of_adults - 1;
     },
     number_of_childrenInc() {
-      this.number_of_children = this.number_of_children + 1;
+      this.number_of_children ++;
 
     }, number_of_childrenDec() {
       if (this.number_of_children > 0)
         this.number_of_children = this.number_of_children - 1;
     },
     number_of_infantsInc() {
-      this.number_of_infants = this.number_of_infants + 1;
+      this.number_of_infants ++;
     }, number_of_infantsDec() {
       if (this.number_of_infants > 0)
         this.number_of_infants = this.number_of_infants - 1;
