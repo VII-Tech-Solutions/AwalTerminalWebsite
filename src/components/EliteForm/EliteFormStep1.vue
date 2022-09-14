@@ -217,28 +217,29 @@ export default {
   },
   methods: {
     setData() {
-      var obj = {};
-      obj.service_id = this.service_id;
-      obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
-      obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children);
-      obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
-      obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
-      obj.countriesoptions = this.countriesoptions;
-      obj.airport_id = this.airport_id;
-      obj.airport_name = this.airport_name;
-      obj.date = this.date;
-      obj.time = this.time;
-      obj.flight_number = this.flight_number;
-      obj.is_arrival_flight = this.is_arrival_flight;
-      obj.passengers = this.passengers;
-      obj.booker = this.booker;
-      obj.airportoptions = this.airportoptions;
-      obj.eliteserviceoptions = this.eliteserviceoptions;
-      obj.xyz = this.xyz;
-      obj.commontype = this.commontype;
-      obj.privatetype = this.privatetype;
+      var obj = localStorage.data != undefined ? JSON.parse(localStorage.data) : undefined;
+      var obj1 = {};
+      obj1.service_id = this.service_id;
+      obj1.number_of_adults = obj == undefined ? '' : parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
+      obj1.number_of_children = obj == undefined ? '' : parseInt(this.number_of_children == null ? 0 : this.number_of_children);
+      obj1.number_of_infants = obj == undefined ? '' : parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
+      obj1.total = obj == undefined ? '' : parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
+      obj1.countriesoptions = this.countriesoptions;
+      obj1.airport_id = obj == undefined ? '' : this.airport_id;
+      obj1.airport_name = obj == undefined ? '' : this.airport_name;
+      obj1.date = obj == undefined ? '' : this.date;
+      obj1.time = obj == undefined ? '' : this.time;
+      obj1.flight_number = obj == undefined ? '' : this.flight_number;
+      obj1.is_arrival_flight = obj == undefined ? '' : this.is_arrival_flight;
+      obj1.passengers = obj == undefined ? '' : this.passengers;
+      obj1.booker = obj == undefined ? '' : this.booker;
+      obj1.airportoptions = this.airportoptions;
+      obj1.eliteserviceoptions = this.eliteserviceoptions;
+      obj1.xyz = this.xyz;
+      obj1.commontype = this.commontype;
+      obj1.privatetype = this.privatetype;
 
-      localStorage.setItem('elitedata', JSON.stringify(obj));
+      localStorage.setItem('elitedata', JSON.stringify(obj1));
 
     },
     getDropdownData() {

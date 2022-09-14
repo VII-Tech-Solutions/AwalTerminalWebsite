@@ -172,11 +172,11 @@
           </div>
           <div class="d-block">
                       <span class="btn-next d-inline-block align-top transition"
-                            v-if="!(airport_name  && date && time && flight_number && number_of_adults )"
+                            v-if="!(airport_name  && date && time && flight_number && number_of_adults && is_arrival_flight )"
                             :disabled="notFormValid" @click="error()">
                             Next
                         </span>
-            <span v-if=" airport_name && date && time && flight_number && number_of_adults ">
+            <span v-if=" airport_name && date && time && flight_number && number_of_adults && is_arrival_flight ">
                          <router-link to="/elite-form3" @click="setData()"
                                       class="btn-next d-inline-block align-top transition">Next</router-link>
                          </span>
