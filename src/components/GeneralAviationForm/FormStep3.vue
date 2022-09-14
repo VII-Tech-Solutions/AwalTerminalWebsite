@@ -627,7 +627,9 @@ export default {
   border-bottom: 0px solid transparent !important;
   border-left: 0px solid transparent !important;
 }
-
+.vs--single .vs__selected{
+  height: 90% !important;
+}
 .azul {
   border: none !important;
   font-size: 12px;
