@@ -205,6 +205,7 @@
 <script>
 import axios from 'axios'
 import '@fortawesome/fontawesome-free/js/all.js';
+import configs from "../constants";
 
 export default {
   mounted() {
@@ -237,8 +238,10 @@ export default {
         if (ext == "pdf") {
           const formData = new FormData();
           formData.append('file', ref.target.files[0]);
-          const headers = {'Content-Type': 'multipart/form-data'};
-          axios.post('https://awal.viitech.net/api/general-aviation/media', formData, {headers}).then((res) => {
+          const headers = {'Content-Type': 'multipart/form-data',
+            'Access-Control-Allow-Origin': '*'
+          };
+          axios.post(configs.base_url+'/api/general-aviation/media', formData, {headers}).then((res) => {
             if (res.status == 200) {
               if (name == "Fuel Release") {
                 this.fuelServices = ref.target.files[0].name;
