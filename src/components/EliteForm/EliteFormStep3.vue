@@ -128,7 +128,7 @@
                           required
                           label="name"
                           id="inputGroupSelect01"
-                          v-model="passenger.nationality_title"
+                          v-model="passenger.nationality_id"
                       >
                       </v-select>
 
