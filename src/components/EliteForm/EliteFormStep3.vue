@@ -186,7 +186,7 @@
                             !(
                               passenger.first_name &&
                               passenger.title &&
-                              passenger.nationality_title &&
+                              passenger.nationality_id &&
                               passenger.last_name &&
                               passenger.birth_date
                             )
@@ -199,7 +199,7 @@
                             v-if="
                             passenger.first_name &&
                             passenger.title &&
-                            passenger.nationality_title&&
+                            passenger.nationality_id&&
                             passenger.last_name &&
                             passenger.birth_date
                           "
