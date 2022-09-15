@@ -233,7 +233,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ obj.arriving_from_airport.name }}
+                                        {{ arriving_from_airport_name }}
                                       </p>
                                     </div>
                                   </li>
@@ -384,7 +384,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ obj.departure_to_airport.name }}
+                                        {{ departure_to_airport_name }}
                                       </p>
                                     </div>
                                   </li>
@@ -571,7 +571,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ obj.operator_country }}
+                                        {{ operator_country_name  }}
                                       </p>
                                     </div>
                                   </li>
@@ -1103,12 +1103,34 @@ export default {
     window.scrollTo(0, 0);
     const obj = JSON.parse(localStorage.data);
     console.log("obj",obj);
+    console.log("obj.operator_country",obj.operator_country);
+    console.log("obj.operator_country",obj.countriesoptions);
+    if(obj.operator_country){
+      let id = obj.operator_country;
+      this.operator_country_name = obj.countriesoptions.filter(user => user.id == id);
+      console.log("this.operator_country_name",this.operator_country_name);
+      this.operator_country_name = this.operator_country_name[0].name;
+    }
+
+    if(obj.arriving_from_airport){
+      let id = obj.arriving_from_airport;
+      this.arriving_from_airport_name = obj.airportoptions.filter(user => user.id == id);
+      this.arriving_from_airport_name = this.arriving_from_airport_name[0].name;
+    }
+    if(obj.departure_to_airport){
+      let id = obj.departure_to_airport;
+      this.departure_to_airport_name = obj.airportoptions.filter(user => user.id == id);
+      this.departure_to_airport_name = this.departure_to_airport_name[0].name;
+    }
   },
   data() {
     var obj1 = JSON.parse(localStorage.data);
     //console.log(obj1);
     return {
       notFormValid: true,
+      operator_country_name:'test',
+      arriving_from_airport_name:'',
+      departure_to_airport_name:'',
       obj: JSON.parse(localStorage.data),
       selectedservice: obj1.formserviceoption.filter((o1) =>
           obj1.services.some((o2) => o1.id === o2)

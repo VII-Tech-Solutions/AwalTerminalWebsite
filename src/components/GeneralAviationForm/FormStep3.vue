@@ -68,7 +68,7 @@
                           class="asterik">*</span></label>
                       <v-select placeholder="Select a country" :class="{'azul':!color}"
                                 :options="countriesoptions" required label="name" :value="operator_country_name"
-                                id="inputGroupSelect01" v-model="operator_country">
+                                id="inputGroupSelect01" v-model="operator_country_name">
                       </v-select>
                     </div>
                     <div class="form-group">
@@ -143,7 +143,7 @@
             <router-link to="/general-aviation-form2" class="light-button d-inline-block">back</router-link>
           </div>
           <div class="d-block">
-                      <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country && operator_tel_number
+                      <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country_name && operator_tel_number
                        && operator_email && operator_address && operator_billing_address && operator_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) && !msg.email
                        && ((is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
                        && agent_email && agent_address && agent_billing_address && agent_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)))
@@ -151,7 +151,7 @@
                        )" :disabled="notFormValid" @click="error()">
                             Next
                         </span>
-            <span v-if="operator_full_name && operator_country && operator_tel_number
+            <span v-if="operator_full_name && operator_country_name && operator_tel_number
                         && operator_email && operator_address && operator_billing_address && operator_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) && !msg.email
 
                         && ( (is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
@@ -177,7 +177,13 @@ export default {
     vSelect
   },
   mounted() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+    var obj = JSON.parse(localStorage.data);
+    if(obj.operator_country){
+      let id = this.operator_country;
+      this.operator_country_name = obj.countriesoptions.filter(user => user.id == id);
+      this.operator_country_name = this.operator_country_name[0].name;
+    }
   },
   data() {
     var obj = JSON.parse(localStorage.data);
@@ -516,11 +522,11 @@ export default {
       obj1.departure_passenger_count = obj.departure_passenger_count;
       obj1.operator_full_name = this.operator_full_name;
       //console.log(this.operator_country);
-      if (this.operator_country.name != undefined) {
-        this.operator_country = this.operator_country.id;
-        this.operator_country_name = this.operator_country.name;
-        // this.operator_country_id = this.operator_country.id;
-        // this.airport_name = this.airport_name.name;
+      if (this.operator_country_name.name != undefined && this.operator_country_name.id != undefined) {
+        this.operator_country = this.operator_country_name.id;
+        this.operator_country_name = this.operator_country_name.name;
+        console.log("operator_country",this.operator_country);
+        console.log("operator_country_name",this.operator_country_name);
         obj1.operator_country = this.operator_country;
         obj1.operator_country_name = this.operator_country_name;
       } else {

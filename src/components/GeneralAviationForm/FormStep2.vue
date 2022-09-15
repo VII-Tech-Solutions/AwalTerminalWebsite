@@ -53,8 +53,8 @@
                           class="asterik">*</span></label>
                       <v-select placeholder="Select an airport" :class="{'azul':!color}"
                                 :options="airportoptions"  required label="name"
-                                id="inputGroupSelect01" v-model="arriving_from_airport"
-                                :value="arriving_from_airport.name" ></v-select>
+                                id="inputGroupSelect01" v-model="arriving_from_airport_name"
+                                :value="arriving_from_airport_name" ></v-select>
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">arrival date<span class="asterik">*</span></label>
@@ -104,7 +104,7 @@
                       <label class="form-label text-capitalize" for="inputGroupSelect01">to Airport<span
                           class="asterik">*</span></label>
                       <v-select :class="{'azul':!color}" :options="airportoptions" required label="name"
-                                id="inputGroupSelect01" v-model="departure_to_airport" :value="departure_to_airport_name"></v-select>
+                                id="inputGroupSelect01" v-model="departure_to_airport_name" :value="departure_to_airport_name"></v-select>
                     </div>
                     <div class="form-group">
                       <label class="form-label text-capitalize">departure date<span class="asterik">*</span></label>
@@ -140,17 +140,17 @@
             <router-link to="/general-aviation-form1" class="light-button d-inline-block">back</router-link>
           </div>
           <div class="d-block">
-                      <span class="beige-button d-inline-block" v-if="!(arrival_call_sign && arriving_from_airport && estimated_time_of_arrival
+                      <span class="beige-button d-inline-block" v-if="!(arrival_call_sign && arriving_from_airport_name && estimated_time_of_arrival
                        && arrival_date && arrival_flight_nature && arrival_passenger_count
-                       && departure_call_sign && departure_to_airport && estimated_time_of_departure
+                       && departure_call_sign && departure_to_airport_name && estimated_time_of_departure
                        && departure_date && departure_flight_nature && departure_passenger_count
 
                        )" :disabled="notFormValid" @click="error()">
                             Next
                         </span>
-            <span v-if="arrival_call_sign && arriving_from_airport && estimated_time_of_arrival
+            <span v-if="arrival_call_sign && arriving_from_airport_name && estimated_time_of_arrival
                         && arrival_date && arrival_flight_nature && arrival_passenger_count
-                        && departure_call_sign && departure_to_airport && estimated_time_of_departure
+                        && departure_call_sign && departure_to_airport_name && estimated_time_of_departure
                         && departure_date && departure_flight_nature && departure_passenger_count
                         ">
                          <router-link to="/general-aviation-form3" @click="setData()"
@@ -176,6 +176,25 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+    var obj = JSON.parse(localStorage.data);
+console.log("obj",obj);
+console.log(obj.arriving_from_airport);
+if(obj.arriving_from_airport){
+  let id = this.arriving_from_airport;
+  console.log("airportoptions",obj.airportoptions);
+  this.arriving_from_airport_name = obj.airportoptions.filter(user => user.id == id);
+  console.log("arriving_from_airport_name",this.arriving_from_airport_name);
+
+  this.arriving_from_airport_name = this.arriving_from_airport_name[0].name;
+  console.log("arriving_from_airport_name2",this.arriving_from_airport_name);
+}
+    if(obj.departure_to_airport){
+      let id = this.departure_to_airport;
+      this.departure_to_airport_name = obj.airportoptions.filter(user => user.id == id);
+      this.departure_to_airport_name = this.departure_to_airport_name[0].name;
+      console.log("departure_to_airport_name",this.departure_to_airport_name);
+      console.log("obj.departure_to_airport",obj.departure_to_airport);
+    }
     this.getDropdownData();
   },
   data() {
@@ -238,25 +257,31 @@ export default {
       obj1.lead_passenger_name = obj.lead_passenger_name;
       obj1.landing_purpose = obj.landing_purpose;
       obj1.arrival_call_sign = this.arrival_call_sign;
-      if (this.arriving_from_airport.name != undefined) {
-        this.arriving_from_airport = this.arriving_from_airport.id;
-        this.arriving_from_airport_name = this.arriving_from_airport.name;
+      if (this.arriving_from_airport_name.name != undefined && this.arriving_from_airport_name.id != undefined) {
+        this.arriving_from_airport = this.arriving_from_airport_name.id;
+        this.arriving_from_airport_name = this.arriving_from_airport_name.name;
+        console.log("arriving_from_airport",this.arriving_from_airport);
+        console.log("arriving_from_airport_name",this.arriving_from_airport_name);
         obj1.arriving_from_airport = this.arriving_from_airport;
         obj1.arriving_from_airport_name = this.arriving_from_airport_name;
-        obj1.airport_name = this.arriving_from_airport.name;
+        // obj1.airport_name = this.arriving_from_airport.name;
       } else {
         obj1.arriving_from_airport = this.arriving_from_airport;
         obj1.arriving_from_airport_name = this.arriving_from_airport_name;
-        obj1.airport_name = this.arriving_from_airport.name;
+        // obj1.airport_name = this.arriving_from_airport.name;
       }
       obj1.estimated_time_of_arrival = this.estimated_time_of_arrival,
           obj1.arrival_date = this.arrival_date,
           obj1.arrival_flight_nature = this.arrival_flight_nature,
           obj1.arrival_passenger_count = this.arrival_passenger_count,
           obj1.departure_call_sign=this.departure_call_sign
-      if (this.departure_to_airport.name != undefined) {
-        this.departure_to_airport = this.departure_to_airport.id;
-        this.departure_to_airport_name = this.departure_to_airport.name;
+      if (this.departure_to_airport_name.name != undefined && this.departure_to_airport_name.id != undefined) {
+        console.log("departure_to_airport_name array",this.departure_to_airport_name);
+
+        this.departure_to_airport = this.departure_to_airport_name.id;
+        this.departure_to_airport_name = this.departure_to_airport_name.name;
+        console.log("departure_to_airport_name",this.departure_to_airport_name);
+        console.log("departure_to_airport",this.departure_to_airport);
         obj1.departure_to_airport_name = this.departure_to_airport_name;
         obj1.departure_to_airport = this.departure_to_airport;
       } else {
