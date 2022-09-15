@@ -715,9 +715,7 @@
                                         "
                                       >
                                         {{
-                                          obj.agent_country != undefined
-                                              ? obj.agent_country
-                                              : ""
+                                          agent_country_name
                                         }}
                                       </p>
                                     </div>
@@ -1111,6 +1109,12 @@ export default {
       console.log("this.operator_country_name",this.operator_country_name);
       this.operator_country_name = this.operator_country_name[0].name;
     }
+    if(obj.agent_country){
+      let id = obj.agent_country;
+      this.agent_country_name = obj.countriesoptions.filter(user => user.id == id);
+      console.log("this.operator_country_name",this.agent_country_name);
+      this.agent_country_name = this.agent_country_name[0].name;
+    }
 
     if(obj.arriving_from_airport){
       let id = obj.arriving_from_airport;
@@ -1130,6 +1134,7 @@ export default {
       notFormValid: true,
       operator_country_name:'test',
       arriving_from_airport_name:'',
+      agent_country_name:'',
       departure_to_airport_name:'',
       obj: JSON.parse(localStorage.data),
       selectedservice: obj1.formserviceoption.filter((o1) =>
