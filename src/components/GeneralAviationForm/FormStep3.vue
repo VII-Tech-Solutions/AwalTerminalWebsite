@@ -94,9 +94,18 @@
                       <label class="form-label text-capitalize">Full Name<span class="asterik">*</span></label>
                       <input type="text" v-model="agent_fullname" class="form-control" placeholder="Full Name">
                     </div>
+
                     <div class="form-group">
                       <label class="form-label">Telephone Number<span class="asterik">*</span></label>
-                      <input type="text" v-model="agent_phoneNumber" class="form-control" placeholder="+973 1234 5678">
+                      <div class="form-border">
+                        <v-select :class="{'azul':!color}" value="973" selected :clearable='null' :options="dialCode"
+                                  id="inputGroupSelect01" v-model="agentdrop">
+                        </v-select>
+                        <input type="text" v-model="agent_phoneNumber" class="form-control border-0"
+                               placeholder="1234 5678">
+
+                      </div>
+
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlTextarea1" class="form-label text-capitalize">address<span
@@ -214,6 +223,7 @@ export default {
       operator_billing_address: obj.operator_billing_address,
       agent_country: obj.agent_country,
       agent_country_name: obj.agent_country_name,
+      agentdrop: obj.agentdrop,
       agent_fullname: obj.agent_fullname,
       agent_phoneNumber: obj.agent_phoneNumber,
       agent_email: obj.agent_email,
@@ -539,6 +549,7 @@ export default {
         obj1.operator_country_name = this.operator_country_name;
       }
       obj1.teldrop = this.teldrop;
+      obj1.agentdrop = this.agentdrop;
       obj1.operator_tel_number = this.teldrop + ' ' + this.operator_tel_number.trim(' ');
       obj1.operator_email = this.operator_email,
           obj1.operator_address = this.operator_address;
@@ -547,6 +558,9 @@ export default {
       if (this.is_using_agent == 1) {
         if (this.agent_country_name.name != undefined && this.agent_country_name.id != undefined) {
           //console.log(this.agent_country);
+          this.agent_phoneNumber = this.agentdrop + ' ' + this.agent_phoneNumber.trim(' ');
+          obj1.agent_phoneNumber = this.agent_phoneNumber;
+
           this.agent_country = this.agent_country_name.id;
           this.agent_country_name = this.agent_country_name.name;
           obj1.agent_country_name = this.agent_country_name;
