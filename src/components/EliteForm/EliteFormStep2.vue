@@ -42,7 +42,10 @@
                   </div>
                   <div class="col-lg-3 ">
                     <div class="form-group">
-                      <label class="form-label" for="inputGroupSelect01">Arriving from<span
+                      <label class="form-label" for="inputGroupSelect01" v-if="is_arrival_flight === 'true'">Arriving from<span
+                          class="asterik">*</span></label>
+
+                      <label class="form-label" for="inputGroupSelect01" v-else> Departing from<span
                           class="asterik">*</span></label>
                       <v-select  placeholder="Select an airport" :options="airportoptions" label="name" :class="{'azul':!color}" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
                     </div>
