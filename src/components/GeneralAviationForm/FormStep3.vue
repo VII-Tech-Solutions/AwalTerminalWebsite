@@ -113,7 +113,7 @@
                           placeholder="Select a country"
                           :class="{'azul':!color}"
                           :options="countriesoptions" required label="name" id="inputGroupSelect01"
-                          v-model="agent_country">
+                          v-model="agent_country_name">
                       </v-select>
                     </div>
                     <div class="form-group">
@@ -145,7 +145,7 @@
           <div class="d-block">
                       <span class="beige-button d-inline-block" v-if="!(operator_full_name && operator_country_name && operator_tel_number
                        && operator_email && operator_address && operator_billing_address && operator_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) && !msg.email
-                       && ((is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
+                       && ((is_using_agent == 2) || (agent_fullname && agent_country_name && agent_phoneNumber
                        && agent_email && agent_address && agent_billing_address && agent_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)))
 
                        )" :disabled="notFormValid" @click="error()">
@@ -154,7 +154,7 @@
             <span v-if="operator_full_name && operator_country_name && operator_tel_number
                         && operator_email && operator_address && operator_billing_address && operator_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) && !msg.email
 
-                        && ( (is_using_agent == 2) || (agent_fullname && agent_country && agent_phoneNumber
+                        && ( (is_using_agent == 2) || (agent_fullname && agent_country_name && agent_phoneNumber
                         && agent_email && agent_address && agent_billing_address && agent_email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ))
                         ">
                          <router-link to="/general-aviation-form4" @click="setData()"
@@ -183,6 +183,11 @@ export default {
       let id = this.operator_country;
       this.operator_country_name = obj.countriesoptions.filter(user => user.id == id);
       this.operator_country_name = this.operator_country_name[0].name;
+    }
+    if(obj.agent_country){
+      let id = this.agent_country;
+      this.agent_country_name = obj.countriesoptions.filter(user => user.id == id);
+      this.agent_country_name = this.agent_country_name[0].name;
     }
   },
   data() {
@@ -540,10 +545,10 @@ export default {
       obj1.operator_billing_address = this.operator_billing_address;
       obj1.agent_fullname = this.is_using_agent == "1" ? this.agent_fullname : "";
       if (this.is_using_agent == 1) {
-        if (this.agent_country.name != undefined) {
+        if (this.agent_country_name.name != undefined && this.agent_country_name.id != undefined) {
           //console.log(this.agent_country);
-          this.agent_country = this.agent_country.id;
-          this.agent_country_name = this.agent_country.name;
+          this.agent_country = this.agent_country_name.id;
+          this.agent_country_name = this.agent_country_name.name;
           obj1.agent_country_name = this.agent_country_name;
           obj1.agent_country = this.agent_country;
         } else {
