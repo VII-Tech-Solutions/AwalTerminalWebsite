@@ -116,6 +116,7 @@
                     <router-link class="text-capitalize" @click="item()" to="/terms-conditions"
                       >Terms & Conditions</router-link
                     >
+
                   </li>
                   <!--<li>
                     <router-link class="text-capitalize" @click="item()" to="/"
