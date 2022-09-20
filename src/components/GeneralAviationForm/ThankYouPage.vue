@@ -22,19 +22,24 @@
               v-bind:href="'mailto:' + booker.email"
               >{{ booker.email }}</a
             >
-            This is to confirm receipt of your request. Request will be confirmed by an agent soon.
+            once your request has been approved.
           </p>
           <p class="">
             If you require any further assistance please contact the Bookings
-            Team on 
+            Team on  
             <a
               class="contact-links text-decoration-none"
-              href="tel:+973 39471116"
-              >+973 39471116</a
-            > or <a
+              href="tel:+973 17139830"
+              >+973 17139830</a
+            > or 
+            <a
+                class="contact-links text-decoration-none"
+                href="tel:+973 33661014"
+            >+973 33661014</a
+            > or email us on <a
               class="contact-links text-decoration-none"
-              href="mailto:cip@halabahrain.bh"
-              >cip@halabahrain.bh</a
+              href="mailto:gaops@halabahrain.bh"
+              >gaops@halabahrain.bh</a
             >
           </p>
         </div>
