@@ -113,11 +113,12 @@
               <div class="footer-copyrigt-links">
                 <ul>
                   <li>
-                    <router-link class="text-capitalize" @click="item()" to="/"
+                    <router-link class="text-capitalize" @click="item()" to="/terms-conditions"
                       >Terms & Conditions</router-link
                     >
+
                   </li>
-                  <li>
+                  <!--<li>
                     <router-link class="text-capitalize" @click="item()" to="/"
                       >Privacy Policy</router-link
                     >
@@ -126,7 +127,7 @@
                     <router-link class="text-capitalize" @click="item()" to="/"
                       >Cookies Policy</router-link
                     >
-                  </li>
+                  </li>-->
                   <li>
                     <span class="text-capitalize" 
                       >Awal Terminal Building. © 2022 All rights reserved.</span>
