@@ -22,7 +22,7 @@
               v-bind:href="'mailto:' + booker.email"
               >{{ booker.email }}</a
             >
-            once your request has been approved.
+            This is to confirm receipt of your request. Request will be confirmed by an agent soon.
           </p>
           <p class="">
             If you require any further assistance please contact the Bookings
