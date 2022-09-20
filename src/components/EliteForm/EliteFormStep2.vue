@@ -47,7 +47,7 @@
 
                       <label class="form-label" for="inputGroupSelect01" v-else> Departing from<span
                           class="asterik">*</span></label>
-                      <v-select  placeholder="Select an airport" :options="airportoptions" label="name" :class="{'azul':!color}" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
+                      <v-select  placeholder="Select an airport" :options="airportoptions" label="full_name" :class="{'azul':!color}" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
                     </div>
                   </div>
                   <div class="col-lg-2">
@@ -254,7 +254,7 @@ export default {
           else
             return this.airportoptions.filter((x) => {
               //x.name.toLowerCase() === query
-              Object.values(x).find((word) => word.name === "name");
+              Object.values(x).find((word) => word.full_name === "full_name");
             });
         }
       },
