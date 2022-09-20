@@ -1047,7 +1047,7 @@
               <div class="form-check terms">
                 <label class="checked-container text-capitalize"
                 >By submitting this form, you are agreeing to our
-                  <router-link to="/privacy-policy">Terms and Conditions</router-link>
+                  <router-link to="/terms-conditions">Terms and Conditions</router-link>
                   <input
                       type="checkbox"
                       value="1"

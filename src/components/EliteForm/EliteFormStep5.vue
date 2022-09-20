@@ -170,8 +170,17 @@
                                           text-capitalize
                                           fw-normal
                                         "
-                                      >
+                                          v-if="is_arrival_flight === 'true'">
                                         Arrival
+                                      </p>
+                                      <p
+                                          class="
+                                          extra-small-text
+                                          text-capitalize
+                                          fw-normal
+                                        "
+                                      v-else>
+                                        Departure
                                       </p>
                                     </div>
                                   </li>

@@ -138,17 +138,7 @@ export default {
 
   methods: {
     getHomeContent() {
-      if(this.$router.options.history.state.back === "/" || "/contact"){
-        this.route = "homepage-content";
-        this.dataRequest = "response.data.data.homepage-content";
-        this.image1 = "home-service-1";
-        this.image2 = "home-service-2";
-        this.image3 = "home-service-3";
-        this.service1 ="Expert Handling";
-        this.service2 ="Luxury Transport";
-        this.service3 ="Perfect Departure";
-      }
-      else if (this.$router.options.history.state.back === "/tour"){
+      if (this.$router.options.history.state.back === "/tour"){
         this.route = "tour-the-terminal-content";
         this.dataRequest = "response.data.data.tour-the-terminal-content";
         this.image1 = "tour-service-1";
@@ -197,6 +187,16 @@ export default {
         this.service1 ="Detailed Interiors";
         this.service2 ="Absolute Comfort";
         this.service3 ="Relaxing Atmosphere";
+      }
+      else{
+        this.route = "homepage-content";
+        this.dataRequest = "response.data.data.homepage-content";
+        this.image1 = "home-service-1";
+        this.image2 = "home-service-2";
+        this.image3 = "home-service-3";
+        this.service1 ="Expert Handling";
+        this.service2 ="Luxury Transport";
+        this.service3 ="Perfect Departure";
       }
       console.log("after",this.route);
 

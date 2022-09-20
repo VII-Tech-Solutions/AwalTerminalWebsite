@@ -305,7 +305,7 @@ export default {
   /* border-bottom: 1px solid #011e41; */
 }
 .header.dark .nav-link {
-  color: #011e41;
+  color: #011e41 !important;
 }
 .header.dark .navbar-expand-lg .navbar-nav .nav-link:hover,
 .header.dark .navbar-expand-lg .navbar-nav .nav-link.router-link-exact-active {
