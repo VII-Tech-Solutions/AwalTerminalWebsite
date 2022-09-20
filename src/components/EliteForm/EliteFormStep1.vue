@@ -66,7 +66,7 @@
                       eliteserviceoptions != undefined
                           ? eliteserviceoptions[0].price_per_adult
                           : ""
-                    }}<sub>/adult</sub></strong
+                    }}<sub> BHD/adult</sub></strong
                   >
                   <ul class="list-unstyled service-features">
                     <li
@@ -106,7 +106,7 @@
                       eliteserviceoptions != undefined
                           ? eliteserviceoptions[1].price_per_adult
                           : ""
-                    }}<sub>/adult</sub></strong
+                    }}<sub> BHD/adult</sub></strong
                   >
                   <ul class="list-unstyled service-features">
                     <li
