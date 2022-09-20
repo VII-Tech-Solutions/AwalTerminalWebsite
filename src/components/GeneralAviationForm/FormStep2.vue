@@ -141,7 +141,7 @@
           </div>
           <div class="d-block">
                       <span class="beige-button d-inline-block" v-if="!(arrival_call_sign && arriving_from_airport_name && estimated_time_of_arrival
-                       && arrival_date && arrival_flight_nature && arrival_passenger_count
+                       && arrival_date && arrival_flight_nature && arrival_passenger_count >=0
                        && departure_call_sign && departure_to_airport_name && estimated_time_of_departure
                        && departure_date && departure_flight_nature && departure_passenger_count
 
@@ -149,7 +149,7 @@
                             Next
                         </span>
             <span v-if="arrival_call_sign && arriving_from_airport_name && estimated_time_of_arrival
-                        && arrival_date && arrival_flight_nature && arrival_passenger_count
+                        && arrival_date && arrival_flight_nature && arrival_passenger_count >=0
                         && departure_call_sign && departure_to_airport_name && estimated_time_of_departure
                         && departure_date && departure_flight_nature && departure_passenger_count
                         ">
