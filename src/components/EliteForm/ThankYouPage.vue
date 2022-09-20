@@ -30,8 +30,8 @@
               >+973 39471116</a
             > or <a
               class="contact-links text-decoration-none"
-              href="mailto:cip@halabahrain.bh"
-              >cip@halabahrain.bh</a
+              href="mailto:elite@halabahrain.bh"
+              >elite@halabahrain.bh</a
             >
           </p>
         </div>
