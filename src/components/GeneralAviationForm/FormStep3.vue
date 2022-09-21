@@ -42,7 +42,7 @@
                       <textarea class="form-control" v-model="operator_address" placeholder="Enter your address"
                                 id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <div class="custom-radio-btn ">
+                    <div class="custom-radio-btn 	d-none d-lg-block  d-xl-block">
                       <p class="form-small-text mb-3">Are you using an agent?</p>
                       <div class="d-flex align-items-center">
                         <div class="form-check px-0 ms-0 me-4">
@@ -84,6 +84,26 @@
                                 rows="3"></textarea>
                     </div>
                   </div>
+                  <div class="col-lg-6 mb-0 custom-radio-btn 	d-lg-none d-xl-none ">
+                    <p class="form-small-text mb-3">Are you using an agent?</p>
+                    <div class="d-flex align-items-center">
+                      <div class="form-check px-0 ms-0 me-4">
+                        <label class="radio-container text-capitalize">yes
+                          <input type="radio" value="1" :change="is_using_agent" v-model="is_using_agent"
+                                 name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <div class="form-check ms-0">
+                        <label class="radio-container text-capitalize">no
+                          <input type="radio" value="2" :change="is_using_agent" v-model="is_using_agent"
+                                 name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </fieldset>
               <fieldset v-show="is_using_agent == 1">
