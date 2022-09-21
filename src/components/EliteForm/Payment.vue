@@ -11,7 +11,7 @@
                 </div>
                 <div class="thankyou-p">
                     <h2>Your payment has  <br>been received!</h2>
-                        <p class="mb-4 ">Thank you for booking the Elite Service.<br/>The details of your booking has been sent to <a class="contact-links" :href="'mailto:'+ email">email</a> </p>
+                        <p class="mb-4 ">Thank you for booking the Elite Service.<br/>The details of your booking has been sent to <a class="contact-links" :href="'mailto:'+ email">{{ email }}</a> </p>
                         <p class="">If you require any further assistance please contact the Bookings Team on  <a class="contact-links text-decoration-none" href="tel:+973 39471116">+973 39471116</a> or <a class="contact-links text-decoration-none" href="mailto:elite@halabahrain.bh">elite@halabahrain.bh</a></p>
                 </div>
                 <div class="d-flex"><router-link to="/" class="blue-btn d-inline">Back to home</router-link></div>
