@@ -146,7 +146,7 @@
                         <label class="form-label text-capitalize">other documents</label>
                         <div class="form-border upload-form px-1"><input type="text" v-model="otherDocuments"
                                                                          class="form-control border-0"
-                                                                         placeholder="Upload other documents">
+                                                                         >
                           <input type="file" @change="uploadFile($event,'other')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
                           <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
