@@ -30,14 +30,9 @@
                     <div class="form-group">
                       <label class="form-label">ETA (UTC Time)<span class="asterik">*</span></label>
                       <div class="form-border">
-                        <input type="time" onkeydown="return false" v-model="estimated_time_of_arrival"
-                               class="form-control border-0" placeholder="HH:MM">
-                        <span class="input-icon">
-                        <img
-                            src="../../assets/images/icons/schedule.svg"
-                            alt="couch"
-                            class=" img-fluid"/>
-                          </span>
+                        <vue-timepicker  v-model="estimated_time_of_arrival" class="form-control border-0" format="HH:mm" @change="arrivalTime"></vue-timepicker>
+                        <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch"
+                                                      class="img-fluid"></span>
 
                       </div>
                     </div>
@@ -85,12 +80,13 @@
                     </div>
                     <div class="form-group">
                       <label class="form-label">ETA (UTC Time)<span class="asterik">*</span></label>
-                      <div class="form-border"><input type="time" onkeydown="return false"
-                                                      v-model="estimated_time_of_departure"
-                                                      class="form-control border-0" placeholder="HH:MM">
+                      <div class="form-border">
+                        <vue-timepicker  v-model="estimated_time_of_departure" class="form-control border-0" format="HH:mm" @change="dapartureTime"></vue-timepicker>
                         <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch"
-                                                      class=" img-fluid"/>
-                        </span></div>
+                                                      class="img-fluid"></span>
+
+                      </div>
+
 
                     </div>
                     <div class="form-group">
@@ -126,6 +122,7 @@
                     </div>
                   </div>
                 </div>
+
               </fieldset>
             </form>
           </div>
@@ -169,10 +166,12 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import axios from 'axios';
 import vSelect from "vue-select";
 import configs from "../constants";
+import VueTimepicker from 'vue3-timepicker';
 
 export default {
   components: {
-    vSelect
+    vSelect,
+    VueTimepicker,
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -197,6 +196,7 @@ if(obj.arriving_from_airport){
     }
     this.getDropdownData();
   },
+
   data() {
     var obj = JSON.parse(localStorage.data);
     return {
@@ -209,7 +209,7 @@ if(obj.arriving_from_airport){
       arriving_from_airport: obj.arriving_from_airport,
       arriving_from_airport_name: obj.arriving_from_airport_name,
 
-      estimated_time_of_arrival: obj.estimated_time_of_arrival,
+      //estimated_time_of_arrival: obj.estimated_time_of_arrival,
       arrival_date: obj.arrival_date,
       arrival_flight_nature: obj.arrival_flight_nature,
       arrival_passenger_count: obj.arrival_passenger_count,
@@ -217,13 +217,42 @@ if(obj.arriving_from_airport){
       departure_call_sign: obj.departure_call_sign,
       departure_to_airport: obj.departure_to_airport,
       departure_to_airport_name: obj.departure_to_airport_name,
-      estimated_time_of_departure: obj.estimated_time_of_departure,
+      //estimated_time_of_departure: obj.estimated_time_of_departure,
       departure_date: obj.departure_date,
       departure_flight_nature: obj.departure_flight_nature,
       departure_passenger_count: obj.departure_passenger_count,
+      estimated_time_of_departure: obj == undefined ? '' : obj.estimated_time_of_departure,
+      estimated_time_of_arrival: obj == undefined ? '' : obj.estimated_time_of_arrival,
     }
   },
   methods: {
+
+    dapartureTime(event){
+      this.estimated_time_of_departure = event.displayTime;
+      console.log("estimated_time_of_departure", this.estimated_time_of_departure);
+      console.log("format", event.data);
+      if(event.data ['H'] !== ''){
+        this.hours= true
+      }
+
+      if(event.data['m'] !== ''){
+        this.min =true
+      }
+    },
+
+
+    arrivalTime(event){
+      this.estimated_time_of_arrival = event.displayTime;
+      console.log("estimated_time_of_arrival", this.estimated_time_of_arrival);
+      console.log("format", event.data);
+      if(event.data ['H'] !== ''){
+        this.hours= true
+      }
+
+      if(event.data['m'] !== ''){
+        this.min =true
+      }
+    },
     getDropdownData() {
       //debugger;
       let axiosConfig = {
@@ -270,6 +299,7 @@ if(obj.arriving_from_airport){
         obj1.arriving_from_airport_name = this.arriving_from_airport_name;
         // obj1.airport_name = this.arriving_from_airport.name;
       }
+      //estimated_time_of_arrival: obj1 == undefined ? '' : obj1.estimated_time_of_arrival,
       obj1.estimated_time_of_arrival = this.estimated_time_of_arrival,
           obj1.arrival_date = this.arrival_date,
           obj1.arrival_flight_nature = this.arrival_flight_nature,
@@ -288,6 +318,7 @@ if(obj.arriving_from_airport){
         obj1.departure_to_airport_name = this.departure_to_airport_name;
         obj1.departure_to_airport = this.departure_to_airport;
       }
+      //estimated_time_of_departure: obj1 == undefined ? '' : obj1.estimated_time_of_departure,
       obj1.estimated_time_of_departure = this.estimated_time_of_departure,
           obj1.departure_date = this.departure_date,
           obj1.departure_flight_nature = this.departure_flight_nature,
@@ -317,6 +348,7 @@ if(obj.arriving_from_airport){
       obj1.countriesoptions = this.countriesoptions;
       obj1.formserviceoption = this.formserviceoption;
       localStorage.setItem('data', JSON.stringify(obj1));
+
     }
   }
 }
