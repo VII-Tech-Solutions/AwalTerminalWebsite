@@ -207,6 +207,9 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+    var airporOptions = JSON.parse(localStorage.airportoptions1);
+    var obj = JSON.parse(localStorage.elitedata);
+    this.searchAirportOptions = airporOptions;
     // this.getDropdownData();
   },
   data() {
