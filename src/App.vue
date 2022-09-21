@@ -1,4 +1,5 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <div id="app">
     <Header v-if="currentRouteName" />
     <router-view />
