@@ -28,7 +28,7 @@
                       <div class="form-group">
                         <div class="form-border upload-form px-1"><input type="text" v-model="fuelServices"
                                                                          class="form-control border-0"
-                                                                         placeholder="arrival_20220415_fasdolaw97w3…">
+                                                                         placeholder="">
                           <input type="file" @change="uploadFile($event,'Fuel Release')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
                           <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
@@ -51,7 +51,7 @@
                       <div class="form-group">
                         <div class="form-border upload-form px-1"><input type="text" v-model="cateringServices"
                                                                          class="form-control border-0"
-                                                                         placeholder="Upload catering order">
+                                                                         placeholder="">
                           <input type="file" @change="uploadFile($event,'Catering Order')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
                           <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
@@ -80,7 +80,7 @@
                         </div>
                         <div class="form-border upload-form px-1"><input type="text" v-model="airCraftCert"
                                                                          class="form-control border-0"
-                                                                         placeholder="certificate_20220415_f8jq8cdh…">
+                                                                         placeholder="">
                           <input type="file" @change="uploadFile($event,'Aircraft Certifications Checklist')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
                           <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
@@ -102,7 +102,7 @@
                         <label class="form-label text-capitalize">Arrival Gendec<span class="asterik">*</span></label>
                         <div class="form-border upload-form px-1"><input type="text" v-model="arrivalgendec"
                                                                          class="form-control border-0"
-                                                                         placeholder="arrival_20220415_fasdolaw97w3…">
+                                                                         placeholder="">
                           <input type="file" @change="uploadFile($event,'Arrival Gendec')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
                           <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
@@ -124,7 +124,7 @@
                         <label class="form-label text-capitalize">Departure Gendec<span class="asterik">*</span></label>
                         <div class="form-border upload-form px-1"><input type="text" v-model="departureGendec"
                                                                          class="form-control border-0"
-                                                                         placeholder="departure_20220415_pkmai856as…">
+                                                                         placeholder="">
                           <input type="file" @change="uploadFile($event,'Departure Gendec')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
                           <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
@@ -146,6 +146,7 @@
                         <label class="form-label text-capitalize">other documents</label>
                         <div class="form-border upload-form px-1"><input type="text" v-model="otherDocuments"
                                                                          class="form-control border-0"
+                                                                         placeholder=""
                                                                          >
                           <input type="file" @change="uploadFile($event,'other')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
