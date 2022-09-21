@@ -148,6 +148,7 @@ export default {
           obj1.operator_full_name = obj == undefined ? '' : obj.operator_full_name,
           obj1.operator_country = obj == undefined ? '' : obj.operator_country,
           obj1.teldrop = obj == undefined ? 973 : obj.teldrop,
+          obj1.agentdrop = obj == undefined ? 973 : obj.agentdrop,
           obj1.operator_tel_number = obj == undefined ? '' : obj.operator_tel_number,
           obj1.operator_email = obj == undefined ? '' : obj.operator_email,
           obj1.operator_address = obj == undefined ? '' : obj.operator_address,
