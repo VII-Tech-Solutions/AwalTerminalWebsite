@@ -1,4 +1,7 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 <template class="bg-white">
+<!--  <meta name="viewport" content="width=device-width, user-scalable=no">-->
   <div class="aviation-form bg-white">
     <div class="container">
       <div class="form-header">
@@ -54,7 +57,7 @@
                     <div class="form-group">
                       <label class="form-label text-capitalize">date<span class="asterik">*</span></label>
                       <div class="form-border">
-                        <input type="date" onkeydown="return false" v-model="date" class="form-control border-0"
+                        <input type="date" onkeydown="return false" :min="new Date().toISOString().substr(0, 10)" v-model="date" class="form-control border-0"
                                placeholder="DD/MM/YYYY">
                         <div class="d-flex align-items-center">
                                                     <span class="input-icon">
@@ -175,11 +178,11 @@
           </div>
           <div class="d-block">
                       <span class="btn-next d-inline-block align-top transition"
-                            v-if="!(airport_name  && date && time && flight_number && number_of_adults )"
+                            v-if="!(airport_name  && date && hours && min && flight_number && number_of_adults )"
                             :disabled="notFormValid" @click="error()">
                             Next
                         </span>
-            <span v-if=" airport_name && date && time && flight_number && number_of_adults ">
+            <span v-if=" airport_name && date && hours && min && flight_number && number_of_adults ">
                          <router-link to="/elite-form3" @click="setData()"
                                       class="btn-next d-inline-block align-top transition">Next</router-link>
                          </span>
@@ -232,6 +235,8 @@ export default {
       time: obj == undefined ? '' : obj.time,
       flight_number: obj == undefined ? '' : obj.flight_number,
       is_arrival_flight: obj.is_arrival_flight,
+      hours: false,
+      min: false,
       passengers: [{
         title: "",
         first_name: "",
@@ -261,6 +266,18 @@ export default {
   methods: {
     changeTime(event) {
       this.time = event.displayTime;
+      console.log("time",this.time);
+      console.log("format", event.data);
+      if(event.data['H'] !== ''){
+        this.hours = true
+      }
+
+      if(event.data['m'] !== ''){
+        this.min = true
+      }
+
+
+
     },
     fligh_name(event) {
       // debugger;

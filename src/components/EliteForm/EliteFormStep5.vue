@@ -513,7 +513,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ passenger.nationality_title }}
+                                        {{ passenger.nationality_id.name }}
                                       </p>
                                     </div>
                                   </li>
