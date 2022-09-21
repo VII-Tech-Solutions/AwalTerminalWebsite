@@ -54,7 +54,7 @@
                     <div class="form-group">
                       <label class="form-label text-capitalize">date<span class="asterik">*</span></label>
                       <div class="form-border">
-                        <input type="date" onkeydown="return false" v-model="date" class="form-control border-0"
+                        <input type="date" onkeydown="return false" :min="new Date().toISOString().substr(0, 10)" v-model="date" class="form-control border-0"
                                placeholder="DD/MM/YYYY">
                         <div class="d-flex align-items-center">
                                                     <span class="input-icon">
@@ -261,6 +261,9 @@ export default {
   methods: {
     changeTime(event) {
       this.time = event.displayTime;
+      console.log("time",this.time);
+      // console.log(this.time.getHours() + ":" + this.time.getMinutes());
+
     },
     fligh_name(event) {
       // debugger;
