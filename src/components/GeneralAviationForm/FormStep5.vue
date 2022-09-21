@@ -193,8 +193,15 @@
             <router-link to="/general-aviation-form4" class="light-button d-inline-block">back</router-link>
           </div>
           <div class="d-block">
-            <router-link to="/general-aviation-form6" @click="setData()" class="beige-button d-inline-block">Next
-            </router-link>
+            <span  class="beige-button d-inline-block"
+                   v-if="!(airCraftCert && arrivalgendec && departureGendec)"
+                  :disabled="notFormValid" @click="error()">
+                            Next
+                        </span>
+            <span v-if="airCraftCert && arrivalgendec && departureGendec">
+                  <router-link to="/general-aviation-form6" @click="setData()" class="beige-button d-inline-block">Next
+                  </router-link>
+            </span>
           </div>
         </div>
       </div>
@@ -226,6 +233,7 @@ export default {
       fuelid: 0,
       catid: 0,
       airid: 0,
+      notFormValid: true,
       arrid: 0,
       depid: 0,
       othid: 0,
@@ -302,6 +310,9 @@ export default {
       var obj = JSON.parse(localStorage.data);
       obj.attachments = this.attachement;
       localStorage.setItem('data', JSON.stringify(obj));
+    },
+    error() {
+      toastr.error('Kindly fillout required fields 🙁');
     },
     setDocumentText() {
 
