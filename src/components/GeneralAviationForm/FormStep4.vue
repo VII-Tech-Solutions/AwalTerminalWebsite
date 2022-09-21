@@ -108,7 +108,9 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
             obj1.arrival_call_sign=obj.arrival_call_sign;    
             obj1.arriving_from_airport=obj.arriving_from_airport,    
-            obj1.estimated_time_of_arrival=obj.estimated_time_of_arrival,  
+            obj1.arriving_from_airport_name=obj.arriving_from_airport_name,
+            obj1.departure_to_airport_name=obj.departure_to_airport_name,
+            obj1.estimated_time_of_arrival=obj.estimated_time_of_arrival,
             obj1.arrival_date=obj.arrival_date,   
             obj1.arrival_flight_nature=obj.arrival_flight_nature,  
             obj1.arrival_passenger_count=obj.arrival_passenger_count,    

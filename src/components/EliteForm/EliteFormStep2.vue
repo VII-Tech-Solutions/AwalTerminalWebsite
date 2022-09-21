@@ -50,7 +50,7 @@
 
                       <label class="form-label" for="inputGroupSelect01" v-else> Departing from<span
                           class="asterik">*</span></label>
-                      <v-select  placeholder="Select an airport" :options="airportoptions" label="full_name" :class="{'azul':!color}" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
+                      <v-select  placeholder="Select an airport" @search="airportSearch" :options="searchAirportOptions" label="full_name" :class="{'azul':!color}" v-model="airport_name" :value="airport_name" id="inputGroupSelect01" v-on:change="fligh_name"></v-select>
                     </div>
                   </div>
                   <div class="col-lg-2">
@@ -197,6 +197,8 @@
 import vSelect from "vue-select"
 import '@fortawesome/fontawesome-free/js/all.js';
 import VueTimepicker from 'vue3-timepicker'
+import axios from "axios";
+import configs from "../constants";
 
 export default {
   components: {
@@ -211,6 +213,7 @@ export default {
     //debugger;
     var airporOptions = JSON.parse(localStorage.airportoptions1);
     var obj = JSON.parse(localStorage.elitedata);
+    this.searchAirportOptions = airporOptions;
     console.log(obj.airportoptions, "airportoptionsairportoptions");
     console.log(localStorage.airportoptions1.type);
 
@@ -220,6 +223,7 @@ export default {
       eliteserviceoptions: obj.eliteserviceoptions,
       xyz: obj.xyz,
       responseArray: [],
+      searchAirportOptions: [],
       commontype: obj.commontype,
       privatetype: obj.privatetype,
       flightoptions: this.flightoptions,
@@ -278,6 +282,17 @@ export default {
 
 
 
+    },
+    airportSearch(e){
+      this.searchKey = e;
+      axios
+          .get(configs.base_url+"/api/search-airports", {params: {search: this.searchKey}})
+          .then((response) => {
+            this.searchAirportOptions = response.data.data.airports;
+          })
+          .catch((err) => {
+            toastr.error('Server Error Please Try again.. 🙁');
+          })
     },
     fligh_name(event) {
       // debugger;
