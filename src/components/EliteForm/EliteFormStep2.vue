@@ -1,4 +1,5 @@
 <template class="bg-white">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <div class="aviation-form bg-white">
     <div class="container">
       <div class="form-header">
