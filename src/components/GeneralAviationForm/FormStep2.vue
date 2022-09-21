@@ -47,7 +47,8 @@
                       <label class="form-label text-capitalize" for="inputGroupSelect01">From Airport<span
                           class="asterik">*</span></label>
                       <v-select placeholder="Select an airport" :class="{'azul':!color}"
-                                :options="airportoptions"  required label="full_name"
+                                :options="searchAirportOptions"  required label="full_name"
+                                @search="airportSearch"
                                 id="inputGroupSelect01" v-model="arriving_from_airport_name"
                                 :value="arriving_from_airport_name" ></v-select>
                     </div>
@@ -99,7 +100,7 @@
                     <div class="form-group">
                       <label class="form-label text-capitalize" for="inputGroupSelect01">to Airport<span
                           class="asterik">*</span></label>
-                      <v-select :class="{'azul':!color}" :options="airportoptions" required label="full_name"
+                      <v-select :class="{'azul':!color}" placeholder="Select an airport" :options="searchAgentAirportOptions" @search="agentAirportSearch" required label="full_name"
                                 id="inputGroupSelect01" v-model="departure_to_airport_name" :value="departure_to_airport_name"></v-select>
                     </div>
                     <div class="form-group">
@@ -181,18 +182,19 @@ console.log(obj.arriving_from_airport);
 if(obj.arriving_from_airport){
   let id = this.arriving_from_airport;
   console.log("airportoptions",obj.airportoptions);
-  this.arriving_from_airport_name = obj.airportoptions.filter(user => user.id == id);
-  console.log("arriving_from_airport_name",this.arriving_from_airport_name);
-
-  this.arriving_from_airport_name = this.arriving_from_airport_name[0].name;
-  console.log("arriving_from_airport_name2",this.arriving_from_airport_name);
+  // this.arriving_from_airport_name = obj.airportoptions.filter(user => user.id == id);
+  console.log("arriving_from_airport_name",obj.arriving_from_airport_name);
+  this.arriving_from_airport_name = obj.arriving_from_airport_name;
+  // this.arriving_from_airport_name = this.arriving_from_airport_name[0].name;
+  // console.log("arriving_from_airport_name2",this.arriving_from_airport_name);
 }
     if(obj.departure_to_airport){
       let id = this.departure_to_airport;
-      this.departure_to_airport_name = obj.airportoptions.filter(user => user.id == id);
-      this.departure_to_airport_name = this.departure_to_airport_name[0].name;
+      // this.departure_to_airport_name = obj.airportoptions.filter(user => user.id == id);
+      // this.departure_to_airport_name = this.departure_to_airport_name[0].name;
+      this.departure_to_airport_name = obj.departure_to_airport_name;
       console.log("departure_to_airport_name",this.departure_to_airport_name);
-      console.log("obj.departure_to_airport",obj.departure_to_airport);
+      console.log("obj.departure_to_airport",obj.departure_to_airport_name);
     }
     this.getDropdownData();
   },
@@ -205,6 +207,8 @@ if(obj.arriving_from_airport){
       formserviceoption: obj.formserviceoption,
       airport_name: obj.airport_name,
       notFormValid: true,
+      searchAirportOptions:[],
+      searchAgentAirportOptions:[],
       arrival_call_sign: obj.arrival_call_sign,
       arriving_from_airport: obj.arriving_from_airport,
       arriving_from_airport_name: obj.arriving_from_airport_name,
@@ -262,8 +266,9 @@ if(obj.arriving_from_airport){
       };
       axios.get(configs.base_url +'/api/metadata', axiosConfig)
           .then((res) => {
-            // debugger;
             this.airportoptions = res.data.data.airports;
+            this.searchAirportOptions = res.data.data.airports;
+            this.searchAgentAirportOptions = res.data.data.airports;
             this.countriesoptions = res.data.data.countries;
             this.formserviceoption = res.data.data.form_services;
           })
@@ -271,6 +276,30 @@ if(obj.arriving_from_airport){
             toastr.error('Server Error Please Try again.. 🙁');
           })
     },
+    airportSearch(e){
+      this.searchKey = e;
+      axios
+          .get(configs.base_url+"/api/search-airports", {params: {search: this.searchKey}})
+          .then((response) => {
+            this.searchAirportOptions = response.data.data.airports;
+          })
+          .catch((err) => {
+        toastr.error('Server Error Please Try again.. 🙁');
+      })
+    },
+
+    agentAirportSearch(e){
+      this.searchKey = e;
+      axios
+          .get(configs.base_url+"/api/search-airports", {params: {search: this.searchKey}})
+          .then((response) => {
+            this.searchAgentAirportOptions = response.data.data.airports;
+          })
+          .catch((err) => {
+            toastr.error('Server Error Please Try again.. 🙁');
+          })
+    },
+
     select_airport(event) {
       this.airport_name = this.airportoptions.find(x => x.id == event.target.value).name;
     },

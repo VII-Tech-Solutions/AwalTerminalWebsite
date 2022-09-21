@@ -233,7 +233,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ arriving_from_airport_name }}
+                                        {{ obj.arriving_from_airport_name }}
                                       </p>
                                     </div>
                                   </li>
@@ -384,7 +384,7 @@
                                           fw-normal
                                         "
                                       >
-                                        {{ departure_to_airport_name }}
+                                        {{ obj.departure_to_airport_name }}
                                       </p>
                                     </div>
                                   </li>
@@ -1116,16 +1116,6 @@ export default {
       this.agent_country_name = this.agent_country_name[0].name;
     }
 
-    if(obj.arriving_from_airport){
-      let id = obj.arriving_from_airport;
-      this.arriving_from_airport_name = obj.airportoptions.filter(user => user.id == id);
-      this.arriving_from_airport_name = this.arriving_from_airport_name[0].name;
-    }
-    if(obj.departure_to_airport){
-      let id = obj.departure_to_airport;
-      this.departure_to_airport_name = obj.airportoptions.filter(user => user.id == id);
-      this.departure_to_airport_name = this.departure_to_airport_name[0].name;
-    }
   },
   data() {
     var obj1 = JSON.parse(localStorage.data);
@@ -1133,8 +1123,6 @@ export default {
     return {
       notFormValid: true,
       operator_country_name:'test',
-      arriving_from_airport_name:'',
-      agent_country_name:'',
       departure_to_airport_name:'',
       obj: JSON.parse(localStorage.data),
       selectedservice: obj1.formserviceoption.filter((o1) =>
