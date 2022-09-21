@@ -102,14 +102,22 @@
   </form>
 </template>
 <script>
+import axios from "axios";
+import configs from "../constants";
+
 export default {
   mounted() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+    // this.getDropdownData();
   },
   data() {
     var obj = localStorage.data != undefined ? JSON.parse(localStorage.data) : undefined;
     return {
       notFormValid: true,
+      // airportoptions: obj.airportoptions,
+      // countriesoptions: obj.countriesoptions,
+      // formserviceoption: obj.formserviceoption,
+
       aircraft_type: obj == undefined ? '' : obj.aircraft_type,
       registration_number: obj == undefined ? '' : obj.registration_number,
       mtow: obj == undefined ? '' : obj.mtow,
@@ -122,6 +130,25 @@ export default {
     error() {
       toastr.error('Kindly fillout required fields 🙁');
     },
+    // getDropdownData() {
+    //   //debugger;
+    //   let axiosConfig = {
+    //     headers: {
+    //       'Content-Type': 'application/json;charset=UTF-8',
+    //     }
+    //   };
+    //   axios.get(configs.base_url +'/api/metadata', axiosConfig)
+    //       .then((res) => {
+    //         // debugger;
+    //         this.airportoptions = res.data.data.airports;
+    //         this.countriesoptions = res.data.data.countries;
+    //         this.formserviceoption = res.data.data.form_services;
+    //       })
+    //       .catch((err) => {
+    //         toastr.error('Server Error Please Try again.. 🙁');
+    //       })
+    // },
+
     setData() {
       var today = new Date();
       var date = (today.getFullYear() + '-' + ((today.getMonth() + 1) < 10 ? '0' + (today.getMonth() + 1) : (today.getMonth() + 1)) + '-' + today.getDate()).toString();

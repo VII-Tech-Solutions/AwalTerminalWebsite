@@ -711,7 +711,6 @@ textarea {
 }
 
 .custom-radio-btn {
-    padding: 0px 0px 0px 0px;
     margin: 50px 0;
 }
 
@@ -1012,10 +1011,6 @@ textarea {
         line-height: 1.69;
     }
 
-    .custom-radio-btn {
-        padding: 20px 0px 0px 0px;
-    }
-
     .elite-forrm-footer, .form-footer {
         padding: 15px 0px;
     }
@@ -1051,6 +1046,9 @@ textarea {
 }
 
 @media (max-width: 991px) {
+    .custom-radio-btn {
+        margin-bottom: 50px !important;
+    }
     .container {
         max-width: 720px;
     }
