@@ -23,13 +23,13 @@
                                 <p class="form-p fw-semi-bold mb-lg-3 mb-2">Select all the services that you require upon arrival/departure</p>
                                 <div class="form-service-check">
                                     <ul class="ul_css">
-                                        <li v-for="item in serviceoptions.slice(0, 5)" :key="item.id">
+                                        <li v-for="item in serviceoptions.slice(0, 6)" :key="item.id">
                                             <label class="checked-container">{{item.name}}
                                                 <input type="checkbox" @change="check" :value="item.id"  v-model="checkedNames" >
                                                 <span class="checkmark"></span>
                                             </label>
                                         </li>
-  
+
                                         <li v-show="houseselected">
 
                                             <div class="d-flex align-items-center ms-4">
@@ -47,7 +47,7 @@
 
                                      <li v-for="item in serviceoptions.slice(6, serviceoptions.length)" :key="item.id">
                                             <label class="checked-container">{{item.name}}
-                                                <input type="checkbox" :value="item.id"  v-model="checkedNames" >
+                                                <input type="checkbox"  :value="item.id"  v-model="checkedNames" >
                                                 <span class="checkmark"></span>
                                             </label>
                                         </li>
@@ -79,7 +79,9 @@
 import '@fortawesome/fontawesome-free/js/all.js';
     export default{
     mounted () {
-     window.scrollTo(0, 0)
+     window.scrollTo(0, 0);
+      var obj= JSON.parse(localStorage.data);
+
     },
     data() {
           var obj= JSON.parse(localStorage.data);
@@ -147,7 +149,8 @@ import '@fortawesome/fontawesome-free/js/all.js';
       },
       check()
       {
-        this.houseselected =     this.checkedNames.filter(o1 => o1 == 5).length>0?true:false
+        console.log("checkedNames",this.checkedNames);
+        this.houseselected =     this.checkedNames.filter(o1 => o1 == 6).length>0?true:false
       }
   }
 
