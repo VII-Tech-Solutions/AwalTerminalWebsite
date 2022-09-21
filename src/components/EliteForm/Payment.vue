@@ -21,7 +21,12 @@
 </template>  
 
 <script>
-
+export default {
+  mounted() {
+    console.log('$route.query.page',this.$route.query.uuid);
+    console.log('$route.query',this.$route.query);
+  },
+}
 </script>
 <style>
 .elite.background-gradient{
