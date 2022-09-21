@@ -175,11 +175,11 @@
           </div>
           <div class="d-block">
                       <span class="btn-next d-inline-block align-top transition"
-                            v-if="!(airport_name  && date && time && flight_number && number_of_adults )"
+                            v-if="!(airport_name  && date && hours && min && flight_number && number_of_adults )"
                             :disabled="notFormValid" @click="error()">
                             Next
                         </span>
-            <span v-if=" airport_name && date && time && flight_number && number_of_adults ">
+            <span v-if=" airport_name && date && hours && min && flight_number && number_of_adults ">
                          <router-link to="/elite-form3" @click="setData()"
                                       class="btn-next d-inline-block align-top transition">Next</router-link>
                          </span>
@@ -232,6 +232,8 @@ export default {
       time: obj == undefined ? '' : obj.time,
       flight_number: obj == undefined ? '' : obj.flight_number,
       is_arrival_flight: obj.is_arrival_flight,
+      hours: false,
+      min: false,
       passengers: [{
         title: "",
         first_name: "",
@@ -262,7 +264,16 @@ export default {
     changeTime(event) {
       this.time = event.displayTime;
       console.log("time",this.time);
-      // console.log(this.time.getHours() + ":" + this.time.getMinutes());
+      console.log("format", event.data);
+      if(event.data['H'] !== ''){
+        this.hours = true
+      }
+
+      if(event.data['m'] !== ''){
+        this.min = true
+      }
+
+
 
     },
     fligh_name(event) {
