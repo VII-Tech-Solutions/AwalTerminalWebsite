@@ -150,7 +150,7 @@
                           <input type="file" @change="uploadFile($event,'other')" ref="file"
                                  class="form-control upload-input" placeholder=""/>
                           <button class="form-blue-btn text-capitalize my-2 d-flex align-items-center">
-                            <span class="fa fa-arrow-up border-bottom me-2"></span>upload
+                            <span class="fa fa-arrow-up border-bottom me-2"></span>upload file
                           </button>
                         </div>
                         <button :fileid="othid" @click="deleteFile($event,'other')"
