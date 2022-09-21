@@ -1,6 +1,6 @@
 
 
 const configs =  {
-   base_url: 'https://awal.viitech.net'
+   base_url: 'https://admin-dev.awalvip.bh'
 }
 export default configs;
