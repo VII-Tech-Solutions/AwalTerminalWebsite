@@ -1088,6 +1088,9 @@
         </div>
       </div>
     </div>
+    <div class="loading" v-if="loader == true">
+      <div id="loader"></div>
+    </div>
   </div>
 </template>
 
@@ -1095,6 +1098,10 @@
 import axios from "axios";
 import "@fortawesome/fontawesome-free/js/all.js";
 import configs from "../constants";
+
+import vSelect from "vue-select";
+import VueTimepicker from "vue3-timepicker";
+
 
 export default {
   mounted() {
@@ -1124,6 +1131,9 @@ export default {
       notFormValid: true,
       operator_country_name:'test',
       departure_to_airport_name:'',
+      isLoading: false,
+      fullPage: true,
+      loader: false,
       obj: JSON.parse(localStorage.data),
       selectedservice: obj1.formserviceoption.filter((o1) =>
           obj1.services.some((o2) => o1.id === o2)
@@ -1158,6 +1168,7 @@ export default {
       this.disabled = e.target.checked;
     },
     async submitData() {
+      this.loader = true;
       let axiosConfig = {
         headers: {
           "Content-Type": "application/json",
