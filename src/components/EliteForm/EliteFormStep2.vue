@@ -74,7 +74,7 @@
                       <div class="form-border">
                         <vue-timepicker v-model="time" class="form-control border-0" format="HH:mm" @change="changeTime"></vue-timepicker>
                         <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch"
-                                                      class="img-fluid"></span>
+                                                      class="img-fluid time-icon"></span>
                       </div>
                     </div>
                   </div>

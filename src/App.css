@@ -582,6 +582,12 @@ textarea {
 .asterik {
     color: #d30202;
 }
+.time-icon{
+    max-width: 15px !important;
+}
+.vue__time-picker-input{
+    width: 100% !important;
+}
 
 .form-small-text {
     font-size: 20px;
