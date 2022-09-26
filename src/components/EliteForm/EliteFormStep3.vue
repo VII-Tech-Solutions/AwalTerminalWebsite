@@ -34,7 +34,7 @@
                   v-for="(passenger, index) in passengers"
                   :key="passenger"
               >
-                <legend class="form-title sub-title" v-if="(number_of_children > 0 && index + 1 <passengers.length)|| number_of_children === 0">Passenger Details</legend>
+                <legend class="form-title sub-title" v-if="number_of_adults> index">Passenger Details</legend>
                 <legend class="form-title sub-title" v-else>Details for children</legend>
                 <legend class="form-title" v-if="(number_of_children > 0 && index + 1 <passengers.length)|| number_of_children === 0">Passenger {{ index + 1 }}</legend>
                 <legend class="form-title" v-else>Passenger {{ index + 1 }}</legend>
@@ -239,7 +239,7 @@ export default {
     window.scrollTo(0, 0);
     var obj = JSON.parse(localStorage.elitedata);
 
-    console.log("passengers",obj.passengers.length);
+    console.log("passengers",obj.number_of_adults);
     console.log("children",obj.number_of_children);
   },
   data() {
