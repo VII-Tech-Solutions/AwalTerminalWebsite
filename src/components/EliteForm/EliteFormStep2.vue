@@ -74,7 +74,7 @@
                       <div class="form-border">
                         <vue-timepicker v-model="time" class="form-control border-0" format="HH:mm" @change="changeTime"></vue-timepicker>
                         <span class="input-icon"><img src="../../assets/images/icons/schedule.svg" alt="couch"
-                                                      class="img-fluid"></span>
+                                                      class="img-fluid time-icon"></span>
                       </div>
                     </div>
                   </div>
@@ -341,10 +341,26 @@ export default {
       console.log(abc);
       console.table(abc);
       var obj = {};
+      this.number_of_infants= parseInt(this.number_of_infants);
+      if (isNaN(this.number_of_infants)){
+        this.number_of_infants = 0;
+        console.log("Nan",this.number_of_infants);
+      }
+      if (isNaN(this.number_of_adults)){
+        this.number_of_adults = 0;
+      }
+      if (isNaN(this.number_of_children)){
+        this.number_of_children = 0;
+      }
+
       obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
       obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children);
       obj.number_of_infants = parseInt(this.number_of_infants == null ? 0 : this.number_of_infants);
+      console.log("number_of_adults",this.number_of_adults);
+      console.log("number_of_children",this.number_of_children);
+      console.log("number_of_infants",this.number_of_infants);
       obj.total = parseInt(parseInt(this.number_of_adults) + parseInt(this.number_of_children) + parseInt(this.number_of_infants));
+      console.log("total",obj.total);
       for (let i = 0; i < obj.total; i++) {
         if (abc != undefined) {
           if (abc.passengers.length == obj.total) {

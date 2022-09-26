@@ -316,7 +316,7 @@
                                         <button class="accordion-button text-capitalize detail-section-title"
                                             type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                             aria-expanded="true" aria-controls="collapseFour">
-                                            Booker’s Details
+                                            Booker's Details
                                         </button>
                                     </p>
                                     <div id="collapseFour" class="accordion-collapse collapse"
