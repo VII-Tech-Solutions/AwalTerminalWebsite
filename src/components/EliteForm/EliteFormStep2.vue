@@ -30,7 +30,7 @@
                       <div class="d-flex align-items-center justify-content-md-start justify-content-center">
                         <div class="form-check px-0 ms-0 me-4">
                           <label class="radio-container text-capitalize">Arrival
-                            <input type="radio" v-model="is_arrival_flight" value="true" name="radio">
+                            <input type="radio" v-model="is_arrival_flight" value="true" name="radio" checked>
                             <span class="checkmark"></span>
                           </label>
                         </div>
