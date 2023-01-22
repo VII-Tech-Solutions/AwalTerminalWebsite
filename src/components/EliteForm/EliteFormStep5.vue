@@ -648,7 +648,7 @@
               <div class="form-check terms">
                 <label class="checked-container text-capitalize"
                 >By submitting this form, you are agreeing to our
-                  <router-link to="/terms-conditions"
+                  <router-link to="/terms-conditions" target="_blank"
                   >Terms and Conditions
                   </router-link
                   >
