@@ -762,7 +762,6 @@ export default {
       //toastr.info('Are you sure you want to buy ');
 
       this.loader = true;
-
       var obj = {};
       obj.number_of_adults = parseInt(
           this.number_of_adults == null ? 0 : this.number_of_adults
@@ -796,7 +795,6 @@ export default {
       }
       obj.booker = this.booker;
       localStorage.setItem("elitedata", JSON.stringify(obj));
-
       this.paynow();
     },
 

@@ -85,6 +85,7 @@
                       <label class="form-label text-capitalize">Flight Number <span
                           class="asterik">*</span></label>
                       <input type="text" class="form-control" v-model="flight_number"
+                             @keypress="NameValidation($event)"
                              placeholder="e.g. BAH2233"
                              content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
                              name="viewport">
@@ -199,6 +200,8 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import VueTimepicker from 'vue3-timepicker'
 import axios from "axios";
 import configs from "../constants";
+import { vMaska } from "maska"
+
 
 export default {
   components: {
@@ -212,6 +215,7 @@ export default {
     this.searchAirportOptions = airporOptions;
     // this.getDropdownData();
   },
+
   data() {
     //debugger;
     var airporOptions = JSON.parse(localStorage.airportoptions1);
@@ -284,6 +288,13 @@ export default {
       }
 
 
+
+    },
+    NameValidation(e){
+      if(!e.key.match(/^[- a-zA-Z0-9]*$/))
+      {
+        e.preventDefault();
+      }
 
     },
     airportSearch(e){
