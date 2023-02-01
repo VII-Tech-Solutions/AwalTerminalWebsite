@@ -14,7 +14,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="map-img" data-aos="fade-up" data-aos-duration="2500">
+					<div class="map-img" data-aos="fade-up" data-aos-duration="2500" >
 						<a href="https://www.google.com/maps/place/Awal+Private+Terminal/@26.2723455,50.6232724,15z/data=!4m5!3m4!1s0x0:0x8fb53419757a27f1!8m2!3d26.2723455!4d50.6232724" target="_blank">
 							<img class="img-fluid" src="../../../assets/images/map-location.jpg" alt="Map Image">
 						</a>

@@ -200,7 +200,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import VueTimepicker from 'vue3-timepicker'
 import axios from "axios";
 import configs from "../constants";
-import { vMaska } from "maska"
 
 
 export default {
