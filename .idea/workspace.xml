@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5cf9af40-ef47-45f2-ae16-40210b6f33d0" name="Changes" comment="dial codes in the general aviation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/components/GeneralAviation/TakeTour.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GeneralAviation/TakeTour.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tour/PrivateLounges.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/PrivateLounges.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tour/Tour.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tour/Tour.vue" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.vue" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +40,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -50,6 +55,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+=======
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+>>>>>>> Stashed changes
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/EliteForm" />
@@ -69,6 +82,13 @@
       <workItem from="1659854944320" duration="18118000" />
       <workItem from="1659886039065" duration="1104000" />
       <workItem from="1659890034649" duration="638000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1660978221985" duration="5296000" />
+      <workItem from="1663160854163" duration="2228000" />
+      <workItem from="1674373930620" duration="12368000" />
+      <workItem from="1675252851366" duration="1790000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Privacy policy">
       <created>1659875171553</created>
@@ -151,7 +171,26 @@
     <MESSAGE value="Change the registration number to string" />
     <MESSAGE value="hide the back in elite services approve payment" />
     <MESSAGE value="working on disable the zoom in the mobile screen" />
+<<<<<<< Updated upstream
     <option name="LAST_COMMIT_MESSAGE" value="working on disable the zoom in the mobile screen" />
+=======
+    <MESSAGE value="cors fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="cors fix" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1674548001936">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1674548001936" />
+    <state x="462" y="144" width="611" height="536" key="find.popup" timestamp="1675253894525">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="462" y="144" width="611" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1675253894525" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1675253248822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1675253248822" />
+>>>>>>> Stashed changes
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
