@@ -129,10 +129,10 @@
                     >
                   </li>-->
                   <li>
-                    <span class="text-capitalize" 
+                    <span class="text-capitalize"
                       >Awal Terminal Building. © 2022 All rights reserved.</span>
                   </li>
-                  
+
                 </ul>
               </div>
               <div class="operated-by">
@@ -164,7 +164,7 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-   
+
     handleScroll(event) {
       // console.log('event')
       // console.log(window.scrollY)
@@ -180,9 +180,9 @@ export default {
 
       element.classList.remove("show");
       element2.classList.add("collapsed");
-      
+
     },
-        
+
 
   },
 };
@@ -305,7 +305,7 @@ export default {
   /* border-bottom: 1px solid #011e41; */
 }
 .header.dark .nav-link {
-  color: #011e41 !important;
+  color: #fff !important;
 }
 .header.dark .navbar-expand-lg .navbar-nav .nav-link:hover,
 .header.dark .navbar-expand-lg .navbar-nav .nav-link.router-link-exact-active {
