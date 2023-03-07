@@ -687,7 +687,7 @@
                             </router-link> -->
 
               <button
-                  @click="setData()"
+                  @click="()=>{checkTerms()}"
                   class="
                   btn-next
                   d-inline-block
@@ -696,7 +696,6 @@
                   text-capitalize
                 "
                   type="button"
-                  :disabled="disabled ? false : true"
               >
                 Submit Reservation
               </button>
@@ -758,9 +757,15 @@ export default {
     check(e) {
       this.disabled = e.target.checked;
     },
+    checkTerms(){
+      if(this.disabled==false){
+        toastr.error('Please check the terms and conditions');
+      }
+      else{
+        this.setData()
+      }
+    },
     setData() {
-      //toastr.info('Are you sure you want to buy ');
-
       this.loader = true;
       var obj = {};
       obj.number_of_adults = parseInt(

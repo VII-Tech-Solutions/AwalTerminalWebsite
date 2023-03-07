@@ -290,7 +290,7 @@ export default {
 
     },
     NameValidation(e){
-      if(!e.key.match(/^[- a-zA-Z0-9]*$/))
+      if(!e.key.match(/^[a-zA-Z0-9]*$/))
       {
         e.preventDefault();
       }
