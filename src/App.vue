@@ -11,6 +11,8 @@
 import Header from "./components/Header/Header.vue";
 import Footer from "./components/Footer/Footer.vue";
 import AOS from "aos";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export default {
   // state
