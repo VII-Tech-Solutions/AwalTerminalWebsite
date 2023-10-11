@@ -680,7 +680,7 @@
                   </p>
                   <div class="details-list">
                     <div class="row">
-                      <div class="col-md-5 mb-md-0 mb-2">
+                      <!-- <div class="col-md-5 mb-md-0 mb-2">
                         <div class="credit-box">
                           <div class="form-check px-0">
                             <label class="radio-container text-capitalize"
@@ -701,7 +701,7 @@
                             />
                           </figure>
                         </div>
-                      </div>
+                      </div> -->
                       <div class="col-md-5 mb-md-0 mb-2">
                         <div class="credit-box">
                           <div class="form-check px-0">
