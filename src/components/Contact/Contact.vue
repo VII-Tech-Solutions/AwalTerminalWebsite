@@ -8,7 +8,7 @@ import Banner from "./Banner.vue";
 import Form from "./Form.vue";
 import axios from 'axios'
 import AOS from "aos";
-
+import configs from "../constants";
 
 export default {
 
@@ -26,7 +26,7 @@ export default {
   methods: {
 
     getContactContent() {
-      axios.get('https://awal.viitech.net/api/contact-us-content')
+      axios.get(configs.base_url + '/api/contact-us-content')
         .then((response) => {
 
           let data = response.data.data.contact_us_content;

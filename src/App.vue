@@ -1,5 +1,8 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <div id="app">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <Header v-if="currentRouteName" />
     <router-view />
     <Footer v-if="currentRouteName" />
@@ -10,7 +13,10 @@
 <script >
 import Header from "./components/Header/Header.vue";
 import Footer from "./components/Footer/Footer.vue";
+import configs from "./components/constants";
 import AOS from "aos";
+
+import 'vue3-timepicker/dist/VueTimepicker.css'
 
 export default {
   // state
@@ -28,7 +34,7 @@ export default {
   mounted() {
     AOS.init();
     window.scrollTo(0, 0)
-
+    
   },
   components: {
     Header,

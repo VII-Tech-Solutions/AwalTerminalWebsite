@@ -100,6 +100,8 @@
 </template>  
 
 <script>
+
+import configs from '../constants';
 import axios from 'axios';
 export default {
 
@@ -128,7 +130,7 @@ export default {
                     'Content-Type': 'application/json;charset=UTF-8',
                 }
             };
-            axios.get('https://awal.viitech.net/api/metadata', axiosConfig)
+            axios.get(configs.base_url + '/api/metadata', axiosConfig)
                 .then((res) => {
                     this.eliteserviceoptions = res.data.data.elite_service_types;
                     this.servicefeatureoptions = res.data.data.elite_service_features;

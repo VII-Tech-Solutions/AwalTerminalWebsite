@@ -23,13 +23,13 @@
                                 <p class="form-p fw-semi-bold mb-lg-3 mb-2">Select all the services that you require upon arrival/departure</p>
                                 <div class="form-service-check">
                                     <ul class="ul_css">
-                                        <li v-for="item in serviceoptions.slice(0, 5)" :key="item.id">
+                                        <li v-for="item in serviceoptions.slice(0, 6)" :key="item.id">
                                             <label class="checked-container">{{item.name}}
                                                 <input type="checkbox" @change="check" :value="item.id"  v-model="checkedNames" >
                                                 <span class="checkmark"></span>
                                             </label>
                                         </li>
-  
+
                                         <li v-show="houseselected">
 
                                             <div class="d-flex align-items-center ms-4">
@@ -47,7 +47,7 @@
 
                                      <li v-for="item in serviceoptions.slice(6, serviceoptions.length)" :key="item.id">
                                             <label class="checked-container">{{item.name}}
-                                                <input type="checkbox" :value="item.id"  v-model="checkedNames" >
+                                                <input type="checkbox"  :value="item.id"  v-model="checkedNames" >
                                                 <span class="checkmark"></span>
                                             </label>
                                         </li>
@@ -79,10 +79,11 @@
 import '@fortawesome/fontawesome-free/js/all.js';
     export default{
     mounted () {
-     window.scrollTo(0, 0)
+     window.scrollTo(0, 0);
+      var obj= JSON.parse(localStorage.data);
+
     },
     data() {
-        debugger;
           var obj= JSON.parse(localStorage.data);
         return {
          notFormValid: true,
@@ -96,7 +97,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
       methods:{
        setData()
       {
-          debugger;
             var obj= localStorage.data != undefined ?  JSON.parse(localStorage.data):undefined;
      
             var obj1 = {};
@@ -108,7 +108,9 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
             obj1.arrival_call_sign=obj.arrival_call_sign;    
             obj1.arriving_from_airport=obj.arriving_from_airport,    
-            obj1.estimated_time_of_arrival=obj.estimated_time_of_arrival,  
+            obj1.arriving_from_airport_name=obj.arriving_from_airport_name,
+            obj1.departure_to_airport_name=obj.departure_to_airport_name,
+            obj1.estimated_time_of_arrival=obj.estimated_time_of_arrival,
             obj1.arrival_date=obj.arrival_date,   
             obj1.arrival_flight_nature=obj.arrival_flight_nature,  
             obj1.arrival_passenger_count=obj.arrival_passenger_count,    
@@ -121,8 +123,9 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
             obj1.operator_full_name=obj.operator_full_name,    
             obj1.operator_country=obj.operator_country,   
-            obj1.teldrop=  obj.teldrop;   
-            obj1.operator_tel_number=  obj.operator_tel_number,    
+            obj1.teldrop=  obj.teldrop;
+            obj1.agentdrop=  obj.agentdrop;
+            obj1.operator_tel_number=  obj.operator_tel_number,
             obj1.operator_email=obj.operator_email,   
             obj1.operator_address=obj.operator_address,    
             obj1.operator_billing_address=obj.operator_billing_address,
@@ -148,8 +151,8 @@ import '@fortawesome/fontawesome-free/js/all.js';
       },
       check()
       {
-        debugger;
-        this.houseselected =     this.checkedNames.filter(o1 => o1 == 5).length>0?true:false
+        console.log("checkedNames",this.checkedNames);
+        this.houseselected =     this.checkedNames.filter(o1 => o1 == 6).length>0?true:false
       }
   }
 

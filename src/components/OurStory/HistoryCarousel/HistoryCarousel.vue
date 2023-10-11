@@ -104,7 +104,7 @@
             </figure>
             <strong class="slider-date">1960s</strong>
           </slide>
-         
+
           <template #addons>
             <navigation />
           </template>
@@ -201,12 +201,12 @@ export default {
       settings: {
         itemsToShow: 1,
         snapAlign: "center",
-        autoplay:"2000"
+        autoplay:"4000"
       },
        settings2: {
         itemsToShow: 1,
         snapAlign: "center",
-        autoplay:"2000"
+        autoplay:"4000"
       },
       // breakpoints are mobile first
       // any settings not specified will fallback to the carousel settings
@@ -237,7 +237,7 @@ export default {
   },
 
   methods: {
-    
+
     item() {
        this.slider1=true;
       this.slider2= false;
@@ -254,7 +254,7 @@ export default {
       $("#span2").addClass("active");
       $("#span1").removeClass("active");
     },
-    
+
   },
   components: {
     Carousel,

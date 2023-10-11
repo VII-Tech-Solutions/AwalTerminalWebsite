@@ -85,6 +85,7 @@
 import FooterBanner from "../FooterBanner/FooterBanner.vue";
 import Banner from "../Banner/Banner.vue";
 import axios from "axios";
+import configs from "../constants";
 
 export default {
   name: "TermsAndConditions.vue",
@@ -137,17 +138,7 @@ export default {
 
   methods: {
     getHomeContent() {
-      if(this.$router.options.history.state.back === "/" || "/contact"){
-        this.route = "homepage-content";
-        this.dataRequest = "response.data.data.homepage-content";
-        this.image1 = "home-service-1";
-        this.image2 = "home-service-2";
-        this.image3 = "home-service-3";
-        this.service1 ="Expert Handling";
-        this.service2 ="Luxury Transport";
-        this.service3 ="Perfect Departure";
-      }
-      else if (this.$router.options.history.state.back === "/tour"){
+      if (this.$router.options.history.state.back === "/tour"){
         this.route = "tour-the-terminal-content";
         this.dataRequest = "response.data.data.tour-the-terminal-content";
         this.image1 = "tour-service-1";
@@ -197,10 +188,20 @@ export default {
         this.service2 ="Absolute Comfort";
         this.service3 ="Relaxing Atmosphere";
       }
+      else{
+        this.route = "homepage-content";
+        this.dataRequest = "response.data.data.homepage-content";
+        this.image1 = "home-service-1";
+        this.image2 = "home-service-2";
+        this.image3 = "home-service-3";
+        this.service1 ="Expert Handling";
+        this.service2 ="Luxury Transport";
+        this.service3 ="Perfect Departure";
+      }
       console.log("after",this.route);
 
 
-      axios.get('https://awal.viitech.net/api/'+this.route)
+      axios.get(configs.base_url + '/api/'+this.route)
           .then((response) => {
             console.log("data",this.dataRequest);
             let data = response.data.data.homepage_content;

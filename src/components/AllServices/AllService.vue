@@ -27,7 +27,7 @@
     <ExperienceTerminal :bigImage1="big_image_1_url" :heading5="heading_5" :paragraph4="paragraph_4" :squareImage2="square_image_2_url" />
     <FooterBanner HeadingTopText="5-star hospitality services" MainHeading="The VIP service" name="elite-story-bg"
       service1="Detailed Interiors" image1="elite-service-1" service2="Absolute Comfort" image2="elite-service-2"
-      service3="Relaxing Atmosphere" image3="elite-service-3" :footerbg="background_image_3_url" />
+      service3="Relaxing Atmosphere" image3="elite-service-3" :footerbg="background_image_3_url"  />
   </div>
 </template>  
 
@@ -40,6 +40,7 @@ import ExperienceTerminal from "./ExperienceTerminal.vue";
 import FooterBanner from "../FooterBanner/FooterBanner.vue";
 import './service.css'
 import axios from 'axios'
+import configs from "../constants";
 
 export default {
 
@@ -87,7 +88,7 @@ export default {
   methods: {
 
     getEliteServcContent() {
-      axios.get('https://awal.viitech.net/api/elite-services-content')
+      axios.get(configs.base_url + '/api/elite-services-content')
         .then((response) => {
 
           let data = response.data.data.elite_services_content;

@@ -7,7 +7,9 @@
                       <p class="text-uppercase text-white mx-0">{{HeadingTopText}}</p>
                       <h2 class="text-white mx-0">{{MainHeading}}</h2>
                   </div>
-                  <router-link to="/services" class="white-btn text-uppercase" data-aos="fade-bottom" data-aos-duration="2500">book now</router-link>
+
+
+                  <router-link :to="''+ booknow +''" class="white-btn text-uppercase" data-aos="fade-bottom" data-aos-duration="2500">book now</router-link>
                   <div class="service-list">
                       <ul>
                           <li data-aos="fade-up" data-aos-duration="2500">
@@ -57,7 +59,11 @@ export default {
     service3: String,
     image3: String,
     footerbg: String,
-  },
+    booknow: {
+        default: '/services',
+        type: String
+    }
+ }
 }
 
 </script>

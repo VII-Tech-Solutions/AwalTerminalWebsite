@@ -19,6 +19,7 @@ import AllServices from './AllServices/AllServices.vue'
 import Service from './Services/Service.vue'
 import FooterBanner from '../FooterBanner/FooterBanner.vue'
 import axios from 'axios'
+import configs from "../constants";
 
 
 export default {
@@ -54,7 +55,7 @@ export default {
   methods: {
 
     getHomeContent() {
-      axios.get('https://awal.viitech.net/api/our-story-content')
+      axios.get(configs.base_url + '/api/our-story-content')
         .then((response) => {
 
           let data = response.data.data.our_story_content;

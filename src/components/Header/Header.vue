@@ -68,7 +68,7 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <router-link to="/services" class="btn book-now-btn" type="submit">Book Now</router-link>
+              <router-link to="/services" class="btn book-now-btn" >Book Now</router-link>
             </form>
           </div>
           <div class="mobile-menu">
@@ -113,11 +113,12 @@
               <div class="footer-copyrigt-links">
                 <ul>
                   <li>
-                    <router-link class="text-capitalize" @click="item()" to="/"
+                    <router-link class="text-capitalize" @click="item()" to="/terms-conditions"
                       >Terms & Conditions</router-link
                     >
+
                   </li>
-                  <li>
+                  <!--<li>
                     <router-link class="text-capitalize" @click="item()" to="/"
                       >Privacy Policy</router-link
                     >
@@ -126,7 +127,7 @@
                     <router-link class="text-capitalize" @click="item()" to="/"
                       >Cookies Policy</router-link
                     >
-                  </li>
+                  </li>-->
                   <li>
                     <span class="text-capitalize"
                       >Awal Terminal Building. © 2022 All rights reserved.</span>
@@ -281,6 +282,7 @@ export default {
   font-family: "Lora";
   font-size: 14px;
 }
+
 .nav-item .dropdown-menu .dropdown-item:hover,
 .nav-item .dropdown-menu .dropdown-item:focus,
 .nav-item .dropdown-menu .dropdown-item.active,
@@ -303,7 +305,7 @@ export default {
   /* border-bottom: 1px solid #011e41; */
 }
 .header.dark .nav-link {
-  color: #ffffff;
+  color: #fff !important;
 }
 .header.dark .navbar-expand-lg .navbar-nav .nav-link:hover,
 .header.dark .navbar-expand-lg .navbar-nav .nav-link.router-link-exact-active {

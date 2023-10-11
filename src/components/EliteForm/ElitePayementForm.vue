@@ -316,7 +316,7 @@
                                         <button class="accordion-button text-capitalize detail-section-title"
                                             type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                             aria-expanded="true" aria-controls="collapseFour">
-                                            Booker’s Details
+                                            Booker's Details
                                         </button>
                                     </p>
                                     <div id="collapseFour" class="accordion-collapse collapse"
@@ -393,6 +393,7 @@
 <script>
 import '@fortawesome/fontawesome-free/js/all.js';
 import axios from 'axios';
+import configs from '../constants';
 export default {
     mounted() {
         window.scrollTo(0, 0)
@@ -436,7 +437,6 @@ export default {
     },
     methods: {
         setData() {
-            //debugger;
             var obj = {};
             obj.number_of_adults = parseInt(this.number_of_adults == null ? 0 : this.number_of_adults);
             obj.number_of_children = parseInt(this.number_of_children == null ? 0 : this.number_of_children);
@@ -455,14 +455,13 @@ export default {
             localStorage.setItem('elitedata', JSON.stringify(obj));
         },
         paynow() {
-            //debugger;
             const postData = JSON.parse(localStorage.elitedata);
             let axiosConfig = {
                 headers: {
                     'Content-Type': 'application/json',
                 }
             };
-            axios.post('https://awal.viitech.net/api/elite-service', postData, axiosConfig)
+            axios.post(configs.base_url + '/api/elite-service', postData, axiosConfig)
                 .then((res) => {
 
                   
@@ -471,7 +470,6 @@ export default {
                     window.location.href = '/elite-service?uuid='+res.data.data.elite_services.uuid;
                 })
                 .catch((err) => {
-                    debugger
                     console.log("AXIOS ERROR: ", err);
                     toastr.error('Server Error Please Try again.. 🙁');
 
@@ -489,7 +487,7 @@ export default {
                 }
             };
 
-            axios.get('https://awal.viitech.net/api/calculate-price', get_param)
+            axios.get(configs.base_url + '/api/calculate-price', get_param)
                 .then((res) => {
                     console.log(res, "aaaaa");
                     this.amount = res.data.data.total_price;
@@ -713,6 +711,8 @@ export default {
     font-size: 12px;
     line-height: 15px;
     font-weight: normal;
+  bottom: 0;
+
 }
 
 .elite-offer-services .service-features {
