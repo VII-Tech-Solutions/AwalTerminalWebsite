@@ -54,7 +54,7 @@ export default {
     methods: {
 
         getTourContent() {
-            axios.get(configs.base_url + '/api/tour-the-terminal-content')
+            axios.get('https://admin.awalvip.bh/api/tour-the-terminal-content')
                 .then((response) => {
 
                     let data = response.data.data.tour_the_terminal_content

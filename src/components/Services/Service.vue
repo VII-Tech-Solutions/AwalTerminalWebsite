@@ -110,7 +110,7 @@ export default {
     methods: {
 
         getHomeContent() {
-            axios.get(configs.base_url + '/api/services-content')
+            axios.get('https://admin.awalvip.bh/api/services-content')
                 .then((response) => {
 
                     let data = response.data.data.services_content;

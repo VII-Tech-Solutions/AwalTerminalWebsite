@@ -299,7 +299,7 @@ export default {
     airportSearch(e){
       this.searchKey = e;
       axios
-          .get(configs.base_url+"/api/search-airports", {params: {search: this.searchKey}})
+          .get("https://admin.awalvip.bh/api/search-airports", {params: {search: this.searchKey}})
           .then((response) => {
             this.searchAirportOptions = response.data.data.airports;
           })

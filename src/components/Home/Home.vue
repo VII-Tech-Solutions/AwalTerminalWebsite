@@ -54,7 +54,7 @@ export default {
 	methods: {
 
 		getHomeContent() {
-			axios.get(configs.base_url + '/api/homepage-content')
+			axios.get('https://admin.awalvip.bh/api/homepage-content')
 				.then((response) => {
 
 					let data = response.data.data.homepage_content;

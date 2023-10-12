@@ -812,7 +812,7 @@ export default {
       };
       axios
           .post(
-              configs.base_url + "/api/elite-service",
+              "https://admin.awalvip.bh/api/elite-service",
               postData,
               axiosConfig
           )
@@ -844,7 +844,7 @@ export default {
       };
 
       axios
-          .get(configs.base_url + "/api/calculate-price", get_param)
+          .get("https://admin.awalvip.bh/api/calculate-price", get_param)
           .then((res) => {
 
             this.amount = res.data.data.total_price;

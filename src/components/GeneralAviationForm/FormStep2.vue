@@ -264,7 +264,7 @@ if(obj.arriving_from_airport){
           'Content-Type': 'application/json;charset=UTF-8',
         }
       };
-      axios.get(configs.base_url +'/api/metadata', axiosConfig)
+      axios.get('https://admin.awalvip.bh/api/metadata', axiosConfig)
           .then((res) => {
             this.airportoptions = res.data.data.airports;
             this.searchAirportOptions = res.data.data.airports;
@@ -279,7 +279,7 @@ if(obj.arriving_from_airport){
     airportSearch(e){
       this.searchKey = e;
       axios
-          .get(configs.base_url+"/api/search-airports", {params: {search: this.searchKey}})
+          .get("https://admin.awalvip.bh/api/search-airports", {params: {search: this.searchKey}})
           .then((response) => {
             this.searchAirportOptions = response.data.data.airports;
           })
@@ -291,7 +291,7 @@ if(obj.arriving_from_airport){
     agentAirportSearch(e){
       this.searchKey = e;
       axios
-          .get(configs.base_url+"/api/search-airports", {params: {search: this.searchKey}})
+          .get("https://admin.awalvip.bh/api/search-airports", {params: {search: this.searchKey}})
           .then((response) => {
             this.searchAgentAirportOptions = response.data.data.airports;
           })

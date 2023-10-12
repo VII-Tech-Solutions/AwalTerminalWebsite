@@ -40,7 +40,7 @@ export default {
     };
     axios
         .get(
-            configs.base_url + "/api/elite-service/" +
+            "https://admin.awalvip.bh/api/elite-service/" +
             this.$route.query.uuid,
             axiosConfig
         )

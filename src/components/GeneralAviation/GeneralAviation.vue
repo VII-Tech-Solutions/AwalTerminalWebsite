@@ -64,7 +64,7 @@ export default {
 
     methods: {
         getGeneralAviationServiceContent() {
-            axios.get(configs.base_url + '/api/general-aviation-content')
+            axios.get('https://admin.awalvip.bh/api/general-aviation-content')
                 .then((response) => {
 
                     let data = response.data.data.general_aviation_content;

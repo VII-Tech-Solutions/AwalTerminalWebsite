@@ -191,7 +191,7 @@ export default {
       console.log("after",this.route);
 
 
-      axios.get(configs.base_url + '/api/'+this.route)
+      axios.get('https://admin.awalvip.bh/api/'+this.route)
           .then((response) => {
             console.log("data",this.dataRequest);
             let data = response.data.data.homepage_content;

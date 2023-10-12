@@ -249,7 +249,7 @@ export default {
         }
       };
 
-      axios.get(configs.base_url + '/api/metadata', axiosConfig)
+      axios.get('https://admin.awalvip.bh/api/metadata', axiosConfig)
           .then((res) => {
             var obj = localStorage.elitedata != undefined ? JSON.parse(localStorage.elitedata) : undefined;
 

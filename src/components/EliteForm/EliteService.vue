@@ -831,7 +831,7 @@ export default {
         },
       };
       axios
-        .get(configs.base_url + "/api/metadata", axiosConfig)
+        .get("https://admin.awalvip.bh//api/metadata", axiosConfig)
         .then((res) => {
           this.airportoptions = res.data.data.airports;
           this.countriesoptions = res.data.data.countries;
@@ -849,7 +849,7 @@ export default {
       };
       axios
         .get(
-          configs.base_url + "/api/elite-service/" +
+          "https://admin.awalvip.bh/api/elite-service/" +
             this.$route.query.uuid,
           axiosConfig
         )

@@ -250,7 +250,7 @@ export default {
           const headers = {'Content-Type': 'multipart/form-data',
             'Access-Control-Allow-Origin': '*'
           };
-          axios.post(configs.base_url+'/api/general-aviation/media', formData, {headers}).then((res) => {
+          axios.post('https://admin.awalvip.bh/api/general-aviation/media', formData, {headers}).then((res) => {
             if (res.status == 200) {
               if (name == "Fuel Release") {
                 this.fuelServices = ref.target.files[0].name;

@@ -142,7 +142,7 @@ export default {
           }
         };
         //debugger;
-        axios.post( configs.base_url + '/api/contact-us', formData, axiosConfig)
+        axios.post('https://admin.awalvip.bh/api/contact-us', formData, axiosConfig)
           .then((res) => {
             console.log("RESPONSE RECEIVED: ", res);
             toastr.success('Congratulation! Conform Ticket 🙂');

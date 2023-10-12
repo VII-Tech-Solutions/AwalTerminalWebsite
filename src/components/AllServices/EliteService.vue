@@ -130,7 +130,7 @@ export default {
                     'Content-Type': 'application/json;charset=UTF-8',
                 }
             };
-            axios.get(configs.base_url + '/api/metadata', axiosConfig)
+            axios.get('https://admin.awalvip.bh/api/metadata', axiosConfig)
                 .then((res) => {
                     this.eliteserviceoptions = res.data.data.elite_service_types;
                     this.servicefeatureoptions = res.data.data.elite_service_features;

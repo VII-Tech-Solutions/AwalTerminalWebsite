@@ -461,7 +461,7 @@ export default {
                     'Content-Type': 'application/json',
                 }
             };
-            axios.post(configs.base_url + '/api/elite-service', postData, axiosConfig)
+            axios.post('https://admin.awalvip.bh/api/elite-service', postData, axiosConfig)
                 .then((res) => {
 
                   
@@ -487,7 +487,7 @@ export default {
                 }
             };
 
-            axios.get(configs.base_url + '/api/calculate-price', get_param)
+            axios.get('https://admin.awalvip.bh/api/calculate-price', get_param)
                 .then((res) => {
                     console.log(res, "aaaaa");
                     this.amount = res.data.data.total_price;

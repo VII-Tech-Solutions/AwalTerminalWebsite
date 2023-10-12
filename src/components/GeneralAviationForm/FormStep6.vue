@@ -1179,7 +1179,7 @@ export default {
       console.log("obj",obj);
       const response = await axios
           .post(
-              configs.base_url + "/api/general-aviation",
+              "https://admin.awalvip.bh/api/general-aviation",
               obj,
               axiosConfig
           )
